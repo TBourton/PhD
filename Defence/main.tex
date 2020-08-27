@@ -1,0 +1,439 @@
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\documentclass{beamer}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\SDet}{SDet}
+\usepackage{tikz}
+  \usetikzlibrary{decorations.markings}
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+\usetheme{default}
+
+\title{Exact Results for $\mathcal{N}=1$ Theories of Class $\mathcal{S}_k$}
+
+\author{Thomas~Bourton}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[DESY] % (optional, but mostly needed)
+{
+  %
+  DESY
+  %University of Somewhere
+  %\and
+  %\inst{2}%
+  %Department of Theoretical Philosophy\\
+  %University of Elsewhere
+  }
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date{17/10/2019}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+%\subject{Theoretical Computer Science}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+% Let's get started
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+% Section and subsections will appear in the presentation overview
+% and table of contents.
+\section{Introduction}
+\subsection{Motivation: Exact results for $\mathcal{N}=1$ Theories?}
+\begin{frame}{Motivation}
+\begin{block}{Ambition: Understand the non-perturbative dynamics of QFTs} This is a \textbf{hard} problem (QCD confinement, Yang-Mills mass-gap, etc) $\implies$ consider simplified models $\implies$ \testbf{supersymmetry}
+\begin{itemize}
+    \item For $\mathcal{N}\geq2$ a lot is understood $\implies \boxed{\text{Exact results!}}$
+    \item But, $\mathcal{N}\geq2$ is far away from `real-world physics'
+\end{itemize}
+  $\mathcal{N}=1$ is a lot closer e.g. $\mathcal{N}=1$ SQCD exhibits:
+  \begin{itemize}
+      \item Color confinement
+      \item Chiral symmetry breaking
+    \item Conformal phase
+  \end{itemize}
+    $\mathcal{N}=1$ SUSY $\implies$ more control over theory than $\mathcal{N}=0$ - still potentially constraining enough to understand the dynamics non-perturbatively.\newline
+    \end{block}
+\end{frame}
+\begin{frame}{Exact Results}
+By "exact result" we mean any quantity that we compute that is valid for any value of the parameter space. They give us a window into the non-perturbative dynamics of a theory. Some examples for $\mathcal{N}=2$
+\begin{itemize}
+      \item{Moduli space $\mathbf{M}$ of SUSY vacua
+      \begin{itemize}
+          \item Coulomb Branch $\textbf{CB}$ - Seiberg-Witten Theory: Exact computation of low-energy effective action
+          \item Higgs branch $\mathbf{HB}$ - Quantum mechanically exact
+      \end{itemize}}
+          \item {
+       Exact evaluation (localisation) of full path integral on various manifolds  e.g. $\mathbb{S}^4$, $\mathbb{S}^1\times\mathbb{S}^3$. \color{blue}[Pestun '07] [Romelsberger '05] [Kinney, Maldacena, Minwalla, Raju '05] [...]
+      }
+      \item{Nekrasov's instanton counting  \color{blue}[Nekrasov '02]\color{black}: path integral $Z_{\text{inst}}$ over all instanton configurations}
+      \item{2d/4d correspondence(s), e.g. AGT, TQFT-Index, etc}
+\end{itemize}
+\begin{center}
+\boxed{\text{What about exact results for $\mathcal{N}=1$?}}
+\end{center}
+\end{frame}
+
+\subsection{Review: Class $\mathcal{S}$}
+\begin{frame}{Class $\mathcal{S}$ Theories}
+\begin{block}{A large class of 4d $\mathcal{N}=2$ theories: \color{blue} [Gaiotto '09] [Gaiotto, Moore, Neitzke '09]}
+\begin{itemize}
+  \itemsep1em
+  \item{6d $\mathcal{N}=(2,0)$ SCFT (stack of $N$ M5 branes) on $\mathbb{R}^4\times\mathcal{C}$ where $\mathcal{C}$ is a compact Riemann surface
+      \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+               \multicolumn{1}{c|}{} &\multicolumn{4}{c|}{$\mathbb{C}^2$}&\multicolumn{2}{c|}{$\mathcal{C}$}&\multicolumn{4}{c|}{$\mathbb{C}^2_{\perp}$}&\multicolumn{1}{c|}{$\mathbb{S}^1$}\\\hline
+             $N$ M5 & --&--&--&--&--&--&$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\cdot$ \\\hline
+        \end{tabular}
+    \end{center}}
+  \item{We take $\text{Area}(\mathcal{C})\to0$ $\implies$ 4d $\mathcal{N}=2$ theory on $\mathbb{R}^4$}
+\end{itemize}\end{block}
+\begin{block}{$\mathcal{C}$ = four punctured sphere $\Leftrightarrow$ $\mathcal{N}=2$ SQCD}
+   \begin{figure}
+    \centering
+  \begin{tikzpicture}[square/.style={regular polygon,regular polygon sides=4},thick,inner sep=0.1em]
+    %gaugenodes
+    \node (G11) at (0,0)[square,draw,minimum size=1cm]{$N$};
+    \node (G21) at (2,0) [circle,draw,minimum size=1cm]{$N$};
+    \node (G31) at (4,0) [square,draw,minimum size=1cm]{$N$};
+    \draw (G11.0) to (G21.180);
+    \draw (G21.0) to (G31.180);
+    \draw (-3,0) ellipse (1.5cm and 1cm);
+    \fill (-2.6,0.5) circle [radius=1.5pt];  
+    \fill (-3.4,0.5) circle [radius=1.5pt];  
+    \fill (-4,-0.3) circle [radius=1.5pt]; 
+    \draw (-4,-0.3) circle [radius=3pt];
+    \fill (-2,-0.3) circle [radius=1.5pt]; 
+    \draw (-2,-0.3) circle [radius=3pt];
+    \node at (-1,0) {$\Leftrightarrow$};
+    \end{tikzpicture}
+\end{figure}
+\end{block}
+\end{frame}
+
+\subsection{Class $\mathcal{S}_k$}
+\begin{frame}{Class $\mathcal{S}_k$}
+    \begin{block}{Natural generalisation of Class $\mathcal{S}$}
+    Instead: Compactify a 6d $\mathcal{N}=(1,0)$ theory on $\mathcal{C}$. 
+    \end{block}
+    \begin{itemize}
+      \itemsep1em
+        \item {The 6d $\mathcal{N}=(1,0)$ theory we use is a $\mathbb{Z}_k$ orbifold of the 6d $\mathcal{N}=(2,0)$ theory \color{blue}[Gaiotto, Razamat '15]}
+        \item{The $\mathbb{Z}_k$ breaks supersymmetry by $1/2$, leaving $\mathcal{N}=1$ in 4d}
+    \end{itemize}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+               \multicolumn{1}{c|}{} &\multicolumn{4}{c|}{$\mathbb{C}^2$}&\multicolumn{2}{c|}{$\mathcal{C}$}&\multicolumn{4}{c|}{$\mathbb{C}^2_{\perp}$}&\multicolumn{1}{c|}{$\mathbb{S}^1$}\\\hline
+             $N$ M5 & --&--&--&--&--&--&$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\cdot$ \\\hline
+             $\mathbb{Z}_k$ &$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\times$&$\times$&$\times$&$\times$&$\cdot$ \\\hline
+        \end{tabular}
+    \end{center}
+    \begin{equation*}
+        \mathbb{Z}_k: (v_{\perp},w_{\perp})\mapsto (e^{2\pi i/k}v_{\perp},e^{-2\pi i/k}w_{\perp})
+    \end{equation*}
+        \begin{itemize}
+        \item {Class of 'nice' 4d $\mathcal{N}=1$ theories again classified by punctured Riemann surfaces $\mathcal{C}$}
+    \end{itemize}
+\end{frame}
+\begin{frame}{Example}
+    \begin{block}{$\mathcal{C}=$ four punctured sphere}
+    \end{block}
+\begin{itemize}
+\itemsep1em
+    \item{For $k=2$ - $\mathcal{N}=1$ superconformal quiver
+\begin{figure}
+\centering
+  \begin{tikzpicture}[square/.style={regular polygon,regular polygon sides=4},thick,inner sep=0.1em]
+    %gaugenodes
+    \node (G11) at (0,0)[square,draw,minimum size=1cm]{$N$};
+    \node (G21) at (2,0) [circle,draw,minimum size=1cm]{$N$};
+    \node (G31) at (4,0) [square,draw,minimum size=1cm]{$N$};
+    \node (G12) at (0,-2)[square,draw,minimum size=1cm]{$N$};
+    \node (G22) at (2,-2) [circle,draw,minimum size=1cm]{$N$};
+    \node (G32) at (4,-2) [square,draw,minimum size=1cm]{$N$};
+    %down chirals phi1
+    \draw [->-=.5] (G21.260) to (G22.100);
+    \draw [->-=.5] (G22.80) to (G21.280);
+    \node at (1.7,-1) {$\Phi$};
+    %right phi2
+    \node at (1,0.3) {$Q$};
+    \draw [->-=.5] (G11.0) to (G21.180);
+    \draw [->-=.5] (G21.0) to (G31.180);
+    \draw [->-=.5] (G12.0) to (G22.180);
+    \draw [->-=.5] (G22.0) to (G32.180);
+	%left up Phi3
+	\draw [->-=.4] (G22.135) to (G11.-45);
+	\node at (0.4,-0.8) {$\widetilde{Q}$};
+    \draw [->-=.7] (G32.135) to (G21.-45);
+    \draw [->-=.7] (G31.225) to (G22.45);
+    \draw [->-=.4] (G21.225) to (G12.45);
+    \draw (-3,-1) ellipse (1.5cm and 1cm);
+    \fill (-2.6,-0.5) circle [radius=1.5pt];  
+    \fill (-3.4,-0.5) circle [radius=1.5pt];  
+    \fill (-4,-1.3) circle [radius=1.5pt]; 
+    \draw (-4,-1.3) circle [radius=3pt];
+    \fill (-2,-1.3) circle [radius=1.5pt]; 
+    \draw (-2,-1.3) circle [radius=3pt];
+    \node at (-1,-1) {$\Leftrightarrow$};
+  \end{tikzpicture}
+\end{figure}
+}
+\item{$W\simeq \left(Q\Phi\widetilde{Q}-\widetilde{Q}\Phi Q\right)-\frac{i\tau}{8\pi^2}\tr W^{\alpha}W_{\alpha}$}
+\item{$SU(2)_{R_{\mathcal{N}=2}}\times U(1)_{r_{\mathcal{N}=2}}\xrightarrow{\mathbb{Z}_k} U(1)_{r}\times U(1)_t$}
+\item{Global Symmetry: $SU(2,2|1)\times U(1)_t\times U(1)_{\gamma}^{k-1}\times U(1)_{\beta}^{k-1}\times SU(N)^{2k}\times U(1)_{\alpha}^2$}
+\end{itemize}
+\end{frame}
+
+\section{Exact Results for Class $\mathcal{S}_k$}
+\subsection{Moduli Space of SUSY Vacua}
+\begin{frame}{Moduli space}
+\begin{block}{$\mathcal{N}=1$ gauge theories have a \textit{moduli space} of supersymmetric vacua}
+   \begin{equation}
+       \mathbf{M}=\left\{\Phi,Q,\widetilde{Q}\middle|V(\Phi,Q,\widetilde{Q})=0\right\}/(\text{gauge transformations})
+   \end{equation}
+K\"ahler manifold $\mathbf{M}$ param'd by top components of $\frac{1}{2}$-BPS multiplets $\overline{\mathcal{B}}_{r(0,0)}$ of $SU(2,2|1)$.\newline 
+   For class $\mathcal{S}_k$ we have \textbf{distinct} Higgs and Coulomb branches \color{blue}[TB, A.~Pini, E.~Pomoni (to appear)]\color{black}. 
+   \begin{center}
+       \boxed{\text{For generic $\mathcal{N}=1$ theories such distinction is not possible!}}
+   \end{center}
+\end{block}
+The non-anomalous $U(1)_r\times U(1)_t$ global symmetries means these branches are separate and cannot mix.
+\end{frame}
+\begin{frame}{Higgs Branch}
+\begin{center}
+\begin{tabular}{c|c|c}
+Field&$U(1)_r$&$U(1)_t$\\\hline
+     $Q$&$2/3$&$1/2$  \\
+     $\widetilde{Q}$&$2/3$&$1/2$\\
+     $\Phi$&$2/3$&$-1$
+\end{tabular}
+\end{center}
+   \begin{equation*}
+ \boxed{\mathbf{HB}=\mathbf{M}|_{\Phi=0}\,,\quad E=\frac{3}{2}r=2q_t}
+   \end{equation*}
+   \begin{itemize}
+    \item Gauge invariants: $Q_i\widetilde{Q}_j$, $\det Q_i$, $\det\widetilde{Q}_i$
+       \item  As with $\mathcal{N}=2$ SUSY $\mathbf{HB}$ is \textit{exact}
+       \item On the other hand only K\"ahler (rather than hyperK\"ahler).
+   \end{itemize}
+\end{frame}
+
+\begin{frame}{Coulomb Branch}
+   \begin{equation*}
+\boxed{ \mathbf{CB}=\mathbf{M}|_{Q=\widetilde{Q}=0}\,,\quad E=\frac{3}{2}r=-q_t}
+   \end{equation*}
+   \begin{itemize}
+    \item Gauge invariants: $u_n=\tr(\Phi_1\dots\Phi_k)^n$ and $B_i=\det \Phi_i$
+       \item  As with $\mathcal{N}=2$ Coulomb branch superpotential has quantum corrections encoded by Seiberg-Witten curve $\Sigma\hookrightarrow T^*\mathcal{C}$ fibred over $\mathbf{CB}$
+   \end{itemize}
+  Curve can be defined for $\mathcal{N}=1$ theories \color{blue}[Intrilgator, Seiberg '94]\color{black}  
+   \begin{equation*}
+     \Sigma:\quad  z^{kN}+\sum_{l=1}^Nz^{k(N-l)}\phi_{kl}(t;u_n,B_i)=0
+   \end{equation*}
+   \color{blue}[Coman, Pomoni, Taki, Yagi '15]\color{black}, \color{blue} [TB, Pomoni (to appear)]\color{black}
+   \begin{equation*}
+       W_{eff}=\frac{i\tau_{eff}}{8\pi}W_{\alpha}W^{\alpha}\,,\quad \tau_{eff}=\frac{\oint_B\lambda}{\oint_A\lambda}\,,\quad \lambda=\frac{v}{t}dt
+   \end{equation*}
+\end{frame}
+\subsection{Supersymmetric Index and Special Limits}
+\begin{frame}{Supersymmetric Index ($\mathbb{S}^3\times \mathbb{S}^1$ partition function)}
+Pick $\mathcal{Q}=\widetilde{\mathcal{Q}}_{\dot-}\implies$ $\boxed{2\{\mathcal{Q},\mathcal{Q}^{\dagger}\}=E-2j_2-3r/2=0}$
+\begin{equation*}
+    \mathcal{I}=\Tr (-1)^Fp^{j_1+j_2+\frac{r}{2}-\frac{2}{3}q_t}q^{-j_1+j_2+\frac{r}{2}-\frac{2}{3}q_t}t^{q_t}e^{-2\beta\{\mathcal{Q},\mathcal{Q}^{\dagger}\}}
+\end{equation*}
+Witten index graded by fugacities for maximal commutant in $SU(2,2|1)\times U(1)_t\times H$
+\begin{itemize}
+    \item{ Counts all short multiplets modulo recombination to long ones
+    \begin{equation*}
+    \mathcal{I}(\mathcal{S})=\chi_{\mathcal{S}}\,,\quad \mathcal{I}(\mathcal{A})=\mathcal{I}(\mathcal{S})+\mathcal{I}(\mathcal{S}')=0
+\end{equation*}}
+\end{itemize}
+
+Use localisation ($k=N=2$)
+\begin{equation*}
+    \mathcal{I}=(p;p)^2(q;q)^2\int\frac{dz_1dz_2}{(4\pi i)^2}\prod_{i=1}^{k=2}\frac{\Gamma_e(\sqrt{t}z_i^{\pm1})^2\,\Gamma_e(\frac{pq}{t}z_i^{\pm1}z_{i-1}^{\pm1})}{\Gamma(z_i^{\pm2})}
+\end{equation*}
+2d/4d relation: Equal to 2d TQFT correlator on $\mathcal{C}$ \color{blue}[Gaiotto, Razamat '15]
+\end{frame}
+
+\begin{frame}{Localisation}
+\begin{block}{Localisation principle:}
+We would like to compute observables:
+\begin{equation}
+\langle\mathcal{O}[\phi]\rangle=\int\limits_{\mathbf{C}(\mathcal{M})}[\mathcal{D}\phi]\,e^{-S[\phi]}\,\mathcal{O}[\phi]
+\end{equation}
+Assume $\exists\,\mathfrak{Q}$ such that $\mathfrak{Q}S=\mathfrak{Q}\mathcal{O}=0$ \& $\mathfrak{Q}^2=\text{(bosonic symmetry)}$. We can then deform $S\to S+t\mathfrak{Q}V$
+\begin{equation}
+    \langle\mathcal{O}[\phi]\rangle_t=\int\limits_{\mathbf{C}(\mathcal{M})}[\mathcal{D}\phi]\,e^{-S[\phi]-t\mathfrak{Q}V[\phi]}\,\mathcal{O}[\phi]\,,\quad t\in\mathbb{R}
+\end{equation}
+$\boxed{\text{The answer is independent of $t$!}}$ we can take $t\to\infty$ $\imples\,\mathfrak{Q}V=0$
+\begin{equation}
+   \langle\mathcal{O}[\phi]\rangle_t=\int\limits_{\{a\in\mathbf{C}(\mathcal{M})|\mathfrak{Q}V=0\}} da\frac{e^{-S[a]}\,\mathcal{O}[a]}{\SDet\left[\frac{\delta^2 \mathfrak{Q}V[a]}{\delta a^2}\right]} 
+\end{equation}
+\end{block}
+\end{frame}
+\begin{frame}{Limits of the Index}
+First defined for \textbf{all} $\mathcal{N}=2$ theories \color{blue}[Gadde, Rastelli, Razamat, Yan '11]\color{black}. The limits can be defined for `\textit{all}' class $\mathcal{S}_k$ theories \color{blue}[TB, Pini, Pomoni (to appear)]\color{black}\newline
+\begin{itemize}
+    \item{ Hall-Littlewood $p,q\to0$, $t$ fixed $(2q_t=E+j_2\,,j_1=0)$\begin{equation*}
+        \mathrm{HL}=\Tr_{HL}(-1)^Ft^{q_t}
+    \end{equation*}}
+    \item{ Coulomb $t,p,q\to0$, $T=pq/t$, $V=p/q$ fixed $(E+2j_2+\frac{r}{2}+\frac{4q_t}{3}=0)$ \begin{equation*}
+        \mathcal{I}^C=\Tr_{C} (-1)^FT^{E+j_2}V^{j_1}
+    \end{equation*}}            
+\end{itemize}
+Can also define Macdonald $p/\sqrt{t}\to0$, $q$ fixed and Schur $q=t$ limits.\newline
+$\boxed{\text{Such limits }\textbf{do not }\text{exist for generic $\mathcal{N}=1$ theories!} }$
+\end{frame}
+\begin{frame}{Limits of the Index}
+Hall-Littlewood index: counts $Q,\widetilde{Q}, \widetilde{\mathcal{Q}}_{\dot+}\overline{\Phi}=\overline{\lambda}\implies$ these all have $2q_t=E+j_2,j_1=0$ and are Higgs branch $\mathbf{HB}$ type operators (plus the extra fermions). For genus zero Lagrangian theories it turns out that \color{blue}[Gadde, Rastelli, Razamat, Yan '11]\color{black}
+\begin{equation*}
+    \mathrm{HL}=\mathrm{Hilb}(t;\mathbf{HB})
+\end{equation*}
+Coulomb index: counts $\Phi\implies$ these have $E+2j_2+\frac{r}{2}+\frac{4q_t}{3}=0$ and are Coulomb branch $\mathbf{CB}$ type operators and we have
+\begin{equation*}
+    \mathcal{I}^C=\mathrm{Hilb}(T;\mathbf{CB})
+\end{equation*}
+The Hilbert series of the variety $\mathbf{M}$ counts independent holomorphic functions
+\begin{equation*}
+    \mathrm{Hilb}(t;\mathbf{M})=\Tr_{\mathbf{M}}t^E\,,\quad  \begin{aligned}\mathrm{Hilb}(t;\mathbb{C}^2)=&1+2t+3t^2=(1-t)^{-2}\\
+    &1\,, \, [z_1,z_2]\,,\, [z_1^2,z_2^2,z_1z_2]\end{aligned}
+\end{equation*}
+
+\end{frame}
+\subsection{Instanton Counting for Class $\mathcal{S}_k$}
+\begin{frame}{Instantons for Class $\mathcal{S}_k$}
+\begin{block}{Partition function over Instantons}
+\begin{itemize}
+  \itemsep1em
+    \item{$Z_{\text{inst}}=\sum_nq^KZ_K$ played an important role in $\mathcal{N}=2$ $\mathbb{S}^4$ partition function. $Z_{\mathbb{S}^4}\sim\int daZ_{\text{pert}}|Z_{\text{inst}}|^2$}
+    \item{Instantons in susy gauge theories embed in string theory $\implies$ can compute of $Z_{\text{inst}}$ for class $\mathcal{S}_k$}
+\end{itemize}
+\end{block}
+\begin{block}{String theory construction}
+\begin{itemize}
+\itemsep1em
+\item{Embed in Type-IIA \color{blue}[Witten '97]\color{black}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+               \multicolumn{1}{c|}{} &\multicolumn{4}{c|}{$\mathbb{C}^2$}&\multicolumn{2}{c|}{$\mathbb{R}^2$}&\multicolumn{1}{c|}{$\mathbb{S}^1$}&\multicolumn{3}{c|}{$\mathbb{R}^3_{\perp}$}\\\hline
+             $N$ D4 & --&--&--&--&$\cdot$&$\cdot$&--&$\cdot$&$\cdot$&$\cdot$ \\\hline
+             NS5 &--&--&--&--&--&--&$\cdot$&$\cdot$&$\cdot$&$\cdot$ \\\hline
+             $\mathbb{Z}_k$ &$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\times$&$\times$&$\cdot$&$\times$&$\times$&$\cdot$ \\\hline
+              $K$ D0 &$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\cdot$&$\cdot$&--&$\cdot$&$\cdot$&$\cdot$ \\\hline
+        \end{tabular}
+    \end{center}}
+
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{ADHM Construction}
+\begin{equation*}
+   \boxed{ \text{$K$ instantons in a D$p$-brane $\equiv$ $K$} D$(p-4)$-branes}
+\end{equation*}
+    \begin{figure}
+  \centering
+  \input{n2qcdbrane.tikz}
+\end{figure}
+\begin{itemize}
+\item{D$0$ Higgs branch = ADHM moduli space of instantons
+\begin{equation*}
+    \mathbf{M}^{\text{D}4}_{\text{inst}}\cong\mathbf{HB}^{\text{D}0}
+\end{equation*}\text{\color{blue}[Douglas '95] [Witten '95] [Douglas '96]}}
+    \item {Reduction to 0d of 2d theory with at least one supercharge $\mathcal{Q}_+$}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Computation of $Z_{\text{inst}}$}
+\begin{itemize}
+    \item {Partition function $Z_{\text{D}0}$ for sigma model living on $K$ D$0$-branes equals $Z_K$}
+   % \item {\alert{Fact}: Higgs branch is invariant under circle compactification (When we have susy)}
+    %\item{Lift the 0d theory to a 2d theory on $\mathbb{S}^1\times\mathbb{S}^1$ (2$\times $T-duality: D$0$ $\to$ D$2$). Radii $\beta_1$, $\beta_2$}
+    \item{$\mathbb{S}^1\times\mathbb{S}^1$ partition function is supersymmetric index of the 2d theory!
+        \begin{equation*}
+        Z_K=Z_{\text{D}0}=\lim_{\beta_1,\beta_2\to0}\mathcal{I}_{\text{D}2}
+    \end{equation*}}
+    \item{$\mathcal{Q}_+$ is \alert{preserved} we are counting gauge invariant operators on $\mathbb{R}^2/\mathbb{Z}_k$ which have $\{\mathcal{Q}_+,\mathcal{Q_+}^{\dagger}\}=0$}
+    \item{We can play the same games and compute 
+        \begin{equation*}
+        \mathcal{I}_{\text{D$2$}}=\Tr(-1)^Fq^{H_-}v^{2j_1}t^{2j_D}\mathbf{x}^{\mathbf{f}}
+    \end{equation*} by projecting onto the $\mathbb{Z}_k$-invariant states \color{blue}[TB, Pomoni '17]\color{black}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Orbifolding to Class $\mathcal{S}_k$}
+        \begin{center}
+        \boxed{
+       \mathcal{I}_{\text{D2}}=\int \left[d\mu_G(\mathbf{z})\right]\mathrm{PE}\left[\sum_{\{\text{multiplets}\}}i^{\text{orb}}_{multiplet}(q,\mathbf{z},\dots)\right] }
+        \end{center}
+\begin{itemize}
+\item{Take the limit}
+    \end{itemize}
+\begin{equation*}
+\begin{aligned}
+    \lim_{\beta_1,\beta_2\to0} \mathcal{I}_{\text{D2}}\propto\prod_{i=1}^k\int \prod_{I=1}^{K_i}du_{i,I}\prod_{I=1}^{K_i}\frac{u_{ii,IJ}'\prod_{j\neq i}\prod_{J=1}^{K_j}\left(u_{ij,IJ}-2\epsilon_+\right)}{\prod_{j=1}^k\prod_{J=1}^{K_j}\left(u_{ij,IJ}+\epsilon_1\right)\left(u_{ij,IJ}+\epsilon_2\right)}&\\
+    \times\prod_{j=1}^k\prod_{I=1}^{K_i}\prod_{A=1}^N\frac{\left(u_{i,I}-\widetilde{m}_{L,j,A}\right)\left(u_{i,I}-\widetilde{m}_{R,j,A}\right)}{\left(u_{i,I}-\widetilde{a}_{j,A}-\epsilon_+\right)\left(u_{i,I}-\widetilde{a}_{j,A}+\epsilon_+\right)}&
+    \end{aligned}
+\end{equation*}
+\begin{itemize}
+\item{We expect this to be equal to the integration over the moduli space of $\{K_1,K_2,\dots,K_k\}$ instantons for this $\mathcal{N}=1$ theory}
+    \end{itemize}
+\end{frame}
+
+
+% Placing a * after \section means it will not show in the
+% outline or table of contents.
+\section{Conclusions and Future Directions}
+
+\begin{frame}{Conclusions and Future Directions}
+  \begin{itemize}
+\item{$Z_{\text{inst}}$ equal to $\mathcal{W}_{kN}$ conformal blocks - AGT?}
+  \end{itemize}
+\end{frame}
+
+
+\end{document}
+
+

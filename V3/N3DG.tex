@@ -1,0 +1,1095 @@
+\documentclass[main.tex]{subfiles}
+\begin{document} 
+\textit{The work in this chapter is based on \cite{Bourton2018}.}
+\section{Introduction}
+Very recently Garc{\'i}a-Etxebarria and Regalado have proposed a construction of genuine 4d $\mathcal{N}=3$ supersymmetric theories \cite{Garcia-Etxebarria:2015wns}. Much progress has been made towards understanding the properties of 4d $\mathcal{N} = 1,2,4$ theories but the $\mathcal{N} = 3$ case had been long ignored.
+This is due to the fact that, preceding their work, no example of an $\mathcal{N} = 3$ SCFT that did not enhance to $\mathcal{N}=4$ supersymmetry was known.
+
+One reason for this is the fact that the only multiplet of $\mathcal{N} = 3$ supersymmetry that one can use to write down a renormalisable, local Lagrangian density is the free vector multiplet which, after imposing CPT invariance, has identical field content to the $\mathcal{N}=4$ vector multiplet. Thus, there are no free genuinely $\mathcal{N} = 3$ theories and all genuinely $\mathcal{N} = 3$ theories have to be strongly coupled.
+
+Garc{\'i}a-Etxebarria and Regalado considered $\mathcal{N} = 3$ theories embedded in type IIB string theory (F-theory) by generalizing the well known orientifold construction to $\mathcal{N} = 3$ preserving S-folds.
+The S-fold includes a $\mathbb{Z}_k$ projection on both the R-symmetry directions as well as the $SL(2,\mathbb{Z})$
+S-duality group of Type-IIB (the torus of F-theory). As pointed out in \cite{Aharony:2016kai}, via a classification of different variants of S-folds, one may create a large variety of $\mathcal{N}=3$ theories further distinguished by an analogue of discrete torsion. More new $\mathcal{N}=3$ SCFTs were also proposed \cite{Argyres:2016yzz} via gauging a discrete subgroup of the global symmetry group of $\mathcal{N}=4$ SYM.
+
+The first to seriously consider the consequences of $\mathcal{N} = 3$ supersymmetry was \cite{Aharony:2015oyb}
+who, by studying the $\mathcal{N} = 3$ superconformal algebra representations, were able to reveal several basic properties that consistent $\mathcal{N}=3$ QFTs should possess; were they to exist. These properties include:
+\begin{itemize}
+\item Conformal anomalies: $a=c$ (as is the case for $\mathcal{N} = 4$ theories, while generic $\mathcal{N}=2$ theories have $a\neq c$).\footnote{Recall that these are the coefficients appearing in the 1-point function of the trace of the stress-tensor\begin{equation}
+\langle \tr T\rangle=\frac{c}{16\pi^2}C^2-\frac{a}{2}|\det g|\star e
+\end{equation}
+where $C$ is the Weyl tensor and $e=\frac{1}{4\pi^2}\Pf(Riem)$ is the $d=4$-form Euler density, with $Riem$ the Riemann Tensor of the Levi-Civita connection associated to metric $g$.}
+\item Global symmetries: $SU(2,2|3)\times H$, where $H$ is discrete.
+\item Trivial conformal manifold: No marginal couplings, they are strongly coupled isolated fixed points; no Lagrangian description.
+\item No $\mathcal{N}=3$ preserving relevant deformations (because there are no continuous flavour symmetries).
+\item Viewed as $\mathcal{N}=2$ theories there is a $U(1)_f$ flavour symmetry $SU(2,2|2)\times U(1)_f\subset SU(2,2|3)$.
+\end{itemize}
+
+Because $\mathcal{N}=3$ SCFTs do not have a Lagrangian description they can be studied only with certain tools. Representation theory alone has taken us very far \cite{Aharony:2015oyb,Cordova:2016xhm,Evtikhiev:2017heo}.
+String-, F- and M-theoretic constructions provide the primary way that we have to study $\mathcal{N}=3$ SCFTs \cite{Garcia-Etxebarria:2015wns,Garcia-Etxebarria:2016erx}. The Type-IIB description allows for an $AdS$ gravity dual description which can be used to examine the properties of $\mathcal{N}=3$ theories in the large $N$ limit \cite{Garcia-Etxebarria:2015wns,Aharony:2016kai,Imamura:2016abe}. Moreover, $\mathcal{N}=3$ theories have Seiberg-Witten solutions \cite{Seiberg:1994aj,Seiberg:1994rs} which encode the low energy effective action of the theory on the Coulomb branch. Various aspects of the Coulomb branches for these theories have been studied in \cite{Argyres:2015ffa,Argyres:2015gha,Argyres:2016xua,Argyres:2016xmc,Aharony:2016kai,Aharony:2015oyb,Argyres:2016yzz,Argyres:2018wxu}.
+Another powerful tool is the superconformal bootstrap which has been employed in \cite{Lemos:2016xke}.
+The bootstrap can also be suplemented with chiral algebra techniques \cite{Beem:2013sza} and has been studied in \cite{Nishinaka:2016hbw,Lemos:2016xke}. Further techniques have been developed in \cite{Imamura:2016udl,Agarwal:2016rvx}.
+
+In this chapter we will focus on the moduli spaces of those $\mathcal{N}=3$ SCFTs that may be obtained by gauging a discrete symmetry of $\mathcal{N}=4$ SYM. We will bestow particular emphasis towards the Hilbert series for the moduli spaces of these theories aswell as certain limits of the superconformal index. 
+
+This chapter is organized as follows: In Section \ref{sec:N3Cons} we review the possible constructions of $\mathcal{N}=3$ SCFTs; both S-folding and discrete gauging. This gives us the opportunity to discuss in detail the symmetries of both the mother and the daughter theories and to embed the discrete subgroup that we want to gauge in the $SU(4)$ R-symmetry group and the $SL(2,\mathbb{Z})$ S-duality group of $\mathcal{N}=4$ SYM. 
+In Section \ref{sec:su22Nrepn} we gather some facts about the representation theory of $\mathfrak{su}(2,2|\mathcal{N})$ superconformal algebras that we will need for the index computation and interpretation.
+In Section \ref{sec:Index} we introduce the refined version of the superconformal index, its Coulomb branch limit and the Higgs branch Hilbert series; the discrete gauging prescription is presented.
+Section \ref{sec:rank1} is devoted to rank one examples. 
+Section \ref{sec:rankN} deals with higher rank examples. We focus on the Coulomb and Higgs branches. Our higher rank computations allow us to make new predictions for these theories. 
+Finally, in Section \ref{sec:largeN} we compute the single trace index in the large $N$ limit and compare to the $AdS$/CFT result of \cite{Imamura:2016abe}.
+
+\section{Constructions of \texorpdfstring{$\mathcal{N}=3$}{N=3} SCFTs}\label{sec:N3Cons}
+\subsection{S-Folds}\label{sec:sfold}
+One possible way to realise $\mathcal{N}=3$ SCFTs is via S-folds. S-folds were originally introduced in \cite{Garcia-Etxebarria:2015wns} and are non-perturbative generalisations of the standard orientifolds in string theory. The construction introduced in \cite{Garcia-Etxebarria:2015wns} goes as follows: consider F-theory on $\mathbb{R}^4\times\left(\mathbb{R}^6\times T^2\right)/\mathbb{Z}_k$. The $\mathbb{Z}_k\subset Spin(6)\times SL(2,\mathbb{Z})$ and we denote its generator in $\mathfrak{su}(4)\iso\mathfrak{so}(6)$ to be $r_k$ which acts on the coordinates $X^i$, $i=1,\dots,6$ of $\mathbb{R}^6$ by rotation corresponding to
+\begin{equation}
+R_k=e^{\frac{2\pi\iu}{k} (q_1+q_2-q_3)}=\begin{pmatrix}
+\hat{R}_k&0&0\\
+0&\hat{R}_k&0\\
+0&0&\hat{R}_k^{-1}
+\end{pmatrix}\in SO(6)\,,
+\end{equation}
+where $\hat{R}_k$ denotes rotation by $2\pi/k$ in the corresponding 2-plane. $q_1$, $q_2$, $q_3\in\mathfrak{so}(6)$ denote the Cartan generators of $\mathfrak{so}(6)$. The corresponding element in $SU(4)\iso Spin(6)$ is just
+\begin{equation}\label{eqn:Rsym}
+\widetilde{R}_k=e^{\frac{2\pi\iu}{k}r_k}=e^{\frac{2\pi\iu}{k} (\frac{R_1}{2}+R_2+\frac{3R_3}{2})}=\begin{pmatrix}
+e^{\iu\pi/k}&0&0&0\\
+0&e^{\iu\pi/k}&0&0\\
+0&0&e^{\iu\pi/k}&0\\
+0&0&0&e^{-3\iu\pi/k}
+\end{pmatrix}\in SU(4)\,.
+\end{equation}
+We choose a basis for the Cartans $R_1$, $R_2$, $R_3\in\mathfrak{su}(4)$ given by\footnote{We use the same conventions as in \cite{Kinney:2005ej} and the $\mathfrak{so}(6)$ Dynkin labels $(q_1,q_2,q_3)$ are related to the $\mathfrak{su}(4)$ Dynkin labels $(R_1,R_2,R_3)$ by
+\begin{equation*}
+q_1=\frac{R_1}{2}+R_2+\frac{R_3}{2}, \ \ q_2=\frac{R_1}{2}+\frac{R_3}{2}, \ \ q_3=\frac{R_1}{2}-\frac{R_3}{2}\,.
+\end{equation*}
+} 
+\begin{gather}
+R_1=\diag(1,-1,0,0)\,,\quad R_2=\diag(0,1,-1,0)\,,\\ R_3=\diag(0,0,1,-1)\,.
+\end{gather}
+On the other hand the quotient on the torus acts as an involution of the torus only for $k=1,2,3,4,6$. Moreover $k=3,4,6$ require fixed complex structure of $\tau=e^{\iu\pi/3},\iu,e^{\iu\pi/3}$ respectively. In that case we denote the generator of $\mathbb{Z}_k\subset SL(2,\mathbb{Z})$ by $s_k$. $s_k$ acts on the coordinate $x+\tau y$ of the $T^2$ corresponding to $S_k\in SL(2,\mathbb{Z})$ with
+\begin{equation}\label{eqn:Sduality}
+S_2=\begin{pmatrix}
+-1&\phantom{-}0\\
+\phantom{-}0&-1
+\end{pmatrix}\,,\quad S_3=\begin{pmatrix}
+\phantom{-}0&\phantom{-}1\\
+-1&-1
+\end{pmatrix}\,,
+\end{equation}
+\begin{equation}
+S_4=\begin{pmatrix}
+\phantom{-}0&\phantom{-}1\\
+-1&\phantom{-}0
+\end{pmatrix}\,,\quad S_6=\begin{pmatrix}
+0&-1\\
+1&\phantom{-}1
+\end{pmatrix}\,.
+\end{equation}
+The elements of $\mathbb{Z}_k\subset Spin(6)\times SL(2,\mathbb{Z})$ are of the form $e^{\frac{2\pi\iu}{k}(r_k+ s_k)}$ , corresponding to the combined action \eqref{eqn:Rsym} and \eqref{eqn:Sduality}.
+
+After taking the Type-IIB limit of F-theory the singular geometry can be probed with a stack of $N$ D3-branes. The resulting low energy theory on the D3-branes (for $k=3,4,6$) is a strongly interacting $\mathcal{N}=3$ SCFT. In Appendix \ref{sec:preservedSCA} we explicitly show the supercharges that are preserved by the $\mathbb{Z}_k$ quotient.
+
+A careful analysis \cite{Aharony:2016kai} of the discrete global symmetries indicates, as for the $(k=2)$ $O3^{\pm},\widetilde{O3}^{\pm}$ perturbative orientifolds, the $k=3,4,6$ S-folds are characterised by different $\mathbb{Z}_p\subset\mathbb{Z}_k$ global symmetries. The S-fold variants are then labelled by $k,\ell=k/p$. We denote the theory of $N$ D3-branes by $S^N_{k,\ell}$ and it has Coulomb branch operators of dimension
+\begin{equation}
+k\,,\,2k\,,\,\dots\,,\,(N-1)k\,;\,N\ell \, ,
+\end{equation}
+corresponding to Coulomb branch operators $\left(\sum_{i=1}^Nz^{jk}_i\right)$, $j=1,\dots,N-1$, and the Pfaffian-like operator $(z_1z_2\dots z_N)^{\ell}$ where $z_i$ denote the positions of the D3-branes in $\mathbb{C}/\mathbb{Z}_k$. Consequently the theory has central charge given by \cite{Argyres:2007tq,Shapere:2008zf,Aharony:2016kai}
+\begin{equation}\label{eqn:Sfoldac}
+a_{k,\ell}=c_{k,\ell}=\frac{kN^2+(2\ell-k-1)N}{4}\,.
+\end{equation}
+The theory $S_{k,\ell}^N$ associated to each value of $k$, $\ell$ has a global symmetry of (at least) $\mathbb{Z}_p=\mathbb{Z}_{k/\ell}$ which acts on the Pfaffian-like operator \newline$(z_1z_2\dots z_N)^{\ell}\mapsto (e^{2\pi\iu/k} z_1z_2\dots z_N)^{\ell}=e^{2\pi\iu/p}(z_1z_2\dots z_N)^{\ell}$ while acting trivially on every other Coulomb branch operator. By gauging $\mathbb{Z}_{p'}\subset\mathbb{Z}_{p}\subset\mathbb{Z}_k$ discrete symmetry we obtain further theories 
+\begin{equation}\label{eqn:sfolddisgauge}
+S^N_{k,\ell}\xrightarrow{\text{$\mathbb{Z}_{p'}$ gauging}} S^N_{k,\ell,p'} \, ,
+\end{equation} 
+which, since they arise as discrete gauging of a `parent' theory, have central charge \eqref{eqn:Sfoldac} and the theory $S^N_{k,\ell,p'}$ has Coulomb branch operators of dimension
+\begin{equation}\label{eqn:sfolddiscgauge}
+k\,,\,2k\,,\,\dots\,,\,(N-1)k\,;\,Np'\,.
+\end{equation}
+Since the $\mathbb{Z}_{p'}$ acts non-trivially only on a single operator quotienting by $\mathbb{Z}_{p'}$ does not introduce relations and the corresponding ring is freely generated.
+\subsection{Discrete Gauging}\label{sec:SdualN=41}
+In this paper we use a different construction to the one described in Section \ref{sec:sfold}. Consider instead $\mathcal{N}=4$ SYM with gauge group $G$. The theory has an exactly marginal gauge coupling $\tau$. $\mathcal{N}=4$ SYM (on $\mathbb{R}^4$) has an S-duality group generated by \cite{MONTONEN1977117,GNO,Vafa:1994tf,Argyres:2006qr,Dorey:1996hx,Girardello:1995gf,Kapustin:2006pk}
+\begin{equation}\label{eqn:Sdual}
+\left(\tau\,,G\right)\mapsto \left(\tau+1\,,G\right)\,\quad \text{and} \quad\left(\tau\,,G\right)\mapsto\left(-\frac{1}{\lambda_q^2\tau}\,,{}^LG\right)\, ,
+\end{equation}
+where $\lambda_q=2\cos\frac{\pi}{q}$ and ${}^LG$ denotes the Langlands dual of $G$. The action on $\tau$ forms a group known as a Hecke group $H(\lambda_q)\subset SL(2,\mathbb{Z}\left[\lambda_q\right])$. $H(\lambda_q)$ can be represented by
+\begin{equation}
+H(\lambda_q)\iso\langle S,T|S^4=1,(ST)^{2q}=1\rangle\iso C_4\star C_{2q}\,.
+\end{equation}
+An explicit matrix representation is given by
+\begin{equation}
+T=\begin{pmatrix}
+1&1\\
+0&1
+\end{pmatrix}\,,\quad S =\begin{pmatrix}
+0&-\lambda_q^{-1}\\
+\lambda_q&0
+\end{pmatrix}\,.
+\end{equation}
+For $q=3$ $H(\lambda_3)=H(1)=SL(2,\mathbb{Z})$. Let $\mathfrak{g}=Lie(G)$. When $\mathfrak{g}=ADE$ (or $\mathfrak{u}(N)$) $q=3$ while for $\mathfrak{g}=BCF$ $q=4$ and for $\mathfrak{g}=G_2$ $q=6$.
+\begin{comment} It can be shown that
+\begin{equation}\label{eqn:Heckegroup}
+H(\lambda_q)\iso\langle s,t,w|s^2=t^q=w,w^2=1\rangle \, ,
+\end{equation}
+with the isomorphism made by $s=S$, $t=ST$ \cite{singerman1998,ikikardes2006,LANG2000220}.\footnote{Generally Hecke groups are usually discussed for $\tau\in\mathbb{H}$ in that case they are related to our discussion as $H'(\lambda_q)=H(\lambda_q)/\langle w\rangle$, then $H'(\lambda_3)\iso PSL(2,\mathbb{Z})$. When we say Hecke group we always mean the $\mathbb{Z}_2$ central extension $0\to H'(\lambda_q)\to H(\lambda_q)\to\mathbb{Z}_2\to0$.} 
+\end{comment}
+We define the \textit{self-duality group} of the theory with gauge group $G$ to be the subset of transformations $\tau\mapsto\tau'$ in $H(\lambda_q)$ which map the theory to itself. When one considers non-local operators this subset of transformations is generally a subgroup of $H(\lambda_q)$ due to the fact that $G\mapsto{}^LG$ clearly changes the global structure of the theory and therefore the spectrum of non-local operators. However, at the level of local operators,    
+when $\mathfrak{g}=ADE$ (or $\mathfrak{u}(N)$) we have $\mathfrak{g}={}^L\mathfrak{g}$ and then at the level of local operators the \textit{self-duality group} is simply the full $SL(2,\mathbb{Z})$. On the other hand when $\mathfrak{g}=BCFG$ then $\mathfrak{g}\neq{}^L\mathfrak{g}$. In particular $B_N\neq{}^LB_N\iso C_N$, $F_4\neq{}^LF_4\iso F_4$ and $G_2\neq{}^LG_2\iso G_2$\footnote{S-duality transformations for non-simply-laced Lie algebras are more complicated. In the particular cases of $G_2$ and $F_4$ Lie algebras we can perform a rotation on the root system of the corresponding Langland dual algebras $^{L}G_2 = G_2^{'}$ and $^{L}F_4 = F_{4}^{'}$ such that these turn out to be isomorphic to the initial one \cite{Argyres:2006qr}.} and the \textit{self-duality group} even at the level of local operators is reduced to a subgroup of $H(\lambda_q)$.\footnote{The Langlands dual algebra is obtained by exchanging $\alpha\mapsto\alpha^{\vee}=\frac{2}{(\alpha\cdot\alpha)}\alpha$. For simply laced algebras we have $\alpha^{\vee}=\alpha$ and $\mathfrak{g}={}^L\mathfrak{g}$. On the other hand, when $\mathfrak{g}$ is not simply laced $\alpha^{\vee}\neq\alpha$ if $\alpha$ is a long root and $\mathfrak{g}\neq{}^L\mathfrak{g}$.} In this paper we will discuss only the cases when $\mathfrak{g}={}^L\mathfrak{g}$.
+
+Let us now discuss the possible symmetry enhancements. $H(\lambda_q)$ has finite cyclic subgroups given by
+\begin{gather}\label{eqn:taufix}
+\text{$H(\lambda_q)\supset \mathbb{Z}_{\kgg}$ for $\kgg=\{2,4,q,2q\}$}\\\text{ fixes $\tau=\left\{\text{any},\frac{\iu}{2\cos\frac{\pi}{q}},-\frac{1}{2}+\frac{\iu}{2}\tan\frac{\pi}{q},-\frac{1}{2}+\frac{\iu}{2}\tan\frac{\pi}{q}\right\}$}\,,
+\end{gather}
+where we take only those fixed points with $\text{Im }\tau\geq0$. For $q=3$ these of course reduce to the usual order $\kgg=4,3,6$ $SL(2,\mathbb{Z})$ fixed points at $\tau=\iu,e^{\iu\pi/3},e^{\iu\pi/3}$.
+
+At a generic point on the conformal manifold the global symmetry group of the theory is at least $PSU(2,2|4)$. On the other hand, for $\tau$ fixed as in \eqref{eqn:taufix}, the global symmetry group (acting on local operators) has a $\mathbb{Z}_n$  enhancement for ${\kgg}=3,4,6$ where the $\mathbb{Z}_{\kgg}$ is generated by \eqref{eqn:Sduality}. We use the notation $\mathbb{Z}_{\kgg}$ since
+%, as we will discuss below,
+${\kgg}$ should generally be considered unrelated to the parameters $k,\ell,p'$ appearing in the S-fold construction of the previous section. From now one we restrict out attention to $q=3$. We therefore have a discrete global symmetry
+\begin{equation}\label{eqn:Zkgauge}
+\mathbb{Z}_{\kgg}\subset SU(4)\times SL(2,\mathbb{Z})
+\end{equation}
+generated by $r_{\kgg}+ s_{\kgg}$. We may consider gauging the $\mathbb{Z}_{\kgg}$ (or in the case when ${\kgg}$ is not prime, subgroups of the $\mathbb{Z}_{\kgg}$) global symmetry \cite{Argyres:2016yzz}. Doing so results in a new theory with a different spectrum of local and non-local operators, but, with equivalent local dynamics and therefore the same values for the $a$ and $c$ anomaly coefficients. One may also worry that this $\mathbb{Z}_{\kgg}$ may have non-vanishing 't Hooft anomalies. We give an argument that this is not the case (at least for the topologically twisted theory on $\mathbb{S}^1\times \mathbb{S}^3$) in Appendix \ref{Sec:thooftanomaly}. 
+The action \eqref{eqn:Zkgauge} preserves the same supercharges as the $\mathbb{Z}_k$ S-fold, i.e. the ${\kgg}=3,4,6$ discrete gaugings preserves four dimensional $\mathcal{N}=3$ supersymmetry.
+Therefore, the theories we will construct are to be labelled by the parent $\mathcal{N}=4$ theory and the discrete group to be gauged. The possible parent theories are labelled by a choice of gauge group $G$. We will only consider parent theories where $G$ is connected. 
+
+Moreover, since we will eventually be interested in computing quantities sensitive only to the local operator spectrum, the global form of the gauge group will not play a role in the computations\footnote{Since $\pi_1\left(\mathbb{S}^3\right)=\pi_2\left(\mathbb{S}^3\right)=\{1\}$ the superconformal index ($\mathbb{S}^3\times\mathbb{S}^1$ partition function) is sensitive only to the spectrum of local operators i.e., for connected groups, a choice of Lie algebra $\mathfrak{g}$.} and therefore the theories can rather be labelled by the Lie algebra $\mathfrak{g}$ of $G$. 
+
+\subsubsection{Coulomb Branch}
+Let us now briefly compare with the construction in the previous subsection. Considered as an $\mathcal{N}=2$ theory we have algebraically independent (over $\mathbb{C}$) Coulomb branch operators $u_j$, $1\leq j\leq N$ , $N:=\rank\mathfrak{g},$ of dimension $E(u_j)$. In the notation of \cite{DolanOsborn} the $u_j$'s are the highest weight states of the chiral $\mathcal{E}_{r,(0,0)}$ multiplets, with conformal dimension $E(u_j)=r(u_j)$ where $r(u_j)$ is the charge under the $\mathfrak{u}(1)_r$ of the $\mathcal{N}=2$ superconformal algebra (see Table \ref{tab:short}). They are built up out of $\mathfrak{g}$-invariant combinations of the scalar $X\in\mathfrak{h}$ in the $\mathcal{N}=2$ vector multiplet, where $\mathfrak{h}$ is a Cartan subalgebra of $\mathfrak{g}$, while setting the adjoint hypermultiplet scalars $Y=Z=0$. Let us now go to a point on the conformal manifold where we have an enhanced $\mathbb{Z}_{\kgg}$ global symmetry generated by $r_{\kgg}+ s_{\kgg}$. In comparison with the discussion \eqref{eqn:Sfoldac}-\eqref{eqn:sfolddiscgauge} this $\mathbb{Z}_{\kgg}$ global symmetry acts non-trivially on multiple Coulomb branch operators of the parent theory, namely
+\begin{equation}\label{eqn:disgaugeZnaction}
+\mathbb{Z}_{\kgg}: u_j\mapsto e^{\frac{2\pi\iu}{\kgg} E(u_j)}u_j\,.
+\end{equation}
+It is clear that this $\mathbb{Z}_{\kgg}$ action does not generically generate a complex reflection group $G(N,m,\kgg)$\footnote{See equation (2.10) of \cite{Aharony:2016kai} for a definition.} on the Coulomb branch chiral ring 
+\begin{equation}
+CB_{\mathfrak{g}}:=\mathbb{C}\left[u_1,u_2,\dots,u_{N}\right]\,,\quad N:=\rank\mathfrak{g}=\dim_{\mathbb{C}}CB_{\mathfrak{g}}\,.
+\end{equation}
+Therefore, by the Chevalley-Shephard-Todd theorem \cite{shephard1954finite,Aharony:2016kai}, the resulting quotient ring generically has relation(s). Hence, when $\rank\mathfrak{g}\geq2$ and $\kgg\geq2$, the quotient of the Coulomb branch of the parent theory $\mathbf{CB}_{\mathfrak{g}}$ by \eqref{eqn:disgaugeZnaction}
+\begin{equation}\label{eqn:CBquotient}
+\mathbf{CB}_{\mathfrak{g},\kgg}:=\mathbf{CB}_{\mathfrak{g}}/\mathbb{Z}_{\kgg}
+\end{equation}
+generally has a non-planar topology. We will see that the structure of the coordinate ring can be often be deduced by studying the Coulomb branch index. Some properties of non-freely generated Coulomb branch chiral rings have been described in \cite{Argyres:2017tmj}.
+We would also like to point out that in \cite{Aharony:2016kai} discrete gauging which results in non-freely generated Coulomb branches was explicitly not considered. They considered discrete gauging of the parent theories $S_{k,\ell}^N$ of only $\mathbb{Z}_{p'}\subset\mathbb{Z}_{k/\ell}$ discrete symmetry which acts non-trivially only on a single Coulomb branch operator. However these theories may have larger discrete symmetry groups which may act non-trivially on multiple Coulomb branch operators. Upon gauging such discrete symmetries one can obtain theories with non-freely generated Coulomb branches.
+Because the discrete gauging does not change the values of $a$ and $c$ we expect them to be equal to those of the $\mathcal{N}=4$ parent theory. If the Coulomb branch operators of the $\mathcal{N}=4$ parent theory have dimension $E(u_i)$ then the $a$ and $c$ anomaly coefficients are given by \cite{Argyres:2007tq,Shapere:2008zf}
+\begin{equation}\label{eqn:discgaugeac}
+a=c=\sum_{i=1}^{\rank \mathfrak{g}}\frac{2E(u_i)-1}{4}\,.
+\end{equation}
+
+\subsubsection{Higgs Branch}
+Considered as a $\mathcal{N}=2$ theory the Higgs branch is reached by setting $X=0$ and by giving diagonal vevs to the adjoint hypermultiplet scalars $Y,Z\in\mathfrak{h}$. The Higgs branch $\mathbf{HB}_{\mathfrak{g}}$ is then parametrised by $\mathfrak{g}$-invariant combinations $W_{i}^{(f)}$ of the $Y,Z$ that transform in the $f$-representation of $U(1)_f$. Where $U(1)_f$ is the flavour symmetry that all $\mathcal{N}=3$ theories have when seen as $\mathcal{N}=2$ theories; we will review this in Section \ref{sec:su22Nrepn}. In the notation of \cite{DolanOsborn} the $W_{i}^{(f)}$ are the highest weight states of $\hat{\mathcal{B}}_R$ multiplets and have $E=2R$ and $r=0$, where $R$ is the Cartan of the $\mathfrak{su}(2)_R$ R-symmetry of the $\mathcal{N}=2$ superconformal algebra (see Table \ref{tab:short}). When $\mathfrak{g}$ is non-abelian the Higgs branch-chiral ring $HB_{\mathfrak{g}}$ (the coordinate ring of the variety $\mathbf{HB}_{\mathfrak{g}}$) is generically non-freely generated. Since $Y,Z$ have $s_{\kgg}=0$ and $r_{\kgg}=r+f=f$ the $\mathbb{Z}_{\kgg}$ acts by
+\begin{equation}\label{eqn:HBaction}
+\mathbb{Z}_{\kgg}:W_{i}^{(f)}\mapsto e^{\frac{2\pi\iu}{\kgg}f}W_{i}^{(f)}\,.
+\end{equation}
+Therefore, after the discrete gauging, the Higgs branch is given by the quotient of the Higgs branch of the parent theory $HB_{\mathfrak{g}}$ by the $\mathbb{Z}_{\kgg}$ action \eqref{eqn:HBaction}
+\begin{equation}\label{eqn:HBdisgauge}
+\mathbf{HB}_{\mathfrak{g},\kgg}:=\mathbf{HB}_{\mathfrak{g}}/\mathbb{Z}_{\kgg}\,.
+\end{equation}
+In Section \ref{sec:Index} we discuss how to compute the Hilbert series of \eqref{eqn:HBdisgauge}.
+
+
+\section{\texorpdfstring{$\mathfrak{su}(2,2|\mathcal{N})$}{su(2,2|N)} Representation Theory}\label{sec:su22Nrepn}
+In this section we will describe some basic facts about representations of (the complexification of) $\mathfrak{su}(2,2|\mathcal{N})$ and their decompositions into subalgebras. 
+\subsection{\texorpdfstring{$\mathfrak{psu}(2,2|4)\to\mathfrak{su}(2,2|3)$}{psu(2,2|4)-> su(2,2|3)} Decomposition}
+The superconformal symmetry algebra of 4d $\mathcal{N}=4$ SYM  is given by $\mathfrak{su}(2,2|4)$. We are interested in unitary representations of $\mathfrak{psu}(2,2|\mathcal{N})$ that can be induced from representations of a bosonic subalgebra $\mathfrak{b}$. Unitary representations of $\mathfrak{psu}(2,2|\mathcal{N})$ are necessarily non-compact. the representations are labelled by $(E,j_1,j_2,R_1,R_2,R_3)$ which label representations under the maximal bosonic subalgebra
+\begin{equation}
+\mathfrak{b}=\mathfrak{u}(1)_E\oplus\mathfrak{su}(2)_1\oplus \mathfrak{su}(2)_2\oplus \mathfrak{su}(4) \subset \mathfrak{psu}(2,2|4)\,.
+\end{equation}
+Here $E$ labels the conformal dimension, $j_1,j_2$ label spin representations and \newline$R_1,R_2,R_3$ are the Dynkin labels of $\mathfrak{su}(4)$. 
+
+As we discussed in Section \ref{sec:N3Cons}, upon the $\mathbb{Z}_{\kgg}$ discrete gauging $\mathfrak{psu}(2,2|4)$ superconformal symmetry is broken down to $\mathfrak{su}(2,2|3)$ (for ${\kgg}=3,4,6$). Representations of this algebra are labelled by $(E,j_1,j_2,R_1,R_2,r_{\mathcal{N}=3})$ of the maximal compact bosonic subalgebra
+\begin{equation}
+\mathfrak{u}(1)_E\oplus\mathfrak{su}(2)_1\oplus \mathfrak{su}(2)_2\oplus \mathfrak{su}(3)\oplus\mathfrak{u}(1)_{r_{\mathcal{N}=3}} \subset \mathfrak{su}(2,2|3)\,.
+\end{equation}
+In particular $\mathfrak{su}(4)\to \mathfrak{su}(3)\oplus \mathfrak{u}(1)_{r_{\mathcal{N}=3}}$.
+%The exact subalgebra is given by the centraliser of the generator of \eqref{eqn:Rsym} in $\mathfrak{su}(4)_R$.
+The surviving supercharges are simply given by $\mathcal{Q}_{\alpha}^{I=1,2,3}$, $\widetilde{\Qfour}_{\dot\alpha I=1,2,3}$ and their conjugates. The Cartans of $\mathfrak{su}(3)$ are given by $R_1,R_2$ and $\mathfrak{u}(1)_{r_{\mathcal{N}=3}}$ is generated by 
+\begin{equation}
+r_{\mathcal{N}=3}=\frac{R_1}{3}+\frac{2R_2}{3}+R_3
+\end{equation}
+under which the $\Qfour_{\alpha}^{I=1,2,3}$ have $r_{\mathcal{N}=3}=\frac{1}{3}$ and $\widetilde{\Qfour}_{\dot\alpha I=1,2,3}$ have $r_{\mathcal{N}=3}=-\frac{1}{3}$. 
+
+One of the most important multiplets of $\mathfrak{psu}(2,2|4)$ are the half-BPS multiplets called $\mathcal{B}_{[0,R_2,0]}^{\frac{1}{2},\frac{1}{2}}$ in the language of \cite{DolanOsborn}. These multiplets obey maximal shortening given by $R_2=E$.
+The superconformal primaries of these multiplets are given by single trace operators of the form $\tr\phi^{(I_1J_1}\dots\phi^{I_mJ_m)}$ (see Table \ref{fig:N4vecletters} for conventions) with $(E,j_1,j_2,R_1,R_2,R_3)=(R_2,0,0,0,R_2,0)$. Under $\mathfrak{psu}(2,2|4)\to\mathfrak{su}(2,2|3)$ these multiplets decompose as
+\begin{equation}\label{B0m0}
+\mathcal{B}_{[0,R_2,0]}^{\frac{1}{2},\frac{1}{2}}\color{black}\iso\bigoplus_{i=0}^{R_2}\hat{\mathcal{B}}_{[R_2-i,i]}\color{black}\,.
+\end{equation}
+Note that this is a simple consequence of the branching of $\mathfrak{su}(4)\to\mathfrak{su}(3)\oplus\mathfrak{u}(1)_{r_{\mathcal{N}=3}}$
+\begin{equation}\label{eqn:su3branching}
+\mathbf{[0,R_2,0]}\to\bigoplus_{i=0}^{R_2}\mathbf{[R_2-i,i]}_{\frac{4i}{3}-\frac{2R_2}{3}}\,,
+\end{equation}
+where the subscript denotes the $\mathfrak{u}(1)_{r_{\mathcal{N}=3}}$ charge.
+The multiplets $\hat{\mathcal{B}}_{[R_1,R_2]}\color{black}$ obey the shortening condition $E=R_1+R_2$, $r_{\mathcal{N}=3}=\frac{2}{3}(R_2-R_1)$. The superconformal primary of these multiplets is given by an operator with 
+$(E,j_1,j_2,R_1,R_2,r_{\mathcal{N}=3})=\left(R_1+R_2,0,0,R_1,R_2,\frac{2R_2-2R_1}{3}\right)$ corresponding to the decomposition of \\$\tr\phi^{(I_1J_1}\dots\phi^{I_mJ_m)}$ under the branching \eqref{eqn:su3branching} . 
+
+\subsection{\texorpdfstring{$\mathfrak{su}(2,2|3)\to\mathfrak{su}(2,2|2)$}{su(2,2|3)->su(2,2|2)} Decomposition}
+For practical applications, rather than dealing with $\mathfrak{su}(2,2|3)$ representations, it is often convenient to choose a $\mathfrak{su}(2,2|2)\subset \mathfrak{su}(2,2|3)$ subalgebra. Representations of this algebra are labelled by $(E,j_1,j_2,R,r)$ under the maximal bosonic subalgebra
+\begin{equation}\label{eqn:su222maximal}
+\mathfrak{u}(1)_R\oplus\mathfrak{su}(2)_{1}\oplus\mathfrak{su}(2)_2\oplus\mathfrak{su}(2)_R\oplus\mathfrak{u}(1)_r\subset\mathfrak{su}(2,2|2)\,.
+\end{equation} 
+There are essentially three different choices of such subalgebras. Throughout this paper we will require only one and we choose it to contain $\Qfour_{\alpha}^{I=1,2}$ and $\widetilde{\Qfour}_{\dot\alpha I=1,2}$ as the $\mathcal{N}=2$ supercharges. This corresponds to $\mathfrak{su}(3)\oplus\mathfrak{u}(1)_{r_{\mathcal{N}=3}}\to\mathfrak{su}(2)_R\oplus\mathfrak{u}(1)_r\oplus\mathfrak{u}(1)_f$. The Cartan of $\mathfrak{su}(2)_R$ is given by $R$ and we take\footnote{Our conventions for $r,R,f$ are chosen to match those of \cite{Nishinaka:2016hbw}.}
+\begin{equation}\label{eqn:N2subalgebra}
+r=\frac{R_1}{2}+R_2+\frac{R_3}{2}\,,\quad R=\frac{R_1}{2}\,,\quad f=R_3\,.
+\end{equation}
+Let us now list the branching of the multiplets $\hat{\mathcal{B}}_{[R_1,R_2]}$ under $\mathfrak{su}(2,2|3)\color{black}\to\mathfrak{su}(2,2|2)\oplus\mathfrak{u}(1)_f$. For $\mathfrak{su}(2,2|2)$ multiplets we use the notation of \cite{DolanOsborn}. See also \cite{Cordova:2016emh,Lemos:2016xke} for more general $\mathcal{N}=3\to\mathcal{N}=2$ multiplet decompositions. We have, valid for $R_1R_2\neq0$,
+\begin{equation}\label{eqn:Bnmdecomp}
+\begin{aligned}
+\hat{\mathcal{B}}_{[R_1,R_2]}\color{black}\simeq\,& \hat{\mathcal{B}}^{(R_2-R_1)}_{\frac{R_1+R_2}{2}}\oplus\mathcal{D}^{(R_2-R_1-1)}_{\frac{R_1+R_2-1}{2}(0,0)}\oplus\overline{\mathcal{D}}^{(R_2-R_1+1)}_{\frac{R_1+R_2-1}{2}(0,0)}\oplus\hat{\mathcal{C}}^{(R_2-R_1)}_{\frac{R_1+R_2-2}{2}(0,0)}\\
+&\oplus\bigoplus_{i=0}^{R_2-2}\left(\mathcal{B}_{\frac{R_1+i}{2},R_2-i(0,0)}^{(i-R_1)}\oplus\mathcal{C}_{\frac{R_1-1+i}{2},R_2-i-1(0,0)}^{(i-R_1+1)}\right)\\
+&\oplus\bigoplus_{i=0}^{R_1-2}\left(\overline{\mathcal{B}}_{\frac{R_2+i}{2},i-R_1(0,0)}^{(R_2-i)}\oplus\overline{\mathcal{C}}_{\frac{R_2+i-1}{2},i+1-R_1(0,0)}^{(R_2-i-1)}\right) \, ,
+\end{aligned}
+\end{equation}
+here the superscript lists the $\mathfrak{u}(1)_f$ charge. Moreover, the above is written with the understanding that any multiplet labelled with a negative value of $R$ is set to zero. The stress-tensor is contained in \eqref{eqn:Bnmdecomp} for $R_1=R_2=1$. We also stress that the $\simeq$ symbol means that the decomposition \eqref{eqn:Bnmdecomp} holds only modulo long multiplets which begin to appear in the decomposition for $R_1R_2\geq4$. For $R_2=0$ the decomposition is
+\begin{equation}\label{eqn:Bn0}
+\hat{\mathcal{B}}_{[R_1,0]}\color{black}\iso\hat{\mathcal{B}}^{(-R_1)}_{\frac{R_1}{2}}\oplus\overline{\mathcal{D}}^{(1-R_1)}_{\frac{R_1-1}{2}(0,0)}\oplus \overline{\mathcal{E}}_{-R_1(0,0)}^{(0)}\oplus_{i=1}^{R_1-2}\overline{\mathcal{B}}^{(i-R_1+1)}_{\frac{R_1-i-1}{2},-i-1,(0,0)}\,,
+\end{equation}
+while its conjugate with $R_1=0$ is given by
+\begin{equation}\label{eqn:B0n}
+\hat{\mathcal{B}}_{[0,R_2]}\color{black}\iso\hat{\mathcal{B}}^{(R_2)}_{\frac{R_2}{2}}\oplus\mathcal{D}_{\frac{R_2-1}{2}(0,0)}^{(R_2-1)}\oplus \mathcal{E}^{(0)}_{R_2(0,0)}\oplus_{i=1}^{R_2-2}\mathcal{B}^{(R_2-i-1)}_{\frac{R_2-i-1}{2},i+1,(0,0)}\,,
+\end{equation}
+and contains $\mathcal{N}=2$ Coulomb branch operators. We stress that here we use the symbol $\iso$ to indicate that the decompositions \eqref{eqn:Bn0} and \eqref{eqn:B0n} are exact. It is interesting to note that, simply by examining \eqref{eqn:Bnmdecomp}-\eqref{eqn:B0n}, we realize that once we know the Higgs branch ($\mathcal{\hat{B}}_R$ multiplets) we can predict the Coulomb branch ($\mathcal{E}_{r,(0,0)}$ multiplets) but not vice-versa.
+\begin{comment}
+For completeness we also list the branching that we used for
+\begin{equation}
+\mathfrak{su}(3)\oplus\mathfrak{u}(1)_{r_{\mathcal{N}=3}}\to\mathfrak{su}(2)_R\oplus\mathfrak{u}(1)_{r}\oplus\mathfrak{u}(1)_{f}\,,
+\end{equation}
+where
+\begin{equation}
+\begin{aligned}
+\mathbf{[R_1,R_2]}_{\frac{2R_2-2R_1}{3}}\to&\bigoplus_{j=0}^{R_2-1}\bigoplus_{i=0}^{j}\left(\mathbf{\frac{j}{2}}\right)_{R_2-R_1+j-2i}^{2i-j}\oplus\bigoplus_{j=R_2}^{R_1}\bigoplus_{i=0}^{R_2}\left(\mathbf{\frac{j}{2}}\right)_{R_2-R_1+j-2i}^{2i-j}\\
+&\oplus\bigoplus_{j=R_1+1}^{R_1+R_2}\bigoplus_{i=0}^{R_2+R_1-j}\left(\mathbf{\frac{j}{2}}\right)_{R_2+R_1-j-2i}^{2i-2R_1+j}\,,
+\end{aligned}
+\end{equation}
+here the notation is $\left(\mathbf{R}\right)_r^f$.
+\end{comment}
+Note that, as a check, our above syntheses and decompositions in terms of $\mathfrak{su}(2,2|3)$ representations are compatible with the decomposition \cite{DolanOsborn}:
+\begin{equation}
+\begin{aligned}
+\mathcal{B}_{[0,R_2,0]}^{\frac{1}{2},\frac{1}{2}}\color{black}\iso&\,(R_2+1)\hat{\mathcal{B}}_{\frac{R_2}{2}}\oplus\mathcal{E}_{R_2,(0,0)}\oplus\overline{\mathcal{E}}_{-R_2,(0,0)}+(R_2-1)\hat{\mathcal{C}}_{\frac{R_2-2}{2},(0,0)}\\
+&\oplus R_2\mathcal{D}_{\frac{R_2-1}{2},(0,0)}\oplus R_2\overline{\mathcal{D}}_{\frac{R_2-1}{2},(0,0)}\\
+&\oplus\bigoplus_{i=1}^{R_2-2}(i+1)\left(\mathcal{B}_{\frac{i}{2},R_2-i,(0,0)}\oplus\overline{\mathcal{B}}_{\frac{i}{2},i-R_2,(0,0)}\right)\\
+&\oplus\bigoplus_{i=0}^{R_2-3}(i+1)\left(\mathcal{C}_{\frac{i}{2},R_2-i-2,(0,0)}\oplus\overline{\mathcal{C}}_{\frac{i}{2},i-R_2+2,(0,0)}\right)\\
+&\oplus\bigoplus_{i=0}^{R_2-4}\bigoplus_{j=0}^{R_2-i-4}(i+1)\mathcal{A}^{R_2}_{\frac{i}{2},R_2-i-4-2j,(0,0)}\,.
+\end{aligned}
+\end{equation}
+
+\section{Indices and the Discrete Gauging Prescription}\label{sec:Index}\renewcommand{\arraystretch}{1.1}
+Let us introduce the various quantities that we plan to discuss in this paper. 
+\subsection{The Superconformal Index}
+The superconformal index for $\mathcal{N}=4$ SYM with respect to the supercharge $\Qfour=\Qfour_{-}^{I=1}$ is defined as \cite{Kinney:2005ej,Romelsberger:2005eg}
+\begin{equation}
+\begin{aligned}\label{eqn:SCI}
+ \mathcal{I}^{\mathfrak{g}}\left(t,y,p,q\right)=&\Tr_{\mathbb{S}^3}(-1)^Ft^{2(E+j_1)}y^{2j_2}p^{R_2}q^{R_2+2R_3}\\
+ =&\Tr_{\mathbb{S}^3}(-1)^Ft^{2(E+j_1)}y^{2j_2}(pq)^{r-R}u_f^f 
+\end{aligned}
+\end{equation}
+in the second line, since we often wish to treat $\mathcal{N}=4$ SYM as an $\mathcal{N}=2$ theory, we used \eqref{eqn:N2subalgebra} to write the generators in $\mathcal{N}=2$ language. We also defined $u_f^2=q^3/p$. The trace is taken over the Hilbert space of $\mathcal{N}=4$ SYM with gauge algebra $Lie(G)=\mathfrak{g}$ in the radial quantisation. In radial quantisation we can take $\Qfour^{\dagger}=\Sfour$. The index \eqref{eqn:SCI} receives contributions only from those states satisfying
+\begin{align}\label{eqn:shortening}
+\delta:=2\left\{\Qfour,\Sfour\right\}=&E-2j_1-\frac{1}{2}(3R_1+2R_2+R_3)\\
+=&E-2j_1-2R-r=0\,.
+\end{align}
+The superconformal index is independent under continuous deformation of the corresponding QFT. In particular
+\begin{equation}\label{eqn:couplingind}
+\frac{\partial}{\partial \tau} \mathcal{I}^{\mathfrak{g}}\left(t,y,p,q\right)=0\,,
+\end{equation}
+that is to say \eqref{eqn:SCI} is independent of the gauge coupling $\tau$ of $\mathcal{N}=4$ SYM.
+Following \eqref{eqn:couplingind} the superconformal index \eqref{eqn:SCI} may be computed in the free theory by enumerating all of the components of the $\mathcal{N}=4$ field strength multiplet that obey \eqref{eqn:shortening} and then projecting onto gauge invariants. The projection onto gauge invariants is implemented by integration over the gauge group $G$. The index \eqref{eqn:SCI} then takes the form
+\begin{equation}\label{eqn:SCIPrescription} 
+\mathcal{I}^{\mathfrak{g}}(t,y,p,q)=\int d\mu_{G}(\mathbf{z}) \PE\left[i(t,y,p,q)\chi_{\text{adj}}^{G}(\mathbf{z})\right] \, ,
+\end{equation}
+$d\mu_{G}$ denotes the Haar measure of the gauge group $G$ and $\chi_{\text{adj}}^{G}$ the character of its adjoint representation. The Plethystic exponential is defined in \eqref{eqn:PE}.
+\begin{table}
+\centering
+\begin{tabular}{|c||c|c|c|c|c|c|c|} 
+\hline
+\textrm{Letters}  & $E$ & $j_1$ & $j_2$ & $R_1$ & $R_2$ & $R_3$ & $i(t,y,p,q)$\\ 
+  \hline\hline
+ $F_{++}$ & $2$ & $1$ & $0$ & $0$ & $0$ & $0$ &$t^6$\\ 
+ \hline
+   $\bar{\lambda}^{I=1}_{\dot{\pm}}$ & $\frac{3}{2}$ & $0$ & $\pm\frac{1}{2}$ & $1$ & $0$ & $0$&$- t^3(y+y^{-1})$\\ 
+ \hline
+   $\lambda_{+I=2,3,4}$ & $\frac{3}{2}$ & $\frac{1}{2}$ & $0$ & $1,0,0$ & $-1,1,0$ & $0,-1,1$& $-t^4\left(\frac{1}{ pq}+\frac{p}{ q}+ q^2\right)$\\ 
+ \hline
+    $X,Y,Z$ & $1$ & $0$ & $0$ & $0,1,1$ & $1,-1,0$ & $0,1,-1$ & $t^2\left( pq+\frac{ q}{p}+\frac{1}{ q^2}\right)$\\ 
+ \hline\hline
+      $\partial\bar{\lambda}^1=0$& $\frac{5}{2}$ & $\frac{1}{2}$ & $0$ & $1$ & $0$ & $0$ &$ t^6$\\ 
+ \hline\hline
+   $\partial_{+\dot\pm}$ & $1$ & $\frac{1}{2}$ & $\pm\frac{1}{2}$ & $0$ & $0$ & $0$ &$t^3y$ , $t^3y^{-1}$\\ 
+ \hline
+\end{tabular}
+\caption{\textit{Letters with $\delta=0$ of the free $\mathcal{N}=4$ vector multiplet.}}
+\label{fig:N4vecletters}
+\end{table}
+The single letter index $i(t,y,p,q)$ may be computed by enumerating all letters with $\delta=0$, listed in Table \ref{fig:N4vecletters}. The on-shell degrees of freedom of the $\mathcal{N}=4$ field strength multiplet are $F_{\alpha\beta}$, $\widetilde{F}_{\dot\alpha\dot\beta}$, $\lambda_{\alpha I}$, $\bar{\lambda}_{\dot\alpha}^I$, $\phi^{IJ}$ with $I=1,2,3,4$ and $\phi^{IJ}$ is in the $\mathbf{[0,1,0]}$ of $\mathfrak{su}(4)$. We define $X=\phi^{12}$, $Y=\phi^{13}$ and $Z=\phi^{14}$. $\partial\bar{\lambda}^1$ denotes the equation of motion $\partial_{+\dot+}\bar{\lambda}_{\dot{-}}^1+\partial_{+\dot-}\bar{\lambda}^1_{\dot{+}}=0$ which enters with opposite statistics. Equivalently, one can evaluate the index of the $\mathfrak{psu}(2,2|4)$ multiplet $\mathcal{B}_{[0,1,0]}^{\frac{1}{2},\frac{1}{2}}$, which is the free $\mathcal{N}=4$ vector multiplet plus conformal descendents.  It is given by
+\begin{equation}\label{eqn:singleletter}
+\begin{aligned}
+i(t,y,p,q)=&\frac{\left(p^{-1}q+pq+q^{-2}\right)t^2-\left(q^2+p^{-1}q^{-1}+pq^{-1}\right)t^4}{(1-t^3y)(1-t^3y^{-1})} \\
+&-\frac{t^3y}{1-t^3y}-\frac{t^3y^{-1}}{1-t^3y^{-1}}\, ,
+\end{aligned}
+\end{equation}
+where $\chi_{2j_2}(y)$ denotes the $SU(2)$ character given by
+\begin{equation}
+\chi_s(y)\equiv\chi_s=y^{s}+y^{s-2}+\dots+y^{-s}\,.
+\end{equation}
+The index \eqref{eqn:SCI} counts short representations of the $\mathfrak{su}(2,2|4)$ superconformal algebra, modulo recombination.
+Meaning that all short multiplets, see \eqref{eq:MultiIndexE}-\eqref{eqn:index0}, contribute to the index, however, when they satisfy the recombination rules \eqref{eqn:short1}-\eqref{eqn:short2} they sum to zero.
+Recombination happens when a long multiplet $\mathcal{A}^E_{[R_1,R_2,R_3],(j_1,j_2)}$ hits the unitary bound and decomposes into semi-direct sums of short representations. We list the possible recombination rules, viewing as an $\mathcal{N}=2$ theory, in equations \eqref{eqn:short1}-\eqref{eqn:short2}. The index \eqref{eqn:SCI} can therefore be expanded in the following form
+\begin{equation}
+\mathcal{I}^{\mathfrak{g}}(t,y,p,q) =
+\sum_{S_{\mathcal{N}=4} \in \text{shorts}} \mathcal{I}_{\mathcal{S}_{\mathcal{N}=4}}(t,y,p,q) \, ,
+\end{equation}
+where the sum is taken over the short multiplets of the theory, modulo those that can recombine into long multiplets.
+We list the indices of multiplets of an $\mathfrak{su}(2,2|2)\subset \mathfrak{psu}(2,2|4)$ subalgebra in Appendix \ref{sec:indicies}. 
+As we discussed in Section \ref{sec:N3Cons} at $\tau=e^{\pi\iu/3},\iu,e^{\pi\iu/3}$ the global symmetry group (at the level of local operators) of the theory has a $\mathbb{Z}_{\kgg}$ enhancement. Correspondingly the Hilbert space carries an extra $\mathbb{Z}_{\kgg}$ grading at those values of the coupling. Therefore one may define a further refined version of the superconformal index given by
+\begin{equation}\label{eqn:SCIrefined}
+ \mathcal{I}^{\mathfrak{g}}\left(t,y,p,q,\epsilon\right)
+ =\textrm{Tr}_{\mathbb{S}^3}(-1)^Ft^{2(E+j_1)}y^{2j_2}(pq)^{r-R}u_f^f\epsilon^{r_{\kgg}\newdot s_{\kgg}}\, ,
+\end{equation}
+where we introduced the $\mathbb{Z}_{\kgg}$-valued fugacity $\epsilon$ in order to keep track of the discrete symmetry. We stress that the $\mathbb{Z}_{\kgg}$ is a global symmetry only at $\tau=e^{\pi\iu/3},\iu,e^{\pi\iu/3}$. As we showed in Appendix \ref{sec:preservedSCA} the $\mathbb{Z}_{\kgg}$ commutes with the supercharges $\Qfour_{-}^{I=1}$ and $\Sfour^{-}_{I=1}$ that we used to compute the index \eqref{eqn:SCI} with respect to. Moreover, we also demonstrated that the $\mathbb{Z}_{\kgg}$ preserves a $\mathfrak{su}(2,2|3)\subset\mathfrak{psu}(2,2|4)$ subalgebra and it therefore preserves the recombination rules \eqref{eqn:short1}-\eqref{eqn:short2}. Therefore, the refined index \eqref{eqn:SCIrefined} can again be expanded
+\begin{equation}\label{eqn:epsilonpres}
+\begin{aligned}
+\mathcal{I}^{\mathfrak{g}}(t,y,p,q,\epsilon) =&
+\sum_{\mathcal{S}_{\mathcal{N}=4} \in \text{shorts}} \mathcal{I}_{\mathcal{S}_{\mathcal{N}=4}}(t,y,p,q,\epsilon)\\
+=&\sum_{\bigoplus_i \mathcal{S}^{(i)}_{\mathcal{N}=3} \in \text{shorts}} \epsilon^{r_{\kgg}\left(\mathcal{S}_{\mathcal{N}=3}\right)+ s_{\kgg}\left(\mathcal{S}_{\mathcal{N}=3}\right)}\mathcal{I}_{\mathcal{S}_{\mathcal{N}=3}}(t,y,p,q)\,.
+\end{aligned}
+\end{equation}
+In the final equality, we firstly used the fact that any short multiplet $\mathcal{S}_{\mathcal{N}=4}$ of $\mathfrak{psu}(2,2|4)$ can be decomposed into multiplets of a $\mathfrak{su}(2,2|3)$ subalgebra $\mathcal{S}_{\mathcal{N}=4}\simeq\bigoplus_i\mathcal{S}^{(i)}_{\mathcal{N}=3}$. Secondly we used the fact that the action of $r_{\kgg}\newdot s_{\kgg}$ preserves the $\mathfrak{su}(2,2|3)\subset\mathfrak{psu}(2,2|4)$ subalgebra and by $r_{\kgg}(\mathcal{S}_{\mathcal{N}=3})\newdot s_{\kgg}(\mathcal{S}_{\mathcal{N}=3})$ we mean the generator of $\mathbb{Z}_{\kgg}$ evaluated on the given multiplet. For example, using \eqref{B0m0}, the refined index on the free $\mathcal{N}=4$ vector multiplet is given by
+\begin{equation}\label{eqn:ik}
+\mathcal{I}_{\mathcal{B}_{[0,1,0]}^{\frac{1}{2},\frac{1}{2}}}(t,y,p,q,\epsilon)=\epsilon^{-1}\,\mathcal{I}_{\hat{\mathcal{B}}_{[1,0]}}(t,y,p,q)+\epsilon\,\mathcal{I}_{\hat{\mathcal{B}}_{[0,1]}}(t,y,p,q)
+\end{equation}
+Where
+\begin{align}
+&\mathcal{I}_{\hat{\mathcal{B}}_{[1,0]}}(t,y,p,q)=\frac{q^{-2}t^2-\left(p^{-1}q^{-1}+pq^{-1}\right)t^4+t^6}{(1-t^3y)(1-t^3y^{-1})}\\
+&\mathcal{I}_{\hat{\mathcal{B}}_{[0,1]}}(t,y,p,q)=\frac{p^{-1}qt^2+pqt^2-(y+y^{-1})t^3-q^2t^4+t^6}{(1-t^3y)(1-t^3y^{-1})}
+\end{align}
+We may then gauge the discrete $\mathbb{Z}_{\kgg}$ symmetry by making the projection
+\begin{equation}\label{eqn:discgaugepro}
+\mathcal{I}_{\mathbb{Z}_{\kgg}}^{\mathfrak{g}}(t,y,p,q):=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\mathcal{I}^{\mathfrak{g}}(t,y,p,q,\epsilon) \, .
+\end{equation} 
+The discrete gauging restricts each contribution, in terms of either $\mathfrak{su}(2,2|3)$ or $\mathfrak{su}(2,2|2)$ multiplets, to satisfy
+\begin{equation}
+r_{\kgg}\newdot s_{\kgg}=r+f\newdot s_{\kgg}=0\bmod {\kgg}\,.
+\end{equation}
+We demonstrate in Section \ref{sec:largeN} that \eqref{eqn:epsilonpres} reproduces the {\it refined} superconformal index \eqref{eqn:SCIrefined} at large $N$ by matching with the KK supergraviton index (\ref{eqn:LargeN}) obtained by the $AdS$/CFT computation of \cite{Imamura:2016abe}. We would like stress that the final expression for KK supergraviton index is {\it not equal} to the index of a theory obtained through an S-fold projection. Since, as shown in Section \ref{sec:largeN}, this last expression is obtained implementing the orbifold projection at the level of the single particle index.
+
+\subsection{Coulomb Branch Limit}
+The graded index \eqref{eqn:SCIrefined} may be rewritten as \cite{Gadde:2011uv}
+\begin{equation}\label{eqn:SCISchur}
+\mathcal{I}^{\mathfrak{g}}\left(t,y,p,q,\epsilon\right)= \textrm{Tr}_{\mathbb{S}^3}(-1)^F\tau^{\frac{1}{2}\delta_+^2}\sigma^{\frac{1}{2}\widetilde{\delta}_{\dot+ 2}}\rho^{\frac{1}{2}\widetilde{\delta}_{\dot- 2}}u_f^f \epsilon^{r_{\kgg}\newdot s_{\kgg}}\, ,
+\end{equation}
+with
+\begin{equation}
+\tau:=\frac{t^2}{\sqrt{pq}}\,,\quad \sigma:=ty\sqrt{pq}\,,\quad \rho:=\frac{t\sqrt{pq}}{y}\,,\quad u_f:=\sqrt{\frac{q^3}{p}}\,,
+\end{equation}
+and
+\begin{align}
+&\delta_{\pm}^2:=2\left\{\Qfour_{\pm}^2,\left(\Qfour_{\pm}^2\right)^{\dagger}\right\}=E\pm2j_1+2R-r\,,\\
+&\widetilde{\delta}_{\dot\pm 2}:=2\left\{\widetilde{\Qfour}_{\dot\pm 2},\left(\widetilde{\Qfour}_{\dot\pm 2}\right)^{\dagger}\right\}=E\pm2j_2-2R+r\,.
+\end{align}
+In the parametrisation \eqref{eqn:SCISchur} the Coulomb branch limit of the superconformal index is defined to be \cite{Gadde:2011uv}
+\begin{equation}\label{eqn:CBlimit}
+\tau\to0\,,\quad \rho\,,\sigma\,\text{ fixed,}
+\end{equation}
+which is well defined since $\delta_+^2\geq0$. In this limit the index is then given by
+\begin{equation}\label{eqn:SCICB1}
+\mathcal{I}^{\mathfrak{g}}_{\text{CB}}\left(\rho,\sigma,u_f,\epsilon\right)= \textrm{Tr}_{\mathbb{S}^3|\delta_+^2=0}(-1)^F\sigma^{\frac{1}{2}\widetilde{\delta}_{\dot+ 2}}\rho^{\frac{1}{2}\widetilde{\delta}_{\dot- 2}}u_f^f\epsilon^{r_{\kgg}\newdot s_{\kgg}}\,.
+\end{equation}
+Defining
+\begin{equation}
+\rho\sigma=x\,,\quad \rho/\sigma=v \, ,
+\end{equation}
+the single letter index \eqref{eqn:singleletter} in the Coulomb branch limit becomes
+\begin{equation}
+i_{\text{CB}}(x)=x\,.
+\end{equation}
+In our $\mathcal{N}=2$ decomposition this is simply the contribution of the single letter $X$ described in Table \ref{fig:N4vecletters}. 
+Since, for our theories, it is independent of both the ratio $v=\rho/\sigma$ and $u_f$ then, due to $\left(\widetilde{\delta}_{\dot+2}+\widetilde{\delta}_{\dot-2}\right)\Qfour_{\alpha}^1=\left(\widetilde{\delta}_{\dot+2}+\widetilde{\delta}_{\dot-2}\right)\Qfour^2_{+}=0$, \eqref{eqn:SCICB1} is further shortened and preserves $\Qfour^1_{\pm}$, $\Qfour^2_{+}$. This allows us to write 
+\begin{equation}
+E=r\,,\quad j_1=j_2=f=R=0\,,
+\end{equation}
+these are the highest weight states of $\mathcal{E}_{r,(0,0)}$ multiplets that generate the $\mathcal{N}=2$ Coulomb branch chiral ring. Therefore the only non-zero contributions to \eqref{eqn:SCICB1} are from 
+\begin{equation}
+\mathcal{I}_{\mathcal{E}_{r,(0,0)}}(x,\epsilon=1)=x^r\,.
+\end{equation} 
+Hence, following \eqref{eqn:disgaugeZnaction}, the prescription \eqref{eqn:epsilonpres} can be implemented simply by
+\begin{equation}
+x\to\epsilon x \, ,
+\end{equation}
+and the index can be written as
+\begin{equation}
+\label{eq:indexCoulomb}
+\mathcal{I}^{\mathfrak{g}}_{\text{CB}}\left(x,\epsilon\right)= \textrm{Tr}_{\mathbb{S}^3|\delta_+^2=0}\left[\epsilon^rx^{r}\right]= \int d\mu_{G}(\mathbf{z}) \PE\left[ i_{\text{CB}}(\epsilon x)\,\chi_{\text{adj}}^{G}(\mathbf{z})\right] \,.
+\end{equation}
+We would like to stress that the $\mathcal{E}_{r,(0,0)}$ multiplets do not recombine \cite{DolanOsborn} and therefore turning on the refinement $\epsilon$ for the discrete symmetry commutes with the integration over $G$. 
+Let $G$ be connected then, as pointed out in \cite{Gadde:2011uv},  (\ref{eq:indexCoulomb}) may be explictly evaluated thanks to Macdonald's constant-term identities \cite{macdonald1998symmetric,macdonald}
+\begin{equation}\label{eqn:SCICBdeg}
+\mathcal{I}^{\mathfrak{g}}_{\text{CB}}\left(x,\epsilon\right)= \PE\left[\sum_{j\in \exponents(\mathfrak{g})}\epsilon^{j+1}x^{j+1}\right]\,,
+\end{equation}
+where $\exponents(\mathfrak{g})$ denotes the set of exponents of the Lie algebra $\mathfrak{g}=Lie(G)$. The elements of $\exponents(\mathfrak{g})$ are in one-to-one correspondence with the degrees of the generators of the ring of $\mathfrak{g}$-invariant polynomials. We list the elements of $\exponents(\mathfrak{g})$ for $\mathfrak{g}=ADE$ and $\mathfrak{u}(N)$ in Table \ref{tab:degrees}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|} 
+\hline
+ $\mathfrak{g}$ & $\exponents(\mathfrak{g})$\\\hline 
+ \hline
+  $\mathfrak{u}(N)$&$0,1,2,\dots,N-1$\\\hline
+ $A_{N}$&$1$, $2$, $3$, $\dots$, $N$\\\hline
+% $B_{N}$&$1$, $3$, $5$, $\dots$, $2N-1$\\\hline
+% $C_{N}$&$1$, $3$, $5$, $\dots$, $2N-1$\\\hline
+ $D_{N}$&$1$, $3$, $5$, $\dots$, $2N-3$; $N-1$\\\hline
+ $E_{6}$&$1$, $4$, $5$, $7$, $8$, $11$\\\hline
+ $E_{7}$&$1$, $5$, $7$, $9$, $11$, $13$, $17$\\\hline
+ $E_{8}$&$1$, $7$, $11$, $13$, $17$, $19$, $23$, $29$\\\hline
+% $F_{4}$&$1$, $5$, $7$, $11$\\\hline
+% $G_{2}$&$1$, $5$\\\hline
+\end{tabular}
+\caption{\it Exponents of the Lie algebra $\mathfrak{g}$.}
+\label{tab:degrees}
+\end{table}
+According to \eqref{eqn:discgaugepro}, upon the discrete gauging, we then have
+\begin{equation}\label{eqn:SCICB}
+\mathcal{I}^{\mathfrak{g}}_{\mathbb{Z}_{\kgg},\text{CB}}\left(x\right)= \frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\mathcal{I}^{\mathfrak{g}}_{\text{CB}}\left(x,\epsilon\right) \,.
+\end{equation}
+Since, in all known examples, \eqref{eqn:SCICB} counts only gauge invariant chiral operators with $j_1=j_2=0$, it is equal to the Coulomb branch Hilbert series for the discretely gauged theory
+\begin{equation}
+\mathcal{I}^{\mathfrak{g}}_{\mathbb{Z}_{\kgg},\text{CB}}\left(x\right)\equiv\HS(x;CB_{\mathfrak{g},n})
+\end{equation}
+ Therefore the rank, i.e. the complex dimension of the Coulomb branch chiral ring is equal to \cite{Cremonesi:2017jrk}
+\begin{equation}\label{eqn:CBdim}
+\dim_{\mathbb{C}}CB_{\mathfrak{g},n}=\left(\text{Order of pole at $x=1$ of $\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{g}}(x)$}\right)\,.
+\end{equation} 
+We of course expect that $\dim_{\mathbb{C}}CB_{\mathfrak{g},n}=\rank\mathfrak{g}$. In the following sections we analyse some examples. 
+
+\subsection{Higgs Branch Hilbert Series}
+In general the Hilbert series \cite{Benvenuti:2006qr,Feng:2007ur} counts gauge invariant chiral operators graded by their charges under a maximally commuting subalgebra of the global symmetry algebra. We will be interested in computing the Hilbert series for the Higgs branch $HB_{\mathfrak{g}}$ of $\mathcal{N}=4$ SYM (using the $\mathcal{N}=2$ decomposition \eqref{eqn:N2subalgebra}). This is given by
+\begin{equation}\label{eqn:hs}
+\HS(\tHS,u_f,\epsilon;HB_{\mathfrak{g}})\equiv\HS^{\mathfrak{g}}(\tHS,u_f,\epsilon): = \Tr_{HB_{\mathfrak{g}}}\tHS^{2R}u_f^f\epsilon^{r_{\kgg}\newdot s_{\kgg}} \, ,
+\end{equation}
+where $HB_{\mathfrak{g}}=\{\mathcal{O}_i | \widetilde{\Qfour}^{I}_{\dot{\alpha}}\mathcal{O}_i=0\,, M_{\mu\nu} \mathcal{O}_i=0\,,r\mathcal{O}_i =0 \}$ is the Higgs branch chiral ring, i.e. the space of scalar, $\mathfrak{g}$-invariant chiral operators that parametrize the Higgs branch moduli space of vacua. In the language of the previous section \eqref{eqn:hs} is counting $\hat{\mathcal{B}}_R$ operators with $E=2R$ and $r=j_1=j_2=0$. We stress that there is no recombination rule \eqref{eqn:short1}-\eqref{eqn:short2} involving only $\hat{\mathcal{B}}_R$ operators. 
+
+The Hilbert series for the Higgs branch is closely related to a certain limit of the superconformal index known as the \textit{Hall-Littlewood limit} \cite{Gadde:2011uv}. In fact, for genus zero theories in class $\mathcal{S}$ they are conjectured to be equal, with $\tau$ of \eqref{eqn:hs} the same as for \eqref{eqn:SCISchur}. For genus one (this is the relevant case for $\mathcal{N}=4$ SYM) and greater the Hall-Littlewood operators contain the Higgs branch operators as a subset. See Appendix \ref{Chap:HLvsHSGenus1} for more discussion on this point.
+
+In the $\mathcal{N}=2$ decomposition that we used in Section \ref{sec:su22Nrepn}, the Higgs branch for our theories is reached by setting equal to zero the scalar field $X$ in the $\mathcal{N}=2$ vector multiplet. Therefore there is only one relevant F-term that we must take into account
+\begin{equation}\label{eqn:Fsuper}
+\partial_{X}W = [Y,Z] = 0 \, ,
+\end{equation}
+where $W$ is the superpotential for $\mathcal{N}=4$ SYM. Unfortunately, due to the fact that the gauge group is not completely broken on the Higgs branch, letter counting techniques cannot be used to compute \eqref{eqn:hs}. Instead, in order to compute \eqref{eqn:hs}, we use the package \textit{Macaulay2} \cite{M2}. By inputting the ring of polynomials $R=\mathbb{C}[Y,Z]$ and the ideal $I=\langle[Y,Z]\rangle$ given by \eqref{eqn:Fsuper}, \textit{Macaulay2} can compute the Hilbert series for $R/I$.
+
+Since both $r$ and $s_{\kgg}$ act trivially on the fields $Y,Z$; on the Higgs branch $r_{\kgg}\newdot s_{\kgg}=f$. Therefore the extra grading may be implemented by $u_f\to\epsilon u_f$. The Higgs branch Hilbert series then takes the form
+\begin{equation}
+\HS^{\mathfrak{g}}(\tHS,u_f,\epsilon)=\int d\mu_{G}(\mathbf{z})f^{\flat}(\tHS,\epsilon u_f,\mathbf{z})\,,
+\end{equation}
+where $f^{\flat}(\tHS,u_f,\mathbf{z}):=\HS(\tHS,u_f,\mathbf{z};R/I)$ denotes the Hilbert series for the ring $R/I$. The discrete gauged Higgs branch Hilbert series reads
+\begin{equation}
+\label{eq:HIggsHS}
+\HS(\tHS,u_f;HB_{\mathfrak{g},\kgg}):=\HS^{\mathfrak{g}}_{\mathbb{Z}_{\kgg}}(\tHS,u_f)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\HS^{\mathfrak{g}}(\tHS,u_f,\epsilon)\, .
+\end{equation}
+One important piece of information carried by \eqref{eqn:hs} is the dimension of the Higgs branch 
+\begin{equation}\label{eqn:dimHB}
+\dim_{\mathbb{C}}HB_{\mathfrak{g},n}=\left(\text{Order of pole at $\tHS=1$ of $\HS^{\mathfrak{g}}_{\mathbb{Z}_{\kgg}}(\tHS,1)$}\right)\,.
+\end{equation} 
+A particularly useful quantity is the Plethystic logarithm of the Hilbert series 
+\begin{equation}
+h^{\mathfrak{g}}_{\mathbb{Z}_{\kgg}}(\tHS,u_f):=\PLog\left[\HS^{\mathfrak{g}}_{\mathbb{Z}_{\kgg}}(\tHS,u_f)\right]\,.
+\end{equation}
+The Plethystic logarithm is defined in \eqref{eqn:PLog}.
+The Plethystic logarithm of the Hilbert series satisfies \cite{Benvenuti:2006qr,DelZotto:2014kka}:
+\begin{itemize}
+\item When the moduli space is a complete intersection variety $h^{\mathfrak{g}}_{\mathbb{Z}_{\kgg}}$ is a polynomial of finite degree. When it is not the $h^{\mathfrak{g}}_{\mathbb{Z}_{\kgg}}$ is an infinite series in $\tHS$.
+\item It has been conjectured in \cite{Feng:2007ur,Benvenuti:2006qr} that when the moduli space is a complete intersection variety the first coefficients with positive sign in the polynomial $h^{\mathfrak{g}}_{\mathbb{Z}_{\kgg}}$ encode the generators of the variety. Negative coefficients encode relations. When the moduli space is not a complete intersection the generators of the moduli space are generally still captured by the first positive terms. However, in this last case, most of the contributions in the PLog expansion represent Hilbert syzygies.\end{itemize}
+
+\section{Rank One Theories}\label{sec:rank1}
+Having introduced the main quantities that we wish to compute we will now go ahead and compute them for the possible $\mathcal{N}=3$ rank one theories that can be obtained via discrete gauging of $\mathcal{N}=4$ SYM. As we mentioned previously, if we restrict to connected groups then, from the point of view of the superconformal index there are only two distinct possibilities, labelled by the two choices of Lie algebras of rank one i.e. $\mathfrak{g}=\mathfrak{u}(1)$ and $\mathfrak{g}=\mathfrak{su}(2)$.
+\subsection{\texorpdfstring{$\mathfrak{g}=\mathfrak{u}(1)$}{g=u(1)}}
+Let us begin with the $\mathbb{Z}_n$ gauging of $\mathfrak{g}=\mathfrak{u}(1)$ $\mathcal{N}=4$ SYM. 
+\subsubsection{Superconformal Index}
+Since the $\mathfrak{u}(1)$ $\mathcal{N}=4$ theory is free the index for the discrete gauging can be computed explicitly. Using \eqref{eqn:ik}, it is given by 
+\begin{equation}\label{eqn:Zkdis}
+\begin{aligned}
+\mathcal{I}^{\mathfrak{u}(1)}_{\mathbb{Z}_{\kgg}}(t,y,p,q)=&\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in \mathbb{Z}_{\kgg}}\mathcal{I}^{\mathfrak{u}(1)}_{\mathbb{Z}_{\kgg}}(t,y,p,q,\epsilon)\\
+=&\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in \mathbb{Z}_{\kgg}}\PE\left[\epsilon^{-1}\,\mathcal{I}_{\hat{\mathcal{B}}_{[1,0]}
+}+\epsilon\,\mathcal{I}_{\hat{\mathcal{B}}_{[0,1]}}\right]\, .
+\end{aligned}
+\end{equation}
+The index may be equivalently expressed in terms of Elliptic Gamma functions  \cite{Dolan:2008qi}
+\begin{equation}
+\mathcal{I}^{\mathfrak{u}(1)}_{\mathbb{Z}_{\kgg}}=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\frac{\Gamma\left(\frac{\epsilon qt^2}{p};t^3y,\frac{t^3}{y}\right)\Gamma\left(\frac{t^2}{\epsilon q^2};t^3y,\frac{t^3}{y}\right)\Gamma\left(\epsilon pqt^2;t^3y,\frac{t^3}{y}\right)}{\left(\epsilon t^3y;t^3y\right)^{-1}\left(\frac{t^3y}{\epsilon };t^3y\right)^{-1}\Gamma\left(\frac{t^3}{\epsilon y};t^3y,\frac{t^3}{y}\right)}\,.
+\label{eqn:u1index}
+\end{equation}
+The Elliptic Gamma function and $q$-Pochammer symbol are defined in equations \eqref{eqn:EllGamma} and \eqref{eqn:qPochammer} respectively.
+When $\kgg=2$ the expression \eqref{eqn:Zkdis} is exactly the index for the $G=O(2)$ $\mathcal{N}=4$ theory which matches the expectation that the this theory is nothing but the usual $O3^-$ orientifold theory. 
+We can perform several other checks of our expression \eqref{eqn:Zkdis} by studying the various limits that we outlined in Section \ref{sec:Index}.
+\subsubsection{Coulomb Branch Limit}
+After taking the Coulomb branch limit \eqref{eqn:CBlimit} we find, for the discrete gauging of the $\mathfrak{g}=\mathfrak{u}(1)$ theory,
+\begin{equation}\label{eqn:u1CBlimit}
+\mathcal{I}^{\mathfrak{u}(1)}_{\mathbb{Z}_{\kgg},\text{CB}}\left(x\right)=\frac{1}{{\kgg}}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\epsilon x\right]=\PE\left[x^{\kgg}\right]\,.
+\end{equation}
+This implies that the Coulomb branch is freely generated by $\widetilde{u}=u^{\kgg}$ with $u=X$ the parent Coulomb branch parameter. Therefore $E(\widetilde{u})=r(\widetilde{u})={\kgg}$ which implies that the $\widetilde{u}$ is the superconformal primary of the $\mathfrak{su}(2,2|2)$ multiplet $\mathcal{E}_{{\kgg},(0,0)}\subset \hat{\mathcal{B}}_{[0,{\kgg}]}$. The topology is simply $CB_{\mathfrak{u}(1),\kgg}=\mathbb{C}[\widetilde{u}]$ and so $\mathbf{CB}_{\mathfrak{u}(1),\kgg}\iso\mathbb{C}$. We wish to point out that \eqref{eqn:u1CBlimit} is in perfect agreement with the expected spectrum of Coulomb operators \eqref{eqn:sfolddiscgauge} coming from the S-fold analysis \cite{Aharony:2016kai} and the Seiberg-Witten curve analysis for the quotient of the $I_{0}$ geometry in the discussion below equation (2.8) of \cite{Argyres:2016yzz}.
+\subsubsection{Higgs Branch Hilbert Series}
+We now compute the Higgs branch Hilbert Series for these theories. For $\mathfrak{g}=\mathfrak{u}(1)$ the superpotential \eqref{eqn:Fsuper} is trivial and we may actually use letter counting. We find that $f^{\flat}(\tHS,u_f,\epsilon)=\PE\left[\epsilon u_f\tHS+\epsilon^{-1}u_f^{-1}\tHS\right]$. The integration over the gauge group is trivially performed and we get
+\begin{equation}
+\begin{aligned}
+\label{eq:hsu1}
+\HS^{\mathfrak{u}(1)}_{\mathbb{Z}_{\kgg}}(\tHS,u_f) &= \frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon \in \mathbb{Z}_{\kgg}}f^{\flat}(\tHS,\epsilon u_f)=\PE\left[\tHS^2+(u_f^{\kgg}+u_f^{-\kgg})\tHS^{\kgg}-\tHS^{2{\kgg}}\right]\\
+&=\text{Hilbert Series of $\mathbb{C}^2/\mathbb{Z}_{\kgg}$}\, .
+\end{aligned}
+\end{equation}
+The generators are simply given by 
+\begin{equation}
+W^+=Y^{\kgg}\,,\quad W^-=Z^{\kgg}\,,\quad J=YZ\,.
+\end{equation} 
+They satisfy the relation $W^+W^-=J^{\kgg}$. For $\kgg=1,2$ \eqref{eq:hsu1} can be expanded in $\mathfrak{su}(2)_{u_f}$ characters (in agreement with the fact that these theories have $\mathcal{N}=4$ supersymmetry) while for $\kgg=3,4,6$ there is only $\mathfrak{u}(1)_{u_f}$. In terms of $\mathfrak{su}(2,2|3)$ multiplets this is equivalently expressed as
+\begin{equation}\label{eqn:su223relation}
+\hat{\mathcal{B}}_{[{\kgg},0]}\hat{\mathcal{B}}_{[0,{\kgg}]}\color{black}\sim\left(\hat{\mathcal{B}}_{[1,1]}\color{black}\right)^{\kgg}\,.
+\end{equation}
+The topology of the moduli space and relation are in perfect agreement with equations (2.1) and (2.16), respectively, of \cite{Nishinaka:2016hbw,Lemos:2016xke}.
+
+\subsubsection{Schur Limit}
+The Schur limit of the index given by setting \cite{Gadde:2011uv}
+\begin{equation}
+t=ypq\,.
+\end{equation}
+Hence, in the Schur limit:
+\begin{equation}
+\mathcal{I}^{\mathfrak{g}}_{\mathbb{Z}_k,\text{Schur}}(\tau,u_f)=\textrm{Tr}_{\mathbb{S}^3}(-1)^F\tau^{2E-2R}u_f^f\,,
+\end{equation}
+where $\tau=\frac{t^2}{\sqrt{pq}}$.
+Writing $\tau^2=\qfk=e^{\beta}$ it may be argued that \cite{Beem:2017ooy,Ardehali:2015bla,Buican:2015ina,DiPietro:2014bca}
+\begin{equation}\label{eqn:schurloglimit}
+\lim_{\tau\to1}\log \mathcal{I}^{\mathfrak{g}}_{\mathbb{Z}_k,\text{Schur}}(\tau,1)\sim\frac{4\pi^2(a-c)}{\beta}+\mathcal{O}(\beta^0)\,,
+\end{equation} 
+where $c,a$ denote the central charge and weyl anomaly coefficient for the 4d SCFT. For any 4d $\mathcal{N}\geq3$ SCFT \cite{Aharony:2015oyb}
+\begin{equation}
+a=c\,.
+\end{equation}
+We find
+\begin{equation}\label{eqn:u1schur}
+\mathcal{I}^{\mathfrak{u}(1)}_{\mathbb{Z}_k,\text{Schur}}(\tau,u_f)=\frac{1}{k}\sum_{\epsilon\in\mathbb{Z}_k}\frac{\left(\epsilon^{-1}\tau^2;\tau^2\right)\left(\epsilon\tau^2;\tau^2\right)}{\left(\epsilon^{-1}u_f^{-1}\tau;\tau^2\right)\left(\epsilon u_f \tau;\tau^2\right)}\,.
+\end{equation}
+We can now check $a\stackrel{?}{=}c$ which we of course expect to hold for any $\mathcal{N}=3$ theory. It can be shown that
+\begin{equation}
+\log\left(\qfk^x;\qfk\right)=-\mathcal{L}_{\qfk}(-1,x)
+\end{equation}
+where
+\begin{equation}\label{eqn:Pochammer}
+\mathcal{L}_{\qfk}(s,x)=\sum_{j=1}^{\infty}\frac{j^s\qfk^{jx}}{1-\qfk^j}
+\end{equation}
+is the Lambert series.
+For $s=-1$ it may be expressed as \cite{2016arXiv160201085B}
+\begin{equation}
+\mathcal{L}_{\qfk}(-1,x)=-\sum_{n=0}^{\infty}\log(n+x)+B_1(x)\log(-\beta)-\sum_{\substack{n\geq0\\n\neq1}}^{\infty}\frac{\zeta(2-n)}{n!}B_n(x)\beta^{n-1}
+\end{equation}
+where $B_n(x)$ is the $n^{\text{th}}$ Bernoulli polynomial. $B_n(x)$ satisfies $\lim_{x\to\infty}B_n(x)= x^n$. Let us suppose $x=(\sigma+\eta\beta)/\beta$ with $\sigma$, $\eta$ c-numbers independent of $\beta$ then the leading divergence is
+\begin{equation}\label{eqn:Lambertlimit}
+\lim_{\beta\to0}\mathcal{L}_{\qfk}\left(-1,\frac{\sigma+\eta\beta}{\beta}\right)=-\frac{\zeta(2)}{\beta}-\frac{1}{\beta}\sum_{n=2}^{\infty}\frac{\zeta(2-n)}{n!}a^n+\dots
+\end{equation}
+where the dots indicate less singular terms. In particular, this implies that
+\begin{equation}\label{eqn:Pochlimit}
+\begin{aligned}
+\lim_{\beta\to0}\log\frac{\left(\qfk^{\frac{\sigma+\beta \eta}{\beta}};\qfk\right)}{\left(\qfk^{\frac{\gamma+\beta \rho}{\beta}};\qfk\right)}=&\lim_{\beta\to0}\left[\mathcal{L}_{\qfk}\left(-1,\frac{\gamma+\rho \beta}{\beta}\right)-\mathcal{L}_{\qfk}\left(-1,\frac{\sigma+\eta \beta}{\beta}\right)\right]\\
+\sim&\,\frac{1}{\beta}\sum_{n=2}^{\infty}\frac{\zeta(2-n)}{n!}(\sigma^n-\gamma^n)+\dots\,.
+\end{aligned}
+\end{equation}
+Using \eqref{eqn:Pochammer} to rewrite \eqref{eqn:u1schur} at $u_f=1$ as
+\begin{equation}\label{eqn:u1Lambert}
+\frac{1}{k}\sum_{l=1}^ke^{-\mathcal{L}_{\qfk}\left(-1,\frac{\beta-\pi\iu l/k}{\beta}\right)-\mathcal{L}_{\qfk}\left(-1,\frac{\beta+\pi\iu l/k}{\beta}\right)+\mathcal{L}_{\qfk}\left(-1,\frac{\beta/2-\pi\iu l/k}{\beta}\right)+\mathcal{L}_{\qfk}\left(-1,\frac{\beta/2+\pi\iu l/k}{\beta}\right)}\,.
+\end{equation} 
+Taking the logarithm and applying the formula \eqref{eqn:Lambertlimit}, \eqref{eqn:Pochlimit} we find
+\begin{equation}
+\lim_{\tau\to0}\log \mathcal{I}^{\mathfrak{u}(1)}_{\mathbb{Z}_k,\text{Schur}}(\tau,1)\sim\frac{0}{\beta}+\dots\,,
+\end{equation}
+where the dots indicate less divergent terms. Applying \eqref{eqn:schurloglimit} implies that indeed $a=c$ for this theory.
+
+\subsection{\texorpdfstring{$\mathfrak{g}=\mathfrak{su}(2)$}{g=su(2)}}\label{sec:su2} 
+For $\mathfrak{g}=\mathfrak{su}(2)$ it is very difficult to compute \eqref{eqn:SCI} in closed form. For this reason we will instead study only the Coulomb branch limit of the index and the Higgs branch Hilbert series.
+\subsubsection{Coulomb Branch Limit}
+Let us now study the Coulomb branch limit (\ref{eqn:SCICB}). The corresponding computation can be easily performed and we get
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{su}(2)}(x)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\epsilon^2x^2\right]=\begin{cases}\PE\left[x^2\right]&{\kgg}=1\\
+\PE\left[x^{\kgg}\right]&{\kgg}=2,4,6\\
+\PE\left[x^6\right]&{\kgg}=3\\\end{cases}\,.
+\end{equation}
+In each case is $CB_{\mathfrak{su}(2),n}=\mathbb{C}\left[\widetilde{u}\right]$ and so $\mathbf{CB}_{\mathfrak{su}(2),n}\iso\mathbb{C}$. For ${\kgg}=2,4,6$ the Coulomb branch ring of the discretely gauged theory, $CB_{\mathfrak{su}(2),n}$, is generated by $\widetilde{u}=u^{{\kgg}/E(u)}$ where $u=\frac{1}{2}\tr X^2$ is the Coulomb branch parameter of the parent theory. Therefore $E(\widetilde{u})=r(\widetilde{u})={\kgg}$ which belong to $\mathcal{E}_{{\kgg},(0,0)}\subset\hat{\mathcal{B}}_{[0,{\kgg}]}$ for ${\kgg}=2,4,6$. This matches with the discussion below equation (2.8) of \cite{Argyres:2016yzz} for the $I_4$-series $I_0^*$ geometries. The ${\kgg}=3$ case is slightly different since $E(u)=2$ is not a divisor of ${\kgg}=3$ and $CB_{\mathfrak{su}(2),3}$ is generated by $\widetilde{u}=u^{\kgg}=u^3$. Nevertheless this is in perfect agreement with the discussion below equation (A.7) of \cite{Argyres:2016yzz} for the $I_2$-series $I_0^*$ geometries. These parent theories do not come from S-folds and so do not fall into the considerations of \cite{Aharony:2016kai}.
+\subsubsection{Higgs Branch Hilbert Series}
+Let us now compute the Higgs branch Hilbert series \eqref{eqn:hs}. For the case at hand the gauge group is not completely broken and we cannot use letter counting. Therefore we compute the F-flat Hilbert series using \textit{Macaulay2}. We obtain
+\begin{equation}
+\begin{aligned}
+f^{\flat}(\tHS,\epsilon u_f,z)=&\left(1-\chi_2(z)\tHS^2+\left(\epsilon u_f+\frac{1}{\epsilon  u_f}\right)\tHS^3\right)\\
+&\times\PE\left[\tHS\left(\epsilon u_f+\frac{1}{\epsilon u_f}\right)\chi_2(z)\right] \, .
+\end{aligned}
+\end{equation}
+Note that the same result was already found, for $\kgg=1$, in \cite{Hanany:2010qu}. After the integration over the $SU(2)$ gauge group we get
+\begin{equation}
+\begin{aligned}
+\HS_{\mathbb{Z}_{\kgg}}^{\mathfrak{su}(2)}(\tHS,u_f)& = \frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon \in \mathbb{Z}_{\kgg}}\int d\mu_{SU(2)}(z)f^{\flat}(\tHS,\epsilon u_f,z)\\
+&= \frac{1}{\kgg}\sum_{\epsilon \in \mathbb{Z}_{\kgg}}\PE\left[\left(1+u_f^2\epsilon^2+\frac{1}{u_f^{2}\epsilon^{2}}\right)\tHS^2-\tHS^4\right]\,.
+\end{aligned}
+\end{equation}
+Summing over the possible values of $\epsilon$ we get
+\begin{equation}
+\HS_{\mathbb{Z}_{\kgg}}^{\mathfrak{su}(2)}(\tHS,u_f) = \begin{cases}\PE\left[\left(1+u_f^2+u_f^{-2}\right)\tHS^2-\tHS^4\right]&{\kgg}=1\\[10pt]
+\PE\left[\tHS^2+\left(u_f^{\kgg}+u_f^{-{\kgg}}\right)\tHS^{\kgg}-\tHS^{2{\kgg}}\right]&{\kgg}=2,4,6\\[10pt]
+\PE\left[\tHS^2+\left(u_f^6+u_f^{-6}\right)\tHS^6-\tHS^{12}\right]&{\kgg}=3\\ 
+\end{cases}\, .
+\end{equation}
+We again define the generators 
+\begin{equation}
+W^+=\frac{1}{2}\tr Y^{\kgg}\,,\quad W^-=\frac{1}{2}\tr Z^{\kgg}\,,\quad J=\frac{1}{2}\tr YZ\,.
+\end{equation}
+For ${\kgg}\in\{2,4,6\}$ we have $W^+W^-=J^{\kgg}$ and the topology of the Higgs branch is $\mathbb{C}^2/\mathbb{Z}_{\kgg}$. The ${\kgg}=1$ case is the same as ${\kgg}=2$. The ${\kgg}=3$ case is also the same as ${\kgg}=6$. 
+\begin{comment}
+Moreover, it is important to note that the $\kgg=3$ case cannot be obtained from the usual $\mathcal{N}=4$ theories since, when one considers non-local operators, the S-duality group is reduced to a subgroup of $SL(2,\mathbb{Z})$ , however it is only physical for discrete gauging of the `new' $\mathcal{N}=4$ theory \cite{Argyres:2016yzz} and the exact interpretation therefore of the ${\kgg}=3$ discrete gauging is still somewhat unclear. 
+\end{comment}
+In terms of $\mathfrak{su}(2,2|3)$ multiplets, after discarding the ${\kgg}=3$ case, we again have
+\begin{equation}
+\hat{\mathcal{B}}_{[{\kgg},0]}\hat{\mathcal{B}}_{[0,{\kgg}]}\color{black}\sim\left(\hat{\mathcal{B}}_{[1,1]}\color{black}\right)^{\kgg}\,.
+\end{equation}
+We again find agreement with \cite{Nishinaka:2016hbw,Lemos:2016xke}.
+
+\section{Higher Rank Theories}\label{sec:rankN}\renewcommand{\arraystretch}{1.2}
+Having studied in detail the rank one theories we now turn our attention to $\mathbb{Z}_n$ discrete gauging of higher rank theories. We limit most of our attention to the cases of $\mathfrak{g}=AD$ and $\mathfrak{g}=\mathfrak{u}(N)$ where the S-duality group \eqref{eqn:Sdual} acting on local operators is given by $SL(2,\mathbb{Z})$. In general the computation of the full discretely gauged index (\ref{eqn:discgaugepro}) for  $\mathfrak{g}=\mathfrak{u}(N),A,D$ is very difficult to perform. Therefore, also for this class of theories, we decide to focus our attention only on the Coulomb branch limit of the index (\ref{eqn:SCICB}) and on the Higgs branch Hilbert series (\ref{eq:HIggsHS}). For the Hilbert series we only explicitly present the rank $2$ cases. In the final subsection we will discuss the Coulomb branch index for the cases $\mathfrak{g}=E_6,E_7,E_8$. 
+\subsection{\texorpdfstring{$\mathfrak{g}=\mathfrak{u}(N)$}{g=u(N)}} 
+\subsubsection*{Coulomb Branch Limit}
+Let us study the Coulomb branch limit \eqref{eqn:CBlimit}. Applying \eqref{eqn:SCICBdeg} we find
+\begin{equation}\label{eqn:uNCBIndex}
+\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{u}(N)}(x)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\sum_{j=1}^N\epsilon^jx^j\right]\,.
+\end{equation}
+We list a few cases for low rank. We define for ${\kgg}=1$ the generators of $CB_{\mathfrak{u}(N)}$ to be $u_j=\frac{1}{j}\tr X^j$. For $N=2$ we collate the results for the Coulomb branch index below 
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{u}(2)}(x)$&${\kgg}$&Generators&Relation\\[2pt] \hline
+$\PE\left[x+x^2\right]$ & $1$ &$u_1,u_2$& $\diagup$ \\[2pt] \hline
+$\PE\left[2x^2\right]$ & $2$ &$\widetilde{u}_1=u_1^2$, $u_2$& $\diagup$\\\hline
+$\PE\left[2x^3+x^6-x^9\right]$&$3$&$\widetilde{u}_1=u_1^3$, $\widetilde{u}_2=u_1u_2$, $\widetilde{u}_3=u_2^3$&$\widetilde{u}_1\widetilde{u}_3=\widetilde{u}_2^3$\\\hline
+$\PE\left[3x^4-x^8\right]$&$4$&$\widetilde{u}_1=u_1^4$, $\widetilde{u}_2=u_2^2$, $\widetilde{u}_3=u_1^2u_2$&$\widetilde{u}_1\widetilde{u}_2=\widetilde{u}_3^2$\\\hline
+$(1+2x^6)\PE\left[2x^6\right]$&$6$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+\end{tabular}
+\end{center}
+By $\diagup$ we mean that the corresponding variety is freely generated with no relation. For ${\kgg}=3,4$ $CB_{\mathfrak{u}(2),\kgg}$ is not freely generated. Moreover for ${\kgg}=6$ we find that Coulomb branch is not a complete intersection. This is in agreement with the expectation that we outlined above \eqref{eqn:CBquotient}. The dimension of Coulomb branch, as a complex manifold, is given by applying \eqref{eqn:CBdim} and $\dim_{\mathbb{C}} CB_{\mathfrak{u}(2),\kgg}=2$ in each case.
+\begin{comment}
+Since we expect that the Plethystic logarithm of the Coulomb branch index is counting the number of generators of the Coulomb branch chiral ring, i.e. the number of independent $\mathcal{E}_{r,(0,0)}$ multiplets, minus relations. Let us examine this case in a bit more detail. 
+\end{comment} 
+For the case when $\mathbf{CB}_{\mathfrak{u}(N),\kgg}$ is non-planar but a complete intersection one can easily read off the generators and relation. Conversely when it is not a complete intersection some more effort is required. The expansion of the Plethystic logarithm of the $\kgg=6$ Coulomb branch index reads
+\begin{equation}\label{eqn:u2CBPlog}
+\PLog\left[\mathcal{I}^{\mathfrak{u}(2)}_{\mathbb{Z}_6,\text{CB}}(x)\right]=4 x^6 - 3 x^{12} + 2 x^{18} +\mathcal{O}(x^{24})\,.
+\end{equation} 
+The generators at $x^6$ are 
+\begin{equation}\label{eqn:u2CBgenerators}
+\widetilde{u}_1=u_2^3\,,\quad\widetilde{u}_2=u_1^6\,,\quad\widetilde{u}_3=u_2u_1^4\,,\quad\widetilde{u}_4=u_2^2u_1^2\,,
+\end{equation} 
+they are primaries of the multiplets $\mathcal{E}_{6,(0,0)}$. There are three relations at $x^{12}$ 
+\begin{equation}\label{eqn:u2CBrelations}
+I_1:\widetilde{u}_1\widetilde{u}_2-\widetilde{u}_3\widetilde{u}_4=0\,,\quad I_2:\widetilde{u}_4^2-\widetilde{u}_3\widetilde{u}_1=0\,,\quad I_3:\widetilde{u}_3^2-\widetilde{u}_2\widetilde{u}_4=0\,.
+\end{equation}
+However these relations are not all independent; at $x^{18}$ we have syzygies
+\begin{equation}\label{eqn:u2CBsyzygies}
+\widetilde{u}_3I_1+\widetilde{u}_2I_2+\widetilde{u}_4 I_3\equiv0\,,\quad \widetilde{u}_4 I_1+\widetilde{u}_3 I_2+\widetilde{u}_1 I_3\equiv0\,.
+\end{equation}
+Generally the moduli space should be characterised by \eqref{eqn:u2CBgenerators}, \eqref{eqn:u2CBrelations} and \eqref{eqn:u2CBsyzygies}.
+For $N=3$ the Coulomb branch index is given by
+\vspace{0.1cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{u}(3)}(x)$&${\kgg}$&Generators&Relation\\\hline
+$\PE\left[x+x^2+x^3\right]$ & $1$ &$u_1,u_2,u_3$&$\diagup$\\\hline
+\multirow{ 2}{*}{$\PE\left[2x^2+x^4+x^6-x^8\right]$} & \multirow{ 2}{*}{$2$} & $\widetilde{u}_1=u_1^2$, $u_2$, &\multirow{ 2}{*}{$\widetilde{u}_1\widetilde{u}_3=\widetilde{u}_2^2$}\\
+&&$\widetilde{u}_2=u_1u_3$, $\widetilde{u}_3=u_3^2$&\\\hline
+\multirow{ 2}{*}{$\PE\left[3x^3+x^6-x^9\right]$}&\multirow{ 2}{*}{$3$}&$\widetilde{u}_1=u_1^3$, $\widetilde{u}_2=u_1u_2$,&\multirow{ 2}{*}{$\widetilde{u}_1\widetilde{u}_3=\widetilde{u}_2^3$}\\
+&& $u_3$, $\widetilde{u}_3=u_2^3$&\\\hline
+$\frac{(1+x^4)(1+x^4+2x^8)}{\left(1-x^4\right)^3(1+x^4+x^8)}$&$4$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+$(1+4x^6+x^{12})\PE\left[3x^6\right]$&$6$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+\end{tabular}
+\end{center}
+\vspace{0.1cm}
+For $N=4$ the Coulomb branch index is given by
+\vspace{0.1cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{u}(4)}(x)$&${\kgg}$&Generators&Relation\\\hline
+$\PE\left[x+x^2+x^3+x^4\right]$ & $1$ &$u_1,u_2,u_3,u_4$&$\diagup$\\\hline
+\multirow{ 2}{*}{$\PE\left[2x^2+2x^4+x^6-x^8\right]$} & \multirow{ 2}{*}{$2$}&$u_2$, $\widetilde{u}_1=u_1^2$, $u_4$, &\multirow{ 2}{*}{$\widetilde{u}_1\widetilde{u}_3=\widetilde{u}_2^2$}\\
+&&$\widetilde{u}_2=u_1u_3$, $\widetilde{u}_3=u_3^2$&\\\hline
+$\frac{(1+x^3+x^6)(1+2x^6)}{(1-x^3)^4(1+x^3)^2(1+x^6)}$&$3$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+$\frac{(1+x^4)(1+x^4+2x^8)}{\left(1-x^4\right)^4(1+x^4+x^8)}$&$4$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+$\frac{(1+2x^6)(1+4x^6+x^{12})}{\left(1-x^6\right)^4(1+x^6)}$&$6$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+\end{tabular}
+\end{center}
+\vspace{0.1cm}
+We would like to point out that the dimension formula \eqref{eqn:CBdim} is in perfect agreement with the above results.
+We checked up to $N=60$ and order $x^{70}$ that $\mathbf{CB}_{\mathfrak{u}(N),n}$ for $\kgg\geq2$ is not a complete intersection for all $N\geq 5$. In principle the analysis that we performed \eqref{eqn:u2CBPlog} - \eqref{eqn:u2CBsyzygies} can be repeated for each case, however doing so is beyond the current scope of this article. Further note that for each $N$ and ${\kgg}\geq3$ we do not have Coulomb branch operators of dimension one or two, implying that we indeed have genuine $\mathcal{N}=3$ supersymmetry \cite{Aharony:2015oyb}. 
+
+\subsubsection{Higgs Branch Hilbert Series}
+Let us now analyse the Higgs branch for these theories. We restrict our attention to the case $\mathfrak{g}=\mathfrak{u}(2)$. Using \textit{Macaulay2} and performing the integration over $U(2)$ gauge group the Higgs branch Hilbert series reads
+\begin{equation}\label{eqn:HSU2}
+\begin{aligned}
+&\HS_{\mathbb{Z}_{\kgg}}^{\mathfrak{u}(2)}(\tHS,u_f) =\\
+& \frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon \in \mathbb{Z}_{\kgg}}\PE\left[\left(\epsilon u_f+\epsilon^{-1} u_f^{-1}\right)\tHS+\left(1+\epsilon^2 u_f^2+\epsilon^{-2} u_f^{-2}\right)\tHS^2-\tHS^4 \right] \, .
+\end{aligned}
+\end{equation}
+After performing the sum over $\mathbb{Z}_{\kgg}$ \eqref{eqn:HSU2} becomes
+\begin{equation}
+\allowdisplaybreaks
+\begin{aligned}
+&\HS_{\mathbb{Z}_{\kgg}}^{\mathfrak{u}(2)}(\tHS,u_f)=\\
+&\begin{cases}\PE\left[(u_f+u_f^{-1})\tHS+(1+u_f^2+u_f^{-2})\tHS^2-\tHS^4\right]&{\kgg}=1\\[12pt]
+\PE\left[2(1+u_f^2+u_f^{-2})\tHS^2-2\tHS^4\right]&{\kgg}=2\\[12pt]
+\frac{\left(\tHS^6 (u_f^6 + u_f^{-6}) + 
+   \tHS^3 (1 + \tHS^2) (1 + \tHS^2 + \tHS^4) (u_f^3 + u_f^{-3}) + 3 \tHS^4 + 3 \tHS^8 +\sum_{a=0}^{6}\tHS^{2a}\right)}{(1 + \tHS^2) ^{-1}\left(1 + \tHS^6 - 
+   \tHS^3 (u_f^3 + u_f^{-3})\right)^2 \left(1 + \tHS^6 + \tHS^3 (u_f^3 + u_f^{-3})\right)}&{\kgg}=3\\[12pt]
+   \frac{(1 + \tHS^2)^2 (u_f^4 + \tHS^4 (1 + (4 + \tHS^4) u_f^4 + u_f^8))}{(1 + 
+  \tHS^8  - \tHS^4 ( u_f^4 + u_f^{-4}))}^2&{\kgg}=4\\[12pt]
+ \frac{(1 + \tHS^2)^2  (2 \tHS^6 (1 + \tHS^4) + (1 + 4 \tHS^4 + 9 \tHS^8 + 4 \tHS^{12} + 
+      \tHS^{16}) u_f^6 + 2 \tHS^6 (1 + \tHS^4) u_f^{12})}{(1 + \tHS^{12}  - 
+  \tHS^6 (u_f^6 + u_f^{-6}))^2} &{\kgg}=6
+\end{cases}
+\end{aligned}
+\end{equation}
+When ${\kgg}=1,2$ we get a complete intersection. Moreover, in an expansion around $\tHS$ the dependence on $u_f$ in \eqref{eqn:HSU2} arranges itself into characters of $SU(2)$ implying that the $U(1)_f$ isometry of the Higgs branch is enhanced to $SU(2)_f$ for these theories. This is of course due to the fact that supersymmetry is enhanced to $\mathcal{N}=4$ for ${\kgg}=1,2$. For ${\kgg}=3,4,6$ we do not have complete intersections, nonetheless we may identify the first generators and their relation. Moreover, for each ${\kgg}$, by applying the dimension formula \eqref{eqn:dimHB} we find that the Higgs branch is a manifold of complex dimension four.
+We define 
+\begin{equation}
+W_{j,m}=\frac{1}{j+m}\tr Y^jZ^m\,.
+\end{equation}
+For ${\kgg}=1$, by taking the Plethystic logarithm of \eqref{eqn:HSU2}, we find that the Higgs branch is generated by the $W_{j,0}$, $W_{0,j}$ for $j=1,2$ and $W_{1,1}$. There is a relation of dimension $4$ between them given by $2W_{1,1}(2W_{1,1}-W_{0,1}W_{1,0})+W_{0,1}^2W_{2,0}+W_{1,0}^2W_{0,2}=0$. The variety is $\mathbf{HB}_{\mathfrak{u}(2),1}\iso\Sym^2\left(\mathbb{C}^2\right)$ \cite{Nakajima:2003pg,Feng:2007ur}.
+
+For ${\kgg}=2$ the Higgs branch is generated by $W_{0,2}$, $W_{2,0}$ $W_{1,1}$ , $\widetilde{W}={W_{1,0}}^2$, $\widetilde{V}={W_{0,1}}^2$ and $\widetilde{J}=W_{1,0}W_{0,1}$ and there are two relations of dimension $4$. The variety is $\mathbf{HB}_{\mathfrak{u}(2),2}\iso\left(\Sym^2\left(\mathbb{C}^2\right)\right)/\mathbb{Z}_2\iso\mathbb{C}^2/\mathbb{Z}_2\times\mathbb{C}^2/\mathbb{Z}_2$.
+
+At ${\kgg}=3$ we do not get a complete intersection, nevertheless we can expand the Plethystic logarithm of \eqref{eqn:HSU2}
+\begin{equation}\label{eqn:HSU2Z3Plog}
+\begin{aligned}
+\PLog\left[\HS_{\mathbb{Z}_3}^{\mathfrak{u}(2)}(\tHS,u_f)\right]=&2 \tHS^2+2 \tHS^3 \left(u_f^3+u_f^{-3}\right)+2 \tHS^4+\tHS^5 \left(u_f^3+u_f^{-3}\right)\\
+&+\tHS^6
+   \left(u_f^6+u_f^{-6}-4\right)+\mathcal{O}\left(\tHS^7\right)\,.
+  \end{aligned}
+\end{equation}
+The generators are $W_{1,1}$, $\widetilde{J}_1=W_{0,1}W_{1,0}$, $\widetilde{W}_1={W_{1,0}}^3$, $\widetilde{V}_1={W_{0,1}}^3$, $\widetilde{W}_2=W_{2,0}W_{1,0}$, $\widetilde{V}_2=W_{0,2}W_{0,1}$, $\widetilde{J}_2=W_{2,0}W_{0,2}$, $W_{2,2}$, $\widetilde{W}_3=W_{2,0}^2W_{0,1}$, $\widetilde{V}_3={W_{0,2}}^2W_{1,0}$, $\widetilde{W}_4={W_{0,2}}^3$ and $\widetilde{V}_4={W_{2,0}}^3$. There are four relations of dimension six between them. In terms of $\mathfrak{su}(2,2|3)$ mutiplets these have the correct quantum numbers to be
+\begin{equation}
+\begin{aligned}\label{eqn:u2z3HB1}
+&\hat{\mathcal{B}}_{[1,1]}\,,\quad \hat{\mathcal{B}}_{[1,1]}\,,\quad \hat{\mathcal{B}}_{[3,0]} \,,\quad {\hat{\mathcal{B}}_{[0,3]}}\,,\quad \hat{\mathcal{B}}_{[3,0]} \,,\quad {\hat{\mathcal{B}}_{[0,3]}}\,,\\ &{\hat{\mathcal{B}}_{[2,2]}}\,,\quad {\hat{\mathcal{B}}_{[2,2]}}\,,\quad {\hat{\mathcal{B}}_{[4,1]}}\,,\quad {\hat{\mathcal{B}}_{[1,4]}}\,,\quad {\hat{\mathcal{B}}_{[6,0]}}\,,\quad {\hat{\mathcal{B}}_{[0,6]}}\,.
+\end{aligned}
+\end{equation}
+Note that, using \eqref{eqn:Bnmdecomp}-\eqref{eqn:B0n}, it is easily checked that \eqref{eqn:u2z3HB1} agrees with the spectrum of Coulomb branch operators that we found for the $\mathfrak{u}(2)$ $\mathbb{Z}_{\kgg=3}$ theory \eqref{eqn:uNCBIndex}. Note that in \eqref{eqn:HSU2Z3Plog} two generators appear which have the correct quantum numbers to belong to $\hat{\mathcal{B}}_{[1,1]}$ multiplets. This implies that the theory contains two conserved spin two currents (which lie inside $\hat{\mathcal{C}}_{0,(0,0)}$ multiplets in $\mathcal{N}=2$ language).
+
+At ${\kgg}=4,6$ we again do not get complete intersection varieties. One can perform a similar analysis for those cases as we did for ${\kgg}=3$. 
+
+We note that for $\mathfrak{u}(N)$ it is possible, in principal, to obtain the result for any value of $N$. Since, for $\mathfrak{u}(N)$ $\mathcal{N}=4$ SYM the Higgs branch is purely mesonic, it can be obtained as the $N^{\text{th}}$ symmetric product of the $\mathfrak{u}(1)$ case \cite{Feng:2007ur,Benvenuti:2006qr,Seiberg:1997ax,Gang:2011xp,Forcella:2008bb}. That is to say
+\begin{equation}
+\mathbf{HB}_{\mathfrak{u}(N),1}=\Sym^N\left(\mathbf{HB}_{\mathfrak{u}(1),1}\right)=\Sym^N\left(\mathbb{C}^2\right)\,.
+\end{equation}
+It therefore follows that the result for the $\mathbb{Z}_n$ discrete gauging is simply
+\begin{equation}\label{eqn:unhsgenericNman}
+\mathbf{HB}_{\mathfrak{u}(N),n}=\mathbf{HB}_{\mathfrak{u}(N),1}/\mathbb{Z}_n=\left(\Sym^N\left(\mathbb{C}^2\right)\right)/\mathbb{Z}_n\,.
+\end{equation}
+The Hilbert series for the variety $\mathbf{M}=\Sym^N\left(\mathbf{V}\right)$ can be obtained by the following formula \cite{Nakajima:2003pg,Benvenuti:2006qr,Feng:2007ur}
+\begin{equation}\label{eqn:HSSymProd}
+\HS(\tHS;M)=\frac{1}{N!}\frac{\partial^N}{\partial\nu^N}\left.\PE\left[\nu \HS(\tHS;V)\right]\right|_{\nu=0}\,.
+\end{equation}
+Applying the formula \eqref{eqn:HSSymProd} we therefore have
+\begin{align}
+\HS_{\mathbb{Z}_n}^{\mathfrak{u}(N)}(\tHS,u_f)=&\frac{1}{|\mathbb{Z}_n|}\sum_{\epsilon\in\mathbb{Z}_n}\frac{1}{N!}\frac{\partial^N}{\partial\nu^N}\left.\PE\left[\nu \HS_{\mathbb{Z}_1}^{\mathfrak{u}(1)}(\tHS,\epsilon u_f)\right]\right|_{\nu=0}\\
+=&\frac{1}{|\mathbb{Z}_n|}\sum_{\epsilon\in\mathbb{Z}_n}\frac{1}{N!}\frac{\partial^N}{\partial\nu^N}\left.\frac{1}{\prod_{i,j\geq0}(1- \nu u_f^{i-j}\epsilon^{i-j}\tHS^{i+j})}\right|_{\nu=0}\label{eqn:unhsgenericN}\,.
+\end{align}
+For generic large values of $N$ evaluating the derivative is rather tricky. For $N=2$ we explicitly checked \eqref{eqn:unhsgenericN} against \eqref{eqn:HSU2} finding precise agreement. For higher values of $N$ explicit evaluation of the Hilbert series using \textit{Macaulay2} is no longer possible. But the agreement for $N=2$ provides strong evidence that \eqref{eqn:unhsgenericNman} \& \eqref{eqn:unhsgenericN} are true for general $N$. We also discuss the case of $N=\infty$ in Section \ref{sec:largeN}.
+
+\subsection{\texorpdfstring{$\mathfrak{g}=\mathfrak{su}(N+1)$}{g=su(N+1)}}
+\subsubsection{Coulomb Branch Limit}
+Let us study the Coulomb branch limit. From \eqref{eqn:SCICBdeg} we have
+\begin{equation}\label{eqn:CBsuN}
+\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{su}(N+1)}(x)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\sum_{j=2}^{N+1}\epsilon^jx^j\right]\,.
+\end{equation}
+Let us examine a few cases for low rank. We define the generators of $CB_{\mathfrak{su}(N+1)}$ for the parent theory to be given by $u_j=\frac{1}{j}\tr X^j$. For $N+1=3$ we have
+\vspace{0.1cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{su}(3)}(x)$&${\kgg}$&Generators&Relation\\\hline
+$\PE\left[x^2+x^3\right]$ & $1$&$u_2$, $u_3$&$\diagup$\\\hline
+$\PE\left[x^2+x^6\right]$ & $2$ & $u_2$, $\widetilde{u}_1=u_3^2$&$\diagup$\\\hline
+$\PE\left[x^3+x^6\right]$ & $3$& $u_3$, $\widetilde{u}_1=u_2^3$&$\diagup$\\\hline
+$\PE\left[x^4+x^8+x^{12}-x^{16}\right]$ & $4$ & $\widetilde{u}_1=u_2^2$, $\widetilde{u}_2=u_2u_3^2$, $\widetilde{u}_3=u_3^4$&$\widetilde{u}_1\widetilde{u}_3=\widetilde{u}_2^2$\\\hline
+$\PE\left[2x^6\right]$ & $6$&$\widetilde{u}_1=u_2^3$, $\widetilde{u}_2=u_3^2$&$\diagup$\\\hline
+\end{tabular}
+\end{center}
+\vspace{0.1cm}
+When $\kgg=1,2,3,6$ $CB_{\mathfrak{su}(3),\kgg}$ is freely generated, in agreement with our discussion above \eqref{eqn:CBquotient}. For $N+1=4$ we have
+\vspace{0.1cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{su}(4)}(x)$&${\kgg}$&Generators&Relation\\\hline
+$\PE\left[x^2+x^3+x^4\right]$ & $1$ &$u_2$, $u_3$, $u_4$&$\diagup$\\\hline
+$\PE\left[x^2+x^4+x^6\right]$ & $2$ & $u_2$, $u_4$, $\widetilde{u}_1=u_2^3$&$\diagup$\\\hline
+\multirow{ 2}{*}{$\PE\left[x^3+2x^6+x^{12}-x^{18}\right]$} & \multirow{ 2}{*}{$3$} & $u_3$, $\widetilde{u}_1=u_2^3$,&\multirow{ 2}{*}{$\widetilde{u}_1\widetilde{u}_3=\widetilde{u}_2^3$}\\
+&&$\widetilde{u}_2=u_2u_4$, $\widetilde{u}_3=u_4^3$&\\\hline
+\multirow{ 2}{*}{$\PE\left[2x^4+x^8+x^{12}-x^{16}\right]$} & \multirow{ 2}{*}{$4$} & $\widetilde{u}_1=u_2^2$, $u_4$,&\multirow{ 2}{*}{$\widetilde{u}_1\widetilde{u}_3=\widetilde{u}_2^2$}\\
+&&$\widetilde{u}_2=u_2u_3^2$, $\widetilde{u}_3=u_3^4$&\\\hline
+\multirow{ 2}{*}{$\PE\left[3x^6+x^{12}-x^{18}\right]$} & \multirow{ 2}{*}{$6$} & $\widetilde{u}_1=u_2^3$, $\widetilde{u}_2=u_3^2$,&\multirow{ 2}{*}{$\widetilde{u}_1\widetilde{u}_4=\widetilde{u}_3^3$}\\
+&&$\widetilde{u}_3=u_2u_4$, $\widetilde{u}_4=u_4^3$&\\\hline
+\end{tabular}
+\end{center}
+\vspace{0.1cm}
+For $N+1=5$ we have
+\vspace{0.1cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{su}(5)}(x)$&${\kgg}$&Generators&Relation\\\hline
+$\PE\left[\sum_{A=2}^5x^A\right]$ & $1$ &$u_2,u_3,u_4,u_5$&$\diagup$\\\hline
+\multirow{ 2}{*}{$\PE\left[\sum_{A=1}^5x^{2A}-x^{16}\right]$} & \multirow{ 2}{*}{$2$} & $u_2$, $u_4$, $\widetilde{u}_1=u_3^2$,&\multirow{ 2}{*}{$\widetilde{u}_3\widetilde{u}_1=\widetilde{u}_2^2$}\\
+&&$\widetilde{u}_2=u_3u_5$, $\widetilde{u}_3=u_5^2$&\\\hline
+$\frac{1+x^6+2x^9+2x^{12}+x^{15}+2x^{18}}{(1-x^3)^4(1+x^3)^2(1+(x^3+x^6+x^9)(1+x^3+x^9))}$ & $3$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+$\frac{(1+x^8)(1+x^8+x^{12}+x^{16})}{(1-x^4)^4(1+(x^4+x^8)(2+2x^4+2x^8+x^{12}+x^{16}))}$ & $4$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+$\frac{1+x^6+4x^{12}+4x^{18}+3x^{24}+3x^{30}+2x^{36}}{(1-x^6)^4(1+2x^6+2x^{12}+2x^{18}+2x^{24}+2x^{30})}$ & $6$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+\end{tabular}
+\end{center}
+Out of the theories with $N+1>5$ we find that, apart from ${\kgg}=2$, $N+1=6$, the Coulomb branch for ${\kgg}=2,3,4,6$ is never a complete intersection. We checked this up to $N=60$ and $x^{70}$. In each case the dimension formula \eqref{eqn:CBdim} holds and is equal to $N$ as expected. In the cases where the moduli space is not a complete intersection variety the analysis that we demonstrated \eqref{eqn:u2CBPlog} - \eqref{eqn:u2CBsyzygies} can, in principle, be repeated. Again, for each $N$, with ${\kgg}\geq3$ we do not have Coulomb branch operators of dimension one or two implying genuine $\mathcal{N}=3$ supersymmetry \cite{Aharony:2015oyb}. 
+
+\subsubsection{Higgs Branch Hilbert Series}
+Let us turn to analysing the Higgs branch for these theories. We restrict ourselves only to the case $\mathfrak{g}=\mathfrak{su}(3)$. Using \textit{Macaluay2} and performing the integration over the gauge group the Higgs branch Hilbert series reads
+\begin{equation}\label{eq:hsu3}
+\begin{aligned}
+&\HS_{\mathbb{Z}_{\kgg}}^{\mathfrak{su}(3)}(\tHS,u_f)= \\
+&\frac{1}{{\kgg}}\sum_{\epsilon \in \mathbb{Z}_{\kgg}}\frac{1+\tHS^2+ \left(u_f \epsilon +\frac{1}{u_f \epsilon }\right)\tHS^3+\tHS^4+\tHS^6}{\left(1-\frac{\tHS^2}{u_f^2 \epsilon ^2}\right)\left(1-\tHS^2u_f^2\epsilon^2\right)\left(1-\frac{\tHS^3}{u_f^3\epsilon^3}\right)\left(1-\tHS^3u_f^3\epsilon^3\right) }\,.
+\end{aligned}
+\end{equation}
+We find that, for all ${\kgg}$, the corresponding moduli space is never a complete intersection. Moreover, applying \eqref{eqn:dimHB}, we find that in each case the Higgs branch is of complex dimension four.
+A complete analysis of the Higgs branches of these theories is beyond the scope of this paper. However, as we did for the $\mathfrak{u}(2)$ case we would like to demonstrate with an example. The generators of the parent $({\kgg}=1)$ theory are $W_{j,0}$ and $W_{0,j}$ for $j\in\{2,3\}$, $W_{1,1}$, $W_{2,1}$ and $W_{1,2}$ where, as before,
+\begin{equation}
+W_{j,m}=\frac{1}{j+m}\tr Y^jZ^m\,.
+\end{equation}
+As an example let us expand the Plethystic logarithm of \eqref{eq:hsu3} for ${\kgg}=3$
+\begin{equation}
+\begin{aligned}
+\PLog\left[\HS_{\mathbb{Z}_3}^{\mathfrak{su}(3)}(\tHS,u_f)\right]= &\tHS^2 + (u_f^{-3} + u_f^3) \tHS^3 + \tHS^4 + (u_f^{-3} + u_f^3) \tHS^5   \\&+(u_f^{-6} + 
+    u_f^6) \tHS^6 - \tHS^8- (u_f^{-6} + u_f^6) \tHS^9\\
+    &
+    -(1+u_f^{-6}+u_f^6)\tHS^{10}+\mathcal{O}(\tHS^{11})\,.
+\end{aligned}
+\end{equation} 
+The generators are $W_{1,1}$, $W_{3,0}$, $W_{0,3}$, $\widetilde{J}=W_{2,0}W_{0,2}$, $\widetilde{W}_1=W_{2,1}W_{2,0}$, $\widetilde{V}_1=W_{1,2}W_{0,2}$, $\widetilde{W}_2={W_{2,0}}^3$ and $\widetilde{V}_2={W_{0,2}}^3$. In terms of $\mathfrak{su}(2,2|3)$ multiplets these have the correct quantum numbers to correspond to
+\begin{equation}
+{\hat{\mathcal{B}}_{[1,1]}}\,,\quad {\hat{\mathcal{B}}_{[3,0]}}\,,\quad {\hat{\mathcal{B}}_{[0,3]}}\,,\quad {\hat{\mathcal{B}}_{[2,2]}}\,,\quad {\hat{\mathcal{B}}_{[4,1]}}\,,\quad {\hat{\mathcal{B}}_{[1,4]}}\,,\quad {\hat{\mathcal{B}}_{[6,0]}}\,,\quad {\hat{\mathcal{B}}_{[0,6]}}\,.
+\end{equation}
+We can again write down the result for any value of $N$. The Higgs branch moduli space for $\mathfrak{su}(N+1)$ $\mathcal{N}=4$ SYM can though of as a hypersurface living inside the $\mathfrak{u}(N+1)$ case defined by the equations $W_{0,1}=W_{1,0}=0$. Therefore we have  \cite{Seiberg:1997ax,Forcella:2008bb}
+\begin{equation}
+\mathbf{HB}_{\mathfrak{su}(N+1)}\iso\mathbb{C}^{2N}/S_{N+1}\subset \mathbf{HB}_{\mathfrak{u}(N+1)}
+\end{equation}
+The Hilbert series for this variety is simply
+\begin{equation}
+\HS_{\mathbb{Z}_1}^{\mathfrak{su}(N+1)}(\tHS,u_f)=(1-u_f\tHS)(1-u_f^{-1}\tHS)\,\HS^{\mathfrak{u}(N+1)}(\tHS,u_f)
+\end{equation}
+with $\HS_{\mathbb{Z}_1}^{\mathfrak{u}(N+1)}$ defined in \eqref{eqn:unhsgenericN}.
+By definition
+\begin{equation}
+\mathbf{HB}_{\mathfrak{su}(N+1),\kgg}\iso\left(\mathbb{C}^{2N}/S_{N+1}\right)/\mathbb{Z}_{\kgg}\,.
+\end{equation}
+And the Hilbert series is 
+\begin{equation}
+\HS_{\mathbb{Z}_n}^{\mathfrak{su}(N+1)}(\tHS,u_f)=\frac{1}{|\mathbb{Z}_n|}\sum_{\epsilon\in\mathbb{Z}_n}\HS_{\mathbb{Z}_1}^{\mathfrak{su}(N+1)}(\tHS,\epsilon u_f)\label{eqn:unhsgenericSUN}\,.
+\end{equation}
+For $N=2$ we explicitly checked \eqref{eqn:unhsgenericSUN} against \eqref{eq:hsu3} finding precise agreement. For higher values of $N$ explicit evaluation of the Hilbert series using \textit{Macaulay2} is no longer possible.
+
+\subsection{\texorpdfstring{$\mathfrak{g}=\mathfrak{so}(2N)$}{g=so(2N)}} 
+\subsubsection{Coulomb Branch Limit}
+The Coulomb branch limit \eqref{eqn:SCICBdeg} reads
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{so}(2N)}(x)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\epsilon^Nx^N+\sum_{j=1}^{N-1}\epsilon^{2j}x^{2j}\right]\,.
+\end{equation}
+We would like to discuss firstly the ${\kgg}=2$ case where there are two distinct cases. Namely when $N=2M$ or $N=2M-1$ for $M\in\mathbb{Z}$. 
+Let the us choose a basis for the Coulomb branch chiral ring given by 
+\begin{equation}
+u_{2j}=\tr X^{2j}\,,\quad 1\leq j\leq N-1\quad\text{and}\quad \hat{u}_N=\Pf X \, ,
+\end{equation}
+where Pf denotes the Pfaffian. The dimensions of the above operator are $E(u_j)=2j$, $E(\hat{u}_N)=N$. When $\mathfrak{g}=\mathfrak{so}(4M)$ we can write \\$X=\diag\left(x_1\sigma_2,x_2\sigma_2,\dots,x_{2N}\sigma_2\right)$ then the $\mathbb{Z}_2$ acts by $r_2\newdot s_2:X\mapsto-X=g^{-1}Xg$ with $g=\diag\left(\sigma_3,\sigma_3,\dots,\sigma_3\right)\in SO(4M)$, where $\sigma_i$ denotes the Pauli matrices, and thus $r_2\cdot s_2$ is isomorphic to a gauge transformation and therefore the ${\kgg}=2$ case with $N=2M$ should lead to exactly the same theory as the ${\kgg}=1$ case. 
+This is to be compared to the case when $\mathfrak{g}=\mathfrak{so}(4M-2)$. Writing $X=\diag\left(x_1\sigma_2,x_2\sigma_2,\dots,x_{2N-1}\sigma_2\right)$ as before we have $r_2\cdot s_2:X\mapsto-X=g^{-1}Xg$ now with $g=\diag\left(\sigma_3,\sigma_3,\dots,\sigma_3\right)\not\in SO(4N-2)$, infact, $g\in O(4N-2)$ and in this case the $\mathbb{Z}_2$ does generate a genuine global symmetry which, when gauged, will lead to a distinct theory. 
+%\footnote{We should point out that the this does not violate the expectation that one should be able to obtain the $O(2N)$ theory as a discrete gauging of the $SO(2N)$ by it's $\mathbb{Z}_2$ central extension $SO(2N)\ltimes\mathbb{Z}_2$. Gauging the $\mathbb{Z}_2$ generated by $r_2\cdot s_2$ does not yield the $O(2N)$ theory (for $N$ odd), since it is not quite the correct $\mathbb{Z}_2$ one must gauge - the extention of $SO(2N)$ by $r_2\cdot s_2$ is a direct rather than semi-direct product. To obtain the $O(2N)$ theory via a discrete gauging of the $SO(2N)$ theory one must gauge the $\mathbb{Z}_2$ global symmetry generated by the element $\mathbb{Z}_2:X\mapsto h^{-1}Xh$ with $h=\diag\left(\sigma_3,\mathbb{I}_{2N-2}\right)\in O(2N)$ but $h\not\in SO(2N)$ and the extension of $SO(2N)$ by the $\mathbb{Z}_2$ generated by $h$ is indeed a semi-direct product. See e.g. \cite{Bourget:2017tmt,Bourget:2017sxr} for discussion on how this may be implemented at the level of the index/Hilbert series.}
+Indeed we find that for $N=2M$
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_2,\text{CB}}^{\mathfrak{so}(4M)}(x)=\PE\left[x^{2M}+\sum_{j=1}^{2M-1}x^{2j}\right]=\mathcal{I}_{\mathbb{Z}_1,\text{CB}}^{\mathfrak{so}(4M)}(x)\,.
+\end{equation}
+On the other hand, for $N=2M-1$
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_2,\text{CB}}^{\mathfrak{so}(4M-2)}(x)=\PE\left[x^{4M-2}+\sum_{j=1}^{2M-2}x^{2j}\right]\,,
+\end{equation}
+and the new Coulomb branch operators are simply given by $u_2,u_4,\dots,u_{4M-4}$ and $\widetilde{u}=\left(\hat{u}_{2M-1}\right)^2=\det X$.
+Let us now turn on the cases ${\kgg}=3,4,6$ for different values of $N$. In the following we collate the results that we found.\\
+For $N=2$ we have
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{so}(4)}(x)$&${\kgg}$&Generators&Relation\\\hline
+$(1+2x^6)\PE\left[1-2x^6\right]$ & $3$ &\multicolumn{2}{c|}{Not complete intersection}\\\hline
+$\PE\left[3x^4-x^{8}\right]$ & $4$ & $\widetilde{u}_1=u_2\hat{u}_2$, $\widetilde{u}_2=u_2^2$, $\widetilde{u}_3=\hat{u}_2^2$&$\widetilde{u}_1^2=\widetilde{u}_2\widetilde{u}_3$\\\hline
+$(1+2x^6)\PE\left[1-2x^6\right]$ & $6$&\multicolumn{2}{c|}{Not complete intersection}\\\hline
+\end{tabular}
+\end{center}
+Note that, since $\mathfrak{so}(4)\iso\mathfrak{su}(2)\oplus\mathfrak{su}(2)$, for $\kgg=1,2$ we have \newline$\mathcal{I}_{\mathbb{Z}_{\kgg=1,2},\text{CB}}^{\mathfrak{so}(4)}=\left(\mathcal{I}_{\mathbb{Z}_{\kgg=1,2},\text{CB}}^{\mathfrak{su}(2)}\right)^2$. On the other hand, for $\kgg\geq3$, \newline$\mathcal{I}_{\mathbb{Z}_{\kgg=3,4,6},\text{CB}}^{\mathfrak{so}(4)}\neq \left(\mathcal{I}_{\mathbb{Z}_{\kgg=3,4,6},\text{CB}}^{\mathfrak{su}(2)}\right)^2$. 
+Since $\mathfrak{so}(6)\iso\mathfrak{su}(4)$ the Coulomb branch index for $N=3$ is the same as for the Coulomb branch index for the $\mathfrak{g}=\mathfrak{su}(4)$ theory \eqref{eqn:CBsuN} and therefore \newline$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{so}(6)}(x)=\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{su}(4)}(x)$.
+
+For $N=4$ we find
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{\mathfrak{so}(8)}(x)$&${\kgg}$&Generators&Relation\\\hline
+$\frac{1+2x^6+5x^{12}+x^{18}}{(1-x^6)^4(1+x^6)^2}$ & $3$ &\multicolumn{2}{c|}{Not complete intersection}\\\hline
+\multirow{ 2}{*}{$\PE\left[3x^4+x^{8}+x^{12}-x^{16}\right]$} & \multirow{ 2}{*}{$4$}& $u_4$, $\hat{u}_4$, $\widetilde{u}_1=u_2^2$,&\multirow{ 2}{*}{$\widetilde{u}_2^2=\widetilde{u}_1\widetilde{u}_3$}\\
+&&$\widetilde{u}_2=u_2u_6$, $\widetilde{u}_3=u_6^2$&\\\hline
+$\frac{1+2x^6+5x^{12}+x^{18}}{(1-x^6)^4(1+x^6)^2}$ & $6$ &\multicolumn{2}{c|}{Not complete intersection}\\\hline
+\end{tabular}
+\end{center}
+Out of the theories with $N>4$ we find that, apart from the ${\kgg}=2$ cases, which we discussed separately, the Coulomb branch for ${\kgg}=3,4,6$ is a not a complete intersection. We again checked this up to $N=60$ and $x^{70}$. In each case the dimension formula \eqref{eqn:CBdim} holds and the dimension is equal to $N$ as expected. With ${\kgg}\geq3$ we do not have Coulomb branch operators of dimension one or two, implying that we indeed have genuine $\mathcal{N}=3$ supersymmetry \cite{Aharony:2015oyb}. 
+
+\subsubsection{Higgs Branch Hilbert Series}
+Using the software \textit{Macaulay2} we did the computation of the Higgs branch Hilbert series for the theory with Lie algebra $\mathfrak{g}=\mathfrak{so}(4) \iso \mathfrak{su}(2) \oplus \mathfrak{su}(2)$. After the integration over the gauge group we get
+\begin{equation}
+\HS_{\mathbb{Z}_{\kgg}}^{\mathfrak{so}(4)}(\tHS,u_f)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon \in \mathbb{Z}_{\kgg}}\PE[2\tHS^2+2(\epsilon^2 u_f^2+\epsilon^{-2}u_f^{-2})\tHS^2-2\tHS^4] \, .
+\end{equation}
+We observe that the above Hilbert series has a pole of order four at $\tHS=1$ and therefore, by \eqref{eqn:dimHB}, the complex dimension of the Higgs branch is four. 
+For ${\kgg}=1,2$ we get a complete intersection variety with Hilbert series
+\begin{equation}
+ \HS_{\mathbb{Z}_{1,2}}^{\mathfrak{so}(4)}(\tHS,u_f) = \textrm{PE}[2(1+u_f^2+u_f^{-2})\tHS^2 -2\tHS^4]= \left(\HS_{\mathbb{Z}_1}^{\mathfrak{su}(2)}(\tHS,u_f)\right)^2\, .
+\end{equation}
+At ${\kgg}=1,2$ it is clear that the Higgs branch moduli space is equal to two copies of the $\mathfrak{su}(2)$ case. We discussed that in Section \ref{sec:su2}. The topology of the moduli space is therefore $\left(\mathbb{C}^2/\mathbb{Z}_2 \right)^2$. For ${\kgg}=3,4,6$ we observe that the corresponding Hilbert series is not a complete intersection. Moreover the Hilbert series for ${\kgg}=3,6$ are equal.
+\subsection{\texorpdfstring{$\mathfrak{g}=E_N$}{g=EN}} 
+In this subsection, since we can make use of \eqref{eqn:SCICBdeg}, we focus on the Coulomb branch limit of the index for $E_6,E_7$ and $ E_8$.
+\subsubsection{$\mathfrak{g}=E_6$}
+The Coulomb branch index reads
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{E_6}(x)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\sum_{i\in\{2,5,6,8,9,12\}}\epsilon^i x^i\right]\,.
+\end{equation}
+For ${\kgg}=2$ the Coulomb branch is no longer freely generated. The Coulomb branch index reads
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_{2},\text{CB}}^{E_6}(x)=\PE\left[x^2+x^{18}+\sum_{j=3}^7x^{2j}-x^{28}\right]\,.
+\end{equation}
+The generators and relation are 
+\begin{equation}
+u_2 ,\,u_6,\,u_8,\,\widetilde{u}_1=u_5^2,\,u_{12},\,\widetilde{u}_2=u_5u_9,\,\widetilde{u}_3=u_9^2\,;\quad \widetilde{u}_2^2=\widetilde{u}_1\widetilde{u}_3\,,
+\end{equation}
+where the $u_j$ are $E_6$-invariant polynomials of degree $j$. For $\kgg=3,4,6$ the variety is not a complete intersection. To save on lengthy formulas we will list, as an example, only the case of $\kgg=6$. In that case the Coulomb branch index reads
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_{6},\text{CB}}^{E_6}(x)=\frac{\left(1 - x^6 + 3 x^{12} + 3 x^{24} +  3 x^{36} - x^{42} + x^{48}\right)\PE\left[6x^6\right]}{(1 +   11 x^{24} + 11 x^{30}  + x^{54}+\sum_{a=1}^33a(x^{6a}+x^{54-6a}))}\,.
+\end{equation}
+
+\subsubsection{$\mathfrak{g}=E_7$}
+By applying \eqref{eqn:SCICBdeg} we have
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{E_7}(x)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\sum_{i\in\{2,6,10,12,14,18\}}\epsilon^i x^i\right]\,.
+\end{equation}
+Clearly $\mathcal{I}_{\mathbb{Z}_{1},\text{CB}}^{E_7}(x)=\mathcal{I}_{\mathbb{Z}_{2},\text{CB}}^{E_7}(x)$. This is to be expected since $\Out(E_7)$ is trivial. For ${\kgg}=\{3,4,6\}$ we do not get a complete intersection.
+% and therefore we can safely conclude that $\mathbb{Z}_n$ discrete gauging of the $\mathfrak{g}=E_7$ theory does not coincide with the $S_{3,1,p'}^7$ S-folds.
+
+\subsubsection{$\mathfrak{g}=E_8$}
+The Coulomb branch index reads
+\begin{equation}
+\mathcal{I}_{\mathbb{Z}_{\kgg},\text{CB}}^{E_8}(x)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in\mathbb{Z}_{\kgg}}\PE\left[\sum_{i\in\{2,8,12,14,18,20,24,30\}}\epsilon^i x^i\right]\,.
+\end{equation}
+We observe that $\mathcal{I}_{\mathbb{Z}_{1},\text{CB}}^{E_8}(x) = \mathcal{I}_{\mathbb{Z}_{2},\text{CB}}^{E_8}(x)$ again, this is to be expected due to the fact that $\Out(E_8)=1$. While it's easy to check that for ${\kgg}=3,4,6$ the space is no longer freely generated. 
+\section{Large \texorpdfstring{$N$}{N} Limit}\label{sec:largeN}
+The large $N$ limit of the index of $G=U(N)$ SYM may be written as \cite{Kinney:2005ej}
+\begin{equation}
+\mathcal{I}^{\mathfrak{u}(\infty)}(t,y,p,q)=\PE\left[Z^{\text{S.T.}}(t,y,p,q)\right]
+\end{equation}
+where 
+\begin{equation}
+Z^{\text{S.T.}}(t,y,p,q)=\sum_{R_2=1}^{\infty}\mathcal{I}_{\mathcal{B}_{[0,R_2,0]}^{\frac{1}{2},\frac{1}{2}}}(t,y,p,q)=\sum_{R_2=1}^{\infty}\sum_{i=0}^{R_2}\mathcal{I}_{\hat{\mathcal{B}}_{[R_2-i,i]}}(t,y,p,q)\,,
+\end{equation}
+where, in the second line we made us of \eqref{B0m0}.
+By applying $r_{\kgg}\newdot s_{\kgg}$ given in \eqref{eqn:Rsym} and \eqref{eqn:Sduality} we can write the single letter index corresponding to the refined index \eqref{eqn:SCIrefined}, it is given by
+\begin{equation}
+Z^{\text{S.T.}}(t,y,p,q,\epsilon)=\sum_{R_2=1}^{\infty}\sum_{i=0}^{R_2}\epsilon^{R_2-2i}\,\mathcal{I}_{\hat{\mathcal{B}}_{[R_2-i,i]}}(t,y,p,q)\,,
+\end{equation}
+where we used that
+\begin{equation}
+(r_k\newdot s_k)\hat{\mathcal{B}}_{[R_1,R_2]}\color{black}=(R_2-R_1)\hat{\mathcal{B}}_{[R_1,R_2]}\color{black}\,.
+\end{equation} 
+The refined index, at large $N$ is then given by
+\begin{equation}
+\mathcal{I}^{\mathfrak{u}(\infty)}(t,y,p,q,\epsilon)=\PE\left[Z^{\text{S.T.}}(t,y,p,q,\epsilon)\right]\,.
+\end{equation}
+The KK supergraviton index graded by $\epsilon$ for $r_k\newdot s_k$, as computed from $AdS$/CFT, reads \cite{Imamura:2016abe}
+\begin{equation}\label{eqn:LargeN}
+\begin{aligned}
+&\mathcal{I}^{\text{KK}}\left(t,p,q,y,\epsilon\right)=-\frac{1-\epsilon^{-1}t^6}{\left(1-t^3y\right)\left(1-t^3/y\right)}\\
+&+\frac{\left(1-\epsilon^{-1}t^3y\right)\left(1-\epsilon^{-1}t^3/y\right)\left(1-t^4\left(\frac{\epsilon}{pq}+\frac{\epsilon p}{q}+\frac{q^2}{\epsilon}\right)+\left(1+\epsilon\right)t^6\right)}{\left(1-t^3y\right)\left(1-t^3/y\right)\left(1-t^2pq/\epsilon\right)\left(1-t^2q/p\epsilon\right)\left(1-t^2\epsilon/q^2\right)}\,.
+\end{aligned}
+\end{equation}
+Expansion around $t=0$ (we checked up to order $t^{20}$) verifies that
+\begin{equation}
+Z^{\text{S.T.}}(t,y,p,q,\epsilon)=\mathcal{I}^{\text{KK}}\left(t,p,q,y,\epsilon\right)\,.
+\end{equation}
+The index for the $\mathbb{Z}_{\kgg}$ discrete gauging of the $\mathfrak{u}(N=\infty)$ theory is therefore
+\begin{equation}\label{eqn:largeNdis}
+\mathcal{I}^{\mathfrak{u}(\infty)}_{\mathbb{Z}_{\kgg}}(t,y,p,q)=\frac{1}{|\mathbb{Z}_{\kgg}|}\sum_{\epsilon\in \mathbb{Z}_{\kgg}}\PE\left[Z^{\text{S.T.}}(t,y,p,q,\epsilon)\right]\,.
+\end{equation}
+On the other hand, as computed in \cite{Imamura:2016abe}, we may also obtain the index for the $k=1,2,3,4,6$ $\mathcal{N}=3$ S-fold SCFTs at large $N$, $S^{\infty}_{k,\ell}$, by implementing the projection at the level of the single letter index. The spectrum of protected single trace operators in the S-fold $S^{\infty}_{k,\ell}$ theory is given by
+\begin{equation}\label{eqn:ZSTk}
+Z^{\text{S.T}}_k(t,y,p,q):=\frac{1}{|\mathbb{Z}_k|}\sum_{R_2=1}^{\infty}\sum_{i=0}^{R_2}\sum_{\epsilon\in\mathbb{Z}_k}\epsilon^{R_2-2i}\mathcal{I}_{\hat{\mathcal{B}}_{[R_2-i,i]}}(t,y,p,q)\,,
+\end{equation}
+for $k=1,2,3,4,6$.
+Note that, at large $N$, the index does not distinguish between theories with different values of $\ell$ \cite{Imamura:2016abe}.
+One advantage of \eqref{eqn:ZSTk} is that it manifestly organises expression into multiplets of $\mathfrak{su}(2,2|3)$. The index for the S-fold at large $N$ is then given by
+\begin{equation}
+\mathcal{I}^{N=\infty}_{\mathbb{Z}_k\text{ S-fold}}(t,p,q,y)=\PE\left[Z_k^{\text{S.T}}(t,p,q,y)\right]\,.
+\end{equation}
+Note that the procedure \eqref{eqn:ZSTk} is a S-fold and not a discrete gauging since it is implemented at the level of the single particle index.
+It is clear that 
+\begin{equation}
+\mathcal{I}^{\mathfrak{u}(\infty)}_{\mathbb{Z}_{{\kgg}=k}}(t,y,p,q)\neq \mathcal{I}^{N=\infty}_{\mathbb{Z}_k\text{ S-fold}}(t,p,q,y)\,.
+\end{equation}
+We can also discuss the Higgs branch Hilbert series of this these theories. The result for $\mathfrak{u}(N)$ $\mathcal{N}=4$ SYM in the $N\to\infty$ limit can be obtained by application of the formula of \cite{Benvenuti:2006qr} which claims that
+\begin{gather}
+\HS_{\mathbb{Z}_1}^{\mathfrak{u}(\infty)}(\tHS,u_f)=\PE\left[f_{\infty}(\tHS,u_f)\right]\,,\\ f_{\infty}(\tHS,u_f)=\HS_{\mathbb{Z}_1}^{\mathfrak{u}(1)}(\tHS,u_f)=\PE\left[(u_f+u_f^{-1})\tHS\right]\,.
+\end{gather}
+Therefore, for the $\mathbb{Z}_{\kgg}$-gauged theory the Hilbert series is given by
+\begin{align}
+&\HS_{\mathbb{Z}_n}^{\mathfrak{u}(\infty)}(\tHS,u_f)=\frac{1}{|\mathbb{Z}_n|}\sum_{\epsilon\in\mathbb{Z}_n}\exp\left(\sum_{j=1}^{\infty}\frac{f_{\infty}(\tHS,\epsilon u_f)-f_{\infty}(0,0)}{j}\right)\\
+&=\frac{1}{|\mathbb{Z}_n|}\sum_{\epsilon\in\mathbb{Z}_n}\prod_{i,j\geq0}\frac{(1-  u_f^{i-j}\epsilon^{i-j}\tHS^{i+j+2})}{(1-  u_f^{i-j-1}\epsilon^{i-j-1}\tHS^{i+j+1})(1-  u_f^{i-j+1}\epsilon^{i-j+1}\tHS^{i+j+1})}\,,
+\end{align}
+which is the Hilbert series for $\left(\Sym^{\infty}(\mathbb{C}^2)\right)/\mathbb{Z}_n$. For example, for $n=4$ we have
+\begin{equation}
+\begin{aligned}
+\HS_{\mathbb{Z}_4}^{\mathfrak{u}(\infty)}(\tHS,u_f)=&1+2\tHS^2+(4+5b_4)\tHS^4+(12+19b_4)\tHS^6\\
+&+(32+55b_4+22b_8)\tHS^8+\mathcal{O}(\tHS^9)
+\end{aligned}
+\end{equation}
+where $b_{\kgg p}=\sum_{i=0}^{2p}u_f^{n(p-i)}=u_f^{\kgg p}+u_f^{\kgg p-n}+\dots+u_f^{-\kgg p}$.
+Conversely, for the $S^{\infty}_{k,\ell}$ S-fold theory the Hilbert series reads
+\begin{equation}
+\begin{aligned}
+&\HS_{\mathbb{Z}_k\text{ S-fold}}^{\mathfrak{u}(\infty)}(\tHS,u_f)=\PE\left[\frac{1}{k}\sum_{\epsilon\in\mathbb{Z}_k}f_{\infty}(\tHS,\epsilon u_f)\right]\\
+&=\PE\left[\frac{1-\tHS^{2k}}{(1-\tHS^2)(1-u_f^k\tHS^k)(1-u_f^{-k}\tHS^k)}\right]\\
+&\begin{aligned}
+&=\prod_{i,j,l\geq0}\left[\frac{\left(1-u_f^{k(i-j)}\tHS^{2l+k(i+j+2)}\right)^2}{\left(1-u_f^{k(i-j)}\tHS^{2+2l+k(j+i)}\right)\left(1-u_f^{k(i-j)}\tHS^{2+2l+k(j+i+2)}\right)}\right.\\
+&\times\left.\frac{\left(1-u_f^{k(i-j-1)}\tHS^{2+2l+k(j+i+1)}\right)\left(1-u_f^{k(i-j+1)}\tHS^{2+2l+k(j+i+1)}\right)}{\left(1-u_f^{k(i-j-1)}\tHS^{2l+k(j+i+1)}\right)\left(1-u_f^{k(i-j+1)}\tHS^{2l+k(j+i+1)}\right)}\right]
+\end{aligned}
+\end{aligned}
+\end{equation}
+which is the Hilbert series for $\Sym^{\infty}(\mathbb{C}^2/\mathbb{Z}_k)$. For $k=4$ this has the expansion
+\begin{equation}
+\begin{aligned}
+\HS_{\mathbb{Z}_4\text{ S-fold}}^{\mathfrak{u}(\infty)}(\tHS,u_f)=&1+\tHS^2+(1+b_4)\tHS^4+(1+2b_4)\tHS^6\\
+&+(2+2b_4+2b_8)\tHS^8+\mathcal{O}(\tHS^9)\,.
+\end{aligned}
+\end{equation}
+\section{Conclusions}
+In this chapter we have presented a prescription on how to implement the discrete gauging of a four dimensional $\mathcal{N}=4$ mother theory, resulting in a $\mathcal{N}=3$ daughter theory, at the level of the superconformal index.
+
+We explicitly computed  the Coulomb branch limit of the index as well as the Higgs branch Hilbert series for a number of  theories based on simply laced groups.
+For rank one theories, the Coulomb branch index and Higgs branch Hilbert series we computed reproduce precisely all known results, while, for higher rank theories we make concrete predictions for the  Coulomb and Higgs branches of these $\mathcal{N}=3$ theories.
+Most strikingly we find that, in general, the higher rank theories, have non-freely generated Coulomb branches. In a few cases the Coulomb branch is a complete intersection variety and, using the Coulomb branch index, we were able to read off the topology of the corresponding space. Generally the Coulomb branch of the theory after the discrete gauging is not a complete intersection and the topology becomes harder to extract. It would be interesting to further study this aspect in the future. 
+
+Since the superconformal index of the $\mathfrak{u}(1)$ theory is easily reorganised into $\mathcal{N}=3$ multiplets we were able to compute the full superconformal index for the discrete gauging of it, given in equation \eqref{eqn:u1index}. Moreover, in the large $N$ limit, a similar reorganisation happens meaning that it is also possible to compute the superconformal index for the discrete gauging, given in equation \eqref{eqn:largeNdis}. For general rank the computation of the full index, or other more refined limits such as the Schur limit, is much more difficult and we leave it for future work.
+However, we can easily compute the Coulomb branch limit of the superconformal index and
+the Higgs branch Hilbert series. Other, more refined, limits contain more types of short multiplets,
+which of course contain more interesting information. In particular the Schur index is related to the vacuum character of chiral algebras.
+The latter allows for the computation of correlation functions in a protected sector \cite{Beem:2013sza}. 
+For $\mathcal{N}=3$ theories the study of chiral algebras  was  initiated  in \cite{Nishinaka:2016hbw,Lemos:2016xke} and it would be very interesting to further pursue.
+With the help of the superconformal index, we can construct and analyse the corresponding chiral algebras for the discrete gauging that we studied in this paper.
+
+It is important to note that the spectrum of non-local operators may reduce the possible $\mathbb{Z}_{\kgg}$'s that can enhance to symmetries of the theory and therefore be gauged. The standard superconformal index that we studied in this paper can say nothing about the non-local operator spectrum.  It captures only the spectrum of protected local operators.
+Using our current tools we only claim that if a theory exists  we can compute its index, but we have no way of deciding if a theory actually exists.
+To break this impasse, a very interesting quantity to compute for the theories obtained via discrete gauging is the Lens space index \cite{Benini:2011nc,Alday:2013rs,Razamat:2013jxa,Razamat:2013opa}. It is a generalisation of the standard superconformal index that has a representation as a path integral on $\mathbb{S}^1\times \mathbb{S}^3/\mathbb{Z}_r$. For $r=1$ this reduces to the usual superconformal index, however, since $\pi_1\left(\mathbb{S}^3/\mathbb{Z}_r\right)=\mathbb{Z}_r$ the Lens space index has the advantage that it is sensitive to the spectrum of line operators of the theory.
+Our construction can be immediately generalized for $r\neq1$.
+
+In a similar spirit it is also possible to compute the index in the presence of certain extended operators \cite{Gaiotto:2012xa,Gang:2012yr}. These should also shed light to the possible discrete gaugings allowed for a given theory. Computing such quantities may be able to teach us more about, the currently mysterious, `new' $\mathcal{N}=4$ theories \cite{Argyres:2016yzz} and discrete gaugings thereof.
+
+Finally, our procedure can also be applied to discrete gauging that preserves $\mathcal{N}=2$ or $\mathcal{N}=1$ superconformal symmetry as in \cite{Argyres:2016yzz} to generate new novel theories that inherit a large amount of structure from their $\mathcal{N}=4$ mother theory.
+\end{document}

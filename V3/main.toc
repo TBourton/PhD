@@ -1,0 +1,264 @@
+\contentsline {chapter}{List of Figures}{}{chapter*.3}
+\contentsline {chapter}{List of Tables}{}{chapter*.3}
+\contentsline {chapter}{List of Notations}{}{chapter*.6}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Recent Advances and Exact Results}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Seiberg-Witten Theory}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Instantons}{6}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Instanton Moduli Space}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}ADHM Construction}{8}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}ADHM Construction from Type-II String Theory}{10}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Example: ADHM for $\mathcal {N}=4$ SYM}{12}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}Partition Functions and Supersymmetric Localisation}{14}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Nekrasov Partition Function}{18}{subsection.1.4.1}
+\contentsline {subsubsection}{Example: Instanton Counting for 5d $\mathcal {N}=1^*$ Theory}{19}{section*.7}
+\contentsline {subsection}{\numberline {1.4.2}$\mathbb {S}^d$ Partition Function}{22}{subsection.1.4.2}
+\contentsline {subsubsection}{Example: $\mathcal {N}=1^*$ $\mathbb {S}^5$ Partition Function}{23}{section*.8}
+\contentsline {subsection}{\numberline {1.4.3}$\mathbb {S}^1\times \mathcal {M}_{d-1}$ Partition Function}{24}{subsection.1.4.3}
+\contentsline {subsubsection}{Example: Index of 4d $\mathcal {N}=1$ Gauge Theories}{26}{section*.10}
+\contentsline {subsubsection}{Example: Index of the 6d $\mathcal {N}=(2,0)$ Theory}{28}{section*.12}
+\contentsline {paragraph}{The Index of the $\mathfrak {g}=\mathfrak {u}(1)$ Free Tensor Multiplet}{30}{section*.13}
+\contentsline {paragraph}{Large $N$ Limit}{31}{section*.15}
+\contentsline {paragraph}{Casimir Energy}{32}{section*.17}
+\contentsline {paragraph}{Relation to the 5d $\mathcal {N}=2$ SYM}{33}{section*.18}
+\contentsline {section}{\numberline {1.5}Hilbert Series and Operator Counting}{35}{section.1.5}
+\contentsline {section}{\numberline {1.6}Compactifications of Six Dimensional SCFTs}{40}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Class $\mathcal {S}$}{41}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Class $\mathcal {S}_k$}{44}{subsection.1.6.2}
+\contentsline {subsubsection}{4d $\mathcal {N}=1$ Class $\mathcal {S}_k$ Quiver Gauge Theories}{45}{section*.24}
+\contentsline {subsubsection}{Type-II Description}{48}{section*.27}
+\contentsline {paragraph}{Type-IIB}{48}{section*.28}
+\contentsline {paragraph}{Type-IIA}{50}{section*.31}
+\contentsline {section}{\numberline {1.7}Thesis Overview}{52}{section.1.7}
+\contentsline {chapter}{\numberline {2}The Higgs and Coulomb Branches of Theories of Class \Sk }{55}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{55}{section.2.1}
+\contentsline {section}{\numberline {2.2}Moduli Space of Supersymmetric Vacua}{56}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}The Moduli Space $\mathbf {M}$ and its Branches}{57}{subsection.2.2.1}
+\contentsline {subsubsection}{An Example: $\mathcal {X}=\mathbb {C}\times \mathbb {C}^2/\mathbb {Z}_2$ Theory}{58}{section*.34}
+\contentsline {subsection}{\numberline {2.2.2}Higgs and Coulomb Branches for Class $\mathcal {S}_k$}{59}{subsection.2.2.2}
+\contentsline {subsubsection}{The Higgs Branch}{60}{section*.36}
+\contentsline {subsubsection}{The Coulomb Branch}{61}{section*.37}
+\contentsline {section}{\numberline {2.3}The Superconformal Index and Unrefined Limits}{63}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}The Hall-Littlewood Limit of the Index}{67}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}The Coulomb Limit of the Index}{68}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}The Schur \& Madonald Limits of the Index}{69}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Genus Zero Theories}{72}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Hilbert Series and the Hall-Littlewood Limit of the Index}{72}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}The Free Trinion}{73}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Core Interacting Theories}{74}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Genus One Theories}{76}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Class $\mathcal {S}$}{78}{subsection.2.5.1}
+\contentsline {subsubsection}{Hilbert Series}{78}{section*.43}
+\contentsline {subsubsection}{Hall-Littlewood Index}{80}{section*.44}
+\contentsline {subsection}{\numberline {2.5.2}Class $\mathcal {S}_k$}{81}{subsection.2.5.2}
+\contentsline {subsubsection}{Hall-Littlewood Index}{83}{section*.46}
+\contentsline {subsection}{\numberline {2.5.3}Deconstruction Limit}{84}{subsection.2.5.3}
+\contentsline {subsubsection}{Computation of the $\frac {1}{2}$-BPS Partition Function for $(1,1)$ LST}{89}{section*.49}
+\contentsline {section}{\numberline {2.6}Interacting Trinion SCFTs}{91}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}$T_B$ Theory}{94}{subsection.2.6.1}
+\contentsline {subsubsection}{Hall-Littlewood and Coulomb Indices}{94}{section*.54}
+\contentsline {subsubsection}{Higgs and Coulomb Branch Hilbert Series}{97}{section*.56}
+\contentsline {subsection}{\numberline {2.6.2}$T_A$ Theory}{102}{subsection.2.6.2}
+\contentsline {subsubsection}{Hall-Littlewood and Coulomb Indices}{102}{section*.58}
+\contentsline {subsubsection}{Higgs and Coulomb Branch Hilbert Series}{105}{section*.60}
+\contentsline {section}{\numberline {2.7}Outlook and Open Problems}{107}{section.2.7}
+\contentsline {chapter}{\numberline {3}Seiberg-Witten Curves for Theories of Class \Sk }{109}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{109}{section.3.1}
+\contentsline {section}{\numberline {3.2}Review of $\mathcal {N}=1$ Seiberg-Intriligator Curves}{110}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Examples}{111}{subsection.3.2.1}
+\contentsline {subsubsection}{$\mathcal {N}=2\to \mathcal {N}=1$ Mass Deformation of Pure $SU(2)$ $\mathcal {N}=2$ Gauge Theory}{111}{section*.62}
+\contentsline {subsubsection}{$\mathcal {N}=1$ $SU(2)\times SU(2)$ Gauge Theory}{111}{section*.63}
+\contentsline {section}{\numberline {3.3}Core Theories in Class \Sk }{113}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Classical Analysis}{113}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Mass Parameters}{114}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Curves for $N=k=2$}{115}{subsection.3.3.3}
+\contentsline {subsubsection}{Diagonal Limit}{115}{section*.64}
+\contentsline {subsubsection}{$q_{(2)}\gg q_{(1)}$ Limit}{117}{section*.65}
+\contentsline {subsubsection}{Checks}{119}{section*.66}
+\contentsline {paragraph}{$M_i=\diag (m,-m,m,-m)$, $M_2\sim E\mathbb {I}_4$}{119}{section*.67}
+\contentsline {paragraph}{$M_1=\diag (m,m,m,0)$, $M_2\sim E\mathbb {I}_4$}{119}{section*.68}
+\contentsline {paragraph}{$M_1=\diag (m,m,m,m)$, $M_2\sim E\mathbb {I}_4$}{120}{section*.69}
+\contentsline {subsection}{\numberline {3.3.4}Curve for $k=2$ General $N$}{120}{subsection.3.3.4}
+\contentsline {subsubsection}{Diagonal Limit}{120}{section*.70}
+\contentsline {subsubsection}{$q_{(2)}\gg q_{(1)}$ Limit}{121}{section*.71}
+\contentsline {subsection}{\numberline {3.3.5}Curve for general $N$ \& $k$}{122}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Comparison to M-Theory Curves}{123}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Review of $k=1$ Class $\mathcal {S}$}{123}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Class $\mathcal {S}_2$}{124}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Conclusions}{125}{section.3.5}
+\contentsline {chapter}{\numberline {4}Instanton Counting for Theories of Class \Sk }{127}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{127}{section.4.1}
+\contentsline {section}{\numberline {4.2}Brane Setup}{128}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Supersymmetry of the D1/D5 System}{130}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Instantons for 4d $\mathcal {N}=2^*$ SYM}{131}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}D1 Worldvolume Theory}{132}{subsection.4.3.1}
+\contentsline {paragraph}{D1-D1}{132}{section*.75}
+\contentsline {paragraph}{D1-D5}{132}{section*.76}
+\contentsline {paragraph}{ADHM Equations}{132}{section*.78}
+\contentsline {subsection}{\numberline {4.3.2}Elliptic Genus Computation}{133}{subsection.4.3.2}
+\contentsline {subsubsection}{Letter Counting}{136}{section*.79}
+\contentsline {subsection}{\numberline {4.3.3}The 6d Instanton Partition Function}{138}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Reduction to Five and Four Dimensions}{139}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Orbifolding to 4d $\mathcal {N}=1,2$ Periodic Quivers}{141}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Orbifolding the Supersymmetric Index}{141}{subsection.4.4.1}
+\contentsline {subsubsection}{Toy Example - Orbifold Index of a Free Fermi Multiplet}{142}{section*.80}
+\contentsline {subsection}{\numberline {4.4.2}Computing the Orbifolded Elliptic Genus}{144}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}The 6d Orbifolded Instanton Partition Function}{147}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Five Dimensional Limit}{149}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Four Dimensional Limit}{150}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.4.6}From Necklace/Toroidal to Linear/Cylindrical Quivers}{151}{subsection.4.4.6}
+\contentsline {section}{\numberline {4.5}Conclusions}{151}{section.4.5}
+\contentsline {chapter}{\numberline {5}$\mathcal {N}=3$ SCFTs from Discrete Gauging}{155}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{155}{section.5.1}
+\contentsline {section}{\numberline {5.2}Constructions of $\mathcal {N}=3$ SCFTs}{157}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}S-Folds}{157}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Discrete Gauging}{159}{subsection.5.2.2}
+\contentsline {subsubsection}{Coulomb Branch}{161}{section*.84}
+\contentsline {subsubsection}{Higgs Branch}{162}{section*.85}
+\contentsline {section}{\numberline {5.3}$\mathfrak {su}(2,2|\mathcal {N})$ Representation Theory}{163}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}$\mathfrak {psu}(2,2|4)\to \mathfrak {su}(2,2|3)$ Decomposition}{163}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}$\mathfrak {su}(2,2|3)\to \mathfrak {su}(2,2|2)$ Decomposition}{164}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Indices and the Discrete Gauging Prescription}{166}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}The Superconformal Index}{166}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Coulomb Branch Limit}{170}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Higgs Branch Hilbert Series}{172}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Rank One Theories}{174}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}$\mathfrak {g}=\mathfrak {u}(1)$}{174}{subsection.5.5.1}
+\contentsline {subsubsection}{Superconformal Index}{174}{section*.88}
+\contentsline {subsubsection}{Coulomb Branch Limit}{175}{section*.89}
+\contentsline {subsubsection}{Higgs Branch Hilbert Series}{175}{section*.90}
+\contentsline {subsubsection}{Schur Limit}{176}{section*.91}
+\contentsline {subsection}{\numberline {5.5.2}$\mathfrak {g}=\mathfrak {su}(2)$}{177}{subsection.5.5.2}
+\contentsline {subsubsection}{Coulomb Branch Limit}{178}{section*.92}
+\contentsline {subsubsection}{Higgs Branch Hilbert Series}{178}{section*.93}
+\contentsline {section}{\numberline {5.6}Higher Rank Theories}{179}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}$\mathfrak {g}=\mathfrak {u}(N)$}{180}{subsection.5.6.1}
+\contentsline {subsubsection}{Higgs Branch Hilbert Series}{182}{section*.95}
+\contentsline {subsection}{\numberline {5.6.2}$\mathfrak {g}=\mathfrak {su}(N+1)$}{184}{subsection.5.6.2}
+\contentsline {subsubsection}{Coulomb Branch Limit}{184}{section*.96}
+\contentsline {subsubsection}{Higgs Branch Hilbert Series}{185}{section*.97}
+\contentsline {subsection}{\numberline {5.6.3}$\mathfrak {g}=\mathfrak {so}(2N)$}{187}{subsection.5.6.3}
+\contentsline {subsubsection}{Coulomb Branch Limit}{187}{section*.98}
+\contentsline {subsubsection}{Higgs Branch Hilbert Series}{189}{section*.99}
+\contentsline {subsection}{\numberline {5.6.4}$\mathfrak {g}=E_N$}{189}{subsection.5.6.4}
+\contentsline {subsubsection}{$\mathfrak {g}=E_6$}{189}{section*.100}
+\contentsline {subsubsection}{$\mathfrak {g}=E_7$}{190}{section*.101}
+\contentsline {subsubsection}{$\mathfrak {g}=E_8$}{190}{section*.102}
+\contentsline {section}{\numberline {5.7}Large $N$ Limit}{191}{section.5.7}
+\contentsline {section}{\numberline {5.8}Conclusions}{193}{section.5.8}
+\contentsline {chapter}{\numberline {6}$\mathcal {N}=(1,0)$ Strings and Surface Operators}{197}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{197}{section.6.1}
+\contentsline {section}{\numberline {6.2}Self-Dual Strings with Surface Operators}{198}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}M-Theory Description}{198}{subsection.6.2.1}
+\contentsline {subsubsection}{An Alternative M-Theory Realisation of the Surface Operator from Orbifolding}{200}{section*.104}
+\contentsline {subsubsection}{Surface Operator Data in the Type II Description}{201}{section*.107}
+\contentsline {subsection}{\numberline {6.2.2}2d Gauge Theory}{202}{subsection.6.2.2}
+\contentsline {subsubsection}{D1-Worldvolume Theory Without Surface Operator}{203}{section*.108}
+\contentsline {paragraph}{$\mathbb {Z}_M$ Orbifold}{205}{section*.110}
+\contentsline {subsubsection}{D1 Worldvolume Theory \& `Chain-Saw' Quiver}{206}{section*.112}
+\contentsline {subsubsection}{BPS Equations}{208}{section*.115}
+\contentsline {subsection}{\numberline {6.2.3}BPS Partition Function on $T^2\times \mathbb {R}_{\epsilon _1,\epsilon _2}^4$}{209}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}M-String Elliptic Genus Without Surface Operator}{211}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}M-String Elliptic Genus With Surface Operator}{214}{subsection.6.2.5}
+\contentsline {section}{\numberline {6.3}5d Theories With Surface Operators}{218}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Review of $\mathbb {S}^1\times \mathbb {S}^4$ Partition Function for $\mathcal {N}_{M,N}$}{219}{subsection.6.3.1}
+\contentsline {subsubsection}{1-Loop Contributions}{220}{section*.119}
+\contentsline {paragraph}{Vector Multiplet Contributions}{220}{section*.120}
+\contentsline {paragraph}{Hypermultiplet Contributions}{221}{section*.121}
+\contentsline {subsubsection}{Instanton Contributions}{221}{section*.123}
+\contentsline {subsection}{\numberline {6.3.2}$\mathbb {S}^1\times \mathbb {S}^4$ Partition Function for $\mathcal {N}^{\rho }_{M,N}$}{223}{subsection.6.3.2}
+\contentsline {subsubsection}{1-Loop Contributions}{224}{section*.124}
+\contentsline {paragraph}{Vector Multiplets}{225}{section*.125}
+\contentsline {paragraph}{Hypermultiplets}{225}{section*.126}
+\contentsline {subsubsection}{Instanton Contributions}{226}{section*.127}
+\contentsline {subsection}{\numberline {6.3.3}Unrefined Limits for 5d MSYM}{228}{subsection.6.3.3}
+\contentsline {subsubsection}{\relax \mathversion {bold}$2m=-\epsilon _+$}{228}{section*.128}
+\contentsline {paragraph}{Without Defect}{229}{section*.129}
+\contentsline {paragraph}{With Defect}{229}{section*.130}
+\contentsline {subsubsection}{\relax \mathversion {bold}$2m=-\epsilon _-$}{230}{section*.131}
+\contentsline {paragraph}{Without Defect}{230}{section*.132}
+\contentsline {paragraph}{With Defect}{230}{section*.133}
+\contentsline {section}{\numberline {6.4}Conclusions}{231}{section.6.4}
+\contentsline {chapter}{\numberline {7}Final Conclusions and Outlook}{233}{chapter.7}
+\contentsline {chapter}{\numberline {A}Definitions, Identities and Special Functions}{235}{appendix.A}
+\contentsline {section}{\numberline {A.1}Identities and Special Functions}{235}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Plethystics}{235}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Modular Forms and Theta Functions}{236}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Other Special Functions}{237}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Young Diagrams}{239}{subsection.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Schur and Skew-Schur Functions}{240}{subsection.A.1.5}
+\contentsline {subsection}{\numberline {A.1.6}Spiridonov-Warnaar Inversion Formula}{242}{subsection.A.1.6}
+\contentsline {section}{\numberline {A.2}Lie Groups, Lie Algebras and Representations}{242}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}$SU(N)$}{242}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}$SO(2N)$}{243}{subsection.A.2.2}
+\contentsline {chapter}{\numberline {B}Algebraic Geometry}{245}{appendix.B}
+\contentsline {section}{\numberline {B.1}Definitions}{245}{section.B.1}
+\contentsline {section}{\numberline {B.2}Algebra-Geometry Correspondence}{247}{section.B.2}
+\contentsline {section}{\numberline {B.3}Hilbert Series}{249}{section.B.3}
+\contentsline {section}{\numberline {B.4}Example Computations with \textit {Macaulay2}}{251}{section.B.4}
+\contentsline {chapter}{\numberline {C}Appendices for Chapter 2}{255}{appendix.C}
+\contentsline {section}{\numberline {C.1}Representation Theory of $\mathfrak {su}(2,2|1)$}{255}{section.C.1}
+\contentsline {subsection}{\numberline {C.1.1}$\mathcal {N}=1$ Index Equivalence Classes}{258}{subsection.C.1.1}
+\contentsline {subsection}{\numberline {C.1.2}Hall-Littlewood Limit}{259}{subsection.C.1.2}
+\contentsline {section}{\numberline {C.2}Unrefined HL Index for Interacting Trinions}{260}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}$T_B$ Theory}{260}{subsection.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}$T_A$ Theory}{261}{subsection.C.2.2}
+\contentsline {chapter}{\numberline {D}Appendices for Chapter 3}{263}{appendix.D}
+\contentsline {section}{\numberline {D.1}Quartic and Weierstrass Forms}{263}{section.D.1}
+\contentsline {section}{\numberline {D.2}Anomaly Free R-Symmetry}{263}{section.D.2}
+\contentsline {section}{\numberline {D.3}Some Elliptic Curve Theory}{265}{section.D.3}
+\contentsline {paragraph}{Relation to gauge theory}{266}{section*.141}
+\contentsline {subsection}{\numberline {D.3.1}Computation of the Period Matrix}{267}{subsection.D.3.1}
+\contentsline {chapter}{\numberline {E}Appendices for Chapter 4}{269}{appendix.E}
+\contentsline {section}{\numberline {E.1}The Elliptic Genus Computation}{269}{section.E.1}
+\contentsline {subsection}{\numberline {E.1.1}Single Letter Indices}{269}{subsection.E.1.1}
+\contentsline {subsection}{\numberline {E.1.2}Orbifolded Single Letter Indices}{273}{subsection.E.1.2}
+\contentsline {section}{\numberline {E.2}4d \& 5d Contour Integral Representations}{276}{section.E.2}
+\contentsline {subsection}{\numberline {E.2.1}5d Limit of the Contour Integral}{276}{subsection.E.2.1}
+\contentsline {subsection}{\numberline {E.2.2}4d Limit of the Contour Integral}{277}{subsection.E.2.2}
+\contentsline {subsection}{\numberline {E.2.3}5d Limit of the Orbifolded Contour Integral}{277}{subsection.E.2.3}
+\contentsline {subsection}{\numberline {E.2.4}4d Limit of the Orbifolded Contour Integral}{278}{subsection.E.2.4}
+\contentsline {chapter}{\numberline {F}Appendices for Chapter 5}{279}{appendix.F}
+\contentsline {section}{\numberline {F.1}Preserved Superconformal Algebra}{279}{section.F.1}
+\contentsline {subsection}{\numberline {F.1.1}Even Subalgebra}{279}{subsection.F.1.1}
+\contentsline {subsection}{\numberline {F.1.2}Odd Subalgebra}{280}{subsection.F.1.2}
+\contentsline {section}{\numberline {F.2}Indices of $\mathfrak {su}(2,2|2)$ Multiplets}{280}{section.F.2}
+\contentsline {section}{\numberline {F.3}Reduction to Three Dimensions}{283}{section.F.3}
+\contentsline {section}{\numberline {F.4}Vanishing of $\mathbb {Z}_{n}$ Anomalies}{284}{section.F.4}
+\contentsline {section}{\numberline {F.5}S-Fold $\mathrel {\mathop {\equiv }\limits ^{?}}$ Discrete Gauging}{286}{section.F.5}
+\contentsline {paragraph}{$\mathfrak {g}=\mathfrak {u}(N)$}{286}{section*.146}
+\contentsline {paragraph}{$\mathfrak {g}=\mathfrak {su}(N+1)=A_N$}{286}{section*.147}
+\contentsline {paragraph}{$\mathfrak {g}=\mathfrak {so}(2N)=D_N$}{286}{section*.148}
+\contentsline {paragraph}{$\mathfrak {g}=\mathfrak {so}(2N+1)=B_N$}{287}{section*.149}
+\contentsline {paragraph}{$\mathfrak {g}=\mathfrak {sp}(N)=C_N$}{287}{section*.150}
+\contentsline {paragraph}{$\mathfrak {g}=E_6$}{287}{section*.151}
+\contentsline {paragraph}{$\mathfrak {g}=E_7$}{287}{section*.152}
+\contentsline {paragraph}{$\mathfrak {g}=E_8$}{287}{section*.153}
+\contentsline {paragraph}{$\mathfrak {g}=F_4$}{288}{section*.154}
+\contentsline {paragraph}{$\mathfrak {g}=G_2$}{288}{section*.155}
+\contentsline {chapter}{\numberline {G}Appendices for Chapter 6}{289}{appendix.G}
+\contentsline {section}{\numberline {G.1}Elliptic Genus Computation}{289}{section.G.1}
+\contentsline {subsection}{\numberline {G.1.1}M-Strings Index without Defect}{290}{subsection.G.1.1}
+\contentsline {subsection}{\numberline {G.1.2}M-Strings Index with Defects}{291}{subsection.G.1.2}
+\contentsline {section}{\numberline {G.2}Review of the 5d Index Localisation}{292}{section.G.2}
+\contentsline {section}{\numberline {G.3}Refined Topological String Computation}{295}{section.G.3}
+\contentsline {subsection}{\numberline {G.3.1}Without Defect - M-Strings Review}{298}{subsection.G.3.1}
+\contentsline {subsection}{\numberline {G.3.2}With Minimal Defect}{303}{subsection.G.3.2}
+\contentsline {chapter}{\numberline {H}Hall-Littlewood Index and Hilbert Series}{309}{appendix.H}
+\contentsline {section}{\numberline {H.1}The Higgs Branch of Class $\mathcal {S}$ Theories}{309}{section.H.1}
+\contentsline {section}{\numberline {H.2}The Hall-Littlewood Index}{311}{section.H.2}
+\contentsline {section}{\numberline {H.3}$\mathcal {N}=4$ SYM Theories}{313}{section.H.3}
+\contentsline {subsection}{\numberline {H.3.1}$G=U(N)$}{314}{subsection.H.3.1}
+\contentsline {subsubsection}{$N=1$}{314}{section*.159}
+\contentsline {subsubsection}{$N=2$}{315}{section*.160}
+\contentsline {subsubsection}{$N=3$}{315}{section*.161}
+\contentsline {subsubsection}{$N=\infty $}{316}{section*.162}
+\contentsline {subsection}{\numberline {H.3.2}$G=SU(N)$}{316}{subsection.H.3.2}
+\contentsline {section}{\numberline {H.4}Elliptic Quiver Theories}{317}{section.H.4}
+\contentsline {subsection}{\numberline {H.4.1}$G=U(N)$}{317}{subsection.H.4.1}
+\contentsline {subsubsection}{$N=1$}{317}{section*.163}
+\contentsline {subsubsection}{$N=n=2$}{318}{section*.164}
+\contentsline {subsection}{\numberline {H.4.2}Generic $\mathfrak {g}=A_1$ Class $\mathcal {S}$ Theories}{318}{subsection.H.4.2}
+\contentsline {chapter}{\numberline {I}Ramified Instanton Partition Functions}{321}{appendix.I}
+\contentsline {chapter}{Acknowledgments}{347}{appendix*.167}

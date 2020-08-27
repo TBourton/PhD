@@ -1,0 +1,296 @@
+\documentclass[main.tex]{subfiles}
+\begin{document} 
+In this Appendix we discuss the relationship between the Hall-Littlewood limit of the index and the Higgs-branch Hilbert series. For $\mathfrak{g}=A_{N-1}$ Class $\mathcal{S}$ theories associated to genus $g=0$ theories it is conjectured that these two quantities are equal. For $g\geq1$ it is known to no longer hold. 
+
+Here we will compare these two quantities, restricting most of our attention to $\mathfrak{g}=A_{N-1}$ class $\mathcal{S}$ SCFTs associated to $g=1$ Riemann surfaces with a collection of minimal punctures.
+
+\section{The Higgs Branch of Class \texorpdfstring{$\mathcal{S}$}{S} Theories}
+For $\mathcal{N}\geq2$ SCFTs the Higgs branch is reached by giving zero vev to operators with $r\neq0$ while allowing vevs for those operators with $r=j_1=j_2=0$. For theories with $\mathcal{N}>2$ this depends on a choice of embedding $\mathfrak{su}(2,2|2)\hookrightarrow\mathfrak{su}(2,2|\mathcal{N})$. The Higgs branch is protected from quantum corrections and thus, when the theory has a Lagrangian description can be described as a purely classical object. The coordinate ring of the Higgs-branch is known as the Higgs-branch chiral ring. By abuse of notation we will identify the Higgs-branch as a complex affine variety with it's chiral ring. The Higgs branch (chiral ring) is given by
+\begin{equation}
+HB=\{\mathcal{O}_i | \widetilde{\mathcal{Q}}^{I}_{\dot{\alpha}}\mathcal{O}_i=0\,, M_{\mu\nu} \mathcal{O}_i=0\,,r\mathcal{O}_i =0 \}\,.
+\end{equation}
+For superconformal theories the Higgs branch is parametrised by the top components of $\hat{\mathcal{B}}_R$ multiplets which have $E=2R$ and $r=j_1=j_2=0$, where $R$ is the Cartan of the $\mathfrak{su}(2)_R$ R-symmetry of the $\mathcal{N}=2$ superconformal algebra. There is no recombination rule \eqref{eqn:short1}-\eqref{eqn:short2} involving only $\hat{\mathcal{B}}_R$ operators.
+For gauge theories based on a gauge group $G$ with a collection of hypermultiplets whose scalars are collectively denoted by $Q,\widetilde{Q}$ the ring $HB$ has a rather simple description. Firstly, one constructs the coordinate ring associated to the \textit{master space} (restricted to the Higgs branch) which is
+\begin{equation}
+F_H=R/I\,,\quad R:=\mathbb{C}[Q,\widetilde{Q}]\,,\quad I:=\langle \partial_{\Phi}W\rangle
+\end{equation}
+here $W$ denotes the superpotential of the theory, and $\Phi$ collectively denotes the vector multiplet scalars. Finally, to obtain $HB$ one takes the $G$-invariant part of $F_H$
+\begin{equation}
+HB=(F_H)^{G}\,.
+\end{equation}
+The Hilbert series counts gauge invariant chiral operators graded by their charges under a maximally commuting subalgebra of the global symmetry algebra. It is given by
+\begin{equation}
+\HS(\tau,u_i;HB)\equiv \HS(\tau,u_i): = \Tr_{HB}\tau^{2R}\prod_iu_i^{f_i}\,.
+\end{equation}
+For the case of $\mathcal{N}=2$ gauge theories the Hilbert series for the Higgs branch takes the form
+\begin{equation}
+\HS(\tau,u_i)=\int d\mu_{G}(\mathbf{z})\HS_F(\tau,u_i,\mathbf{z})\,,
+\end{equation}
+where $\HS_F(\tau,u_i,\mathbf{z})$ denotes the Hilbert-series for $F=R/I$, defined as
+\begin{equation}
+\HS_F(\tau,u_i,\mathbf{z})=\HS(\tau,u_i,\mathbf{z};F)=\Tr_{R/I}\tau^{2R}\prod_iu_i^{f_i}\prod_{a=1}^{\rank\mathfrak{g}}z_a^{g_a}\,.
+\end{equation}
+In the case of genus $g=0$ class $\mathcal{S}$ theories gauge theories one can show that the set of F-terms generating $I$ form a regular sequence. 
+This implies that the affine variety $\mathbf{F}$  whose coordinate ring is $F=R/I$ is a complete intersection, which further means that it's Hilbert series can be written as $\HS_F=\PE[p(\tau,u_i,z_a)]$ with $p$ a polynomial in $\tau$.
+This implies that for those theories one can use letter counting in order to compute $\HS_F$.
+
+For genus $g\geq1$ this fails to be the case and letter counting, in general, cannot be used. In that case one must use an algebraic geometry package such as \textit{Macaulay2} \cite{M2}. By inputting the ring of polynomials $R$ and the ideal $I$ \textit{Macaulay2} can compute the Hilbert series for $F=R/I$. 
+
+\section{The Hall-Littlewood Index}
+The superconformal index for a class $\mathcal{S}$ theory is defined as \cite{Kinney:2005ej,Romelsberger:2005eg}
+\begin{equation}\label{eqn:SCI1}
+ \mathcal{I}\left(\rho,\sigma,\tau,u_i\right)=\Tr_{\mathbb{S}^3}(-1)^F\rho^{\frac{1}{2}\delta_{1-}}\sigma^{\frac{1}{2}\delta_{1+}}\tau^{\frac{1}{2}\widetilde{\delta}_{2\dot+}}\prod u_i^{f_i} \,.
+\end{equation}
+The trace is taken over the Hilbert space of the theory in the radial quantisation. The index \eqref{eqn:SCI1} receives contributions only from those states satisfying
+\begin{equation}\label{eqn:shortening1}
+\delta=\widetilde{\delta}_{1\dot-}:=2\left\{\widetilde{\mathcal{Q}}_{1\dot-},\widetilde{\mathcal{S}}^{1\dot-}\right\}=E-2j_2-2R+r=0\,.
+\end{equation}
+We also have
+\begin{equation}
+\delta_{1\pm}=E\pm 2j_1-2R-r\,,\quad \widetilde{\delta}_{\dot\pm}=E\pm 2j_2+2R+r\,.
+\end{equation}
+The superconformal index is independent under continuous deformation of the corresponding QFT. That means that, if the theory admits a free-field limit, \eqref{eqn:SCI1} may be computed in the free theory by enumerating all of the free fields that satisfy $\delta=0$ and then projecting onto gauge invariants. The projection onto gauge invariants is implemented by integration over the gauge group $G$. The index \eqref{eqn:SCI1} for a gauge theory then takes the form
+\begin{equation} 
+\mathcal{I}(\rho,\sigma,\tau,u_i)=\int d\mu_{G}(\mathbf{z}) \PE\left[i(\rho,\sigma,\tau,u_i,\mathbf{z})\right] \, ,
+\end{equation}
+$d\mu_{G}$ denotes the Haar measure of the gauge group $G$ and $\PE\left[f(x)\right]$ denotes the Plethystic exponential of a function $f(x)$, defined in \eqref{eqn:PE}.
+The single letter index $i$ may be computed by enumerating all free field `letters' with $\delta=0$.
+The more powerful statement, however, is that, for class $\mathcal{S}$ theories, the index \eqref{eqn:SCI1} has the interpretation as a partition function of a 2d TQFT living on the Riemann surface $C$. 
+Given a pair of pants decomposition of $C$ into a collection of three-punctured spheres (where each puncture carries an associated representation of $A_n$) and tubes. The index of any class $\mathcal{S}$ theory can then be written in terms of the indices of the elementary three point functions (three-punctured sphere indices), expanded in a basis
+\begin{equation}
+\mathcal{I}_{\mathbf{a}\mathbf{b}\mathbf{c}}=\sum_{\alpha,\beta,\chi}C_{\alpha\beta\gamma}f^{\alpha}(\mathbf{a})f^{\beta}(\mathbf{b})f^{\chi}(\mathbf{c})\,,
+\end{equation} 
+and propagators (indicies of tubes)
+\begin{equation}
+\mathcal{I}_{\mathbf{a}\mathbf{b}}=\eta_{\mathbf{a}\mathbf{b}}=\int\mu_{SU(N)}(\mathbf{a})\Delta(\mathbf{a})\mathcal{I}^V(\mathbf{a})\delta(\mathbf{a},\mathbf{b}^{-1})\,.
+\end{equation}
+The index \eqref{eqn:SCI1} counts short representations of the $\mathfrak{su}(2,2|\mathcal{N})$ superconformal algebra, modulo recombination.
+Recombination happens when a long multiplet hits the unitary bound and decomposes into semi-direct sums of short representations. We list the possible $\mathcal{N}=2$ recombination rules in equations \eqref{eqn:short1}-\eqref{eqn:short2}. 
+
+The Hall-Littlewood index is defined as
+\begin{equation}
+\HL(\tau,u_i)=\lim_{\rho,\sigma\to0}\mathcal{I}\left(\rho,\sigma,\tau,u_i\right)=\Tr_{\mathbb{S}^3|_{\delta_{1\pm}=0}}(-1)^F\tau^{2R+2j_2}\prod_i u_i^{f_i}\,.
+\end{equation}
+This limit is always well defined since superconformal symmetry implies $\delta_{1\pm}\geq0$. This limit of the index counts a restricted number of operators, namely those with
+\begin{equation}
+j_1=0\,,\quad j_2=r\,,\quad E=2R+j_2\,.
+\end{equation} 
+Note that the only superconformal multiplets contributing to the index in this limit are
+\begin{equation}
+\HL_{\hat{\mathcal{B}}_{R}}(\tau)=\tau^{2R}\,,\quad \HL_{\mathcal{D}_{R(0,j_2)}}(\tau)=(-1)^{2j_2+1}\tau^{2+2R+2j_2}\,.
+\end{equation}
+We notice also that the Higgs branch chiral ring $HB$ is contained as a subset of Hall-littlewood operators. For genus zero theories it is conjectured that these two rings are equal.
+
+We plan to consider the quantity
+\begin{equation}
+\frac{\HL(\tau,u_i)}{\HS(\tau,u_i)}=\,\parbox{20em}{Partition function of operators \\with  $j_1=0$, $j_2=r\geq\frac{1}{2}$, $E=2R+j_2$}\,.
+\end{equation}
+Equivalently the ratio $\HL/\HS$ has an expansion in terms of $\mathcal{D}_{R(0,j_2)}$ multiplet indices
+\begin{equation}
+\frac{\HL(\tau,u_i)}{\HS(\tau,u_i)}=\sum_{R,j_2\in\mathbb{N}/2}p_{R,j_2}(u_i)\HL_{\mathcal{D}_{R(0,j_2)}}(\tau)\,,
+\end{equation}
+with $p_{R,j_2}$ $K$-symmetric polynomials in the $u_i$ with positive integer coefficients, where $K$ is the global symmetry group of the theory.
+Note however that the Hall-Littlewood index can distinguish only equivalence classes of multiplets, namely
+\begin{align}
+[\tilde{R}]_+&=\hat{\mathcal{B}}_{\tilde{R}}\cup\{\mathcal{D}_{\tilde{R}-j_2-1(0,j_2)}|\tilde{R}-j_2-1\geq0,2j_2\in2\mathbb{N}+1\in\}\\
+[\tilde{R}]_-&=\{\mathcal{D}_{\tilde{R}-j_2-1(0,j_2)}|\tilde{R}-j_2-1\geq0,2j_2\in2\mathbb{N}\}
+\end{align}
+and
+\begin{equation}
+\HL_{[\tilde{R}]_+}=-\HL_{[\tilde{R}]_-}=\tau^{2\tilde{R}}\,.
+\end{equation}
+Note that the following multiplets contain only a single representative: $[1/2]_+=\hat{\mathcal{B}}_{\frac{1}{2}}$, $[1]_+=\hat{\mathcal{B}}_1$,  $[1]_-=\mathcal{D}_{0,(0,0)}$, $[3/2]_-=\mathcal{D}_{1/2,(0,0)}$ these correspond to free half-hypers, moment map operator, free vector multiplet (chiral piece) and super-symmetry current. Note that the multiplets $\mathcal{D}_{0(j_1,0)}$ contain free fields. As we just mentioned when $j_1=0$ this is a free vector multiplet, when $j_1\geq\frac{1}{2}$ these contain higher-spin free fields.
+
+We will also use the fact that the Plethystic Logarithm counts all single trace operators, in other words
+\begin{align}
+\PLog\left[\HL(\tau,u_i)\right]=\,\parbox{20em}{Partition function of single trace operators\newline with  $j_1=0$, $j_2=r$, $E=2R+j_2$ }\,.
+\end{align}
+
+\section{\texorpdfstring{$\mathcal{N}=4$}{N=4} SYM Theories}
+From now we will label quantities by the Class $\mathcal{S}$ data, i.e. type $\mathfrak{g}$ and the Riemann surface data of genus $g$ and $n$ punctures. We will focus much of our attention to the class $\mathcal{S}$ theory associated to a torus with a single puncture, $n=1$, $g=1$. This yields the $G=SU(N),U(N)$ MSYM theory (depending on whether we choose to gauge the c.o.m. degree of freedom). This example is particularly tractable because we can compute the Hilbert series for any $N$. Viewed as an $\mathcal{N}=2$ theory $\mathcal{N}=4$ SYM has a $U(1)$ flavour symmetry associated to the puncture which we give fugacity $u$ for, this enhances to $SU(2)$ on the Higgs-branch.
+As an affine variety, the Higgs branch of this theory is given by
+\begin{equation}
+\mathbf{HB}=\mathbb{C}^{2r}\slash W(G)
+\end{equation}
+where $W(G)$ denotes the Weyl group of $G$ and $r=\rank G$. The chiral ring is obviously just therefore $HB=(\mathbb{C}[x_1,x_2,\dots,x_{2r}])^{W(G)}$, although this description can be rather cumbersome to work with in practise. The Hilbert series is then simply the Molien series
+\begin{equation}
+\HS^{G}_{1,1}(\tau,u)=M(\tau,u;\mathbb{C}^{2r}\slash W(G))\,.
+\end{equation}
+The Hall-Littlewood index is expressed as the matrix integral
+\begin{gather}
+\HL^{G}_{1,1}=\oint d\mu_{G}\PE\left[h(\tau,u)\chi^{(adj.)}_G\right]\,,\\ h(\tau,u)=\chi_1(u)\tau-\tau^2=\chi_1(u)\HL_{\hat{\mathcal{B}}_{1/2}}+\HL_{\mathcal{D}_{0(0,0)}}\,,
+\end{gather}
+here $\chi_{k}(u)\equiv\chi_k=\sum_{i=0}^ku^{k-2i}$ is the character of the spin-$k/2$ $SU(2)$ representation. The Hall-Littlewood letters are the top components of half-hypers $X=Q$, $Y=\widetilde{Q}$ which transform in the $\mathbf{2}$ under the enhanced $SU(2)$ flavour symmetry and $\overline{\lambda}=\overline{\lambda}_{1\dot+}$ in the $\mathbf{1}$ under the $SU(2)$. All the letters are in the adjoint representation of $G$. 
+Operators appearing in the expansion of the PLog of the Hall-Littlewood index are of the form
+\begin{equation}
+\tr X^nY^m\overline{\lambda}^k\in\begin{cases}\hat{\mathcal{B}}_{\frac{m+n}{2}}&\text{ if $k=0$}\\
+\mathcal{D}_{\frac{m+n+k-1}{2}(0,\frac{k-1}{2})}&\text{ if $k\geq1$}
+\end{cases}
+\end{equation} 
+due to $SU(2)$ flavour symmetry these must occur symmetrically under $m\leftrightarrow n$.
+\subsection{\texorpdfstring{$G=U(N)$}{G=U(N)}}
+The Hilbert series for this theory was computed already in Chapter \ref{Chap:N3DG} and reads
+\begin{equation}
+\HS^{U(N)}_{1,1}=\frac{1}{N!}\left.\frac{\partial^N}{\partial\nu^N}\PE\left[\frac{\nu}{(1-u\tau)(1-u^{-1}\tau)}\right]\right|_{\nu=0}\,.
+\end{equation}
+In particular, the Higgs branch of this theory as a variety is $\Sym^N(\mathbb{C}^2)$.
+
+\subsubsection{$N=1$}
+We can immediately write down the ratio
+\begin{equation}
+\frac{\HL^{U(1)}_{1,1}}{\HS^{U(1)}_{1,1}}=\PE[-\tau^2]=\PE[\HL_{[1]_-}]=\PE[\HL_{\mathcal{D}_{0,(0,0)}}]\,.
+\end{equation}
+I.e. the difference is simply an additional free vector multiplet. 
+\subsubsection{$N=2$}
+The Hilbert series reads
+\begin{equation}
+\HS^{U(2)}_{1,1}=\PE\left[\chi_1\tau+\chi_2\tau^2-\tau^4 \right]\,.
+\end{equation}
+The Hall-Littlewood index can be evaluated by means of residues and reads
+\begin{equation}
+\HL^{U(2)}_{1,1}=(1+\tau^2-\chi_1\tau^3)\PE\left[\chi_1\tau+\chi_2\tau^2-2\tau^2\right]\,.
+\end{equation}
+The ratio is
+\begin{align}
+\frac{\HL^{U(2)}_{1,1}}{\HS^{U(2)}_{1,1}}=&\frac{(1+\tau^2-\chi_1\tau^3)(1-\tau^2)^2}{1-\tau^4}=\left(1-\frac{\chi_1\tau^3}{1+\tau^2}\right)\PE\left[\HL_{\mathcal{D}_{0(0,0)}}\right]\\
+=&\left(1+\chi_1\sum_{n=1}^{\infty}(-1)^{n}\tau^{2n+1}\right)\PE\left[\HL_{\mathcal{D}_{0(0,0)}}\right]\\
+=&\left(1+\chi_1\sum_{m=1}^{\infty}\left(\HL_{[2m+1/2]_+}+\HL_{[2m-1/2]_-}\right)\right)\PE\left[\HL_{\mathcal{D}_{0(0,0)}}\right]
+\end{align}
+note that here we have factored out the contribution from a $\mathcal{D}_{0(0,0)}$ multiplet, as we know that this multiplet is always present for the $\mathfrak{u}(N)$ theory and corresponds to the free decoupled $\mathfrak{u}(1)$ in the decomposition $\mathfrak{u}(N)\iso\mathfrak{su}(N)\oplus\mathfrak{u}(1)$.
+The Plethystic logarithm (spectrum of single-trace operators) is
+\begin{equation}
+\PLog\left[\frac{\HL^{U(2)}_{1,1}}{\HS^{U(2)}_{1,1}}\right]=-\tau^2-(u+u^{-1})\tau^3+(u+u^{-1})\tau^5+\mathcal{O}(\tau^6)
+\end{equation}
+corresponding to $\tr\overline{\lambda}$, $\tr X\overline{\lambda}$, $\tr Y\overline{\lambda}$, $\tr X\overline{\lambda}^2$, $\tr Y\overline{\lambda}^2$ , past this order it is no longer possible to uniquely determine the operators.
+\subsubsection{$N=3$}
+The Hilbert series in this case is
+\begin{equation}
+\HS^{U(3)}_{1,1}=\left(\chi_1\tau^3+\sum_{n=0}^{3}\tau^{2n}\right)\PE\left[3\chi_1\tau+\chi_2\tau^2-\tau^2+(\chi_1-\chi_3)\tau^3\right]
+\end{equation}
+where we used the identity $\sum_{n=0}^px^n=(1-x^{p+1})/(1-x)=\PE[x-x^{p+1}]$.
+
+For $N=3$ it is still possible to compute using residues and, after using some identities we arrive at
+\begin{equation}
+\begin{aligned}
+\HL^{U(3)}_{1,1}=&\left(-\chi_2\tau^4-\chi_1\tau^5-(\chi_2-1)\tau^6+(\chi_3-\chi_1)\tau^7+\sum_{n=0}^4\tau^{2n}\right)\\
+&\times \PE\left[3\chi_1\tau+\chi_2\tau^2+\chi_1\tau^3-2\tau^2-\chi_3\tau^3\right]\,.
+\end{aligned}
+\end{equation}
+The ratio is
+\begin{equation}
+\begin{aligned}
+&\frac{\HL^{U(3)}_{1,1}}{\HS^{U(3)}_{1,1}}=\PE\left[\HL_{\mathcal{D}_{0(0,0)}}\right]\\
+&\times\left(1-\frac{\chi_1\tau^3+\chi_2\tau^4+\chi_1\tau^5+(\chi_2-1)\tau^6-(\chi_3-\chi_1)\tau^7-\tau^8}{1+\tau^2+\chi_1\tau^3+\tau^4+\tau^6}\right)\,.
+\end{aligned}
+\end{equation}
+
+\subsubsection{$N=\infty$}
+In Chapter \ref{Chap:N3DG} we wrote a simple formula for the $U(\infty)$ $\mathcal{N}=4$ Hilbert series, it reads
+\begin{equation}
+\HS^{U(\infty)}_{1,1}=\PE\left[\frac{1}{(1-u\tau)(1-u^{-1}\tau)}\right]=\PE\left[\sum_{k\geq0}\chi_{k}(u)\tau^{k}\right]\,.
+\end{equation}
+The spectrum of single trace Higgs-branch operators is a collection of $\hat{\mathcal{B}}_{R}$ multiplets in the spin $R$ representation of the $SU(2)$ global symmetry.
+In the large $N$ limit the Hall-Littlewood index can easily be written down by appealing to $AdS$/CFT \cite{Kinney:2005ej} it reads
+\begin{equation}
+\HL^{U(\infty)}_{1,1}=\PE\left[\HL^{KK}\right]\,,\quad \HL^{KK}=\frac{\chi_1(u)\tau-2\tau^2}{(1-u\tau)(1-u^{-1}\tau)}\,.
+\end{equation}
+So, the ratio is
+\begin{equation}
+\frac{\HL^{U(\infty)}_{1,1}}{\HS^{U(\infty)}_{1,1}}=\PE\left[\frac{-\tau^2}{(1-u\tau)(1-u^{-1}\tau)}\right]=\PE\left[\sum_{k\geq0}\chi_{k}(u)\HL_{[1+k/2]_-}\right]
+\end{equation}
+\subsection{\texorpdfstring{$G=SU(N)$}{G=SU(N)}}
+The Hilbert series for this theory was computed already in Chapter \ref{Chap:N3DG} and is given by
+\begin{equation}
+\HS^{SU(N)}_{1,1}=(1-u\tau)(1-u^{-1}\tau)\HS^{U(N)}_{1,1}=\frac{\HS^{U(N)}_{1,1}}{\HS^{U(1)}_{1,1}}\,.
+\end{equation}
+The Higgs branch of this theory as a variety is $\mathbb{C}^{2N-2}/S_N\subset\Sym^N(\mathbb{C}^2)$, this is the subvariety of the $U(N)$ case defined by demanding tracelessness of the adjoint representation.
+We checked via series expansion for various low values of $N$ that
+\begin{equation}
+\HL^{SU(N)}_{1,1}=\frac{\HL^{U(N)}_{1,1}}{\HL^{U(1)}_{1,1}}\,.
+\end{equation}
+So, we can apply the results of the previous section using
+\begin{equation}
+\frac{\HL^{SU(N)}_{1,1}}{\HS^{SU(N)}_{1,1}}=\frac{\HL^{U(N)}_{1,1}}{\HL^{U(1)}_{1,1}}\frac{\HS^{U(1)}_{1,1}}{\HS^{U(N)}_{1,1}}=\PE[\HL_{\mathcal{D}_{0,(0,0)}}]\frac{\HL^{U(N)}_{1,1}}{\HS^{U(N)}_{1,1}}\,.
+\end{equation}
+
+\section{Elliptic Quiver Theories}
+We now allow for $n$ minimal punctures. For $U(N)$ gauge groups this is the $\mathbb{Z}_n$ orbifold theory of $\mathcal{N}=4$ SYM.
+\subsection{\texorpdfstring{$G=U(N)$}{G=U(N)}}
+The Higgs branch of this theory as a variety is $\Sym^N(\mathbb{C}^2/\mathbb{Z}_n)$ and the Hilbert series is therefore
+\begin{equation}
+\HS^{U(N)}_{1,n}=\frac{1}{N!}\left.\frac{\partial^N}{\partial\nu^N}\PE\left[\frac{\nu(1-\tau^{2n})}{(1-\tau^2)(1-u^n\tau^n)(1-u^{-n}\tau^n)}\right]\right|_{\nu=0}\,.
+\end{equation}
+The Hall-Littlewood index is
+\begin{equation}
+\HL^{U(N)}_{1,n}=\oint \prod_{i=1}^n\left(d\mu_{U(N)_i}\PE\left[\left(uf_i\overline{f}_{i+1}+u^{-1}\overline{f}_if_{i+1}\right)\tau-\chi^{(adj.)}_{U(N)_i}\tau^2\right]\right)
+\end{equation}
+where 
+$f_i=\sum_{a=1}^Nz_{i,a}$, $\overline{f}_i=\sum_{a=1}^Nz^{-1}_{i,a}$, $\chi^{(adj.)}_i=\sum_{a,b=1}^N\frac{z_{i,a}}{z_{i,b}}$ we also take $z_{i+n,a}= z_{i,a}$.
+\subsubsection{$N=1$}
+For $N=1$ the results are rather simple
+\begin{equation}
+\HS^{U(1)}_{1,n}=\frac{1-\tau^{2n}}{(1-\tau^2)(1-u^n\tau^n)(1-u^{-n}\tau^n)}
+\end{equation}
+and
+\begin{equation}
+\HL^{U(1)}_{1,n}=\frac{1-\tau^{2n}}{(1-u^n\tau^n)(1-u^{-n}\tau^n)}
+\end{equation}
+we again have that the two quantities differ by a free vector multiplet
+\begin{equation}
+\frac{\HL^{\mathfrak{u}(1)}_{1,n}}{\HS^{\mathfrak{u}(1)}_{1,n}}=(1-\tau^2)=\PE\left[\HL_{\mathcal{D}_{0(0,0)}}\right]\,.
+\end{equation}
+\subsubsection{$N=n=2$}
+The Hilbert series is
+\begin{equation}
+\HS^{U(2)}_{1,n}=\frac{(1-\tau^{2n})\left[(1+\tau^{2n})(1-\tau^{2+2n})+(u^{-n}+u^n)(\tau^{2+n}-\tau^{3n})\right]}{(1-\tau^2)(1-\tau^4)(1-u^{\pm n}\tau^n)(1-u^{\pm2n}\tau^{2n})}\,.
+\end{equation}
+For $n=2$ this simplifies to
+\begin{equation}
+\HS^{U(2)}_{1,2}=\left(\chi_2\tau^{4}+\sum_{i=0}^4\tau^{2i}\right)\PE\left[(\chi_2-1)\tau^2+(\chi_4-\chi_2)\tau^4\right]\,.
+\end{equation}
+The Hall-Littlewood index is
+\begin{equation}
+\HL^{U(2)}_{1,2}=\left(1+\tau^4-(\chi_2-1)\tau^6\right)\PE\left[(\chi_2-1)\tau^2+(\chi_4-\chi_2-1)\tau^4\right]\,.
+\end{equation}
+The ratio is
+\begin{align}
+&\frac{\HL^{U(2)}_{1,2}}{\HS^{U(2)}_{1,2}}=\frac{1-\tau^8-(\chi_2-1)\tau^6(1-\tau^4)}{1+\chi_2\tau^4-\chi_2\tau^6-\tau^{10}}\PE[-\tau^2]\\
+&=\left(1+\chi_2\HL_{[2]_-}+\HL_{[3]_+}+(\chi_4+\chi_2)\HL_{[4]_+}+\mathcal{O}(\tau^{10})\right)\PE[\HL_{\mathcal{D}_{0(0,0)}}]
+\end{align}
+
+\subsection{Generic \texorpdfstring{$\mathfrak{g}=A_1$}{g=A1} Class \texorpdfstring{$\mathcal{S}$}{S} Theories}
+The Hall-Littewood index for the $A_1$ theory associated to a genus $g$ Riemann surface with $n$ punctures is \cite{Gadde:2011uv}
+\begin{equation}
+\HL^{SU(2)}_{g,n}=\frac{(1+\tau^2)^{\chi}}{(1-\tau^2)^{1-g}}\sum_{\lambda=0}^{\infty}\frac{1}{P_{\lambda}(\tau,\tau^{-1}|\tau)^{\chi}}\prod_{I=1}^n\frac{P_{\lambda}(a_I,a_I^{-1}|\tau)}{(1-a_I^2\tau^2)(1-a_I^{-2}\tau^2)}
+\end{equation}
+where $\chi=2g-2+n$ and the Hall-Littlewood polynomials are 
+\begin{equation}
+P_{\lambda}(a,a^{-1}|\tau)=\begin{cases}
+\chi_{\lambda}(a)-\tau^2\chi_{\lambda-2}(a)&\lambda\geq1\\
+\sqrt{1+\tau^2}&\lambda=0
+\end{cases}
+\end{equation}
+with $\chi_{\lambda}=(a^{1+\lambda}-a^{-1-\lambda})/(a-a^{-1})$ the $SU(2)$ characters.
+On the other hand, the Hilbert series for the same theory is given by \cite{Hanany:2010qu}
+\begin{equation}
+\begin{aligned}
+\HS^{SU(2)}_{g,n}=&\frac{(1+\tau^2)^{\chi}}{(1-\tau^2)}\left((1+\tau^2)^{1-2g}\prod_{I=1}^n\frac{1}{(1-a_I^2\tau^2)(1-a_I^{-2}\tau^2)}\right.\\
+&\left.+\sum_{\lambda=1}^{\infty}\frac{1}{P_{\lambda}(\tau,\tau^{-1}|\tau)^{\chi}}\prod_{I=1}^n\frac{P_{\lambda}(a_I,a_I^{-1}|\tau)}{(1-a_I^2\tau^2)(1-a_I^{-2}\tau^2)}\right)\,.
+\end{aligned}
+\end{equation}
+It is immediate that, when $g=0$ we have $\HS^{SU(2)}_{0,n}=\HL^{SU(2)}_{0,n}$.
+Let us consider the case of a theory associated to a genus $g\geq1$ surface without punctures, in which case the sums can be performed explicitly
+\begin{equation}
+\HL^{SU(2)}_{g,0}=\frac{(1-\tau^2)^{\chi/2}(\tau^{\chi}+(1+\tau^2)^{\chi/2}(1-\tau^{\chi}))}{(1-\tau^{\chi})}
+\end{equation}
+while the corresponding Hilbert series becomes
+\begin{equation}
+\HS^{SU(2)}_{g,0}=\PE\left[\tau^4+\tau^{\chi}+\tau^{\chi+2}-\tau^{2\chi+4}\right]\,.
+\end{equation}
+The ratio then takes the form
+\begin{equation}
+\begin{aligned}
+\frac{\HL^{SU(2)}_{g,0}}{\HS^{SU(2)}_{g,0}}=& \left(\tau^{2g-2}+(1+\tau^2)^{g-1}(1-\tau^{2g-2})\right)\\&\times\PE\left[-(g-1)\tau^2-\tau^4-\tau^{2g}(1-\tau^{2g})\right]\,.
+\end{aligned}
+\end{equation}
+\end{document}

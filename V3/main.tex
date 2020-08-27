@@ -1,0 +1,78 @@
+\documentclass[a4paper,11pt]{book}
+%
+\input{preamble}
+\begin{document}
+\include{prologue}
+
+	\chapter{Introduction}
+	\label{Chap:intro}
+	\subfile{intro}	
+	
+	\chapter{The Higgs and Coulomb Branches of Theories of Class \texorpdfstring{\protect\Sk}{Sk}}
+	\label{Chap:HCSk}
+	\subfile{HCSk}
+	
+	\chapter{Seiberg-Witten Curves for Theories of Class \texorpdfstring{\protect\Sk}{Sk}}
+	\label{Chap:SkCurves}
+	\subfile{SkCurves}
+		
+	\chapter{Instanton Counting for Theories of Class \texorpdfstring{\protect\Sk}{Sk}}
+	\label{Chap:skinstcounting}
+	\subfile{skinstcounting}
+	
+	\chapter{\texorpdfstring{$\mathcal{N}=3$}{N=3} SCFTs from Discrete Gauging}
+	\label{Chap:N3DG}
+	\subfile{N3DG}
+	
+	\chapter{\texorpdfstring{$\mathcal{N}=(1,0)$}{N=(1,0)} Strings and Surface Operators}
+	\label{Chap:10Defects}
+	\subfile{10Defects}
+	
+	\chapter{Final Conclusions and Outlook}
+	\label{Chap:Conclusions}
+	\subfile{Conclusions}
+	
+\appendix
+\allowdisplaybreaks
+
+	\chapter{Definitions, Identities and Special Functions}
+	\label{Chap:AppIdentities}
+	\subfile{AppIdentities}
+	
+	\chapter{Algebraic Geometry}
+	\label{Chap:AppAlgGeo}
+	\subfile{AppAlgGeo}
+
+	\chapter{Appendices for Chapter 2}\label{App:Chap2}
+	\subfile{AppChap2}
+	
+	\chapter{Appendices for Chapter 3}
+	\subfile{AppChap3}
+	
+	\chapter{Appendices for Chapter 4}
+	\subfile{AppChap4}
+	
+	\chapter{Appendices for Chapter 5}
+	\subfile{AppChap5}
+
+	\chapter{Appendices for Chapter 6}\label{App:Chap6}
+	\subfile{AppChap6}
+	
+	\chapter{Hall-Littlewood Index and Hilbert Series}
+	\label{Chap:HLvsHSGenus1}
+	\subfile{HLvsHSGenus1}
+	
+	\chapter{Ramified Instanton Partition Functions}
+	\label{Chap:AppRamInsts}
+	\subfile{AppRamInsts}	
+	
+	
+\clearpage
+\singlespacing
+\bibliography{B}
+\bibliographystyle{ieeetr}
+
+\singlespacing
+\include{decleration}
+	
+\end{document}

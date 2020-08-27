@@ -1,0 +1,24 @@
+\select@language {english}
+\contentsline {section}{\numberline {I.1}Introduction}{452}{section.I.1}
+\contentsline {section}{\numberline {I.2}Review of $\mathcal {N}=1$ Seiberg-Intriligator Curves}{453}{section.I.2}
+\contentsline {subsection}{\numberline {I.2.1}Examples}{454}{subsection.I.2.1}
+\contentsline {subsubsection}{$\mathcal {N}=2\to \mathcal {N}=1$ Mass Deformation of Pure $SU(2)$ $\mathcal {N}=2$ Gauge Theory}{454}{section*.101}
+\contentsline {subsubsection}{$\mathcal {N}=1$ $SU(2)\times SU(2)$ Gauge Theory}{454}{section*.102}
+\contentsline {section}{\numberline {I.3}Core Theories in Class \Sk }{456}{section.I.3}
+\contentsline {subsection}{\numberline {I.3.1}Classical Analysis}{457}{subsection.I.3.1}
+\contentsline {subsection}{\numberline {I.3.2}Mass Parameters}{458}{subsection.I.3.2}
+\contentsline {subsection}{\numberline {I.3.3}Curves for $N=k=2$}{460}{subsection.I.3.3}
+\contentsline {subsubsection}{Diagonal Limit}{460}{section*.103}
+\contentsline {subsubsection}{$q_{(2)}\gg q_{(1)}$ Limit}{462}{section*.104}
+\contentsline {subsubsection}{Checks}{464}{section*.105}
+\contentsline {paragraph}{$M_i=\diag (m,-m,m,-m)$, $M_2\sim E\mathbb {I}_4$}{464}{section*.106}
+\contentsline {paragraph}{$M_1=\diag (m,m,m,0)$, $M_2\sim E\mathbb {I}_4$}{464}{section*.107}
+\contentsline {paragraph}{$M_1=\diag (m,m,m,m)$, $M_2\sim E\mathbb {I}_4$}{465}{section*.108}
+\contentsline {subsection}{\numberline {I.3.4}Curve for $k=2$ General $N$}{465}{subsection.I.3.4}
+\contentsline {subsubsection}{Diagonal Limit}{465}{section*.109}
+\contentsline {subsubsection}{$q_{(2)}\gg q_{(1)}$ Limit}{467}{section*.110}
+\contentsline {subsection}{\numberline {I.3.5}Generalisation to $k>1$}{468}{subsection.I.3.5}
+\contentsline {section}{\numberline {I.4}Comparison to M-Theory Curves}{469}{section.I.4}
+\contentsline {subsection}{\numberline {I.4.1}Review of $k=1$ Class $\mathcal {S}$}{469}{subsection.I.4.1}
+\contentsline {subsection}{\numberline {I.4.2}Class $\mathcal {S}_2$}{470}{subsection.I.4.2}
+\contentsline {section}{\numberline {I.5}Conclusions}{471}{section.I.5}

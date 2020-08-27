@@ -1,0 +1,407 @@
+\documentclass[main.tex]{subfiles}
+\begin{document} 
+\section{Introduction}
+Shortly after the seminal work by Seiberg and Witten on $\N=2$ gauge theories \cite{Seiberg:1994rs,Seiberg:1994aj} Seiberg and Intriligator pointed out that similar techniques may be deployed to study $\N=1$ gauge theories that possess a pure abelian Coulomb branch \cite{Intriligator:1994sm}. When supersymmetry is unbroken the theory may often possess several inequivalent ground states for any given values of the moduli $\{u_i\}$ of the theory. The ground states are generically in different `branches' or `phases' of the theory. These phases may be Coulomb, Higgs, Confining or, more generally, a mixture between them. In many cases the moduli space $\mathbf{M}$ is a manifold parametrised by the $u_i$. In particular, they were able to write down a family of holomorphic curves $\mathfrak{X}$ encoding the low energy superpotential on the Coulomb branch. 
+It is useful to think of the total space $\mathfrak{X}$ as a fibration of holomorphic curves fibered over the moduli space base
+\begin{equation}
+\mathfrak{X}=\begin{tikzcd}
+\mathcal{X}\arrow[d]\\
+\mathbf{CB}
+\end{tikzcd}
+\end{equation}
+here $\mathcal{X}$ is a $\{u_i\}$ dependent Riemann surface specified by a polynomial in two auxiliary variables $x,y$ and the various coupling constants $q$ and masses,
+\begin{equation}
+\mathcal{X}:\quad y^2=F(x;u_i,q,m)\,.
+\end{equation}
+The low energy effective coupling matrix then is computed by inverting
+\begin{equation}
+\int_{B_j}\omega_i=\sum_{l=1}^{g}\tau_{il}\int_{A_l}\omega_j\,,
+\end{equation}
+where $\omega\in\Omega^{1,0}(\mathcal{X})$ with $\Omega^{p,q}(\mathcal{X})$ is the space of closed $(p,q)$-forms on the genus $g$ curve $\mathcal{X}$ at fixed $u_i$.
+
+In contrast to $\N=2$ gauge theory, where the techniques of Seiberg and Witten allows one to compute the low energy Wilsonian effective action and the masses of the lightest single particle states exactly, computing the Seiberg-Intriligator curve for an is not enough to `solve' the Coulomb branch of $\mathcal{N}=1$ theory. In particular, in the case of a generic $\N=1$ gauge theory, supersymmetry does not relate the superpotential to the K\"ahler part of the action. Furthermore, the lack of a BPS bound means that there is no direct way to compute the masses of the lightest states. 
+
+On the contrary, the $\mathcal{N}=1$ curves still encode a large amount of information and may be particularly instructive in, for example, a Gaiotto type classification for theories of class $\mathcal{S}_k$ \cite{Gaiotto:2009we,Gaiotto:2009hg}.
+
+\section{Review of \texorpdfstring{$\mathcal{N}=1$}{N=1} Seiberg-Intriligator Curves}
+In this section we wish to provide a brief review of a few rank one examples of the $\mathcal{N}=1$ curves proposed by Seiberg and Intriligator \cite{Intriligator:1994sm}. Guided by the following basic assumptions:
+\begin{itemize}
+ \item {The low energy effective action has an $SL(2,\mathbb{Z})$ duality group meaning that $\tau$ is not a single valued function but rather a section of an $SL(2,\mathbb{Z})$ bundle over $\mathbf{CB}$ which can be identified with the period matrix of a genus $g$ Riemann surface $\mathcal{X}_u$ which is given by a ratio of the periods $\tau=\int_{B}\omega/\int_{A}\omega$ where $A,B$ are independent 1-cycles, the so called electric and magnetic cycles respectively.}
+ \item {Because $\tau$ is a global holomorphic section in the light fields and the various coupling constants, over $\mathbf{CB}$, the curve $\mathcal{X}$ should be holomorphic in them too.}
+\item{The curve should respect the global symmetries.}
+\item{The curve should be described by a polynomial of the form $y^2=F(x;u,q,m)$.}
+\end{itemize}
+they were able to write down the family of holomorphic curves $\mathfrak{X}$ encoding the low energy superpotential on the Coulomb branch.
+\subsection{Examples}
+\subsubsection{$\mathcal{N}=2\to\mathcal{N}=1$ Mass Deformation of Pure $SU(2)$ $\N=2$ Gauge Theory}
+The first example they considered is the mass deformation of pure $SU(2)$ $\N=2$ gauge theory. The $\N=2\to\N=1$ deformation is given by adding $W\to W+mu$ where $u=\frac{1}{2}\tr\phi^2$ and $\phi$ is the adjoint chiral multiplet of the $\N=2$ vector multiplet. The curve of this $\N=1$ theory is given by
+\begin{equation}
+y^2=x^3-mux^2+\Lambda_d^6x.
+\end{equation}
+\subsubsection{$\mathcal{N}=1$ $SU(2)\times SU(2)$ Gauge Theory}
+Perhaps the most relevant example for us that was studied in \cite{Intriligator:1994sm} is $\N=1$ gauge theory with $G=SU(2)_1\times SU(2)_2$ with two chiral superfields $\Phi_{ia_1a_2}$ in the $\left(\mathbf{2},\mathbf{2}\right)$ representation of $G$, labelled by $a_1,a_2=1,2$ respectively. The theory has a $SU(2)_F$ flavour symmetry $\Phi_i\to f_{ij}\Phi_j$ where $f_{ij}\in SU(2)_F$. The theory can, on one hand, be understood as a $\mathbb{Z}_2$ orbifold of the above $\N=2$ pure $SU(2)$ gauge theory. Equivalently, the theory can be obtained by compactifying the 6d $(1,0)_{A_1}$ theory on a punctured Riemann surface $\mathcal{C}$ of genus zero in the presence of a certain set of defect operators associated to so called `wild' punctures. As in $\N=2$ theories the Seiberg-Intriligator curve $\mathcal{X}$ is a double covering of $\mathcal{C}$. The theory has a three complex dimensional moduli space of supersymmetric vacua parametrised by the gauge invariant quantities $M_{ij}:=\det \Phi_i\Phi_j$ where the determinant is taken over $G$. 
+
+This theory has an one complex-dimensional abelian coulomb branch where $SU(2)_1\times SU(2)_2\to U(1)_D\subset SU(2)_D$ and $SU(2)_D$ denotes the diagonal subgroup of $SU(2)_1\times SU(2)_2$. The moduli space $\mathbf{CB}$ of gauge inequivalent coulomb vacua is parametrised by a single gauge and flavour singlet $u=\det_{ij}M_{ij}$. The holomorphic gauge coupling in this phase is  $\tau_D=\tau_D\left(u,\Lambda_1^4,\Lambda_2^4\right)$ where $\Lambda_i^4:=\mu^4 e^{2\pi\iu\tau_i}$ are the instanton parameters. We may deduce the form of the curve describing the moduli space by considering a few limits. Firstly consider the limit where $\Phi_1$ acquires a large diagonal vev but the vev of $\Phi_2$ is vanishing. The gauge group is broken to $SU(2)_D$. $\Phi_2$ decomposes into $\mathbf{2}\otimes\mathbf{2}\to \mathbf{3}\oplus\mathbf{1}$ of $SU(2)_D$. There is also the heavy singlet field $M_{11}$. If we assume that the singlets decouple then the theory is approximately pure $\N=2$ $SU(2)_D$ gauge theory - the curve of that theory is
+\begin{equation}\label{eqn:largeu}
+y^2=x^3-u_Dx^2+\frac{1}{4}\Lambda_D^4x\,,\quad\text{for large $u$}
+\end{equation} 
+where
+\begin{equation}
+u_D=\tr\phi^2=\frac{2u}{M_{11}}\,,\quad \Lambda_D^4=\frac{16\Lambda_1^4\Lambda_2^4}{M_{11}}\,.
+\end{equation}
+After rescaling $x,y$, by the $\Aut(Quiver)\iso\mathbb{Z}_2$ symmetry acting by $1\leftrightarrow 2$, agreement at large $u$ with \eqref{eqn:largeu}, analyticity and dimensional analysis the most general form of the $\mathcal{N}=1$ curve is
+\begin{equation}\label{eqn:alphacurve}
+y^2=x^3-\left(u-\alpha(\Lambda_1^4+\Lambda_2^4)\right)x^2+\Lambda_1^4\Lambda_2^4x\,.
+\end{equation} 
+To fix $\alpha$ it is useful to focus on one of the two gauge nodes, say the $SU(2)_2$ node, from that point of view it sees $SU(2)$ SQCD with $N_f=2$ with holomorphic scale given by $\Lambda_2$ .\footnote{By $SU(N)$ SQCD with $N_f$ flavours to be the theory consisting of an $\N=1$ $SU(N)$ vector multiplet coupled to $N_f$ chiral multiplets $Q_i$ in the $\mathbf{N}$ of $SU(N)$ and $N_f$ chiral multiplets $\widetilde{Q}^i$ in the $\bar{\mathbf{N}}$ possibly with non-trivial superpotential.}\textsuperscript{,}\footnote{Recall that the $\mathbf{2}$ of $SU(2)$ is pseudo-real and therefore isomorphic to the $\bar{\mathbf{2}}$.} For SQCD we have the following quantum constraint
+\begin{equation}\label{eqn:constraint}
+\Pf V=u+E\widetilde{u}=\Lambda_2^4
+\end{equation}
+with $E$ some energy scale and $\widetilde{u}=\tr\widetilde{\phi}^2$, $\widetilde{\phi}=\frac{1}{E}\left(\Phi_1\Phi_2-\frac{1}{2}\tr\Phi_1\Phi_2\right)$. 
+To then fix $\alpha$ consider the limit where the second gauge group is very strongly coupled $\Lambda_2\to\infty$, $\Lambda_2\gg\Lambda_1$. On one hand, in this limit, the theory is approximately $SU(2)_1$ gauge theory coupled to the adjoint field $\widetilde{\phi}$ and singlets $\det\Phi_1^2$, $\det\Phi_2^2$, $\tr\Phi_1\Phi_2$. Assuming that the singlets decouple, the theory is approximately pure $\N=2$ gauge theory with holomorphic scale $\Lambda_1$ which has curve
+\begin{equation}
+y^2=x^3-\widetilde{u}x^2+\frac{1}{4}\Lambda_1^4x\,.
+\end{equation} 
+and is singular at 
+\begin{equation}\label{tildeu}
+\widetilde{u}=\frac{1}{E}\left(\Lambda_2^4-u\right)=\pm\Lambda_1^2\,.
+\end{equation}
+On the other hand \eqref{eqn:alphacurve} is singular at $u=\alpha\left(\Lambda_1^4+\Lambda_2^4\right)\pm2\Lambda_1^2\Lambda_2^2\approx\alpha\Lambda_2^4\pm2\Lambda_1^2\Lambda_2^4$. Comparing with \eqref{tildeu} implies that $\alpha=1$ and therefore curve $\mathcal{X}_u$ of this theory is given by
+\begin{equation}\label{eqn:SIcurve}
+y^2=x^3+(-u+\Lambda^4_1+\Lambda^4_2)x^2+\Lambda^4_1\Lambda^4_2x\,.
+\end{equation}
+Interestingly, the solution of this $SU(2)\times SU(2)$ $\mathcal{N}=1$ gauge theory is isomorphic to that of $SU(2)$ $\mathcal{N}=2$ gauge theory with the isomorphism $\mathfrak{X}\iso\mathfrak{X}_{\N=2}\iso \mathbb{H}/\Gamma_0(4)$ provided by the mapping which shifts $f:u_{\N=2},\Lambda_{\N=2}\mapsto u-\Lambda_1^4-\Lambda_2^4,\Lambda_1\Lambda_2$.
+\section{Core Theories in Class \texorpdfstring{\protect\Sk}{Sk}}
+In this section we derive the $\mathcal{N}=1$ Seiberg-Intriligator curves for the `core theories` in class $\mathcal{S}_k$, namely those associated to spheres with two maximal and $\ell-2$ minimal punctures. 
+\subsection{Classical Analysis}
+The theory admits a rather intricate phase structure however, we may restrict our attention to the Coulomb branch defined by giving non zero vevs to $\Phi$'s while $Q,\widetilde{Q}$ have vanishing vevs. For generic vevs the gauge group is broken from $SU(N)^{k\ell}\to U(1)^{(N-1)\ell}$.
+The branches don't mix because they may be differentiate using the $U(1)_t$ symmetry, as we have shown in Chapter \ref{Chap:HCSk}.
+
+We first define $\Phi_n:=\prod_{i=1}^k\Phi_{(i,n)}$, the Coulomb branch may be parametrised by the following $N$ gauge invariants
+\begin{equation}\label{eqn:uln}
+u_{lk,n}:=\begin{cases}\frac{1}{l}\tr\left(\Phi_n-\frac{1}{N}\tr\Phi_n\right)^l& 2\leq l\leq N\\
+\tr\Phi_n&l=1
+\end{cases}
+\end{equation}
+of dimension $lk$ and $k$ `baryonic' gauge invariant objects
+\begin{equation}\label{eqn:bin}
+B_{i,n}:=\frac{1}{(N!)^2}\epsilon_{{a_1}\dots {a_N}}\epsilon^{{b_{1}}\dots {b_{N}}}\Phi_{(i,n)b_1}^{{a_1}}\dots\Phi_{(i,n)b_N}^{{a_N}}=\det\Phi_{(i,n)}\,,
+\end{equation}
+of dimension $N$. Classically there is a relation
+\begin{equation}\label{eqn:classicalrelation}
+\det M_{i+1,n}-B_{i,n}B_{i+1,n}=0\,,\quad (M_{i+1,n})^a_c:=\Phi_{(i,n)b}^{a}\Phi_{(i+1,n)c}^{b}\,,
+\end{equation}
+this relation is modified quantum mechanically \cite{Seiberg:1994bz} 
+\begin{equation}
+\det M_{i+1,n}-B_{i,n}B_{i+1,n}=\Lambda^{2N}_{i+1,n}
+\end{equation}
+here $\Lambda^{2N}_{i+1,n}$ is the effective holomorphic scale of the $(i+1,n)^{\text{th}}$ gauge group. It can be written in terms of the gauge couplings $q_{(j,n)}$ and the masses for hypermultiplets which we will discuss in detail in the next section.
+
+Note that there is an over-parametrisation since the $u_{lk,n}$ and $B_{i,n}$ are not all independent but rather related by the applying the Cayley-Hamilton theorem to the matrix $\Phi_n$:
+\begin{equation}\label{eqn:CHtheorem}
+p(\Phi_n)=\sum_{l=1}^Nc_{l,n}\Phi_n^l+(-1)^N\det\Phi_n\mathbb{I}_{N}=0
+\end{equation} 
+where 
+\begin{equation}
+c_{N-l,n}=\frac{(-1)^l}{l!}BE_l\left(\mathfrak{u}_{k,n},-1!\mathfrak{u}_{2k,n},\dots,(-1)^{l-1}(l-1)!\mathfrak{u}_{lk,n}\right)\,,
+\end{equation}
+with $c_N=1$ and $BE_l$ is the $l^{\text{th}}$ complete exponential Bell polynomial and we defined $\mathfrak{u}_{lk,n}:=\tr\Phi_n^l$. The $u_{lk,n}$ may be expressed in terms of the $\mathfrak{u}_{lk,n}$ as $u_{lk,n}=\frac{1}{l}\sum_{p=0}^l\binom{l}{p}\left(-\frac{1}{N}\mathfrak{u}_{k,n}\right)^p\mathfrak{u}_{(l-p)k,n}$. Taking the trace of \eqref{eqn:CHtheorem} implies, for generic $\Phi_{(i,c)}$, a single relation between \eqref{eqn:uln} and \eqref{eqn:bin}
+\begin{equation}
+\tr p(\Phi_n)=\sum_{l=1}^Nc_{l,n}\mathfrak{u}_{lk,n}+(-1)^NN\prod_{i=1}^kB_{i,n}=0\,.
+\end{equation}
+In particular, this implies that $u_{Nk,n}$ can be completely written in terms of the $B_{i,n}$ and the $u_{lk,n}$ $1\leq l\leq N-1$.
+Hence, the coordinate ring of the Coulomb branch for $k\geq2$ is expected to be a freely generated ring of dimension $(3g-3+\ell)(k+N-1)$
+\begin{equation}
+CB=\mathbb{C}[u_{lk,n},B_{i,n}]\,,\quad \begin{aligned}
+&l\in\{1,2,\dots,N-1\}\,,\\
+&i\in\{1,2,\dots,k\}\,,\\
+&n\in\{1,2,\dots,3g-3+\ell\}\,.
+\end{aligned}
+\end{equation}
+
+\subsection{Mass Parameters}
+We may regard the masses corresponding to the flavour symmetries for \newline$SU(N)_{(i,0)}=SU(N)_{(i,L)}$ and $SU(N)_{(i,\ell+1)}=SU(N)_{(i,R)}$ as expectation values for background superfields $\Phi_{(i,0)}=M^L_i$, $\Phi_{(i,\ell+1)}=M^R_i$. Hence we may construct flavour invariant combinations of masses in the same fashion, to that end we define
+\begin{gather}
+\mu^{L}_{lk}:=\tr\left(\prod_{i=1}^kM_i^L\right)^l\,,\quad \mu^{R}_{lk}:=\tr\left(\prod_{i=1}^kM_i^R\right)^l\,,\\ J^L_i:=\det M_i^L\,,\quad J^R_i:=\det M_i^R\,,
+\end{gather}
+for $1\leq l\leq N$. Moreover, $M_{i}^{L/R}$ may be diagonalised by $SU(N)$ transformations such that they take they form
+\begin{equation}
+M_{i}^{L/R}=\diag\left(m_{i,1}^{L/R},\dots,m_{i,N}^{L/R}\right)\,.
+\end{equation}
+Additionally, when $\ell=1$, the $SU(N)^{2k}$ flavour symmetry enhances to $SU(2N)^k$ and in that case we find it convenient to instead combine the mass parameters as 
+\begin{equation}
+M_i:=M_i^L\oplus M_i^R :=\diag\left(m_{(i),1},\dots,m_{(i),2N}\right)\,,
+\end{equation}
+and to write the invariants as 
+\begin{equation}\label{eqn:massparam2}
+\mu_{lk}:=\tr\left(\prod_{i=1}^kM_i\right)^l\,,\quad J_i:=\det M_i\,,
+\end{equation}
+where now $1\leq l\leq 2N$. 
+After giving vevs in the UV each $U(1)$ factor is decoupled and the corresponding coupling matrix $\tau_{ab,n}^{\text{UV}}$ is diagonal and they are related to the $SU(N)_{(i,n)}$ gauge couplings by
+\begin{equation}
+\tau_{ab,n}^{\text{UV}}=2\delta_{a,b}\sum_{i=1}^k\tau_{(i,n)}
+\end{equation}
+\subsection{Curves for \texorpdfstring{$N=k=2$}{N=k=2}}
+We will now compute the curve for the simplest of our theories, namely the $k=2$ quiver with $N=2$ and $\ell=1$. We will drop the `$n$' index for compactness, e.g. here $\Phi_{(i,n)}=\Phi_{(i,1)}:=\Phi_{(i)}$. 
+\subsubsection{Diagonal Limit}
+Initially let us consider the limit where, say, $\Phi_{(1)}$ gets a large diagonal vev $\left<\Phi_{(1)}\right>=\text{diag}(a,a)$, by examining the Lagrangian one sees that the gauge group is broken down to a $SU(2)_D$ diagonal subgroup just as in \cite{Intriligator:1994sm}, under which both bifundamentals decompose into an adjoint and a singlet, of which the adjoint associated to $\Phi_{(1)}$ becomes the longitudinal modes of the massive $(SU(2)_{(1)}\times SU(2)_{(2)})/SU(2)_D$ gauge bosons, while the (anti)fundamentals of the $SU(2)$'s decompose into (anti)fundamentals of the $SU(2)_D$.
+
+The uneaten adjoint is $\phi=\Phi_{(2)}-\frac{1}{2}\tr\Phi_{(2)}$. Below the scale $a$ the quarks $Q_{(1,0)}$, $Q_{(2,1)}$, $\tilde{Q}_{(1,0)}$, $\tilde{Q}_{(1,1)}$ can be integrated out, the super potential (without the singlets) is then \footnote{The "diagonal" quark masses can be calculated by solving the F-term's for $Q_{(1,0)}$, $Q_{(2,1)}$, $\tilde{Q}_{(1,0)}$, $\tilde{Q}_{(1,1)}$.}
+In general there will also be the singlet $u_2=\tr\Phi_{(1)}\Phi_{(2)}$ of which there be an associated mass deformation to the diagonal superpotential $W_D$ 
+\begin{equation}
+W_D\to W_D+m_su_2
+\end{equation}
+Then below $m_s$ the singlet $u_2$ can be integrated out.\footnote{In \cite{Intriligator:1994sm,Csaki:1997zg,Tachikawa:2011ea} the assumption that the singlet does not enter the gauge dynamics appears to be consistent assumption, atleast below the scales $m_s$ where the singlet can be integrated out.} then below the scale $a$ the theory flows to $\mathcal{N}=2$ QCD with $N_f=4$ flavors \cite{Leigh:1996ds} which was studied in \cite{Seiberg:1994rs}. The curve for that theory in quartic form\footnote{The interested reader may consult Appendix \ref{App:quartquad} for the explicit details regarding the change of variables in order to move between quartic and cubic forms.} is \cite{Argyres:1995wt,Seiberg:1994aj}
+\begin{equation}
+y^2=(x^2-u_D)^2-\frac{4q_D}{(1+q_D)^2}\prod_{j=1}^4\left(x+\tilde{\mu}_j-\frac{q_D}{2(1+q_D)}\sum_{m=1}^4\tilde{\mu}_m\right)
+\end{equation}
+where $\tilde{\mu}_j=m_{(1),j}m_{(2),j}/a$, $u_D:=\frac{1}{2}\tr\phi^2=u_4/a^2=(\mathfrak{u}_4-\mathfrak{u}_2^2)/2a^2$ and $q_{D}=e^{2\pi i\tau_{D}}=q_{(1)}q_{(2)}$ is associated to the coupling for the $SU(2)_D$. 
+After rescaling $x\to x/a$, $y\to y/{a^2}$ and substituting in the above relations we have
+\begin{equation}\label{eqn:N2curve}
+y^2=(x^2-u_4)^2-\frac{4q}{(1+q)^2}\prod_{j=1}^4\left(x+m_{(1),j}m_{(2),j}-\frac{q}{2(1+q)}\mu_2\right)
+\end{equation}
+where $q:=q_{(1)}q_{(2)}$ and $\mu_2$ is defined as in \eqref{eqn:massparam2}.
+Now consider integrating out all of the flavours from this $\mathcal{N}=2$ curve, leaving us with pure $SU(2)$ $\mathcal{N}=2$ gauge theory; \cite{Argyres:1995wt} tells us to hold fixed, in our conventions, the relation
+\begin{equation}
+\Lambda^4_{D}=\frac{4q_{D}}{(1+q_{D})^2}\prod_{j=1}^4\tilde{\mu}_j=\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^4\frac{m_{(1),j}m_{(2),j}}{a}
+\end{equation}
+On the other hand, from \cite{Intriligator:1994sm} we have that \footnote{Note that to save on various factors of $\sqrt{2}$ we prefer to use $u_D=\frac{1}{2}\tr\phi$ instead of $u_D=\tr\phi$, accounting for factor $4$ instead of $16$}
+\begin{equation}
+\Lambda_{D}^4=4\frac{\Lambda^4_{(1)}\Lambda^4_{(2)}}{a^4}
+\end{equation}
+should be held fixed. Equating them implies that
+\begin{equation}
+\Lambda^4_{(1)}\Lambda^4_{(2)}=\frac{q_{D}}{(1+q_{D})^2}\prod_{j=1}^4m_{(1),j}m_{(2),j}=\frac{q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}J_1J_2
+\end{equation}
+should be held fixed under the limit, with $J_i$ defined in \eqref{eqn:massparam2}.
+By the $\Aut(Quiver)$ symmetry we must have that the matching condition is
+\begin{equation}\label{eqn:matching}
+\Lambda^4_{(i)}=\pm \frac{q_{(i)}}{1+q_{(1)}q_{(2)}}J_i.
+\end{equation}
+Positivity of $\Re\Lambda^4_{(i)}$ demands that we take the positive sign.
+
+Hence, the most general form of the curve which is both polynomial in masses and Coulomb moduli, is invariant under all of the symmetries and reproduces \eqref{eqn:N2curve} in the $\mathcal{N}=2$ limit is
+\begin{equation}\label{eqn:gencurve}
+\begin{aligned}
+y^2=&\left(x^2-u_4+a_{12}J_1+a_{21}J_2+b\mu_2^2+c\mu_2 u_2+d\mu_4\right)^2\\
+&-\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^4\left(x+m_{(1),j}m_{(2),j}-\frac{q_{(1)}q_{(2)}}{2(1+q_{(1)}q_{(2)})}\mu_2\right)
+\end{aligned}
+\end{equation}
+where $a_{12}:=a(q_{(1)},q_{(2)})$, $a_{21}:=a(q_{(2)},q_{(1)})$ and $b,c,d$ are all symmetric functions in $q_{(1)},q_{(2)}$. Note however that we may immediately restrict the dependence of $b,c,d$ on $q_{(1)},q_{(2)}$ by demanding agreement with the curves \cite{Gremm:1997sz,Intriligator:1994sm} upon integrating out some of the flavours. To have a well defined limit we must have that $b,c,d$ are functions of only the product $q_{(1)}q_{(2)}$ e.g. $b=b(q_{(1)}q_{(2)})$ and, moreover, that as power series in $q_{(1)}q_{(2)}$ the leading terms of $b,c,d$ are proportional to $q_{(1)}^nq_{(2)}^{n}$ for $n\geq 1$, e.g. $b(q_{(1)}q_{(2)})=\sum_{n\geq0}b_nq_{(1)}^nq_{(2)}^n$ and $b_0\equiv0$.
+
+\subsubsection{$q_{(2)}\gg q_{(1)}$ Limit}
+We can now consider a similar limit as taken in \cite{Intriligator:1994sm}, namely where, say $q_{(2)}\gg q_{(1)}$. Below the scale set by the matching condition $\Lambda_2^4=\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2$, from the point of view of $SU(2)_1$ the theory is approximately described by a single $SU(2)$ gauge theory with an adjoint field $\tilde{\phi}=\frac{1}{E}(\Phi_1\Phi_2-\frac{1}{2}\tr\Phi_1\Phi_2)$ and the singlets $b_1,b_2$ and $u_2$. There are also singlets involving fundamental $Q,\widetilde{Q}$'s which do not appear in the curve for reasons discussed earlier. If we assume that the singlets do not enter into the gauge dynamics in the Coulomb phase then in the above limit the theory is approximately a $\mathcal{N}=2$ $SU(2)_1$ $N_f=4$  gauge theory with instanton parameter $q_{(1)}$ and with mass matrix given by $M_1$.
+
+The fields are constained, implementing the matching relation, by the quantum result \cite{Seiberg:1994bz}
+\begin{equation}\label{eqn:Pfaffian}
+\Pf V=u-E^2\tilde{u}=\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2\,,
+\end{equation}
+with $\tilde{u}=\frac{1}{2}\tr\tilde{\phi}^2$ and $E$ some energy scale.
+
+To fix $a_{12},a_{21}$ we need only consider the mass configurations $M_1=0$, $M_2\sim E\mathbb{I}_4$. Then the $\mathcal{N}=2$ theory has an order $4$ singularity, associated to the quarks becoming massless, when $\tilde{u}=0$. For these mass configurations the discriminant of \eqref{eqn:gencurve} has a point of vanishing order $4$ at  
+\begin{equation}\label{eqn:singpt}
+u_4=\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2
+\end{equation}
+which implies that $a_{21}\equiv \frac{q_{(2)}}{1+q_{(1)}q_{(2)}}$ and therefore $a_{12}\equiv \frac{q_{(1)}}{1+q_{(1)}q_{(2)}}$.
+
+Following this we may appeal to a simple argument to fix the remaining functions $b,c,d$: Consider the limit of integrating out all of flavours coupled to, say, the $SU(2)_2$ by taking $q_{(2)}\to 0$ $m_{(2),j}\to\infty$ while holding fixed the matching condition \eqref{eqn:matching}. However, since $q_{(1)}$ is an independent parameter we are free to also take $q_{(1)}\to\infty$ while also holding $q_{(1)}{q_{(2)}}\propto1$ fixed. We expect the resulting curve to describe a $\mathcal{N}=1$ $SU(2)_1\times SU(2)_2$ quiver theory with instanton parameters $q_{(1)},\Lambda_{(2)}^4$ with $4$ chiral multiplets in $(\mathbf{2},\mathbf{1})$ and $2$ in $(\mathbf{2},\mathbf{2})$. However, in order for the resulting curve to we well defined we require that $b=c=d=0$ . \footnote{For example consider the term $\lim b(q_{(1)}q_{(2)})\mu_4\sim b(1)\infty^2\sim \infty^2$ hence $b\equiv0$ in order to get a well defined result.} The curve is therefore:
+\begin{align}\label{eqn:curve}
+&\begin{aligned}
+y^2=&\left(x^2-u_4+\frac{q_{(1)}}{1+q_{(1)}q_{(2)}}J_1+\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2\right)^2\\
+&-\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^4\left(x+m_{(1),j}m_{(2),j}-\frac{q_{(1)}q_{(2)}}{2(1+q_{(1)}q_{(2)})}\mu_2\right)\,,
+\end{aligned}\\
+&J_i=\det M_i=\prod_{j=1}^4m_{(i),j}\,,\quad \mu_2=\tr M_1M_2=\sum_{j=1}^4m_{(1),j}m_{(2),j}\,.
+\end{align}
+\subsubsection{Checks}
+It can be immediately verified that our curve \eqref{eqn:curve} reproduces those of \cite{Gremm:1997sz,Intriligator:1994sm}
+Let us again consider the $q_{(2)}\gg q_{(1)}$ limit and check consistency for a few mass configurations:
+\paragraph{$M_i=\diag(m,-m,m,-m)$, $M_2\sim E\mathbb{I}_4$}
+In this configuration the adjoint field of $SU(2)_1$ is singular at the order $4$ quark singularity $\tilde{u}=m^2$ whilst the corresponding vanishing order $4$ point of \eqref{eqn:curve} is at 
+\begin{equation}
+\begin{aligned}
+u_4&=m^2E^2+\frac{q_{(1)}}{1+q_{(1)}q_{(2)}}m^4+\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}E^4\\
+&\approx m^2E^2+\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}E^4
+\end{aligned}
+\end{equation}
+which agrees nicely with \eqref{eqn:Pfaffian}.
+
+\paragraph{$M_1=\diag(m,m,m,0)$, $M_2\sim E\mathbb{I}_4$}
+The $\mathcal{N}=2$ curve has an order $3$ quark singularity at $4\widetilde{u}=m^2(2-q_{(1)})^2/(1+q_{(1)})^2= 4m^2+\mathcal{O}(q_{(1)})$. On the other hand \eqref{eqn:curve} has a vanishing order $3$ point at
+\begin{equation}
+\begin{aligned}
+u_4&=\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}E^4+E^2m^2+\frac{3(1-q_{(1)}q_{(2)})}{1+q_{(1)}q_{(2)}}\\
+&\approx \frac{q_{(2)}}{1+q_{(1)}q_{(2)}}E^4+4E^2m^2+\mathcal{O}(q_{(1)})
+\end{aligned}
+\end{equation}
+again, in agreement with \eqref{eqn:Pfaffian}.
+
+\paragraph{$M_1=\diag(m,m,m,m)$, $M_2\sim E\mathbb{I}_4$}
+The $\mathcal{N}=2$ curve has an order $4$ quark singularity at $\widetilde{u}=m^2(1-q_{(1)})^2/(1+q_{(1)})^2=m^2+\mathcal{O}(q_{(1)})$. The discriminant of \eqref{eqn:curve} has a zero of degree $4$ located at
+\begin{equation}
+\begin{aligned}
+u_4=&\frac{q_{(1)}}{1+q_{(1)}q_{(2)}}m^4+\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}E^4+\frac{(1-q_{(1)}q_{(2)})^2}{(1+q_{(1)}q_{(2)})^2}m^2E^2\\
+\approx& \frac{q_{(2)}}{1+q_{(1)}q_{(2)}}E^4+m^2E^2
+\end{aligned}
+\end{equation}
+again, in agreement with \eqref{eqn:Pfaffian}.
+
+\subsection{Curve for \texorpdfstring{$k=2$}{k=2} General \texorpdfstring{$N$}{N}}
+The generalisation to $SU(N)$ is rather straightforward. We again consider the diagonal limit.
+\subsubsection{Diagonal Limit} The same diagonal limit is reached by giving diagonal vev $\langle\Phi_{(1)}\rangle=a\mathbb{I}_N$. In this limit the theory is again approximately $\mathcal{N}=2$ $SU(N)$ gauge theory with $N_f=2N$ flavours and the adjoint field is $\phi=\Phi_{(2)}-\frac{1}{N}\tr\Phi_{(2)}$. The curve of that theory is given by \cite{Argyres:1995wt}
+\begin{equation}
+\begin{aligned}
+y^2=&\left(x^N-\sum_{l=2}^Nu_{D,l}x^{N-l}\right)^2\\
+&-\frac{4q_D}{(1+q_D)^2}\prod_{j=1}^{2N}\left(x+\tilde{\mu}_j-\frac{q_D}{N(1+q_D)}\sum_{m=1}^{2N}\tilde{\mu}_m\right)
+\end{aligned}
+\end{equation}
+where $\tilde{\mu}_j=m_{(1),j}m_{(2),j}/a$, $u_{D,l}:=\frac{1}{l}\tr\phi^l=u_{2l}/a^l$ and $q_{D}=q_{(1)}q_{(2)}$ is associated to the coupling for the $SU(2)_D$. 
+After rescaling $x\to x/a$, $y\to y/{a^{2N}}$ and substituting in the above relations we have
+\begin{equation}
+\begin{aligned}
+y^2=&\left(x^{N}-\sum_{l=2}^Nu_{2l}x^{N-l}\right)^2\\
+&-\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^{2N}\left(x+m_{(1),j}m_{(2),j}-\frac{q_{(1)}q_{(2)}}{N(1+q_{(1)}q_{(2)})}\mu_2\right)\,.
+\end{aligned}
+\end{equation}
+Now consider integrating out all of the flavours from this $\mathcal{N}=2$ curve, leaving us with pure $SU(2)$ $\mathcal{N}=2$ gauge theory; \cite{Argyres:1995wt} tells us to hold fixed the relation
+\begin{equation}
+\Lambda^{2N}_{D}=\frac{4q_{D}}{(1+q_{D})^2}\prod_{j=1}^{2N}\tilde{\mu}_j=\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^{2N}\frac{m_{(1),j}m_{(2),j}}{a}
+\end{equation}
+On the other hand, from \cite{Csaki:1997zg} we have that 
+\begin{equation}
+\Lambda_{D}^{2N}=4\frac{\Lambda^{2N}_{(1)}\Lambda^{2N}_{(2)}}{a^{2N}}
+\end{equation}
+should be held fixed. Equating them implies that
+\begin{equation}
+\Lambda^{2N}_{(1)}\Lambda^{2N}_{(2)}=\frac{q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}J_1J_2
+\end{equation}
+should be held fixed under the limit, with $J_i$ defined in \eqref{eqn:massparam2}.
+By the $\Aut(Quiver)$ symmetry we must have that
+\begin{equation}
+\Lambda^{2N}_{(i)}=\pm \frac{q_{(i)}}{1+q_{(1)}q_{(2)}}J_i\,.
+\end{equation}
+Positivity of $\Re\Lambda^{2N}_{(i)}$ demands that we take the positive sign.
+
+We have have then the most general ansatz for the curve
+\begin{equation}\label{eqn:gencurveN}
+\begin{aligned}
+y^2=&\left(x^N-\sum_{l=2}^N\left[u_{2l}+f_l\left(\mathfrak{u}_n,\mu_{m};q_{(1)}q_{(2)}\right)\right]x^{N-l}+a_{12}J_1+a_{21}J_2\right)^2\\
+&-\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^{2N}\left(x+m_{(1),j}m_{(2),j}-\frac{q_{(1)}q_{(2)}}{N(1+q_{(1)}q_{(2)})}\mu_2\right)
+\end{aligned}
+\end{equation}
+where $f_l\left(u_{2n},\mu_{m};q_{(1)}q_{(2)}\right)$ is a function with mass dimension (or equivalently R-charge) $2l$ which satisfies $\lim_{\mu_m\to0}f_l\left(u_{2n},\mu_{m};q_{(1)}q_{(2)}\right)=0$. In other words the $f_{l}$ are always subdominant compared to $u_{2l}$ in the large $u_{2l}$ limit. For the same reasons as before $f_l$ is also a function only of $q_{(1)}q_{(2)}$. On the other hand, the same steps as for the $N=2$ case may now be simply run. 
+\subsubsection{$q_{(2)}\gg q_{(1)}$ Limit}
+We may again consider the $q_{(2)}\gg q_{(1)}$ limit. In that limit, from the point of view of the $SU(N)_1$ the theory is approximately $\mathcal{N}=2$ $SU(N)_1$ gauge theory with $N_f=2N$ and instanton parameter $q_{(1)}$. There is the adjoint field $\widetilde{\phi}=\frac{1}{E}\left(\Phi_{(1)}\Phi_{(2)}-\frac{1}{N}\tr\Phi_{(1)}\Phi_{(2)}\right)$. There is also a quantum modified constraint on moduli space \cite{Seiberg:1994bz}
+\begin{equation}\label{eqn:SeibergCons}
+\det\Phi_{(1)}\Phi_{(2)}-B_1B_2=\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2\,.
+\end{equation} 
+This is implemented on the curves by
+\begin{equation}\label{eqn:quantcon}
+\widetilde{u}_l=\begin{cases}\frac{u_{2l}}{E^l}&l\neq N\\
+\frac{1}{E^l}\left(u_{2N}+\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2\right)&l= N
+\end{cases}
+\end{equation}
+Now we may fix $a_{12}(q_{(1)},q_{(2)})=a_{21}(q_{(2)},q_{(1)})$. The massless $M_1=0$ $\mathcal{N}=2$, $N_f=2N$ theory is singular when $\widetilde{u}_l=0$. On the other hand, our curve \eqref{eqn:gencurveN} with $M_1=0$ is singular when 
+\begin{equation}
+u_{2l}=\begin{cases}0&l\neq N\\
+a_{21}J_2&l= N
+\end{cases}
+\end{equation}
+Comparison with \eqref{eqn:quantcon} implies $a_{21}=\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}$. We may then run the argument that we used below equation \eqref{eqn:singpt} to immediately set all of the $f_l\equiv0$. Hence the curve for $k=2$ is
+\begin{equation}\label{eqn:curveN}
+\begin{aligned}
+y^2=&\left(x^N-\sum_{l=2}^Nu_{2l}x^{N-l}+\frac{q_{(1)}}{1+q_{(1)}q_{(2)}}J_1+\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2\right)^2\\
+&-\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^{2N}\left(x+m_{(1),j}m_{(2),j}-\frac{q_{(1)}q_{(2)}}{N(1+q_{(1)}q_{(2)})}\mu_2\right)\,.
+\end{aligned}
+\end{equation}
+
+\subsection{Curve for general \texorpdfstring{$N$}{N} \& \texorpdfstring{$k$}{k}}
+The generalisation to arbitrary $k$ is largely the same. It is the extension of \cite{Csaki:1997zg} to include flavours. The only new phenomena is the implementation of the quantum relation \eqref{eqn:SeibergCons} for the quiver. We will simply state the result. The curve may be written as
+\begin{equation}
+\begin{aligned}
+y^2=&\left(\sum_{l=1}^Nc_{l}\mathfrak{u}_{lk}x^{N-l}+(-1)^N\prod_{i=1}^kB_{i}+\left(B_iB_{i+1}\to\frac{q_{i+1}}{1+q}J_{i+1}\right)\right)^2\\
+&-\frac{4q}{(1+q)^2}\prod_{j=1}^{2N}\left(x+m_j-\frac{q}{N(1+q)}\mu_k\right)\,,
+\end{aligned}
+\end{equation}
+here the $c_l$ are defined by \eqref{eqn:CHtheorem}, $q:=\prod_{i=1}^kq_{(i)}$, $m_j:=\prod_{i=1}^km_{(i),j}$. Finally the brackets mean to replace the pairs $B_iB_{i+1}$ appearing in $(-1)^N\prod_{i=1}^kB_{i}$ with the corresponding mass condition in all possible ways, for example at $k=4$ the brackets should be read as
+\begin{equation}
+\begin{aligned}
+(-1)^N\left(B_iB_{i+1}\to\Lambda^{2N}_{i+1}\right)=&\Lambda^{2N}_2B_3B_4+B_1\Lambda^{2N}_3B_4+B_1B_2\Lambda^{2N}_4\\
+&+\Lambda^{2N}_1B_2B_3+\Lambda^{2N}_2\Lambda^{2N}_4+\Lambda^{2N}_1\Lambda^{2N}_3\,,
+\end{aligned}
+\end{equation}
+for shorthand we use $\Lambda_i^{2N}=q_{i}J_{i}/(1+q)$.
+\section{Comparison to M-Theory Curves}
+We can place our curves into Gaiotto form. We would like to match with \cite{Coman:2015bqq}. Let us begin by review the change of variables needed for the class $\mathcal{S}$ case.
+\subsection{Review of \texorpdfstring{$k=1$}{k=1} Class \texorpdfstring{$\mathcal{S}$}{S}}
+The Seiberg-Witten curve in the original form reads  \cite{Argyres:1995wt}
+\begin{equation}
+y^2=\left(x^N-\sum_{l=2}^Nu_{l}x^{N-l}\right)^2-\frac{4q}{(1+q)^2}\prod_{j=1}^{2N}\left(x-\mathfrak{m}_j\right)
+\end{equation}
+where we have defined $\mathfrak{m}_j:=-m_j+\frac{q}{N(1+q)}\mu_1$. $(x,y)$ have dimension (equal to minus $U(1)_{r_{\mathcal{N}=2}}$ charge) $(1,N)$. Now we make the change of variables
+\begin{equation}
+y=-\frac{2t}{1+q}\prod_{j=1}^N\left(x-\mathfrak{m}_j\right)+\left(x^N-\sum_{l=2}^Nu_{l}x^{N-l}\right)\,.
+\end{equation}
+Which results in
+\begin{equation}
+\prod_{i=1}^N(x-\mathfrak{m}^L_i)t^2-(1+q)\left(x^N-\sum_{l=2}^Nu_lx^{N-l}\right)t+q\prod_{i=1}^{N}(x-\mathfrak{m}^R_i)=0
+\end{equation}
+and matches the computation from Type-IIA side \cite{Witten:1997sc}.
+This curve can be placed in `Gaiotto form' 
+\begin{equation}
+z^N+\sum_{i=1}^Nz^{N-l}\phi_l(t)=0\,,
+\end{equation}
+where $\phi_l(t)dt^l$ are degree $l$ differentials on the Riemann surface $\mathcal{C}\xleftarrow{1:N}\mathcal{X}$. $t$ is a local coordinate on $\mathcal{C}$ and $(z,t)$ on $T^*\mathcal{C}$. We write $x=tz$. Considering first the massless $m_i=0$ case the curve is
+\begin{equation}
+z^N+\sum_{l=2}^Nz^{N-l}\frac{(1+q)u_l}{t^{l-1}(t-1)(t-q)}=0\,.
+\end{equation}
+In the massive case, expanding $\prod_{l=1}^N(x-\mathfrak{m}^{L/R}_l)=x^N+\sum_{l=1}^Nx^{N-l}f_l(\mathfrak{m}^{L/R}_l)$ we have
+\begin{equation}
+z^N+\sum_{l=1}^Nz^{N-l}\frac{t^{2}f_l(\mathfrak{m}^{L}_p)+(1+q)tu_l+qf_l(\mathfrak{m}_p^R)}{t^l(t-1)(t-q)}=0\,.
+\end{equation}
+So, the differentials are
+\begin{equation}
+\phi_l(t)dt^l=\frac{t^{2}f_l(\mathfrak{m}^{L}_p)+(1+q)tu_l+qf_l(\mathfrak{m}_p^R)}{t^l(t-1)(t-q)}dt^l\,.
+\end{equation}
+Notice that at $t=0,\infty$ (recall that $t$ is a coordinate on $\mathcal{C}$) $\phi_l$ has order $l$ poles. These are interpreted as maximal punctures. On the other hand, at $t=1,q$ $\phi_l$ has simple poles, these are the locations of the minimal punctures.
+
+\subsection{Class \texorpdfstring{$\mathcal{S}_2$}{S2}}
+Let us perform the same manipulations to the $k=2$ case. The curve \eqref{eqn:curveN} is
+\begin{equation}
+\begin{aligned}
+y^2=&\left(x^N-\sum_{l=2}^Nu_{2l}x^{N-l}+\frac{q_{(1)}}{1+q_{(1)}q_{(2)}}J_1+\frac{q_{(2)}}{1+q_{(1)}q_{(2)}}J_2\right)^2\\
+&-\frac{4q_{(1)}q_{(2)}}{(1+q_{(1)}q_{(2)})^2}\prod_{j=1}^{2N}\left(x+m_{(1),j}m_{(2),j}-\frac{q_{(1)}q_{(2)}}{N(1+q_{(1)}q_{(2)})}\mu_2\right)\,.
+\end{aligned}
+\end{equation}
+The dimensions of $(x,y)$ is now $(k,Nk)$. We perform the change of variables
+\begin{equation}
+y=-\frac{2t}{1+q_{(1)}q_{(2)}}\prod_{j=1}^N\left(x-\mathfrak{m}_j\right)+\left(x^N-\sum_{l=2}^Nu_{2l}x^{N-l}+\sum_{i=1}^2\frac{q_{(i)}}{1+q_{(1)}q_{(2)}}J_i\right)
+\end{equation}
+with $\mathfrak{m}_j:=-m_{(1),j}m_{(2),j}+\frac{q_{(1)}q_{(2)}}{N(1+q_{(1)}q_{(2)})}\mu_2$; as before $q:=\prod_{i=1}^kq_{(i)}$. Then the curve becomes
+\begin{equation}
+\begin{aligned}
+0=&\prod_{i=1}^N(x-\mathfrak{m}^L_i)t^2-(1+q)\left(x^N-\sum_{l=2}^Nu_{2l}x^{N-l}+\sum_{i=1}^2\frac{q_{(i)}}{1+q}J_i\right)t\\
+&+q\prod_{i=1}^{N}(x-\mathfrak{m}^R_i)\,.
+\end{aligned}
+\end{equation}
+If we would like to again have the interpretation of $(z,t)$ being canonical coordinates on $T^*\mathcal{C}$ we require that $(z,t)$ have dimension $(1,0)$. Therefore we must write write $x=tz^k$. Plugging this in we find
+\begin{equation}
+z^{kN}+\sum_{l=1}^Nz^{kN-kl}\phi_{kl}(t)=0\,,
+\end{equation}
+\begin{equation}
+\phi_{kl}(t)=\begin{cases}
+\frac{t^{2}f_1(\mathfrak{m}^{L}_p)+qf_1(\mathfrak{m}_p^R)}{t(t-1)(t-q)}& l=1\,,\\
+\frac{t^{2}f_l(\mathfrak{m}^{L}_p)+qf_l(\mathfrak{m}_p^R)+(1+q)tu_{2l}}{t^l(t-1)(t-q)}&1<l<N\,,\\
+-\frac{q_{(1)}J_1+q_{(2)}J_2}{t^{N-1}(t-1)(t-q)}&l=N\,.
+\end{cases}
+\end{equation}
+Notice that $\phi_{kl}$ again has order $l$ poles at $t=0,\infty$ and simple poles at $t=0,q$. These signify the locations of the maximal and minimal punctures, respectively.
+If we consider the massless case the answer simplifies to
+\begin{equation}
+z^{kN}+\frac{\sum_{l=2}^N(1+q)z^{k(N-l)}u_{2l}}{t^{l-1}(t-1)(t-q)}=0\,.
+\end{equation}
+
+\section{Conclusions}
+In this chapter we have derived curves, \`a la Seiberg and Intriligator, encoding the low energy behaviour of a certain class $\mathcal{S}_k$ theories on the Coulomb branch. We are able to place these curves in `Gaiotto form' and in that case we can give an interpretation as a curve embedded in $T^*\mathcal{C}$ where $\mathcal{C}$ is the Riemann surface that gives rise to the class $\mathcal{S}_k$ theory from the 6d $(1,0)_{A_{k-1}}$ SCFT. We have matched the curves to those computed from M-theory \cite{Coman:2015bqq}.
+
+The curves, while not encoding enough information to `solve' the low energy effective theory due to the K\"ahler part of the action being unconstrained by holomorphicity, are believed to still encode a large amount of information regarding the theory. In particular, they may prove invaluable for deriving new theories and dualities, as was performed for class $\mathcal{S}$ in \cite{Gaiotto:2009we}.
+\end{document}

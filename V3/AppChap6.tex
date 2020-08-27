@@ -1,0 +1,629 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\section{Elliptic Genus Computation}\label{App:EllipticGenus}
+The Elliptic genus for 2d $\N=(0,2)$ theories was computed via localisation in \cite{Benini:2013nda,Benini:2013xpa}. Writing schematically it is given by
+\begin{equation}
+\Ell(q,a)=\Tr_{\text{R}}\left[(-1)^Fq^{H_-}\prod a^f\right]\,.
+\end{equation}
+A $\N=(0,2)$ chiral multiplet $\Phi$ in representations $R$ of $G\times F$ contributes to $\Ell$
+\begin{equation}
+\Ell_{\Phi,R}(q,a)=\prod_{\rho\in R}\iu\frac{\eta(q)}{\theta_1(a^{\rho};q)}\,.
+\end{equation}
+Similarly, a $\N=(0,2)$ Fermi multiplet $\Psi$ contributes
+\begin{equation}
+\Ell_{\Psi,R}(q,a)=\prod_{\rho\in R}\iu\frac{\theta_1(a^{\rho};q)}{\eta(q)}\,.
+\end{equation}
+Finally we present the formula for the $\N=(0,2)$ Vector multiplet $V$
+\begin{equation}
+\Ell_{V,G}(q,a)=\left(\iu\eta(q)\right)^{2\rank G}\prod_{\alpha\in G}\iu\frac{\theta_1(a^{\alpha};q)}{\eta(q)}\,,
+\end{equation}
+which is that of a Fermi multiplet in the adjoint representation of $G$.
+The vector multiplets should be paired with the corresponding integration over the maximal torus of $G$
+\begin{equation}
+\frac{1}{|W(G)|}\oint_{T[G]}\prod_{n=1}^{\rank G}\frac{da_n}{2\pi\iu a_n}\,,
+\end{equation}
+which is essentially the Haar measure divided by the Vandermonde determinant. $W(G)$ is the Weyl group of $G$ and the contour is taken over $|a|=1$. 
+
+\subsection{M-Strings Index without Defect}\label{App:Ell}
+The partition functions corresponding to each $\N=(0,2)$ multiplet read
+\begin{equation}
+\Ell_Y=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{J=1}^{K_{n+1}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\cbf\sqrt{\frac{\tbf}{\qbf}}\frac{y_{n,I}}{y_{n+1,J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\widetilde{Y}}=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{J=1}^{K_{n-1}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\frac{1}{\cbf}\sqrt{\frac{\tbf}{\qbf}}\frac{y_{n,I}}{y_{n-1,J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\zeta}=\prod_{n=1}^M\prod_{I,J=1}^{K_n}\iu\frac{\theta_1\left(\frac{\qbf}{\tbf}\frac{y_{n,I}}{y_{n,J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\Upsilon}=\prod_{n=1}^M\left(\iu\eta(\Qtau)\right)^{2K_n}\prod_{I\neq J}\iu\frac{\theta_1\left(\frac{y_{n,I}}{y_{n,J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell_X=\prod_{n=1}^M\prod_{I,J=1}^{K_n}\iu\frac{\eta(\Qtau)}{\theta_1\left(\qbf\frac{y_{n,I}}{y_{n,J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\widetilde{X}}=\prod_{n=1}^M\prod_{I,J=1}^{K_n}\iu\frac{\eta(\Qtau)}{\theta_1\left(\tbf^{-1}\frac{y_{n,I}}{y_{n,J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\lambda}=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{J=1}^{K_{n+1}}\iu\frac{\theta_1\left(\cbf\sqrt{\qbf\tbf}\frac{y_{n,I}}{y_{n+1,J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\widetilde\lambda}=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{J=1}^{K_{n-1}}\iu\frac{\theta_1\left(\frac{\sqrt{\qbf\tbf}}{\cbf}\frac{y_{n,I}}{y_{n-1,J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\phi}=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{A=1}^{N}\iu\frac{\eta(\Qtau)}{\theta_1\left(\sqrt{\frac{\qbf}{\tbf}}\frac{y_{n,I}}{x_{n,A}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\widetilde{\phi}}=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{A=1}^{N}\iu\frac{\eta(\Qtau)}{\theta_1\left(\sqrt{\frac{\qbf}{\tbf}}\frac{x_{n,A}}{y_{n,I}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\psi}=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{A=1}^{N}\iu\frac{\theta_1\left(\cbf^{-1}\frac{y_{n,I}}{x_{n-1,A}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell_{\widetilde{\psi}}=\prod_{n=1}^M\prod_{I=1}^{K_n}\prod_{A=1}^{N}\iu\frac{\theta_1\left(\cbf^{-1}\frac{x_{n+1,J}}{y_{n,I}};\Qtau\right)}{\eta(\Qtau)}\,.
+\end{equation}
+\subsection{M-Strings Index with Defects}\label{App:EllZk}
+We now list the result of performing the $\mathbb{Z}_k$ orbifold.
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_Y=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{J=1}^{K_{(n+1)(i-1)}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\cbf\sqrt{\frac{\tbf}{\qbf}}\frac{y_{ni,I}}{y_{(n+1)(i-1),J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\Upsilon}=\prod_{n=1}^M\prod_{i=1}^k\left(\iu\eta(\Qtau)\right)^{2K_{ni}}\prod_{I\neq J}\iu\frac{\theta_1\left(\frac{y_{ni,I}}{y_{ni,J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\widetilde{Y}}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{J=1}^{K_{(n-1)i}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\cbf^{-1}\sqrt{\frac{\tbf}{\qbf}}\frac{y_{ni,I}}{y_{(n-1)i,J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\zeta}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{J=1}^{K_{n(i+1)}}\iu\frac{\theta_1\left(\frac{\qbf}{\tbf}\frac{y_{ni,I}}{y_{n(i+1),J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_X=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{J=1}^{K_{n(i+1)}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\qbf\frac{y_{ni,I}}{y_{n(i+1),J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\widetilde{X}}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I,J=1}^{K_{ni}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\tbf^{-1}\frac{y_{ni,I}}{y_{ni,J}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\lambda}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{J=1}^{K_{(n+1)i}}\iu\frac{\theta_1\left(\cbf\qbf\tbf\frac{y_{ni,I}}{y_{(n+1)i,J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\widetilde{\lambda}}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{J=1}^{K_{(n-1)(i-1)}}\iu\frac{\theta_1\left(\frac{\qbf\tbf}{\cbf}\frac{y_{n,I}}{y_{(n-1)(i-1),J}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\phi}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{A=1}^{N_{ni}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\sqrt{\frac{\qbf}{\tbf}}\frac{y_{ni,I}}{x_{ni,A}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\widetilde{\phi}}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{A=1}^{N_{n(i-1)}}\iu\frac{\eta(\Qtau)}{\theta_1\left(\sqrt{\frac{\qbf}{\tbf}}\frac{x_{n(i-1),A}}{y_{ni,I}};\Qtau\right)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\psi}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{A=1}^{N_{(n-1)i}}\iu\frac{\theta_1\left(\cbf^{-1}\frac{y_{ni,I}}{x_{(n-1)i,A}};\Qtau\right)}{\eta(\Qtau)}\,,
+\end{equation}
+\begin{equation}
+\Ell^{\mathbb{Z}_k}_{\widetilde{\psi}}=\prod_{n=1}^M\prod_{i=1}^k\prod_{I=1}^{K_{ni}}\prod_{A=1}^{N_{(n+1)(i-1)}}\iu\frac{\theta_1\left(\cbf^{-1}\frac{x_{(n+1)(i-1),A}}{y_{ni,I}};\Qtau\right)}{\eta(\Qtau)}\,.
+\end{equation}
+Clearly each $\Ell_{P}^{\mathbb{Z}_k}$ is invariant under the action \eqref{eqn:orbfugacity}.
+\section{Review of the 5d Index Localisation}\label{app:SCIrev}
+We describe in more detail, following \cite{Kim:2012gu}, the localisation of the superconformal index
+\begin{equation}
+Z\left(s,p,v,\mathbf{q}_A\right)=\Tr_{\mathcal{H}_{\mathbb{S}^4}}\left[(-1)^Fe^{-\beta\delta}s^{-2J_R-2J_R^R}p^{-2J_L}v^{2J_L^R}\prod_{A=1}^N\mathbf{q}_A^{K_A}\right]\,.
+\end{equation}
+It receives contributions only from those states which satisfy the BPS condition \eqref{eqn:BPS}. After Wick rotation to Euclidean time $X^5=\iu \tau_E$ the index $Z$ admits a path integral representation on $\mathbb{S}^1\times \mathbb{S}^4$ 
+\begin{equation}
+Z(s,p,v,\mathbf{q}_A)=\int_{\mathbf{C}(\mathbb{S}^1\times \mathbb{S}^4)}[\mathcal{D}\Phi]e^{-S_{E}[\Phi]}\,.
+\end{equation}
+The insertion of chemical potentials results in twisted boundary conditions upon going around the $\mathbb{S}^1$
+\begin{equation}\label{eqn:twistedbcs}
+\Phi(\tau_E+\beta)=(-1)^Fe^{-\beta(-2J_R-3J_R^R)}s^{-2J_R-2J_R^R}p^{-2J_L}v^{2J_L^R}\Phi(\tau_E)\,.
+\end{equation}
+The twisted boundary conditions \eqref{eqn:twistedbcs} may be taken into account by shifting time derivatives
+\begin{equation}\label{eqn:dhat}
+\partial_{\tau_E}\to\hat{\partial}_{\tau_E}=\partial_{\tau_E}+(2-\iu\epsilon_+)J_R+(3-\iu\epsilon_+)J_R^R-\iu\epsilon_-J_L+2mJ_L^R
+\end{equation}
+and giving periodic boundary conditions to all fermions to account for the insertion of $(-1)^F$. 
+To perform the localisation we deform the Lagrangian by the $\widetilde{\Qfive}$ exact term 
+\begin{equation}
+\mathcal{L}\to\mathcal{L}+t\left\{\widetilde{\Qfive},V\right\}\,,
+\end{equation}
+$t$ may then be taken to infinity in which case the path integral localises around the set of saddle points of $\{\widetilde{\Qfive},V\}=0$. The supersymmetry transformation $\widetilde{\Qfive}+\widetilde{\Sfive}$ is parametrised by the Killing spinor  
+\begin{equation}
+\varepsilon=\varepsilon_q+\varepsilon_s=e^{\frac{1}{2}\theta_1\gamma^{51}}e^{\frac{1}{2}\theta_2\gamma^{12}}e^{\frac{1}{2}\theta_3\gamma^{23}}e^{\frac{1}{2}\theta_4\gamma^{34}}\left(\varepsilon_0^q+\gamma^5\varepsilon_0^s\right)\,.
+\end{equation}
+where $\varepsilon_0^q$, $\varepsilon_0^s$ are constant spinors corresponding to $\widetilde{\Qfive}$, $\widetilde{\Sfive}$. $\varepsilon$ satisfies the Killing spinor equation
+\begin{equation}
+\hat\nabla_{\mu}\varepsilon=\frac{1}{2}\gamma_{\mu}\gamma^5\tilde\varepsilon
+\end{equation}
+where $\hat\nabla$ denotes the covariant derivative on $\mathbb{S}^4\times \mathbb{S}^1$ with the twisted time derivative \eqref{eqn:dhat} and $\tilde{\varepsilon}=-\varepsilon_q+\varepsilon_s$. The square of the supercharge $\widetilde{\Qfive}+\widetilde{\Sfive}$ is then given by
+\begin{equation}
+\delta_{\varepsilon}^2=-\iu\mathcal{L}_{\frac{\partial}{\partial\tau_E}}+\iu G-\epsilon_+J_R-\epsilon_+J_R^R-\epsilon_-J_L+2mJ_L^R
+\end{equation}
+where $\mathcal{L}_v$ denotes the Lie derivative and $G$ denotes a gauge transformation. We then choose $V$ such that
+\begin{equation}\label{eqn:Qexact}
+\{\widetilde{\Qfive},V\}=\delta_{\varepsilon}\left(\left(\delta_{\varepsilon}\lambda\right)^{\dagger}\lambda\right)
+\end{equation}
+upon taking the $t\to\infty$ limit the path integral for the vector multiplets localises onto the critical points of the potential 
+\begin{equation}\label{eqn:potential}
+\begin{aligned}
+\left(\delta_{\varepsilon}\lambda\right)^{\dagger}\lambda=&F_{\tau_E\mu}F^{\tau_E\mu}+\cos^2\frac{\theta_1}{2}\left(F_{ij}^--\omega_{ij}^-\phi\right)^2+\sin^2\frac{\theta_1}{2}\left(F_{ij}^+-\omega^+_{ij}\right)^2\\
+&+\left(\hat\nabla_{\mu}\phi\right)^2-D^2
+\end{aligned}
+\end{equation}
+which is positive semi-definite (recall that in Euclidean signature $D$ is pure imaginary) $F_{ij}^{\pm}=\frac{1}{2}\left(F_{ij}\mp\star_4F_{ij}\right)$ and
+\begin{gather}
+\omega_{ij}^+=\frac{\iu}{2\sin^2\frac{\theta_1}{2}}\bar{\tilde{\varepsilon}}^+\gamma^5\gamma^{ij}\varepsilon^+\,,\quad \omega_{ij}^-=\frac{\iu}{2\cos^2\frac{\theta_1}{2}}\bar{\tilde{\varepsilon}}^-\gamma^5\gamma^{ij}\varepsilon^-\,,\\\omega_{ij}^+\omega^{+ij}=\omega_{ij}^-\omega^{-ij}=1\,.
+\end{gather}
+Here $\varepsilon^{\pm}=\frac{1}{2}\left(1\pm\gamma^5\right)\varepsilon$, $\tilde\varepsilon^{\pm}=\frac{1}{2}\left(1\pm\gamma^5\right)\tilde\varepsilon$. 
+The classical saddle points of the potential \eqref{eqn:potential} are given by $F_{\tau_E\mu}=D^A=0$ while $\phi$ is covariantly constant everywhere on $\mathbb{S}^4$. On the other hand, by the Bianchi identity, the second and third terms of \eqref{eqn:potential} imply that away from the north and south poles we have $F_{ij}=\phi=0$. Note also that (anti-)self-dual instantons ($F^-=0$) $F^+=0$ can be localised at (north)south-pole. The index hence factorises as in \eqref{eqn:5dindexgeneric}
+\begin{equation}
+Z=\int\prod_{A=1}^N\left[da_A\right]Z_{\text{south}}\left(a_{A,n},\epsilon_1,\epsilon_2,m,\mathbf{q}_A\right)Z_{\text{north}}\left(a_{A,n},\epsilon_1,\epsilon_2,m,\mathbf{q}_A^{-1}\right)
+\end{equation}
+After the gauge fixing we have a BRST operator $\widetilde{\Qfive}+\widetilde{\Sfive}\to\QBRST$ and may make a cohomological formulation of the supercharge $\QBRST$. The bosonic and fermionic fields may be regarded as differential forms on a supermanifold $\mathcal{X}$ such that they form a $\QBRST$-complex
+\begin{equation}\label{eqn:Qcmplx}
+\QBRST\Phi_{b,f}=\Phi_{f,b}'\,,\quad \QBRST\Phi'_{f,b}=\QBRST^2\Phi_{b,f}
+\end{equation}
+and
+\begin{equation}\label{eqn:locsusycharge}
+\begin{aligned}
+\QBRST^2=&\mathcal{L}_{\frac{\partial}{\partial\tau_E}}- \frac{a}{\beta}-\iu\epsilon_+(J_R+J_R^R)-\iu\epsilon_-J_L+2\iu mJ_L^R\\
+=&\mathcal{L}_{\frac{\partial}{\partial\tau_E}}- \frac{a}{\beta}+\iu\epsilon_1(J_{12}-J_{R}^R)+\iu\epsilon_2(J_{34}-J_{R}^R)+2\iu m J_L^R\,.
+\end{aligned}
+\end{equation}
+We now study the $\QBRST^2$-equivariant cohomology of $\mathcal{X}$. After expanding the gauge fixed $\QBRST$ invariant terms to quadratic order the Gaussian integrals may be evaluated. Due to cancelations due to pairing by the $\QBRST$-complex \eqref{eqn:Qcmplx} the 1-loop contributions take the form \cite{Kim:2012gu}
+\begin{equation}
+Z^{\text{1-loop}}=\sqrt{\frac{\det_{\coker D}\QBRST^2|_{f}}{\det_{\ker D}\QBRST^2|_{b}}}
+\end{equation}
+where $D$ is the quadratic operator in \eqref{eqn:Qexact}. $Z^{\text{1-loop}}$ may computed using the equivariant Atiyah-Singer index theorem. The fixed point of the torus action of $\QBRST^2$ \eqref{eqn:locsusycharge} are the north and south poles. In a neighbourhood of the north pole $D$ is isomorphic to the anti-self-dual complex $(d,d^-)$
+\begin{equation}\label{eqn:northcmplx}
+\Omega^0\xrightarrow{d}\Omega^1\xrightarrow{d^-}\Omega^{2-}\,,
+\end{equation}
+while at the south pole $D$ is isomorphic to the self-dual complex $(d,d^+)$
+\begin{equation}\label{eqn:southcmplx}
+\Omega^0\xrightarrow{d}\Omega^1\xrightarrow{d^+}\Omega^{2+}\,,
+\end{equation}
+where $(\Omega^{2-})$ $\Omega^{2+}$ denotes the space of (anti-)self-dual 2-forms. For concreteness let us focus on the south pole. At the south pole we may choose local coordinates $z_1,z_2$ parametrising $\mathbb{C}^2$. The torus action acts on those coordinates by \newline$(z_1,z_2)\mapsto(e^{\iu\epsilon_1}z_1,e^{\iu\epsilon_2}z_2)$. Furthermore we expand the elements of the self-dual complex in eigenmodes of the circle momenta $\Phi=\sum_{p\in\mathbb{Z}}\Phi_pe^{\frac{2\pi\iu p}{\beta}}$. The equiviarint index for the vectors multiplets is then given by
+\begin{equation}\label{eqn:indexsouth}
+\ind_{\text{vec}} D=-\frac{1+e^{\iu\beta\epsilon_+}}{2(1-\epsilon^{\iu\epsilon_1})(1-\epsilon^{\iu\epsilon_2})}\sum_{A=1}^N\sum_{n\neq m}e^{\frac{\iu}{\beta}(a_{A,n}-a_{A,m})}\sum_{p\in\mathbb{Z}}e^{\frac{2\pi\iu p}{\beta}}\,.
+\end{equation} 
+One may compute the 1-loop determinants for the hypermultiplets by localisation. In that case the differential operator $D$ for the hypermultiplet is isomorphic to a Dirac complex
+\begin{equation}\label{eqn:Diraccmplx}
+\Omega^{\left(\frac{1}{2},0\right)}\xrightarrow{D_{\text{Dirac}}} \Omega^{\left(0,\frac{1}{2}\right)}\,.
+\end{equation} 
+The equivariant index at the south pole reads
+\begin{equation}\label{eqn:hypindexsouth}
+\ind_{\text{hyp}}=\frac{e^{\iu\epsilon_+/2}}{(1-e^{\iu\epsilon_1})(1-e^{\iu\epsilon_2})}\sum_{A=1}^N\sum_{m=1}^{M_A}\sum_{n=1}^{M_{A+1}}e^{\frac{\iu }{\beta}(a_{A,n}- a_{A+1,m})+\iu m}\sum_{p\in\mathbb{Z}}e^{\frac{2\pi\iu}{\beta}p}\,.
+\end{equation}
+\section{Refined Topological String Computation}\label{sec:topovertexrev1}
+The partition function for $M$ M5-branes on $A_{N-1}$ is equivalent to the refined topological string partition function of certain Calabi-Yau 3-folds $X_{M,N}$ 
+\begin{align}\label{eqn:ztop}
+Z^{\text{top}}_{\text{refined}}\left(X_{M,N}\right)&=Z^{\text{M-theory}}\left((A_{N-1}\times\underbrace{\mathbb{R}^4)\ltimes T^2}_{\text{$M$ M5-branes}}\times\mathbb{R}\right)\\&=\left(\prod_{A=1}^NZ_{U(1)}^{(A)}\right)Z^{A_{N-1}}_{M}\,,
+\end{align} 
+where $Z_{U(1)}^{(A)}$ is the partition function for a single M5-brane.
+The Calabi-Yau 3-folds arise as the M-theory lift of the dual $(p,q)$-brane web construction. The $(p,q)$ web is obtained by compactifying the setup of Table \ref{table:Mtheory} along $X^6$. This gives rise to the 5d quiver gauge theories $\mathcal{N}_{M,N}$ supported on the D4-branes with $\mathcal{N}=1$ supersymmetry. The defects become D4'-branes. T-dualising along the Taub-Nut circle $X^8$ results the setup of Table \ref{table:IIBpq}
+\begin{table}[ht!]
+\centering
+\begin{tabular}{ c |c| c| c| c| c| c| c| c| c| c| }
+&\multicolumn{2}{c|}{$\mathbb{C}_{\epsilon_1}$}&\multicolumn{2}{c|}{$\mathbb{C}_{\epsilon_2}$}&\multicolumn{1}{c|}{$\mathbb{S}^1$}&\multicolumn{1}{c|}{$\mathbb{R}$}&\multicolumn{1}{c|}{$\mathbb{S}^1$}&\multicolumn{3}{c|}{$\mathbb{R}^3$}\\
+   & $X^1$ & $X^2$ & $X^3$ & $X^4$ & $X^5$ & $X^7$ & $X^8$ & $X^9$ & $X^{10}$& $X^{11}$\\\hline 
+    $N$ $NS5$ & --& -- & -- &-- & -- & -- & $\cdot$&$\cdot$ & $\cdot$ & $\cdot$\\ \hline
+  $M$ $D5$ &-- & -- & -- & -- & -- & $\cdot$ & -- & $\cdot$ & $\cdot$ & $\cdot$\\ \hline
+  $K$ $F1$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$  & -- & --& $\cdot$&$\cdot$  & $\cdot$ & $\cdot$ \\\hline
+ $k$ $D3'$ & $\cdot$& $\cdot$ & -- & -- & -- &  $\cdot$&$\cdot$ &-- & $\cdot$ & $\cdot$\\ \hline
+\end{tabular}
+\caption{\it Type-IIB $(p,q)$-brane web.}
+\label{table:IIBpq}
+\end{table}
+After turning on mass deformation we end up with a $(p,q)$-brane web. We may now lift the IIB setup on $\mathbb{S}^1$ to M-theory on $T^2$. $(p,q)$-branes corresponds to the degeneration of the $(p,q)$ cycle of the $T^2$ as we vary along the $X^5,X^7$ base. Hence the $(p,q)$-brane web lifts to M-theory on a non-compact, elliptically fibered $CY_3$ whose toric diagram is given by the $(p,q)$-web itself. 
+%
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro\xinc{1}
+\pgfmathsetmacro\yinc{1}
+\def\hyp{sqrt(\xinc^2+\yinc^2)}
+\coordinate (z) at (0,{-\hyp});
+\coordinate (a) at (0,0);
+\coordinate (b) at (\xinc,\yinc);
+\coordinate (c) at (\xinc,{\yinc+\hyp});
+\coordinate (d) at (2*\xinc,{2*\yinc+\hyp});
+\coordinate (e) at (2*\xinc,{2*\yinc+2*\hyp});
+\coordinate (f) at (3*\xinc,{3*\yinc+2*\hyp});
+\coordinate (g) at (3*\xinc,{3*\yinc+3*\hyp});
+\draw (z)--node[midway,right]{$\lambda_{2A+2}$}(a)--node[midway,right]{$Q_{A+1}$}node[midway,left]{$\lambda_{2A+3}$}(b)--node[midway,right]{$\lambda_{2A}$}(c)--node[midway,right]{$Q_A$}node[midway,left]{$\lambda_{2A+1}$}(d)--node[midway,right]{$\lambda_{2A-2}$}(e)--node[midway,right]{$Q_{A-1}$}node[midway,left]{$\lambda_{2A-1}$}(f)--node[midway,right]{$\lambda_{2A-4}$}(g);
+\draw (a) -- ($(a)-({\hyp},0)$) node[label=left:{$\mu^{\trans}_{A+1}$}]{};
+\draw (c) -- ($(c)-({\hyp},0)$) node[label=left:{$\mu^{\trans}_{A}$}]{};
+\draw (e) -- ($(e)-({\hyp},0)$) node[label=left:{$\mu^{\trans}_{A-1}$}]{};
+\draw (b) -- ($(b)+({\hyp},0)$) node[label=right:{$\nu_{A+1}$}]{};
+\draw (d) -- ($(d)+({\hyp},0)$) node[label=right:{$\nu_A$}]{};
+\draw (f) -- ($(f)+({\hyp},0)$) node[label=right:{$\nu_{A-1}$}]{};
+\draw [thick,blue]($(a)-({\hyp-0.1},0.2)$)--($(a)-({\hyp-0.1},-0.2)$);
+\draw [thick,blue]($(c)-({\hyp-0.1},0.2)$)--($(c)-({\hyp-0.1},-0.2)$);
+\draw [thick,blue]($(e)-({\hyp-0.1},0.2)$)--($(e)-({\hyp-0.1},-0.2)$);
+\draw [thick,blue]($(b)+({\hyp-0.1},0.2)$)--($(b)+({\hyp-0.1},-0.2)$);
+\draw [thick,blue]($(d)+({\hyp-0.1},0.2)$)--($(d)+({\hyp-0.1},-0.2)$);
+\draw [thick,blue]($(f)+({\hyp-0.1},0.2)$)--($(f)+({\hyp-0.1},-0.2)$);
+\draw [dotted](z) to ($(z)-(0,0.5)$);
+\draw [dotted](g) to ($(g)+(0,0.5)$);
+\draw [<->] ($(g)+({3+\hyp},0.5)$) to node[midway,right]{$Q_{\tau}$}($(g)+({3+\hyp},{-3*\yinc-4*\hyp-0.5})$);
+%\draw [<->] ($(g)+({-3-\hyp-3*\yinc},0.5)$) to node[midway,left]{$Q_{\tau}$}($(g)+({-3*\yinc-3-\hyp},{-3*\yinc-4*\hyp-0.5})$);
+\draw [<->] ($(f)+({1.5+\hyp},0)$) to node[midway,right] {$Q_{\tau_{A-1}}$} ($(f)+({1.5+\hyp},{-\hyp-\yinc})$);
+\draw [<->] ($(f)+({1.5+\hyp},{-\hyp-\yinc})$) to node[midway,right] {$Q_{\tau_A}$} ($(f)+({1.5+\hyp},{-2*\hyp-2*\yinc})$);
+\draw [<->] ($(a)-({1.5+\hyp},0)$) to node[midway,left] {$Q'_{\tau_{A}}$} ($(a)-({1.5+\hyp},{-\hyp-\yinc})$);
+\draw [<->] ($(a)-({1.5+\hyp},{-2*\hyp-2*\yinc})$) to node[midway,left] {$Q'_{\tau_{A-1}}$} ($(a)-({1.5+\hyp},{-\hyp-\yinc})$);
+\end{tikzpicture}
+\caption{\it Strip geometry which builds the partition function of for the $A_{N-1}$ geometry. Blue lines denote the direction of the refined topological vertex. The dotted lines indicate the fact that we are dealing with the partial compactification of the strip geometry.}
+\label{fig:stripgeoo}
+\end{figure}
+We compute the refined A-model open string amplitude for the strip geometry using the refined topological vertex formalism \cite{Aganagic:2003db,Iqbal:2007ii}.
+The refined topological vertex is labelled by three Young diagrams and is given by
+\begin{equation}
+\begin{aligned}
+&C_{\lambda\mu\nu}(\mathbf{t},\mathbf{q})=\\
+&\tbf^{-\frac{||\mu^{\trans}||^2}{2}}\qbf^{\frac{||\mu||^2+||\nu||^2}{2}}\widetilde{Z}_{\nu}(\tbf,\qbf)\sum_{\eta}\left(\frac{\qbf}{\tbf}\right)^{\frac{|\lambda|+|\eta|-|\mu|}{2}}s_{\lambda^{\trans}/\eta}(\tbf^{-\rho}\qbf^{-\nu})s_{\mu/\eta}(\tbf^{-\nu^{\trans}}\qbf^{-\rho})
+\end{aligned}
+\end{equation}
+where $\rho=\{-1/2,-3/2,-5/2,\dots\}$, $s_{\lambda/\eta}(x)$ is the skew Schur function and 
+\begin{equation}
+\widetilde{Z}_{\nu}(\tbf,\qbf)=\prod_{(l,p)\in\nu}\frac{1}{1-\qbf^{\nu_l-p}\tbf^{\nu_p^{\trans}-l+1}}\,.
+\end{equation} 
+$\qbf,\tbf$ are related torus action $(z_1,z_2)\mapsto (e^{2\pi\iu\epsilon_1}z_1,e^{2\pi\iu\epsilon_2}z_2)$ on $\mathbb{C}^2$ by
+\begin{equation}
+\qbf=e^{2\pi\iu\epsilon_1}\,,\quad \tbf=e^{-2\pi\iu\epsilon_2}\,.
+\end{equation}
+The framing factors are
+\begin{equation}
+f_{\nu}(\tbf,\qbf)=(-1)^{|\nu|}\tbf^{\frac{||\nu^{\trans}||^2}{2}}\qbf^{\frac{-||\nu||^2}{2}}\,,\quad \widetilde{f}_{\nu}(\tbf,\qbf)=\left(\frac{\tbf}{\qbf}\right)^{\frac{|\nu|}{2}}f_{\nu}(\tbf,\qbf)\,.
+\end{equation}
+\subsection{Without Defect - M-Strings Review}
+Applying the standard rules of the refined topological vertex formalism \cite{Iqbal:2007ii} the partition function for the strip geometry Figure \ref{fig:stripgeoo} is
+\begin{equation}
+\begin{aligned}
+Z^{\mu_1,\dots\mu_N}_{\nu_1\dots\nu_N}(Q_{A},Q_{\tau_A},&Q_{\tau_A}';\tbf,\qbf)=\sum_{\{\lambda\}}\prod_{A=1}^N\Big\{\left(-Q_{A}\right)^{|\lambda_{2A+1}|}\left(-Q_{A}^{-1}Q_{\tau_{A}}\right)^{|\lambda_{2A}|}\\
+\times&C_{\lambda_{2A}^{\trans}\lambda_{2A+1}^{\trans}\mu^{\trans}_A}\left(\tbf^{-1},\qbf^{-1}\right)C_{\lambda_{2A+2}\lambda_{2A+1}\nu_A}\left(\qbf^{-1},\tbf^{-1}\right)\Big\}\,,
+\end{aligned}
+\end{equation}
+note that, since we partially compactify the strip geometry (dotted lines in the figure) we identify the indices $A\sim A+N$. $Q_{\tau}=\prod_{A=1}^NQ_{\tau_A}=\prod_{A=1}^NQ_{\tau_A}'$. Inserting  the explicit expression for the vertex we have 
+\begin{equation}
+\begin{aligned}
+&Z^{\mu_1,\dots\mu_N}_{\nu_1\dots\nu_N}(Q_{A},Q_{\tau_A},Q_{\tau_A}';\tbf,\qbf)=\prod_{A=1}^N\Bigg\{\qbf^{-\frac{||\mu_A^{\trans}||^2}{2}}\tbf^{-\frac{||\nu_A||^2}{2}}\widetilde{Z}_{\mu_{A}^{\trans}}\left(\tbf^{-1},\qbf^{-1}\right)\\
+&\widetilde{Z}_{\nu_A}\left(\qbf^{-1},\tbf^{-1}\right)\sum_{\{\lambda\},\{\sigma\}}\Bigg[\left(-Q_{A}\right)^{|\lambda_{2A+1}|}\left(-\frac{Q_{\tau_{A}}}{Q_A}\right)^{|\lambda_{2A}|}s_{\lambda_{2A}/\sigma_{2A}}\left(\tbf^{\rho}\qbf^{\mu_A^{\trans}}\right)\\
+&s_{\lambda_{2A+1}^{\trans}/\sigma_{2A}}\left(\qbf^{\rho+\frac{1}{2}}\tbf^{\mu_A-\frac{1}{2}}\right)s_{\lambda_{2A+2}^{\trans}/\sigma_{2A+1}}\left(\qbf^{\rho}\tbf^{\nu_A}\right)\\
+&s_{\lambda_{2A+1}/\sigma_{2A+1}}\left(\qbf^{\nu_A^{\trans}-\frac{1}{2}}\tbf^{\rho+\frac{1}{2}}\right)\Bigg]\Bigg\}\,.
+\end{aligned}
+\end{equation}
+The method for simplifying this product was given in \cite{Haghighat:2013gba,Haghighat:2013tka}. Consider
+\begin{equation}
+\begin{aligned}
+G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A}):=\prod_{A=1}^N\left(\left(-Q_{A}\right)^{|\lambda_{2A+1}|}\left(\frac{-Q_{\tau_{A}}}{Q_{A}}\right)^{|\lambda_{2A}|}\right.&\\
+\left.\times s_{\lambda_{2A}/\sigma_{2A}}\left(X_A\right)s_{\lambda_{2A+2}^{\trans}/\sigma_{2A+1}}\left(Y_A\right)s_{\lambda_{2A+1}^{\trans}/\sigma_{2A}}\left(Z_A\right)s_{\lambda_{2A+1}/\sigma_{2A+1}}\left(W_A\right)\right)&
+\end{aligned}
+\end{equation}
+with the products over $A$ are defined modulo $N$. We now apply repeatedly the identities \eqref{eqn:skew1}, \eqref{eqn:skew2} and \eqref{eqn:skew3}.
+We have
+\begin{equation}
+\begin{aligned}
+&G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A})=\prod_{A=1}^N\left(-Q^{-1}_{A}Q_{\tau_{A}}\right)^{|\sigma_{2A}|}\left(-Q_A\right)^{|\sigma_{2A+1}|}\\
+&\times s_{\sigma_{2A}^{\trans}/\lambda_{2A}}\left(Y_{A-1}\right)s_{\sigma_{2A-1}^{\trans}/\lambda_{2A}^{\trans}}\left(-Q^{-1}_{A}Q_{\tau_{A}}X_A\right)s_{\sigma_{2A}^{\trans}/\lambda_{2A+1}^{\trans}}\left(-Q_{A}W_A\right)\\
+&\times s_{\sigma_{2A+1}^{\trans}/\lambda_{2A+1}}\left(Z_{A}\right)\prod_{l,p=1}^{\infty}\left(1-Q^{-1}_{A}Q_{\tau_{A}}X_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Z_{A;l}W_{A;p}\right)\end{aligned}\label{eqn:step1}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A})=\prod_{A=1}^N\left(-Q_{\tau_A}\right)^{|\lambda_{2A+1}|}\\
+&\times\prod_{l,p=1}^{\infty}\frac{\left(1-Q^{-1}_{A}Q_{\tau_{A}}X_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Z_{A;l}W_{A;p}\right)}{\left(1-Q_{\tau_{A}}W_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Q^{-1}_{A+1}Q_{\tau_{A+1}}X_{A+1;l}Z_{A;p}\right)}\\
+&\times s_{\lambda_{2A+1}^{\trans}/\sigma_{2A}^{\trans}}\left(Y_{A-1}\right)s_{\lambda_{2A}/\sigma_{2A}^{\trans}}\left(-Q_{\tau_A}W_{A}\right)s_{\lambda_{2A}^{\trans}/\sigma_{2A-1}^{\trans}}\left(-Q_{A-1}Z_{A-1}\right)\\
+&\times s_{\lambda_{2A+1}/\sigma_{2A+1}^{\trans}}\left(-Q^{-1}_{A+1}Q_{\tau_{A+1}}X_{A+1}\right)
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A})=\prod_{A=1}^N\left(-Q_{\tau_A}\right)^{|\sigma_{2A}|}\\
+&\times\prod_{l,p=1}^{\infty}\left\{\frac{\left(1-Q^{-1}_{A}Q_{\tau_{A}}X_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Z_{A;l}W_{A;p}\right)}{\left(1-Q_{\tau_{A}}W_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Q^{-1}_{A+1}Q_{\tau_{A+1}}X_{A+1;l}Z_{A;p}\right)}\right.\\
+&\times\left.\vphantom{\frac{\left(1-Q^{-1}_{A}Q_{\tau_{A}}X_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Z_{A;l}W_{A;p}\right)}{\left(1-Q_{\tau_{A}}W_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Q^{-1}_{A+1}Q_{\tau_{A+1}}X_{A+1;l}Z_{A;p}\right)}}\left(1-Q_{A-1}Z_{A-1}Q_{\tau_A}W_A\right)\left(1-Q_{A+1}^{-1}Q_{\tau_A}Q_{\tau_{A+1}}X_{A+1}Y_{A-1}\right)\right\}\\
+&\times s_{\sigma_{2A}/\lambda_{2A+1}^{\trans}}\left(-Q_{A+1}^{-1}Q_{\tau_{A+1}}X_{A+1}\right)s_{\sigma_{2A}/\lambda_{2A}}\left(-Q_{\tau_{A-1}}Z_{A-1}\right)\\
+& \times s_{\sigma_{2A-1}/\lambda_{2A}^{\trans}}\left(Q_{\tau_A}W_{A}\right)s_{\sigma_{2A+1}/\lambda_{2A+1}}\left(Q_{\tau_A}Y_{A-1}\right)
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{eqn:step2}
+\begin{aligned}
+&G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A})=\prod_{A=1}^N\left(-Q^{-1}_{A}Q_{\tau_{A}}\right)^{|\lambda_{2A}|}\left(-Q_{A}\right)^{|\lambda_{2A+1}|}\\
+& s_{\lambda_{2A+1}^{\trans}/\sigma_{2A}}\left(Q_{A-1}Q^{-1}_{A}Q_{\tau_{A}}Z_{A-1}\right)s_{\lambda_{2A}/\sigma_{2A}}\left(Q^{-1}_{A+1}Q_{\tau_{A+1}}Q_{A}X_{A+1}\right)\\
+&s_{\lambda_{2A+1}/\sigma_{2A+1}}\left(Q_{\tau_{A+1}}W_{A+1}\right)s_{\lambda_{2A+2}^{\trans}/\sigma_{2A+1}}\left(Q_{\tau_{A}}Y_{A-1}\right)\\
+&\prod_{l,p=1}^{\infty}\left\{\frac{\left(1-Q^{-1}_{A}Q_{\tau_{A}}X_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Z_{A;l}W_{A;p}\right)}{\left(1-Q_{\tau_{A}}W_{A;l}Y_{A-1;p}\right)\left(1-Q^{-1}_{A+1}Q_{\tau_{A+1}}Q_{A}X_{A+1;l}Z_{A;p}\right)}\right.\\
+&\frac{\left(1-Q^{-1}_{A+1}Q_{\tau_{A}}Q_{\tau_{A+1}}Y_{A-1;l}X_{A+1;p}\right)}{\left(1-Q_{\tau_{A}}Q_{A-1}Q^{-1}_{A+1}Q_{\tau_{A+1}}X_{A+1;l}Z_{A-1};p\right)}\\
+&\left.\frac{\left(1-Q_{\tau_{A}}Q_{A-1}W_{A;l}Z_{A-1;p}\right)}{\left(1-Q_{\tau_{A+1}}Q_{\tau_{A}}Y_{A-1;l}W_{A+1;p}\right)}\right\}\,.
+\end{aligned}
+\end{equation}
+Finally, this can be written as
+\begin{equation}
+\begin{aligned}
+&G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A})=\\
+&\prod_{A=1}^N\prod_{l,p=1}^{\infty}\left\{\frac{\left(1-Q^{-1}_{A}Q_{\tau_{A}}X_{A;l}Y_{A-1;p}\right)\left(1-Q_{A}Z_{A;l}W_{A;p}\right)}{\left(1-Q_{\tau_{A}}W_{A;l}Y_{A-1;p}\right)\left(1-Q^{-1}_{A+1}Q_{\tau_{A+1}}Q_{A}X_{A+1;l}Z_{A;p}\right)}\right.\\
+&\left. \times\frac{\left(1-Q^{-1}_{A+1}Q_{\tau_{A}}Q_{\tau_{A+1}}Y_{A-1;l}X_{A+1;p}\right)\left(1-Q_{\tau_{A}}Q_{A-1}W_{A;l}Z_{A-1;p}\right)}{\left(1-Q_{\tau_{A}}Q_{A-1}Q^{-1}_{A+1}Q_{\tau_{A+1}}X_{A+1;l}Z_{A-1};p\right)\left(1-Q_{\tau_{A+1}}Q_{\tau_{A}}Y_{A-1;l}W_{A+1;p}\right)}\right\}\\
+&G^{(N)}\left(\frac{Q_{\tau_{A+1}}Q_{A}X_{A+1}}{Q_{A+1}},Q_{\tau_{A}}Y_{A-1},\frac{Q_{A-1}Q_{\tau_{A}}Z_{A-1}}{Q_A},Q_{\tau_{A+1}}W_{A+1};Q_A,Q_{\tau_A}\right)
+\end{aligned}
+\end{equation}
+The steps \eqref{eqn:step1}-\eqref{eqn:step2} may then be iterated $N-1$ more times until one finds 
+\begin{equation}\label{eqn:step3}
+\begin{aligned}
+&G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A})=\\
+&G^{(N)}\left(Q_{\tau}X_A,Q_{\tau}Y_{A},Q_{\tau}Z_{A},Q_{\tau}W_{A};Q_A,Q_{\tau_A}\right)\\
+&\times\prod_{A,B=1}^N\prod_{l,p=1}^{\infty}\left\{\frac{\left(1-Q_{\tau}Q_{AB}^{-1}X_{A;l}Y_{B;p}\right)\left(1-Q_{\tau}^2Q_{AB}^{-1}X_{A;l}Y_{B;p}\right)}{\left(1-\widetilde{Q}_{AB}'Z_{A;l}X_{B;p}\right)\left(1-Q_{\tau}\widetilde{Q}_{AB}'Z_{A;l}X_{B;p}\right)}\right.\\
+&\left.\frac{\left(1-Q_{AB}Z_{A;l}W_{B;p}\right)\left(1-Q_{\tau}Q_{AB}Z_{A;l}W_{B;p}\right)}{\left(1-\widetilde{Q}_{AB}Y_{A;l}W_{B;p}\right)\left(1-Q_{\tau}\widetilde{Q}_{AB}Y_{A;l}W_{B;p}\right)}\right\}
+\end{aligned}
+\end{equation}
+here $Q_{\tau}=\prod_{A=1}^{N}Q_{\tau_A}$. Now we perform \eqref{eqn:step1}-\eqref{eqn:step3} an infinite number of times and use the fact that
+\begin{equation}
+\lim_{r\to\infty}G^{(N)}\left(Q_{\tau}^rX_A,Q_{\tau}^rY_{A},Q_{\tau}^rZ_{A},Q^r_{\tau}W_{A};Q_A,Q_{\tau_A}\right)=\prod_{r=1}^{\infty}\frac{1}{1-Q_{\tau}^r}\,,
+\end{equation}
+provided $|Q_{\tau}|<1$. Hence
+\begin{equation}
+\begin{aligned}
+&G^{(N)}(X_A,Y_A,Z_A,W_A;Q_A,Q_{\tau_A})=\prod_{r,l,p=1}^{\infty}(1-\Qtau^r)^{-N^2}\\
+&\prod_{A,B=1}^N\prod_{r,l,p=1}^{\infty}\frac{\left(1-Q_{\tau}^rQ_{AB}^{-1}X_{A;l}Y_{B;p}\right)\left(1-Q_{\tau}^{r-1}Q_{AB}Z_{A;l}W_{B;p}\right)}{\left(1-Q_{\tau}^{r-1}\widetilde{Q}_{AB}'Z_{A;l}X_{B;p}\right)\left(1-Q_{\tau}^{r-1}\widetilde{Q}_{AB}Y_{A;l}W_{B;p}\right)}\,.
+\end{aligned}
+\end{equation}
+All in all, the partition function for the strip geometry reads
+\begin{equation}
+\begin{aligned}
+&Z^{\mu_1\dots\mu_N}_{\nu_1\dots\nu_N}(Q_{A},Q_{\tau_A},Q_{\tau_A}';\tbf,\qbf)=\\
+&\prod_{A=1}^N\qbf^{-\frac{||\mu_A^{\trans}||^2}{2}}\tbf^{\frac{-||\nu_A||^2}{2}}\widetilde{Z}_{\mu_A^{\trans}}(\tbf^{-1},\qbf^{-1})\widetilde{Z}_{\nu_A}(\qbf^{-1},\tbf^{-1})\\
+&\times\prod_{A,B=1}^N\prod_{l,p,r=1}^{\infty}\frac{\left(1-Q_{\tau}^{r-1}Q_{AB}\tbf^{\mu_{A;l}-p+1/2}\qbf^{\nu^{\trans}_{B;p}-l+1/2}\right)}{\left(1-Q_{\tau}^r\right)\left(1-Q_{\tau}^{r-1}\widetilde{Q}_{BA}\tbf^{\nu_{B;l}-p+1}\qbf^{\nu^{\trans}_{A;p}-l}\right)}\\
+&\times\prod_{A,B=1}^N\prod_{l,p,r=1}^{\infty}\frac{\left(1-Q_{\tau}^{r}Q^{-1}_{AB}\tbf^{\nu_{B;l}-p+1/2}\qbf^{\mu^{\trans}_{A;p}-l+1/2}\right)}{\left(1-Q_{\tau}^{r-1}\widetilde{Q}'_{AB}\tbf^{\mu_{A;l}-p}\qbf^{\mu^{\trans}_{B;p}-l+1}\right)}
+\end{aligned}
+\end{equation}
+where we define $Q_{\tau}:=\prod_{A=1}^NQ_{\tau_A}$. We may then define the domain wall partition function
+\begin{align}
+D^{\mu_1\dots\mu_N}_{\nu_1\dots\nu_N}(Q_{A},Q_{\tau_A},Q_{\tau_A}';\tbf,\qbf):=\frac{Z^{\mu_1\dots\mu_N}_{\nu_1\dots\nu_N}(Q_{A},Q_{\tau_A};\tbf,\qbf)}{Z^{\emptyset\dots\emptyset}_{\emptyset\dots\emptyset}(Q_{A},Q_{\tau_A};\tbf,\qbf)}
+\end{align}
+which may be expressed in terms of $\mathcal{N}_{\nu,\mu}(Q;\qbf,\tbf)$ \eqref{eqn:nekfun}
+\begin{equation}\label{eqn:domwall}
+\begin{aligned}
+&D^{\mu_1\dots\mu_N}_{\nu_1\dots\nu_N}(Q_{A},Q_{\tau_A},Q_{\tau_A}';\tbf,\qbf)=\\
+&\prod_{A=1}^N\qbf^{-\frac{||\mu_A^{\trans}||^2}{2}}\tbf^{\frac{-||\nu_A||^2}{2}}\widetilde{Z}_{\mu_A^{\trans}}(\tbf^{-1},\qbf^{-1})\widetilde{Z}_{\nu_A}(\qbf^{-1},\tbf^{-1})\\
+&\times\prod_{A,B=1}^N\prod_{r=1}^{\infty}\frac{\mathcal{N}_{\mu_A\nu_B}\left(Q_{\tau}^{r-1}Q_{AB}\sqrt{\frac{\tbf}{\qbf}};\tbf,\qbf\right)\mathcal{N}_{\nu_B\mu_A}\left(Q_{\tau}^{r}Q_{AB}^{-1}\sqrt{\frac{\tbf}{\qbf}};\tbf,\qbf\right)}{\mathcal{N}_{\mu_A\mu_B}\left(Q_{\tau}^{r-1}\widetilde{Q}'_{AB};\tbf,\qbf\right)\mathcal{N}_{\nu_A\nu_B}\left(Q_{\tau}^{r-1}\widetilde{Q}_{AB}\frac{\tbf}{\qbf};\tbf,\qbf\right)}
+\end{aligned}
+\end{equation}
+where
+\begin{align}
+Q_{AB}&=Q_A\prod_{i=1}^{A-1}Q_{\tau_i}\prod_{j=B}^NQ_{\tau_j}\bmod Q_{\tau}\,,\\
+\widetilde{Q}_{AB}&=\begin{cases}
+\prod_{i=B}^{A-1}Q_{\tau_i}&\text{$A>B$}\,,\\
+Q_{\tau}&\text{$A=B$}\,,\\
+Q_{\tau}/\prod_{i=A}^{B-1}Q_{\tau_i}&\text{$A<B$}\,,
+\end{cases}\\
+\widetilde{Q}_{AB}'&=\frac{Q_A}{Q_B}\widetilde{Q}_{AB}\,.
+\end{align}
+The M5-brane partition function on $A_{N-1}$ singularity is then given by
+\begin{equation}
+Z_{\text{M5}}\left(Q_{n,A},Q_{\tau_{n,A}},Q_{f,n,A};\tbf,\qbf\right)=Z_{\text{rel.}}Z_M^{A_{N-1}}\left(Q_{n,A},Q_{\tau_{n,A}},Q_{f,n,A};\tbf,\qbf\right)
+\end{equation}
+where
+\begin{align}
+&\begin{aligned}
+&Z_{M}^{A_{N-1}}\left(Q_{n,A},Q_{\tau_{n,A}},Q_{f,n,A};\tbf,\qbf\right)=\\
+&\sum_{\{\vec{\mu}_{n}\}}\left(\prod_{n=1}^{M-1}\prod_{A=1}^N\left(-Q_{f,n,A}\right)^{|\mu_{n,A}|}\right)Z_{M,\{\vec{\mu}_{n}\}}^{A_{N-1}}\left(Q_{n,A},Q_{\tau_{n,A}};\tbf,\qbf\right)\,,\end{aligned}\\
+&Z_{U(1)}^{(n)}:=Z^{\emptyset\dots\emptyset}_{\emptyset\dots\emptyset}\left(Q_{n,A},Q_{\tau_{n,A}},Q_{\tau_{n,A}}';\tbf,\qbf\right)\,,\\
+&Z_{\text{rel.}}=\prod_{n=1}^MZ_{U(1)}^{(n)}\,,
+\end{align}
+and 
+\begin{equation}
+\begin{aligned}
+&Z_{M,\vec{\mu}_n}^{A_{N-1}}\left(Q_{n,A},Q_{\tau_{n,A}};\tbf,\qbf\right)=D^{\emptyset\dots\emptyset}_{\mu_{1,1}\dots\mu_{1,N}}\left(Q_{1,A},Q_{\tau_{1,A}},Q_{\tau_{1,A}}';\tbf,\qbf\right)\\&\times D^{\mu_{1,1}\dots\mu_{1,N}}_{\mu_{2,1}\dots\mu_{2,N}}\left(Q_{2,A},Q_{\tau_{2,A}},Q_{\tau_{2,A}}';\tbf,\qbf\right)\label{eqn:ZAN1M}\\
+&\times\dots\times D_{\emptyset\dots\emptyset}^{\mu_{M-1,1}\dots\mu_{M-1,N}}\left(Q_{M,A},Q_{\tau_{M,A}},Q_{\tau_{M,A}}';\tbf,\qbf\right)\,.
+\end{aligned}
+\end{equation}
+Note that the gluing requires
+\begin{equation}
+Q_{\tau_{n+1,A}}'=Q_{\tau_{n,A}}\implies\widetilde{Q}'_{n+1,AB}=\widetilde{Q}_{n,AB}\,.
+\end{equation}
+It may be shown that \cite{Haghighat:2013tka} \eqref{eqn:ZAN1M} may be written as
+\begin{equation}
+\begin{aligned}
+&Z_M^{A_{N-1}}=\\
+&\sum_{\{\mu_{n,A}\}}\prod_{n=1}^{M-1}\prod_{A=1}^N\left(\overline{Q}_{f,n,A}^{|\mu_{n,A}|}\right)\prod_{(l,p)\in\mu_{n,A}}\prod_{B=1}^N\frac{\theta_1\left(z_{n,AB}(l,p)\middle|\tau\right)\theta_1\left(w_{n,AB}(l,p)\middle|\tau\right)}{\theta_1\left(u_{n,AB}(l,p)\middle|\tau\right)\theta_1\left(v_{n,AB}(l,p)\middle|\tau\right)}
+\end{aligned}
+\end{equation}
+where
+\begin{align}
+&e^{2\pi\iu z_{n,AB}(l,p)}=Q_{n+1,AB}^{-1}\tbf^{-\mu_{n,A;l}+p-1/2}\qbf^{\mu_{n+1,B;p}^{\trans}+l-1/2}\\
+&e^{2\pi\iu w_{n,AB}(l,p)}=Q_{n,BA}^{-1}\tbf^{\mu_{n,A;l}-p+1/2}\qbf^{\mu_{n-1,B;p}^{\trans}-l+1/2}\\
+&e^{2\pi\iu u_{n,AB}(l,p)}=\widehat{Q}_{n,BA}^{-1}\tbf^{\mu_{n,A;l}-p}\qbf^{\mu_{n,B;p}^{\trans}-l+1}\\
+&e^{2\pi\iu v_{n,AB}(l,p)}=\widehat{Q}_{n,AB}^{-1}\tbf^{\mu_{n,A;l}+p-1}\qbf^{-\mu_{n,B;p}^{\trans}+l}
+\end{align}
+and
+\begin{equation}
+\overline{Q}_{f,n,A}=\left(\frac{\qbf}{\tbf}\right)^{\frac{N-1}{2}}Q_{f,n,A}\left(\prod_{A=1}^N Q_{n,A}\right)\,,\quad \widehat{Q}_{n,AB}=\begin{cases}1&\text{$A=B$}\,,\\
+\widetilde{Q}_{n,AB}&\text{$A\neq B$}\,.\end{cases}
+\end{equation}
+The authors of \cite{Haghighat:2013tka} were, remarkably, able to show
+\begin{equation}
+Z_M^{A_{N-1}}=Z_{\text{string}}
+\end{equation}
+where $Z_{\text{string}}$ is the same as in \eqref{eqn:Zstringdef1}.
+\subsection{With Minimal Defect}
+Let us consider the minimal type defects in the $A_0$ theory. By minimal we mean the defects of type
+\begin{equation}\label{eqn:minimalpart}
+\rho=[(M-k),\underbrace{1,\dots,1}_{\text{$k$ times}}]\,.
+\end{equation}
+The relation between the string Elliptic genus and refined topological partition function in the presence of a defect of type $2=1+1$ has been studied in \cite{Mori:2016qof}. We can compute the domain wall partition function \eqref{eqn:domwall} in the presence of a D$3$'-brane ending on D$5$-brane. The effect of the Lagrangian brane is to insert the factor
+\begin{equation}
+\tr_{\sigma_1^{\trans}}\left(X\right)\tr_{\sigma_2^{\trans}}\left(X^{-1}\right)=s_{\sigma_1^{\trans}}\left(x\right)s_{\sigma^{\trans}_2}\left(x^{-1}\right)\,.
+\end{equation}  
+Where we assume that the brane has framing factor exponents $p=1$. The refined open topological string amplitude for the strip geometry with $N=1$ with a single Lagrangian brane
+\begin{equation}\label{eqn:A0minimal}
+\begin{aligned}
+&\widehat{Z}^{\mu}_{\nu}(Q_1,Q_{\tau},\widetilde{Q},x;\tbf,\qbf)=\\
+&\sum_{\sigma_1,\sigma_2,\lambda_1,\lambda_2}\left\{\left(-Q_1\right)^{|\lambda_2|}\left(-Q_1^{-1}Q_{\tau}\right)^{|\lambda_1|}\left(-\widetilde{Q}^{-1}Q_1^{-1}Q_{\tau}\right)^{|\sigma_1|}\left(-\widetilde{Q}\right)^{|\sigma_2|}\right.\\
+& \times s_{\sigma_1^{\trans}}\left(x\right)s_{\sigma^{\trans}_2}\left(x^{-1}\right)\left.\vphantom{\left(-Q_2\right)^{|\delta|}}C_{(\lambda_1^{\trans}\otimes\sigma_1)\lambda_2^{\trans}\mu^{\trans}}(\tbf^{-1},\qbf^{-1})C_{(\lambda_1\otimes\sigma_2)\lambda_2\nu}(\qbf^{-1},\tbf^{-1})\right\}\,.
+\end{aligned}
+\end{equation}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfmathsetmacro\xinc{1}
+\pgfmathsetmacro\yinc{1}
+\def\hyp{sqrt(\xinc^2+\yinc^2)}
+\coordinate (a) at (0,0);
+\coordinate (b) at (\xinc,\yinc);
+%\coordinate (c) at (\xinc,{\yinc+\hyp});
+%\coordinate (d) at (2*\xinc,{2*\yinc+\hyp});
+\draw (a)--node[midway,above,left]{$Q_1$}(b)--($(b)+(0,{\hyp})$);%--(c)--node[midway,above,left]{$Q_1$}(d);
+\draw (a) -- ($(a)-({\hyp},0)$) node[label=left:{$\mu^{\trans}$}]{};
+\draw (a) -- ($(a)-(0,{\hyp})$);
+%\draw (c) -- ($(c)-({\hyp},0)$) node[label=left:{$\mu^{\trans}$}]{};
+\draw (b) -- ($(b)+({\hyp},0)$) node[label=right:{$\nu$}]{};
+%\draw (d) -- ($(d)+({\hyp},0)$) node[label=right:{$\nu$}]{};
+%\draw (d) -- ($(d)+(0,{\hyp})$);
+\draw [dashed]($(a)-(0,{0.5*\hyp})$) to node[midway,above] {$\sigma_1$} node[midway,below] {$\sigma_2$} ($(a)-(-{\hyp},{0.5*\hyp})$);
+%\draw [dashed]($(b)+(0,{0.5*\hyp})$)to node[midway,above] {$\sigma_1$} node[midway,below] {$\sigma_2$}($(b)+({\hyp},{0.5*\hyp})$);
+\draw [<->] ({3*\xinc+\hyp},{-\hyp}) to node[midway,right] {$Q_{\tau}$} ({3*\xinc+\hyp},{\yinc+\hyp});
+\draw [thick,red]($(b)+(-0.2,{\hyp-0.1})$) to ($(b)+(0.2,{\hyp-0.1})$);
+\draw [thick,red]($(a)+(-0.2,{-\hyp+0.1})$) to ($(a)+(0.2,{-\hyp+0.1})$);
+\draw[thick,blue]($(b)+({\hyp-0.1},0.2)$)--($(b)+({\hyp-0.1},-0.2)$);
+\draw[thick,blue]($(a)-({\hyp-0.1},0.2)$)--($(a)-({\hyp-0.1},-0.2)$);
+\draw ({-5*\xinc},{\hyp}) node[right](f1){} to node[midway,left](e){} node[midway,right](f){}({-5*\xinc},{-\hyp})node[right](f2){};
+\draw [<->] ({-5*\xinc-0.3},{\hyp}) to node[midway,left]{$Q_1^{-1}Q_{\tau}$} ({-5*\xinc-0.3},{-\hyp});  
+\draw[dashed](e) to ($(e)+({\hyp},0)$);
+\draw[<->](f) to node[midway,right]{$Q_1^{-1}Q_{\tau}\widetilde{Q}^{-1}$}(f2);
+\draw[<->](f) to node[midway,right]{$\widetilde{Q}$}(f1);
+\end{tikzpicture}
+\caption{ Left: \it Assignment of K\"ahler parameters for the Lagrangian brane \textnormal Right: \it Strip geometry for the $A_0$ singularity with a single Lagrangian brane corresponding to the defect. The blue lines denote the preferred direction of the refined topological vertex. The red lines denote the direction periodic identification.}
+\end{figure}
+From \eqref{eqn:A0minimal} after expanding out the topological vertex we have
+\begin{equation}
+\begin{aligned}
+&\widehat{Z}^{\mu}_{\nu}(Q_1,Q_{\tau_1},\widetilde{Q};\tbf,\qbf)=\tbf^{-\frac{||\nu||^2}{2}}\qbf^{-\frac{||\mu^{\trans}||^2}{2}}\widetilde{Z}_{\mu^{\trans}}(\tbf^{-1},\qbf^{-1})\widetilde{Z}_{\nu}(\qbf^{-1},\tbf^{-1})\\
+&\sum_{\sigma_1,\sigma_2,\lambda_1,\lambda_2,\eta_1,\eta_2}\left\{\left(\frac{\qbf}{\tbf}\right)^{\frac{|\eta_1|-|\eta_2|}{2}}\left(-Q_1\right)^{|\lambda_2|}\left(-Q_1^{-1}Q_{\tau_1}\right)^{|\lambda_1|}\right.\\
+&\times s_{\sigma_1^{\trans}}\left(\widetilde{Q}^{-1}Q_1^{-1}Q_{\tau_1}\sqrt{\frac{\tbf}{\qbf}}x\right) s_{\sigma^{\trans}_2}\left(\widetilde{Q}\sqrt{\frac{\qbf}{\tbf}}x^{-1}\right)s_{(\lambda_1\otimes\sigma_1^{\trans})/\eta_2}\left(\tbf^{\rho}\qbf^{\mu^{\trans}}\right)\\
+&\left.\vphantom{\left(\frac{\qbf}{\tbf}\right)^{\frac{|\eta_1|-|\eta_2|}{2}}}\times s_{\lambda_2^{\trans}/\eta_2}\left(\tbf^{\mu}\qbf^{\rho}\right)s_{(\lambda_1^{\trans}\otimes\sigma_2^{\trans})/\eta_1}\left(\qbf^{\rho}\tbf^{\nu}\right)s_{\lambda_2/\eta_1}\left(\qbf^{\nu^{\trans}}\tbf^{\rho}\right)\right\}\,.
+\end{aligned}
+\end{equation}
+Using the identity \eqref{eqn:tensorprodid} we have
+\begin{equation}
+\begin{aligned}
+\widehat{Z}^{\mu}_{\nu}&(Q_1,Q_{\tau_1},\widetilde{Q};\tbf,\qbf)=\tbf^{-\frac{||\nu||^2}{2}}\qbf^{-\frac{||\mu^{\trans}||^2}{2}}\widetilde{Z}_{\mu^{\trans}}(\tbf^{-1},\qbf^{-1})\widetilde{Z}_{\nu}(\qbf^{-1},\tbf^{-1})\\
+&\sum_{\sigma_1,\sigma_2,\lambda_1,\lambda_2,\eta_1,\eta_2,\gamma_1,\gamma_2}\left\{\left(\frac{\qbf}{\tbf}\right)^{\frac{|\eta_1|-|\eta_2|}{2}}\left(-Q_1\right)^{|\lambda_2|}\left(-Q_1^{-1}Q_{\tau_1}\right)^{|\lambda_1|}c_{\lambda_1\sigma_1^{\trans}}^{\gamma_1}c_{\lambda_1^{\trans}\sigma_2^{\trans}}^{\gamma_2^{\trans}}\right.\\
+&\times s_{\sigma_1^{\trans}}\left(\widetilde{Q}^{-1}Q_1^{-1}Q_{\tau_1}\sqrt{\frac{\tbf}{\qbf}}x\right)s_{\sigma^{\trans}_2}\left(\widetilde{Q}\sqrt{\frac{\qbf}{\tbf}}x^{-1}\right)s_{\gamma_1/\eta_2}\left(\tbf^{\rho}\qbf^{\mu^{\trans}}\right)\\
+&\left.\times \vphantom{\left(\frac{\qbf}{\tbf}\right)^{\frac{|\eta_1|-|\eta_2|}{2}}}s_{\lambda_2^{\trans}/\eta_2}\left(\tbf^{\mu}\qbf^{\rho}\right)s_{\gamma_2^{\trans}/\eta_1}\left(\qbf^{\rho}\tbf^{\nu}\right)s_{\lambda_2/\eta_1}\left(\qbf^{\nu^{\trans}}\tbf^{\rho}\right)\right\}\,.
+\end{aligned}
+\end{equation}
+Now apply the identity \eqref{eqn:skewdef2} to obtain
+\begin{equation}
+\begin{aligned}
+&\widehat{Z}^{\mu}_{\nu}(Q_1,Q_{\tau_1},\widetilde{Q};\tbf,\qbf)=\tbf^{-\frac{||\nu||^2}{2}}\qbf^{-\frac{||\mu^{\trans}||^2}{2}}\widetilde{Z}_{\mu^{\trans}}(\tbf^{-1},\qbf^{-1})\widetilde{Z}_{\nu}(\qbf^{-1},\tbf^{-1})\\
+&\sum_{\lambda_1,\lambda_2,\eta_1,\eta_2,\gamma_1,\gamma_2}\left\{\left(-Q_1\right)^{|\lambda_2|}\left(\frac{-Q_{\tau_1}}{Q_1}\right)^{|\lambda_1|}s_{\gamma_1/\lambda_1}\left(\frac{Q_{\tau_1}}{\widetilde{Q}Q_1}\sqrt{\frac{\tbf}{\qbf}}x\right)s_{\gamma_1/\eta_2}\left(\tbf^{\rho}\qbf^{\mu^{\trans}}\right)\right.\\
+&\left.s_{\gamma^{\trans}_2/\lambda_1^{\trans}}\left(\widetilde{Q}\sqrt{\frac{\qbf}{\tbf}}x^{-1}\right)s_{\lambda_2^{\trans}/\eta_2}\left(\sqrt{\frac{\qbf}{\tbf}}\tbf^{\mu}\qbf^{\rho}\right)s_{\gamma_2^{\trans}/\eta_1}\left(\qbf^{\rho}\tbf^{\nu}\right)s_{\lambda_2/\eta_1}\left(\sqrt{\frac{\tbf}{\qbf}}\qbf^{\nu^{\trans}}\tbf^{\rho}\right)\right\}\,.
+\end{aligned}
+\end{equation}
+Therefore let us consider
+\begin{equation}
+\begin{aligned}
+&G(X,Y,Z,W,A,B;a,b)=\sum_{\lambda_1,\lambda_2,\eta_1,\eta_2,\gamma_1,\gamma_2}\left\{\left(a\right)^{|\lambda_1|}\left(b\right)^{|\lambda_2|}s_{\gamma_1/\lambda_1}\left(A\right)\right.\\
+&\left.s_{\gamma^{\trans}_2/\lambda_1^{\trans}}\left(B\right)s_{\gamma_1/\eta_2}\left(X\right)s_{\lambda_2^{\trans}/\eta_2}\left(Y\right)s_{\gamma_2^{\trans}/\eta_1}\left(Z\right)s_{\lambda_2/\eta_1}\left(W\right)\right\}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:step1p}
+\begin{aligned}
+&G(X,Y,Z,W,U,A,B;a,b)=\\
+&\sum_{\lambda_1,\lambda_2,\eta_1,\eta_2,\gamma_1,\gamma_2}\left\{\left(a\right)^{|\gamma_1|}\left(b\right)^{|\gamma_1|}s_{\lambda_1/\gamma_1}\left(aX\right)s_{\lambda_1^{\trans}/\gamma_2}\left(Z\right)s_{\eta_2^{\trans}/\lambda_2^{\trans}}\left(W\right)\right.\\
+&\left.s_{\eta_1^{\trans}/\lambda_2}\left(bY\right)s_{\eta_1/\gamma_2}\left(B\right)s_{\eta_2/\gamma_1}\left(bA\right)\right\}\prod_{l,p=1}^{\infty}\frac{\left(1+bY_lW_p\right)}{\left(1-A_lX_p\right)\left(1-B_lZ_p\right)}
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&G(X,Y,Z,W,U,A,B;a,b)=\sum_{\lambda_1,\lambda_2,\eta_1,\eta_2,\gamma_1,\gamma_2}\left\{\left(a\right)^{|\eta_2|}\left(b\right)^{|\lambda_1|}s_{\gamma_1^{\trans}/\lambda_1}\left(bZ\right)\right.\\
+&\times\left.s_{\gamma_2^{\trans}/\lambda_1^{\trans}}\left(aX\right)s_{\lambda_2/\eta_2^{\trans}}\left(bA\right)s_{\gamma_1^{\trans}/\eta_2}\left(aW\right)s_{\lambda_2^{\trans}/\eta_1^{\trans}}\left(B\right)s_{\gamma_2^{\trans}/\eta_1}\left(bY\right)\right\}&\\
+&\times\prod_{l,p=1}^{\infty}\frac{\left(1+bY_lW_p\right)\left(1+aX_lZ_p\right)\left(1+bA_lW_p\right)\left(1+bY_lB_p\right)}{\left(1-A_lX_p\right)\left(1-B_lZ_p\right)}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:step2p}
+\begin{aligned}
+&G(X,Y,Z,W,U,A,B;a,b)=\sum_{\lambda_1,\lambda_2,\eta_1,\eta_2,\gamma_1,\gamma_2}\left\{\left(a\right)^{|\lambda_2|}\left(b\right)^{|\lambda_1|}s_{\lambda_1/\gamma_1^{\trans}}\left(aW\right)\right.\\
+&\times\left.s_{\lambda_1^{\trans}/\gamma_2^{\trans}}\left(bY\right)s_{\eta_2/\lambda_2}\left(aB\right)s_{\eta_2/\gamma_1^{\trans}}\left(bZ\right)s_{\eta_1/\lambda_2^{\trans}}\left(bA\right)s_{\eta_1/\gamma_2^{\trans}}\left(aX\right)\right\}\\
+&\times\prod_{l,p=1}^{\infty}\frac{\left(1+bY_lW_p\right)\left(1+aX_lZ_p\right)\left(1+bA_lW_p\right)\left(1+bY_lB_p\right)\left(1+bB_lA_p\right)}{\left(1-A_lX_p\right)\left(1-B_lZ_p\right)\left(1-abW_lZ_p\right)\left(1-abY_lX_p\right)}
+\end{aligned}
+\end{equation}
+Which is, again, rather similar to our original expressions:
+\begin{equation}
+\begin{aligned}
+&G(X,Y,Z,W,A,B;a,b)=G\left(bZ,aW,aX,bY,aB,bA;a,b\right)\\
+&\times\prod_{l,p=1}^{\infty}\frac{\left(1+bY_lW_p\right)\left(1+aX_lZ_p\right)\left(1+bA_lW_p\right)\left(1+bY_lB_p\right)\left(1+bB_lA_p\right)}{\left(1-A_lX_p\right)\left(1-B_lZ_p\right)\left(1-abW_lZ_p\right)\left(1-abY_lX_p\right)}
+\end{aligned}
+\end{equation}
+So, repeating steps \eqref{eqn:step1p} to \eqref{eqn:step2p} again we have that
+\begin{equation}\label{eqn:step3p}
+\begin{aligned}
+&G(X,Y,Z,W,A,B;a,b)=G\left(Q_{\tau}X,Q_{\tau}Y,Q_{\tau}Z,Q_{\tau}W,Q_{\tau}A,Q_{\tau}B;a,b\right)\\
+&\times\prod_{l,p=1}^{\infty}\frac{\left(1+bY_lW_p\right)\left(1+aX_lZ_p\right)\left(1+bA_lW_p\right)\left(1+bY_lB_p\right)\left(1+bB_lA_p\right)}{\left(1-A_lX_p\right)\left(1-B_lZ_p\right)\left(1-abW_lZ_p\right)\left(1-abY_lX_p\right)}\\
+&\times\prod_{l,p=1}^{\infty}\frac{\left(1+Q_{\tau}bY_lW_p\right)\left(1+Q_{\tau}aX_lZ_p\right)\left(1+Q_{\tau}bA_lW_p\right)}{\left(1-Q_{\tau}A_lX_p\right)\left(1-Q_{\tau}B_lZ_p\right)\left(1-Q_{\tau}^2W_lZ_p\right)}\\
+&\times\prod_{l,p=1}^{\infty}\frac{\left(1+bQ_{\tau}Y_lB_p\right)\left(1+Q_{\tau}bB_lA_p\right)}{\left(1-Q_{\tau}^2Y_lX_p\right)}
+\end{aligned}
+\end{equation}
+where $Q_{\tau}:=ab$ so again iterating the steps \eqref{eqn:step1p} to \eqref{eqn:step3p} an infinite number of times and using 
+\begin{equation}
+\lim_{r\to\infty}G\left(Q_{\tau}^rX,Q_{\tau}^rY,Q_{\tau}^rZ,Q_{\tau}^rW,Q_{\tau}^rA,Q_{\tau}^rB;a,b\right)=\prod_{r=1}^{\infty}\frac{1}{1-Q_{\tau}^r}
+\end{equation}
+we arrive at
+\begin{equation}
+\begin{aligned}
+&G(X,Y,Z,W,A,B;a,b)=\prod_{r,l,p=1}^{\infty}\left\{\frac{\left(1+Q_{\tau}^{r-1}bY_lW_p\right)\left(1+Q_{\tau}^{r-1}aX_lZ_p\right)}{\left(1-Q_{\tau}^r\right)\left(1-Q_{\tau}^{r-1}A_lX_p\right)}\right.\\
+&\left.\times\frac{\left(1+Q_{\tau}^{r-1}bA_lW_p\right)\left(1+bQ_{\tau}^{r-1}Y_lB_p\right)\left(1+Q_{\tau}^{r-1}bB_lA_p\right)}{\left(1-Q_{\tau}^{r-1}B_lZ_p\right)\left(1-Q_{\tau}^{r}W_lZ_p\right)\left(1-Q_{\tau}^{r}Y_lX_p\right)}\right\}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+&\widehat{Z}^{\mu}_{\nu}(Q_1,Q_{\tau},\widetilde{Q},x;\tbf,\qbf)=\tbf^{-\frac{||\nu||^2}{2}}\qbf^{-\frac{||\mu^{\trans}||^2}{2}}\widetilde{Z}_{\mu^{\trans}}(\tbf^{-1},\qbf^{-1})\widetilde{Z}_{\nu}(\qbf^{-1},\tbf^{-1})\\
+&\times\prod_{r,l,p=1}^{\infty}\Bigg\{\frac{\left(1-Q_1^{-1}Q_{\tau}^{r}\qbf^{\mu_l^{\trans}-p+1/2}\tbf^{\nu_p-l+1/2}\right)}{\left(1-Q_{\tau}^r\tbf^{\mu_l-p}\qbf^{\mu^{\trans}_p-l+1}\right)\left(1-Q_{\tau}^r\qbf^{\nu_l^{\trans}-p}\tbf^{\nu_p-l+1}\right)}\\
+&\frac{\left(1-Q_{\tau}^{r}\widetilde{Q}^{-1}\qbf^{\nu^{\trans}_l}\tbf^{-l+1/2}x_p\right)\left(1-Q_{\tau}^{r-1}\widetilde{Q}Q_1\tbf^{\mu_l}\qbf^{-l+1/2}x^{-1}_p\right)}{\left(1-Q_1^{-1}\widetilde{Q}^{-1}Q_{\tau}^{r}\qbf^{\mu^{\trans}_l+1/2}\tbf^{-l}x_p\right)\left(1-\widetilde{Q}Q_{\tau}^{r-1}\qbf^{-l}\tbf^{\nu_l+1/2}x^{-1}_p\right)}\\
+&\frac{\left(1-Q_{\tau}^{r}x_lx^{-1}_p\right)\left(1-Q_1Q^{r-1}_{\tau_1}\tbf^{\mu_l-p+1/2}\qbf^{\nu^{\trans}_p-l+1/2}\right)}{\left(1-Q_{\tau}^r\right)}\Bigg\}\,.
+\end{aligned}
+\end{equation}
+As before, we define the domain wall partition function; it turns out that it factorises in the following fashion
+\begin{equation}
+\begin{aligned}
+\widehat{D}^{\mu}_{\nu}(Q_1,Q_{\tau},\widetilde{Q},x;\tbf,\qbf)&:=\frac{\widehat{Z}^{\mu}_{\nu}(Q_1,Q_{\tau},\widetilde{Q};\tbf,\qbf)}{\widehat{Z}^{\emptyset}_{\emptyset}(Q_1,Q_{\tau},\widetilde{Q};\tbf,\qbf)}\\
+&=D^{\mu}_{\nu}(Q_1,Q_{\tau};\tbf,\qbf)\widehat{d}^{\mu}_{\nu}(Q_1,Q_{\tau},\widetilde{Q},x;\tbf,\qbf)\,.\label{eqn:A0minimaldom}
+\end{aligned}
+\end{equation}
+Where $D$ is given by \eqref{eqn:domwall} and
+\begin{align}\label{eqn:defectfactor}
+&\widehat{d}^{\mu}_{\nu}(Q_1,Q_{\tau},\widetilde{Q},x;\tbf,\qbf)\nonumber\\
+&\begin{aligned}
+&=\prod_{r,p=1}^{\infty}\left\{\prod_{l=1}^{\ell(\nu^{\trans})}\frac{\left(1-Q_{\tau}^{r}\widetilde{Q}^{-1}\qbf^{\nu^{\trans}_l}\tbf^{-l+1/2}x_p\right)}{\left(1-Q_{\tau}^{r}\widetilde{Q}^{-1}\tbf^{-l+1/2}x_p\right)}\prod_{l=1}^{\ell(\nu)}\frac{\left(1-\widetilde{Q}Q_{\tau}^{r-1}\qbf^{-l}\tbf^{1/2}x_p^{-1}\right)}{\left(1-\widetilde{Q}Q_{\tau}^{r-1}\qbf^{-l}\tbf^{\nu_l+1/2}x_p^{-1}\right)}\right.\\
+&\left.\prod_{l=1}^{\ell(\mu)}\frac{\left(1-Q_{\tau}^{r-1}\widetilde{Q}Q_1\tbf^{\mu_l}\qbf^{-l+1/2}x_p^{-1}\right)}{\left(1-Q_{\tau}^{r-1}\widetilde{Q}Q_1\qbf^{-l+1/2}x^{-1}_p\right)}\prod_{l=1}^{\ell(\mu^{\trans})}\frac{\left(1-Q_1^{-1}\widetilde{Q}^{-1}Q_{\tau}^{r}\qbf^{1/2}\tbf^{-l}x_p\right)}{\left(1-Q_1^{-1}\widetilde{Q}^{-1}Q_{\tau}^{r}\qbf^{\mu^{\trans}_l+1/2}\tbf^{-l}x_p\right)}\right\}\\
+\end{aligned}\\
+&\begin{aligned}
+&=\prod_{r,p=1}^{\infty}\left\{\prod_{(l,q)\in\nu}\frac{\left(1-Q_{\tau}^{r}\widetilde{Q}^{-1}\qbf^{l}\tbf^{-q+1/2}x_p\right)\left(1-\widetilde{Q}Q_{\tau}^{r-1}\qbf^{-l}\tbf^{q-1/2}x_p^{-1}\right)}{\left(1-Q_{\tau}^{r}\widetilde{Q}^{-1}\qbf^{l-1}\tbf^{-q+1/2}x_p\right)\left(1-\widetilde{Q}Q_{\tau}^{r-1}\qbf^{-l}\tbf^{q+1/2}x_p^{-1}\right)}\right.\\
+&\left.\prod_{(l,q)\in\mu}\frac{\left(1-Q_{\tau}^{r-1}\widetilde{Q}Q_1\tbf^{q}\qbf^{-l+1/2}x_p^{-1}\right)\left(1-Q_1^{-1}\widetilde{Q}^{-1}Q_{\tau}^{r}\qbf^{l-1/2}\tbf^{-q}x_p\right)}{\left(1-Q_{\tau}^{r-1}\widetilde{Q}Q_1\tbf^{q-1}\qbf^{-l+1/2}x^{-1}_p\right)\left(1-Q_1^{-1}\widetilde{Q}^{-1}Q_{\tau}^{r}\qbf^{l+1/2}\tbf^{-q}x_p\right)}\right\}\,.
+\end{aligned}
+\end{align}
+is the contribution of the defect to the partition function. It does not quite assemble into a nice form in terms of $\theta_1$ functions. However, in the unrefined $\qbf=\tbf$ limit:
+\begin{equation}
+\begin{aligned}
+\widehat{d}^{\mu}_{\nu}(Q_1,Q_{\tau},\widetilde{Q},x;\qbf,\qbf)=&\prod_{p=1}^{\infty}\Bigg\{\qbf^{\frac{|\mu|-|\nu|}{2}}\prod_{(l,q)\in\nu}\frac{\theta_1\left(\widetilde{Q}^{-1}\qbf^{l-q+1/2}x_p;Q_{\tau}\right)}{\theta_1\left(\widetilde{Q}^{-1}\qbf^{l-q-1/2}x_p;Q_{\tau}\right)}\\
+&\times\prod_{(l,q)\in\mu}\frac{\theta_1\left(Q_1^{-1}\widetilde{Q}^{-1}\qbf^{l-1/2-q}x_p;Q_{\tau}\right)}{\theta_1\left(Q_1^{-1}\widetilde{Q}^{-1}\qbf^{l+1/2-q}x_p;Q_{\tau}\right)}\Bigg\}
+\end{aligned}
+\end{equation}
+We may then compute the M$5$-brane partition function in the presence of the defect labelled by the partition \eqref{eqn:minimalpart} by gluing together $k$ domain wall partitions of type \eqref{eqn:A0minimaldom} with $M-k$ of type \eqref{eqn:domwall}. This builds the theory labelled by partition $\rho=[M-k,\underbrace{1,\dots,1}_{k}]$. Hence we write
+\begin{equation}
+Z_{\text{M$5$},\rho}=\left(\prod_{n=1}^{M-k}Z_{U(1)}^{(n)}\right)\left(\prod_{n=M-k+1}^MZ_{U(1),\rho}^{(n)}\right)Z_{\rho}^{A_0}
+\end{equation}
+where, 
+\begin{align}
+&Z_{U(1),\rho}^{(n)}(Q_{n,1},Q_{\tau},\widetilde{Q}_n,x_n;\tbf,\qbf)=\widehat{Z}^{\emptyset}_{\emptyset}(Q_{n,1},Q_{\tau},\widetilde{Q}_n,x_n;\tbf,\qbf)\\
+&\begin{aligned}
+&Z_{\rho}^{A_0}\left(Q_{f,n,1},Q_{\tau},\widetilde{Q}_n,x_n;\tbf,\qbf\right):=\sum_{\{\mu_{n}\}}\left(\prod_{n=1}^{M-1}\left(-Q_{f,n,1}\right)^{|\mu_{n}|}\right)\\
+&\times D^{\emptyset}_{\mu_1}(Q_{1,1},Q_{\tau};\tbf,\qbf)\times D^{\mu_1}_{\mu_2}(Q_{2,1},Q_{\tau};\tbf,\qbf)\\
+&\times\dots \times D^{\mu_{M-k-1}}_{\mu_{M-k}}(Q_{M-k,1},Q_{\tau};\tbf,\qbf)\\
+&\times \widehat{D}^{\mu_{M-k}}_{\mu_{M-k+1}}(Q_{M-k+1,1},Q_{\tau},\widetilde{Q}_{M-k+1},x_{M-k+1};\tbf,\qbf)\\
+&\times\dots\times\widehat{D}^{\mu_{M-1}}_{\emptyset}(Q_{M,1},Q_{\tau},\widetilde{Q}_{M},x_{M};\tbf,\qbf)\,.
+\end{aligned}
+\end{align}
+By the factorisation \eqref{eqn:defectfactor} it is clear that
+\begin{equation}
+\begin{aligned}
+&Z_{\rho}^{A_0}\left(Q_{f,n,1},Q_{n,1},Q_{\tau},\widetilde{Q}_n,x_n;\tbf,\qbf\right):=\sum_{\{\mu_{n}\}}\left(\prod_{n=1}^{M-1}\left(-Q_{f,n,1}\right)^{|\mu_{n}|}\right)\\
+&\times Z_{M,\{\vec{\mu}_n\}}^{A_0}\left(Q_{n,1},Q_{\tau};\tbf,\qbf\right)\times \widehat{d}^{\mu_{M-k}}_{\mu_{M-k+1}}(Q_{M-k+1,1},Q_{\tau},\widetilde{Q}_{M-k+1},x_{M-k+1};\tbf,\qbf)\\
+&\times\dots\times\widehat{d}^{\mu_{M-1}}_{\emptyset}(Q_{M,1},Q_{\tau},\widetilde{Q}_{M},x_{M};\tbf,\qbf)\,.
+\end{aligned}
+\end{equation}
+\end{document}

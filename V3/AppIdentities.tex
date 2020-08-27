@@ -1,0 +1,288 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+The purpose of this Appendix is to collect the various definitions and identities used through this thesis. Formulas and identities that are used only once will not be listed here, but rather in the relevant place where they are used. Conversely, identities used multiple times throughout the thesis will simply be stated in this Appendix and then referred to from the main text.
+
+\section{Identities and Special Functions}
+\subsection{Plethystics}
+The \textit{Plethystic Exponential} is given by
+\begin{equation}\label{eqn:PE}
+\PE\left[f(x_1,\dots,x_m)\right]:=\exp\left(\sum_{n=1}^{\infty}\frac{f(x_1^n,\dots,x_m^n)-f(0,\dots,0)}{n}\right)\,.
+\end{equation}
+Its inverse is called the \textit{Plethystic Logarithm}
+\begin{equation}\label{eqn:PLog}
+\begin{aligned}
+\PE^{-1}[f(x_1,\dots,x_m)]:=&\PLog[f(x_1,\dots,x_m)]\\
+=&\sum_{n=1}^{\infty}\frac{\mu(n)}{n}\log f(x_1^n,\dots,x_m^n)\,,
+\end{aligned}
+\end{equation}
+where $\mu(n)$ is the M\"obius $\mu$ function. 
+Some basic identities are
+\begin{equation}
+\PE[t]=\frac{1}{1-t}\,,\quad \PE[-t]=1-t\,,\quad \sum_{n=0}^{N-1}t^n=\frac{1-t^N}{1-t}=\PE[t-t^N]\,.
+\end{equation}
+
+\subsection{Modular Forms and Theta Functions}
+The Dedekind eta function is
+\begin{equation}
+\eta(q)=q^{1/24}\prod_{a=1}^{\infty}(1-q^a)
+\end{equation}
+and
+\begin{equation}
+\begin{aligned}\label{eqn:Jacobitheta}
+\theta_1(x;q)&=\iu q^{1/8}(x^{-1/2}-x^{1/2})\prod_{r=1}^{\infty}(1-q^r)(1-xq^r)(1-x^{-1}q^r)\\
+&=-\iu q^{1/8}x^{1/2}\prod_{r=1}^{\infty}(1-q^r)(1-xq^r)(1-x^{-1}q^{r-1})\\
+&=-\iu q^{1/8}x^{1/2}\sum_{r=-\infty}^{\infty}(-1)^r(xq^{\frac{1}{2}})^rq^{\frac{r^2}{2}}
+\end{aligned}
+\end{equation}
+is the Jacobi theta function. Clearly
+\begin{equation}
+\theta_1\left(x;q\right)=-\theta_1\left(x^{-1};q\right)\,.
+\end{equation} 
+We often also write
+\begin{equation}
+\theta_1\left(z|\tau\right)\equiv\theta_1\left(x;q\right)
+\end{equation} 
+with $x:=e^{2\pi\iu z}$ and $ q:=e^{2\pi\iu\tau}$. The Jacobi theta function satisfies the properties
+\begin{equation}
+\theta_1\left(xq^{a+b/\tau};q\right)=(-1)^{a+b}x^{-a}q^{-a^2/2}\theta_1\left(x;q\right)\,,\quad \theta_1(x;q)=-\theta_1(x^{-1};q)\,.
+\end{equation}
+$\theta_1\left(x;q\right)$ has simple zeros for $x=q^{a+b/\tau}$ for $a,b\in\mathbb{Z}$ and no poles. Furthermore, to compute residues, note that
+\begin{equation}
+\frac{\partial}{\partial y}\theta_1\left(y;q\right)|_{y=1}=2\pi\eta(q)^3
+\end{equation}
+hence the residue is given by
+\begin{equation}
+\oint_{y=q^{a+b/\tau}}\frac{dy}{2\pi\iu y}\frac{1}{\theta\left(y;q\right)}=\frac{(-1)^{a+b}q^{a^2/2}}{2\pi\eta(q)^3}\,.
+\end{equation}
+
+\subsection{Other Special Functions}
+We will often use the shorthand notation
+\begin{equation}
+f(z^{\pm n})\equiv f(z^n)f(z^{-n})\,.
+\end{equation}
+We use the following notation for the $q$-Pochammer symbols
+\begin{equation}\label{eqn:qPochammer}
+(a;q)_N=\prod_{n=0}^{N}(1-aq^n)\,,\quad (a;q):=(a;q)_{\infty}=\PE\left[\frac{a}{1-q}\right]\,.
+\end{equation}
+The $q$-theta function is
+\begin{equation}\label{eqn:qtheta}
+\theta\left(x;q\right):=\left(x;q\right)\left(qx^{-1};q\right)=\PE\left[\frac{x+qx^{-1}}{1-q}\right]\,.
+\end{equation}
+They are related to the Jacobi theta function through
+\begin{equation}
+\theta_1(x;q)=\iu q^{\frac{1}{12}}\eta(q)x^{-\frac{1}{2}}\theta(x;q)\,.
+\end{equation}
+An obvious but important identity that we often employ is
+\begin{equation}
+x\theta\left(qx;q\right)=-\theta\left(x;q\right)\,.
+\end{equation}
+The function $\theta\left(y;q\right)$ has simple zeros for $y=q^{a+b/\tau}$ for $a,b\in\mathbb{Z}$ and no poles. To compute residues note that
+\begin{equation}
+\frac{\partial}{\partial y}\theta\left(y;q\right)|_{y=1}=-\left(q;q\right)^2\,.
+\end{equation}
+Using the identity $x\theta\left(qx;q\right)=-\theta\left(x;q\right)$ the residue is given by
+\begin{equation}\label{eqn:residueform}
+\oint_{y=q^{a+b/\tau}}\frac{dy}{2\pi\iu y}\frac{1}{\theta\left(y;q\right)}=(-1)^{a+1}\left(q;q\right)^{-2}q^{\frac{a}{2}\left(a-1\right)}\,.
+\end{equation}
+We are often interested in the $q\to1$ limit of the above $q$-series'. To take the limit, first note that the ratio of $q$-theta function may be rewritten as
+\begin{equation}
+\frac{\theta\left(q^a;q\right)}{\theta\left(q^b;q\right)}=\frac{\left[a\right]_q}{\left[b\right]_q}\prod_{n=1}^{\infty}\frac{\left[n+a\right]_q\left[n-a\right]_q}{\left[n+b\right]_q\left[n-b\right]_q}
+\end{equation}
+where $[n]_q:=(1-q^n)/(1-q)$ is the $q$-number. The $q$-number has the property that \begin{equation}
+\lim_{q\to1}[n]_q=n
+\end{equation}
+and therefore, for $q$-independent $a,b$, we have
+\begin{equation}\label{eqn:thetafunctionlimit}
+\lim_{q\to1}\frac{\theta\left(q^a;q\right)}{\theta\left(q^b;q\right)}=\frac{\sinh\iu\pi a}{\sinh\iu\pi b}\,,
+\end{equation}
+where we have used the Euler infinite product representation for the sine function
+\begin{equation}\label{eqn:Eulersine}
+\sin(x)=x\prod_{t=1}^{\infty}\left(1-\frac{x^2}{\pi^2t^2}\right)\,.
+\end{equation}
+The Elliptic Gamma function is defined as
+\begin{equation}
+\label{eqn:EllGamma}
+\Gamma_e(z):=\Gamma(z;p,q)=\prod_{i,j=0}^{\infty}\frac{1-z^{-1}p^{i+1}q^{j+1}}{1-zp^iq^j}=\PE\left[\frac{z-\frac{pq}{z}}{(1-p)(1-q)}\right]\,.
+\end{equation}
+An obvious, yet important, identity is 
+\begin{equation}\label{eqn:gammaid}
+\Gamma_e(z)\Gamma_e(pq/z)=1\,.
+\end{equation}
+Multiple gamma functions are defined as the regularised infinite products
+\begin{equation}\label{eqn:multigamma}
+\Gamma_r(z|\vec{\omega})\sim\prod_{n_1,n_2,\dots,n_r=0}^{\infty}(\vec{n}\cdot\vec{\omega}+z)^{-1}
+\end{equation}
+and $\vec{n}\cdot\vec{\omega}=n_1\omega_1+n_2\omega_2+n_3\omega_3$.
+The multiple sine function is defined as the regularised product
+\begin{equation}\label{eqn:multisine}
+\begin{aligned}
+S_r(z|\vec{\omega})&=\Gamma_r(z|\vec{\omega})^{-1}\Gamma_r(|\vec{\omega}|-z|\vec{\omega})^{(-1)^r}\\
+&\sim \prod_{n_1,n_2,\dots,n_r=0}^{\infty}\left(\vec{n}\cdot\vec{\omega}+|\vec{\omega}|-z\right)\left(\vec{n}\cdot\vec{\omega}+z\right)^{(-1)^{r+1}}\,,
+\end{aligned}
+\end{equation} 
+with $|\vec{\omega}|=\omega_1+\dots+\omega_r$. It has the symmetry property
+\begin{equation}
+S_r(z|\vec{\omega})=S_r(|\vec{\omega}|-z|\vec{\omega})^{(-1)^{r+1}}\,.
+\end{equation}
+
+\subsection{Young Diagrams}\label{sec:yngconv}
+We use Greek letters $\eta,\mu,\lambda,\nu$ to denote partitions of natural numbers. We denote the empty partition by $\emptyset$. A non-empty partition is a set of integers $\lambda$
+\begin{equation}\label{eqn:yngdeff}
+\lambda_1\geq\lambda_2\geq\dots\lambda_l\geq\dots\geq\lambda_{\ell(\lambda)}>0\,,
+\end{equation}
+with $\lambda_A\in\mathbb{N}$ and $\ell(\lambda)$ the number of parts of $\lambda$. This definition is also extended to include $\lambda_{l >\ell(\lambda)}\equiv0$. $\lambda^{\trans}$ is the transpose.
+We denote
+\begin{equation}
+|\lambda|:=\sum_{l=1}^{\ell(\lambda)}\lambda_l\,,\quad ||\lambda||^2:=\sum_{l=1}^{\ell(\lambda)}\lambda^2_l=\sum_{(l,p)\in\lambda^{\trans}}\lambda_l\,.
+\end{equation}
+We give a box $s$ in the Young diagram coordinates $s=(l,p)$ such that
+\begin{equation}
+\lambda=\left\{(l,p)|l=1,\dots,\ell(\lambda);p=1,\dots,\lambda_l\right\}\,.
+\end{equation}
+By definition
+\begin{equation}
+\prod_{(l,p)\in\lambda}g(l,p)=\prod_{l=1}^{\ell(\lambda)}\prod_{p=1}^{\lambda_l}g(l,p)\,.
+\end{equation}
+We will also be interested in collections of Young diagrams in which case we will give them labels, for example, $\lambda_{A}$ in which case we write $\lambda_{A;l}$ to denote the number of boxes in the $l^{\text{th}}$ column of the diagram $\lambda_A$. 
+An $N$-tuple of Young diagrams is then
+\begin{equation}
+\vec{\mu}=\left\{\mu_A\middle|I=1,2,\dots,N\right\}\,.
+\end{equation}
+We will also make use the identity \cite{Nakajima:2003pg,Hosomichi:2014rqa}
+\begin{equation}\label{eqn:youngsimp}
+\begin{aligned}
+&\sum_{(i,j)\in \mu}e^{i\epsilon_1+j\epsilon_2}+\sum_{(i',j')\in \mu'}e^{\epsilon_+-(i'\epsilon_1+j'\epsilon_2)}\\
+&-(1-e^{\epsilon_1})(1-e^{\epsilon_2})\sum_{(i,j)\in\mu}\sum_{(i',j')\in \mu'}e^{(i-j')\epsilon_1+(j-j')\epsilon_2}\\
+&=\sum_{(i,j)\in \mu}e^{-(\mu'^{\trans}_{j}-i)\epsilon_1+(\mu_{i}-j+1)\epsilon_2}+e^{2\epsilon_+}\sum_{(i',j')\in \mu'}e^{(\mu^{\trans}_{j'}-i')\epsilon_1-(\mu'_{i'}-j'+1)\epsilon_2}\,.
+\end{aligned}
+\end{equation}
+with $\epsilon_{\pm}=\epsilon_1\pm\epsilon_2$.
+We also use the identity
+\begin{align}
+&\mathcal{N}_{\nu,\mu}(Q;\qbf,\tbf):=\prod_{l,p=1}^{\infty}\frac{1-Q\qbf^{\nu_l-p}\tbf^{\mu_p^{\trans}-l+1}}{1-Q\qbf^{-p}\tbf^{-l+1}}=\mathcal{N}_{\nu^{\trans},\mu^{\trans}}(Q;\tbf,\qbf)\label{eqn:nekfun}\\
+=&\prod_{(l,p)\in\nu}\left(1-Q\qbf^{\nu_l-p}\tbf^{\mu_p^{\trans}-l+1}\right)\prod_{(l,p)\in\mu}\left(1-Q\qbf^{-\mu_l+p-1}\tbf^{-\nu_p^{\trans}+l}\right)\,.
+\end{align}
+
+\subsection{Schur and Skew-Schur Functions}
+The Schur functions $s_{\mu}(x)$ are functions which depend on a given young diagram $\mu$. They form an orthogonal basis for the ring of symmetric functions $\Lambda$. The basis is orthogonal with respect to the Hall inner product:
+\begin{equation}
+\langle s_{\eta}(x),s_{\nu}(x)\rangle=\delta_{\eta\nu}\,.
+\end{equation}
+An explicit representation is given by
+\begin{equation}\label{eqn:schurpolyrepn}
+s_{\lambda}(\mathbf{x})=\frac{\det_{AB} x_A^{\lambda_B+N-B}}{\det_{AB} x_A^{N-B}}\,,
+\end{equation}
+which are orthogonal with respect to the measure
+\begin{equation}
+\langle s_{\lambda},s_{\mu}\rangle:=\oint d\mu(\mathbf{x})s_{\lambda}(\mathbf{x})s_{\mu}(\mathbf{x})=\delta_{\lambda,\mu}\,,
+\end{equation}
+\begin{equation}\label{eqn:schurmeasure}
+\oint d\mu_{U(N)}(\mathbf{z})=\oint d\mu(\mathbf{z})=\frac{1}{N!}\oint_{|z_A|=1}\prod_{A=1}^N\frac{dz_A}{2\pi\iu z_A}\prod_{A\neq B}\left(1-\frac{z_A}{z_B}\right)\,.
+\end{equation}
+Furthermore,
+\begin{equation}\label{eqn:HLcoeff}
+s_{\lambda\otimes\mu}(x)=s_{\lambda}(x)s_{\mu}(x)=\sum_{\eta}c_{\lambda\mu}^{\eta}s_{\eta}(x)\,,
+\end{equation}
+where 
+\begin{equation}
+c_{\nu\eta}^{\mu}=c_{\nu^{\trans}\eta^{\trans}}^{\mu^{\trans}}
+\end{equation} 
+are Littlewood-Richardson coefficients. The skew Schur functions may then be defined by
+\begin{equation}
+\langle s_{\lambda/\mu}(x),s_{\nu}(x)\rangle=\left\langle s_{\lambda}(x),s_{\mu}(x)s_{\nu}(x)\right\rangle
+\end{equation}
+and $s_{\eta}(x)\equiv s_{\eta/\emptyset}(x)$. From \eqref{eqn:HLcoeff} we have the identity
+\begin{equation}
+s_{\lambda_1\otimes\dots\otimes\lambda_n}(x)=\prod_{i=1}^ns_{\lambda_i}(x)=\sum_{\eta_1,\dots,\eta_{n-1}}c_{\lambda_1\lambda_2}^{\eta_1}\left(\prod_{i=1}^{n-2}c_{\eta_i\lambda_{i+2}}^{\eta_{i+1}}\right)s_{\eta_{n-1}}(x)\,.
+\end{equation}
+Hence,
+\begin{align}
+&\left\langle s_{\left(\lambda_1\otimes\dots\otimes\lambda_n\right)/\mu}(x),s_{\nu}(x)\right\rangle=\left\langle s_{\lambda_1\otimes\dots\otimes\lambda_n}(x),s_{\mu}(x)s_{\nu}(x)\right\rangle\\
+&=\sum_{\eta_1,\dots,\eta_{n-1},\sigma}c_{\lambda_1\lambda_2}^{\eta_1}\left(\prod_{i=1}^{n-2}c_{\eta_i\lambda_{i+2}}^{\eta_{i+1}}\right)c_{\mu\nu}^{\sigma}\left\langle s_{\eta_{n-1}}(x),s_{\sigma}(x)\right\rangle\\
+&=\sum_{\eta_1,\dots,\eta_{n-1}}c_{\lambda_1\lambda_2}^{\eta_1}\left(\prod_{i=1}^{n-2}c_{\eta_i\lambda_{i+2}}^{\eta_{i+1}}\right)c_{\mu\nu}^{\eta_{n-1}}\\
+&=\sum_{\eta_1,\dots,\eta_{n-1},\rho}c_{\lambda_1\lambda_2}^{\eta_1}\left(\prod_{i=1}^{n-2}c_{\eta_i\lambda_{i+2}}^{\eta_{i+1}}\right)c_{\mu\rho}^{\eta_{n-1}}\langle s_{\rho}(x),s_{\nu}(x)\rangle\,,
+\end{align}
+where we understand $\eta_{0}:=\emptyset$ and $c_{\emptyset\mu}^{\nu}=1$. By the non-degeneracy of $\langle\cdot,\cdot\rangle$ we have
+\begin{equation}\label{eqn:prodid}
+s_{\left(\lambda_1\otimes\dots\otimes\lambda_n\right)/\mu}(x)=\sum_{\eta_1,\dots,\eta_{n-1},\rho}c_{\lambda_1\lambda_2}^{\eta_1}\left(\prod_{i=1}^{n-2}c_{\eta_i\lambda_{i+2}}^{\eta_{i+1}}\right)c_{\mu\rho}^{\eta_{n-1}}s_{\rho}(x)\,.
+\end{equation}
+The skew Schur function may be equivalently expressed as
+\begin{equation}\label{eqn:skewdef2}
+s_{\mu/\nu}(x)=\sum_{\eta}c_{\nu\eta}^{\mu}s_{\eta}(x)\,.
+\end{equation}
+Therefore \eqref{eqn:prodid} may be written as
+\begin{equation}\label{eqn:tensorprodid}
+s_{\left(\lambda_1\otimes\dots\otimes\lambda_n\right)/\mu}(x)=\sum_{\eta_1,\dots,\eta_{n-1}}c_{\lambda_1\lambda_2}^{\eta_1}\left(\prod_{i=1}^{n-2}c_{\eta_i\lambda_{i+2}}^{\eta_{i+1}}\right)s_{\eta_{n-1}/\mu}(x)\,.
+\end{equation}
+The skew Schur functions satisfy the Cauchy identities
+\begin{gather}
+\sum_{\eta}s_{\eta/\lambda}(x)s_{\eta/\mu}(y)=\prod_{l,p=1}^{\infty}(1-x_ly_p)^{-1}\sum_{\eta}s_{\mu/\eta}(x)s_{\lambda/\eta}(y)\,,\label{eqn:skew1}\\
+\sum_{\eta}s_{\eta^{\trans}/\lambda}(x)s_{\eta/\mu}(y)=\prod_{l,p=1}^{\infty}(1+x_ly_p)\sum_{\eta}s_{\mu^{\trans}/\eta}(x)s_{\lambda^{\trans}/\eta^{\trans}}(y)\,,\label{eqn:skew2}\\
+s_{\mu/\nu}(Qx)=Q^{|\mu|-|\nu|}s_{\mu/\nu}(x)\label{eqn:skew3}\,.
+\end{gather}
+For Schur polynomials of type $A_1$ the Littlewood-Richardson coefficients are, of course, simply
+\begin{equation}
+s_{2j}s_{2j'}=\sum_{2j''=2|j-j'|}^{2j+2j'}s_{2j''}\,,
+\end{equation}
+with $2j,2j',2j''\in\mathbb{N}$.
+
+\subsection{Spiridonov-Warnaar Inversion Formula}
+Define
+\begin{equation}\label{eqn:deltafac}
+\delta(x,y;T):=\frac{\Gamma_e(Tx^{\pm1}y^{\pm1})}{\Gamma_e(T^2)\Gamma_e(x^{\pm2})}\,,
+\end{equation}
+and consider the integral
+\begin{equation}
+f(z)=\kappa\oint\frac{dw}{4\pi\iu w}\delta(w,z;T)\hat{f}(w)\,,
+\end{equation}
+such that $\max\{|p|,|q|\}<|T|^2<1$. A consequence of the Spiridonov-Warnaar theorem is that \cite{2004math11044S,Gadde:2010te}
+\begin{equation}\label{eqn:SWinversion}
+\hat{f}(w)=\kappa\oint_{C_w}\frac{dz}{4\pi\iu z}\delta(z,w;T^{-1})f(z)\,,
+\end{equation}
+where $C_w$ is a deformation of the unit circle that includes the poles at $z=T^{-1}w^{\pm1}$ but excludes those at $Tw^{\pm1}$. Note that, if $\lim_{p,q\to0}(f,\hat{f},T):=(\tilde{f},\tilde{\hat{f}},T)$ is smooth, \eqref{eqn:SWinversion} implies
+\begin{equation}
+\begin{aligned}
+&\tilde{f}(z)=\oint\frac{dw}{4\pi\iu w}\frac{(1-T^2)(1-w^{\pm2})}{(1-Tw^{\pm1}z^{\pm1})}\tilde{\hat{f}}(w) \\
+&\implies\,
+\tilde{\hat{f}}(w)=\oint_{C_w}\frac{dz}{4\pi\iu z}\frac{(1-T^{-2})(1-z^{\pm2})}{(1-T^{-1}w^{\pm1}z^{\pm1})}\tilde{f}(z)\,.
+\end{aligned}
+\end{equation}
+
+\section{Lie Groups, Lie Algebras and Representations}
+\subsection{\texorpdfstring{$SU(N)$}{SU(N)}}
+Highest weight, irreducible representations $\mathcal{R}_{(d_1,d_2,\dots,d_{N-1})}$ of $SU(N)$ may be labelled by a Young diagram $\lambda$ \eqref{eqn:yngdeff} of length $\ell(\lambda)=N$ with $\lambda_N$.
+The relations between the Dynkin labels of the representation and the Young diagram is
+\begin{equation}\label{eqn:youngdynkin}
+d_A=\lambda_A-\lambda_{A+1}\,,\quad \lambda_A=\sum_{i=A}^{N-1}d_i\,.
+\end{equation}
+The conjugate representation $\overline{\mathcal{R}_{(d_1,d_2,\dots,d_{N-1})}}=\mathcal{R}_{(d_{N-1},d_{N-2},\dots,d_1)}$ is therefore associated to the Young diagram $\overline{\lambda}$ with $\overline{\lambda}_A=\sum_{r=A}^{N-1}d_{N-r}=\sum_{r=A}^{N-1}(\lambda_{N-r}-\lambda_{N-r+1})=\lambda_{1}-\lambda_{N-A+1}$.
+
+The characters for the representation $\mathcal{R}_{(d_1,d_2,\dots,d_{N-1})}$ are given by Schur polynomials \eqref{eqn:schurpolyrepn} for the Young diagram $\lambda$ that specifies the representation
+\begin{equation}\label{eqn:SUNChar}
+\chi_{(d_1,d_2,\dots,d_{N-1})}(\mathbf{x})=s_{\lambda}(\mathbf{x})
+\end{equation}
+with $\lambda_N=0$ and $\prod_{A=1}^Nx_A=1$. We also often abuse notation and denote these characters simply by their Dynkin labels $\chi_{(d_1,d_2,\dots,d_{N-1})}(\mathbf{x})\equiv[d_1,d_2,\dots,d_{N-1}]$. The representation labelled by $\lambda$ has dimension
+\begin{equation}
+|\mathcal{R}_{(d_1,d_2,\dots,d_{N-1})}|=s_{\lambda}(\mathbf{1})=\prod_{1\leq A<B\leq N}\frac{\lambda_A-\lambda_B-A+B}{-A+B}\,.
+\end{equation}
+The characters are orthogonal with respect to the Haar measure of $SU(N)$ 
+\begin{equation}\label{eqn:Haarmeasure}
+\oint d\mu_{SU(N)}(\mathbf{z})=\oint d\mu(\mathbf{z})\delta\left(\prod_{A=1}^Nz_A-1\right)\,,
+\end{equation}
+with $d\mu$ defined in \eqref{eqn:schurmeasure}.
+One fact that we will often use is, that for any class function $f:SU(N)\to\mathbb{C}$ that is also invariant under the Weyl group of $SU(N)$ we can write
+\begin{equation}
+\oint d\mu_{SU(N)}(\mathbf{z})f(\mathbf{z})=\oint_{|z_A|=1}\prod_{A=1}^{N-1}\frac{dz_A}{2\pi\iu z_A}\prod_{1\leq A<B\leq N}\left(1-\frac{z_A}{z_B}\right)f(\mathbf{z})\,.
+\end{equation}
+
+\subsection{\texorpdfstring{$SO(2N)$}{SO(2N)}}
+We will also sporadically make use of $SO(2N)$ characters. These are given by
+\begin{equation}
+\hat{s}_{\lambda}(\mathbf{x})=\frac{\det_{AB} \left(x_A^{\lambda_B+N-B}-x_A^{-\lambda_B-N+B}\right)}{\det_{AB} (x_A-x_A^{-1})^{N-B}}\,.
+\end{equation}
+where the $\lambda_1\geq\lambda_2\geq,\dots,\geq|\lambda_N|\geq0$ is related to the Dynkin labels $(d_1,d_2,\dots,d_N)$ by
+\begin{equation}
+\lambda_A=-d_{N-1}\delta_{A,N}+\frac{1}{2}(d_N+d_{N-1})+\sum_{n=A}^{N-2}d_n\,.
+\end{equation}
+\end{document}

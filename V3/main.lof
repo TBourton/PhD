@@ -1,0 +1,43 @@
+\select@language {english}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \it Schematic overview of the `landscape' of quantum field theories.\relax }}{41}{figure.caption.20}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces \textit {$\mathcal {N}=2$ hypermultiplets in the class $\mathcal {S}$ description. The dot represents the $N=(N-1)+1$ minimal puncture.}\relax }}{43}{figure.caption.21}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces \textit {$\mathcal {N}=2$ SQCD with $N_f=2N$ hypermultiplets in the class $\mathcal {S}$ description.}\relax }}{43}{figure.caption.22}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces \textit {Description of the $T_3=MN(E_6)$ SCFT in class $\mathcal {S}$ description.}\relax }}{44}{figure.caption.23}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces \it Quiver diagram for the free trinion theory of bifundamental chiral multiplets, associated to a sphere with one minimal puncture and two maximal punctures $s_{c}^{l,+}$ and $s_{c+1}^{r,+}$.\relax }}{47}{figure.caption.25}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces \it Quiver associated to $\Phi $-gluing.\relax }}{47}{figure.caption.26}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces \it Section of the quiver diagram of the $\mathbb {Z}_k\times \mathbb {Z}_{\ell }$ orbifold theory of $\mathcal {N}=4$ SYM. Circular nodes denote $(S)U(N)$ vector multiplets and directed arrows denote chiral multiplets. \relax }}{51}{figure.caption.30}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces \it Open quiver corresponding to a sphere with two maximal punctures and $\ell -2=4$ minimal punctures. The quiver is still periodically identified in the `$k$'-direction.\relax }}{52}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textit {Quiver for the $\mathcal {X}=\mathbb {C}^2/\mathbb {Z}_2 \times \mathbb {C}$ theory.} \relax }}{58}{figure.caption.35}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textit {Branching of $\mathaccentV {hat}05E{\mathcal {C}}_{0(0,0)}\cong \color {red}\mathaccentV {hat}05E{\mathcal {C}}_{(0,0)}\color {black}\oplus \color {green}\mathaccentV {hat}05E{\mathcal {C}}_{\left (\frac {1}{2},0\right )}\color {black}\oplus \color {blue}\mathaccentV {hat}05E{\mathcal {C}}_{\left (0,\frac {1}{2}\right )}\color {black}\oplus \color {cyan}\mathaccentV {hat}05E{\mathcal {C}}_{\left (\frac {1}{2},\frac {1}{2}\right )}$. Underlined are those states, with given $j_2$, which have $\mathaccentV {widetilde}872{\delta }_{\mathaccentV {dot}739-}=E-2j_2-\frac {3}{2}r=0$ and thus can contribute to the right-handed index \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eqn:SCI3}\unskip \@@italiccorr )}}.}\relax }}{71}{figure.caption.41}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \textit {The circular quiver with gauge group $U(N)^{\ell }$}\relax }}{78}{figure.caption.42}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \it Quiver diagram of the $k=2$ theory associated to a torus with $\ell =2$ minimal punctures.\relax }}{81}{figure.caption.45}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \it Visualisation for the example of $p=3$.\relax }}{87}{figure.caption.48}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \textit {Three `S-dual' frames of the basic $A_1$ four punctured sphere in class $\mathcal {S}_2$. On the top is the canonical weakly coupled frame with fluxes for $U(1)_{\beta }\times U(1)_{\gamma }\times U(1)_t$ given by $\mathcal {F}=(0,0,1)$. In the middle is the S-dual frame obtained by gluing a quiver tail to the $T_B$ theory with flux $\mathcal {F}_B=(-\frac {1}{4},\frac {1}{4},1)$. On the bottom is the S-dual frame obtained by gluing a quiver tail to the $T_A$ theory with fluxes $\mathcal {F}_A=(\frac {1}{4},\frac {1}{4},1)$. Green (red) circles indicate maximal punctures of colour $c=0$ ($c=1$). $o=l,r$ indicates the orientation of a maximal puncture. Dots indicate minimal punctures.}\relax }}{91}{figure.caption.50}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces \it Quiver diagram of the theory associated to a sphere with two minimal punctures and two maximal punctures of colour $c_l=c_r=0$ in the canonical weakly coupled frame.\relax }}{92}{figure.caption.51}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Left: \it Schematic overview for $k=1$ of two alternate ways to obtain the 4d $\mathcal {N}=2$ $\mathaccentV {tilde}07E{A}_{\ell -1}$ circular quivers with $SU(N)^\ell $ gauge group in class $\mathcal {S}$ from compactifications of 6d theories. \normalfont Right: \it A schematic overview of the $k>1$ generalisations of 6d compactifications. The resulting 4d SCFTs are $\mathcal {N}=1$ $\mathaccentV {tilde}07E{A}_{\ell -1}\times \mathaccentV {tilde}07E{A}_{k-1}$ torodial quivers in class $\mathcal {S}_k$ with gauge group $SU(N)^{\ell k}$.\relax }}{129}{figure.caption.73}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \it 6d circular (necklace) quiver $\mathcal {T}^N_{\ell }$ for $\ell =5$. Circular nodes denote $\mathcal {N}=(1,0)$ vector multiplets and solid lines connecting them denote bifundamental $\mathcal {N}=(1,0)$ hypermultiplets. $\mathbb {S}^1/T^2$ reduction of $\mathcal {T}^N_{\ell }$ results in the 5d/4d circular $\mathaccentV {tilde}07E{A}_{\ell -1}$ affine quiver theories.\relax }}{130}{figure.caption.74}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \it The $\mathcal {N}=(4,4)$ 2d quiver of the gauge theory on $K$ D1-branes in the presence of $N$ D5-branes.\relax }}{133}{figure.caption.77}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \it The 5d $\mathcal {N}_{N,\ell }$ quiver for $\ell =5$ after taking the decoupling limit obtained by sending one of the couplings to zero. Circle reduction gives 4d $\mathcal {N}=2$ linear $A_{\ell -1}$ quivers.\relax }}{150}{figure.caption.82}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \normalfont Left: \it $\mathaccentV {tilde}07E{A}_1\times \mathaccentV {tilde}07E{A}_1$ quiver. \normalfont Middle: \it Decoupling limit giving SCQCD$_2$. \normalfont Right: \it Further decoupling limit giving $\mathcal {N}=1$ SQCD with $N_f=3N$ theory.\relax }}{152}{figure.caption.83}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \it Quiver diagram in $\mathcal {N}=(0,2)$ notation describing M-strings for the $(1,0)_{A_{M-1}}$ theory with $M=6$, $\mathaccentV {tilde}07E{\rho }=[N_1,N_2,\dots ,N_6]$ and \newline $\mathaccentV {tilde}07E{\kappa }=[K_1,K_2,K_3,K_4,K_5,K_6]$, $K_6=0$.\relax }}{206}{figure.caption.111}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \it Quiver diagram in $\mathcal {N}=(0,2)$ notation describing $M$-strings for the $(1,0)_{A_{M-1}}$ theory with $M=3$, $k=2$ $MkN=\sum _{n,i}N_{ni}$ and $\mathaccentV {tilde}07E{\kappa }_{n=1,2}=[K_{n1},K_{n2}]$, $\mathaccentV {tilde}07E{\kappa }_{3}=[0]$. \relax }}{207}{figure.caption.113}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \it 5d $\mathcal {N}=1$ necklace quiver $\mathcal {N}_{M,N}$ for $N=6$.\relax }}{218}{figure.caption.118}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {G.1}{\ignorespaces \it Strip geometry which builds the partition function of for the $A_{N-1}$ geometry. Blue lines denote the direction of the refined topological vertex. The dotted lines indicate the fact that we are dealing with the partial compactification of the strip geometry.\relax }}{297}{figure.caption.157}
+\contentsline {figure}{\numberline {G.2}{\ignorespaces Left: \it Assignment of K\"ahler parameters for the Lagrangian brane \textnormal Right: \it Strip geometry for the $A_0$ singularity with a single Lagrangian brane corresponding to the defect. The blue lines denote the preferred direction of the refined topological vertex. The red lines denote the direction periodic identification.\relax }}{304}{figure.caption.158}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {I.1}{\ignorespaces \textit {Example of the fixed point structure for $p=3$, $q_{1}=1$, $q_{2}=-2$, $N_1=N_2=N_3=1$.}\relax }}{324}{figure.caption.165}

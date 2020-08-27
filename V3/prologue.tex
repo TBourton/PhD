@@ -1,0 +1,287 @@
+
+\frontmatter
+
+\pagestyle{fancy}
+\fancyhf{} % clear all headers and footers
+\renewcommand{\headrulewidth}{0pt} % remove rule between header and text
+\fancyhead[LE,RO]{\thepage} % put page number in left header on even pages,
+                            % right header on odd pages
+\fancyhead[RE]{\MakeTextUppercase{\leftmark}} % remove uppercase on chapter title
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % remove "Chapter N." prefix
+\setlength{\headheight}{13.6pt}
+		
+\begin{titlepage}
+	\addtolength{\hoffset}{0.5\evensidemargin-0.5\oddsidemargin} %set equal margins on the frontpage - remove this line if you want default margins
+	\noindent%
+	\begin{center}
+	\end{center}
+	\noindent%
+	\begin{tabular}{@{}p{\textwidth}@{}}
+		\toprule[2pt]
+		\midrule
+		\vspace{0.2cm}
+		\begin{center}
+			\Large{\textbf{\boldmath Exact Results for $\mathcal{N}=1$ Theories of Class $\mathcal{S}_k$}}
+		\end{center}
+		\vspace{0.2cm}\\
+		\midrule
+		\toprule[2pt]
+	\end{tabular}
+	\vspace{1.8 cm}
+  {\small
+  	\begin{center}
+  		{\Large \textbf{Dissertation}}
+  		
+  		\vspace{1.2cm}
+  		\large
+  		
+  		zur Erlangung des Doktorgrades
+  		
+  		%\vspace{0.2cm}      
+  		%Doctor\ rerum\ naturalium
+  		
+  		\vspace{0.2cm}
+  		an der Fakult{\"a}t f{\"u}r Mathematik, 
+
+        \vspace{0.2cm}
+        Informatik und Naturwissenschaften
+  		
+  		\vspace{0.2cm}
+  		Fachbereich Physik 
+  		
+  		\vspace{0.2cm}
+  		der
+  		
+  		\vspace{0.2cm}
+  		Universit{\"a}t Hamburg
+  		
+  		
+  		\vspace{1.6cm}
+  		
+  		
+  		vorgelegt von%Insert your group name or real names here
+  		
+  		\vspace{1.cm}
+  		
+  		
+  		{\Large Thomas James George Bourton}%Insert your group name or real names here
+  		
+  		%    \vspace{1cm}
+  		%    
+  		%     {\large
+  		%      aus Tortum%Insert your group name or real names here
+  		%    }
+  	\end{center}
+  }
+  \vspace{1.5cm}
+  {\large \begin{center}Hamburg\\2019\end{center} }
+\end{titlepage}
+\clearpage
+
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\newpage
+\thispagestyle{empty}
+
+\vspace*{\fill}
+
+%\vspace{4cm}
+
+\noindent 
+\begin{tabular}{@{}ll}
+	Gutachter der Dissertation: 					& Dr.~Elli~Pomoni\\
+	\hspace{10cm}									& Prof.~Dr.~Gleb~Arutyunov \\
+	\\
+	Zusammensetzung der Pr\"ufungskommission: 		
+													& Dr.~Elli~Pomoni \\
+													& Prof.~Dr.~Gleb~Arutyunov \\
+													& Prof.~Dr.~Volker~Schomerus \\
+													& Prof.~Dr.~Sven-Olaf~Moch  \\
+													& Prof.~Dr.~Elisabetta~Gallo \\
+	\\
+	Vorsitzender der Pr\"ufungskommission:			& Prof.~Dr.~Sven-Olaf~Moch  \\
+	\\
+	Datum der Disputation:							& 17.10.2019 \\
+	\\
+	Vorsitzender Fach-Promotionsausschusses PHYSIK: & Prof.~Dr.~Michael~Potthoff \\
+	\\
+	Leiter des Fachbereichs PHYSIK:					&  Prof.~Dr.~Wolfgang~Hansen\\
+	\\
+	Dekan der Fakult\"at MIN:							& Prof.~Dr.~Heinrich~Graener
+\end{tabular}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\newpage
+\thispagestyle{empty}
+
+\newpage
+
+\nonfrenchspacing
+\section*{Abstract}
+\onehalfspacing 
+{\normalsize A large class of four dimensional $\mathcal{N}=1$ theories can be obtained by twisted compactification along a Riemann surface $\mathcal{C}$ of six dimensional theories with $\mathcal{N}=(1,0)$ supersymmetry. When the $(1,0)$ theory is that of the theory on M$5$-branes on a transverse $\mathbb{C}^2/\mathbb{Z}_k$ singularity the resulting four dimensional theories are said to be of class $\mathcal{S}_k$. These are orbifolds of class $\mathcal{S}$ theories and as such, much structure is inherited from the class $\mathcal{S}$ mother theory, for which a large number of results have been computed and understood. 
+
+In this thesis we investigate exact results, to which we can obtain, for theories of class $\mathcal{S}_k$. We describe and define, via the orbifold inheritance structure, Higgs and Coulomb branches of the moduli space of supersymmetric vacua for theories of class $\mathcal{S}_k$. This is in contrast to `generic' $\mathcal{N}=1$ theories where no such distinction can be made. The Hilbert series for these branches is computed for a variety of examples. Certain distinguished limits, that would again not exist for generic $\mathcal{N}=1$ theories, of the superconformal index are defined and exact results can be written in terms of a matrix integral. In some cases the integrals can be explicitly performed. The relation to dimensional deconstruction of $\mathcal{N}=(1,1)$ LST is reviewed and we are able to match the $\frac{1}{2}$-BPS partition functions of the class $\mathcal{S}_k$ theory and the LST, providing another check of the dimensional deconstruction proposal of Arkani-Hamed, Cohen, Kaplan, Karch and Motl. Holomorphic $\mathcal{N}=1$ curves encoding the low energy superpotential on the Coulomb branch are derived for a variety of class $\mathcal{S}_k$ theories, following the methodology of Seiberg and Intriligator. The $\mathcal{N}=1$ analogue of Nekrasov's partition function of instantons is computed and is matched to $\mathcal{W}_{kN}$ conformal blocks.
+
+We also investigate $\mathcal{N}=3$ theories that arise from discrete gauging of an enhanced discrete symmetry which emerges at strong coupling of $\mathcal{N}=4$ SYM. We study their moduli spaces, focusing on the Higgs and Coulomb branches. The Hilbert series are computed. Moreover, in some cases we can also compute the superconformal index. We compare some of the properties to the S-fold theories of Garc\`ia-Etxebarria and Regalado.
+
+Lastly, BPS-strings in 6d $\mathcal{N}=(1,0)$ SCFTs on $\mathbb{R}^4\times T^2$ in the presence of surfaces defects are examined. The $(1,0)$ theories in question are the same ones used to engineer class $\mathcal{S}_k$ theories however, in this case, the surface defects lie along an $\mathbb{R}^2\subset\mathbb{R}^4$ as opposed to on the Riemann surface $\mathcal{C}=T^2$ such that we get an $\mathcal{N}=2$ theory with a defect upon compactification. The strings wrap the $T^2$. The elliptic genus partition function of the strings is computed.
+}
+
+\pagestyle{empty}
+\cleardoublepage
+\pagenumbering{gobble}
+\section*{Zusammenfassung}
+\onehalfspacing 
+{\normalsize Eine umfangreiche Klasse der vierdimensionalen $\mathcal{N}=1$ Theorien kann mithilfe einer getwisteten Kompaktifizierung einer sechsdimensional Theorie mit $\mathcal{N}=(1,0)$ Supersymmetrie entland einer riemannschen Fl\"ache konstruiert werden. In dem falle, dass die $(1,0)$ Theorie einer Theorie auf der transversen $\mathbb{C}^2/\mathbb{Z}_k$ Singularit\"at auf M$5$-Branen entspricht, wird die resultierende Theorie in vier Dimensionen als der Klasse $\mathcal{S}_k$ zugeh\"orig bezeichnet. Diese Theorien sind Orbifaltigkeiten von Theorien der Klasse $\mathcal{S}$ und dementsprechend wird einiges der Struktur der Muttertheorie, f\"ur die sehr viele Ergebnisse berechnet und verstanden wurden, von der Tochtertheorie \"ubernommen.
+
+In dieser Dissertation untersuchen wir exakte Resultate von Theorien der Klasse $\mathcal{S}_k$, soweit wir diese erziehlen k\"onnnen. Unter Anwednung der Vererbungsstruktur der Orbifaltigkeiten beschreiben und definieren wir den Higgs- sowie den Coulombzweig des Modulraums der supersymmetrischen Vakua der Theorien der Klasse $\mathcal{S}_k$. Dies steht im Kontrast zu generischen $\mathcal{N}=1$ Theorien, in denen eine solche Aufteilung nicht m\"oglich ist. Die Hilbertreihe wird f\"ur eine Vielzahl dieser Zweige beispielhaft berechnet. Einige bedeutende Grenzwerte des superkonformen Indexes, die f\"ur generische $\mathcal{N}=1$ Theorien ebensowenig existieren w\"urden, werden definiert und die exakten Ergebnisse k\"onnen zudem in Matrixintegralen ausgedr\"uckt werden. In manchen F\"allen lassen sich die Integral explizit berechnen. Der Zusammenhang mit der dimensionalen Dekonstruktion von $\mathcal{N}=(1,1)$ LST wird besprochen und wir gleichen die $\frac{1}{2}$-BPS Zustandsfunktionen der Theorien der Klasse $\mathcal{S}_k$ mit jenen der LST ab, was einen zus\"atzlichen Test des dimensionalen Dekonstruktionsvorschlags von Arkani-Hamed, Cohen, Kaplan, Korch und Motl darstellt. Holomorphe $\mathcal{N}=1$ Kurven, die das Niederenergiesuperpotential auf dem Coulombzweig kodieren, werden nach der Methodik von Seiberg und Intriligator f\"ur einige der Theorien der Klasse $\mathcal{N}_k$ hergeleitet. Das $\mathcal{N}=1$ Analog der nekrasovschen Zustandsfunktion der Instantons wird berechnet und mit den konformen $\mathcal{W}_{kN}$ Blocks verglichen.
+
+Wir untersuchen des Weiteren $\mathcal{N}=3$ Theorien, die aus einer diskreten Eichung einer erh\"ohten diskreten Symmetrie, die sich aus der starken Kopplung von $\mathcal{N}=4$ SYM ergibt, entstehen. Wir analysieren deren Modulr\"aume, wobei wir uns auf den Higgs- und den Coulombzweig fokussieren. Die Hilbertreihe wird berechnet. Dar\"uber hinaus ist es uns in einigen F\"allen m|'oglich auch den superkonformen Index zu berechnen. Wir vergleichen eine Reihe von Eigenschaften hiervon mit den S-fold Theorien von Garcia-Etxebarria und Regalado.
+
+\onehalfspacing
+Letztlich untersuchen wir BPS-Strings in sechs dimensionalen $\mathcal{N}=(1,0)$ superkonformen Feldtheorien auf $\mathbb{R}^4\times T^2$ in der Anwesenheit von Oberfl\"achendefekten. Die betrachteten $(1,0)$ Theorien sind dieselben wie bei der Konstruktion der Theorien der Klasse $\mathcal{S}_k$, wobei, in diesem Fall, der Oberfl\"achendefekt, entgegen der zuvor verwendeten riemannschen Oberfl\"ache $\mathcal{C}=T^2$ entlang eines $\mathbb{R}^2\subset \mathbb{R}^4$ liegt, sodass wir nach der Kompaktifizierung eine $\mathcal{N}=2$ Theorie mit einem Defekt erhalten. Der String umwickelt den $T^2$. Die Zustandsfunktion des elliptischen Genus des Strings wird berechnet.}
+\singlespacing
+
+\thispagestyle{empty}
+\cleardoublepage
+\pagenumbering{gobble}
+%\selectlanguage{english}
+
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+
+\newpage
+%\vspace*{\fill}
+\noindent \textbf{\Large This Thesis is Based Upon:} 
+
+\vspace{1.0cm}
+ 
+\begin{itemize}
+	
+\item{Bourton, T. \& Pomoni, E {\it {Instanton Counting in Class $\mathcal{S}_k$}}\\  \href{http://arxiv.org/abs/1712.01288}{{\tt arXiv:1712.01288}}.}
+    
+    \item{Bourton, T., Pini, A. \& Pomoni, E. \textit{4d $\mathcal{N}=3$ Indices via Discrete Gauging}, J. High Energ. Phys. (2018) 2018: 131.\\ \href{https://doi.org/10.1007/JHEP10(2018)131}{{\tt doi.org/10.1007/JHEP10(2018)131}} .}	\\
+   
+     \item{Bourton, T., Pini, A. \& Pomoni, E. \textit{The Higgs and Coulomb Branches of Theories of Class \Sk}, To Appear}\\
+
+\end{itemize}
+
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+
+
+
+%\thispagestyle{empty}
+%\clearpage
+%\thispagestyle{empty}
+
+\cleardoublepage
+\pagenumbering{gobble}
+\pagestyle{empty}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{\listfigurename}
+\addcontentsline{toc}{chapter}{\listtablename}
+
+\pagenumbering{gobble}
+\pagestyle{empty}
+\listoffigures
+\cleardoublepage
+\listoftables
+\cleardoublepage
+
+
+\chapter*{List of Notations}
+\addcontentsline{toc}{chapter}{List of Notations}
+\pagenumbering{gobble}
+\begin{center}
+\small
+\begin{tabular}{ p{5.5cm} p{8.5cm} }
+Notation & Explanation\\
+\hline
+$\mathbb{N}=\{0,1,2\dots\}$ &The natural numbers\\
+$\mathbb{Z}^+=\{1,2\dots\}$ &The positive integers\\
+$\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$ & The integers\\
+$\mathbb{K}$ &Generic field\\
+$C_n=\mathbb{Z}/n\mathbb{Z}=\{0,1,\dots,n-1\}$ & Group of integers under addition modulo $n$\\
+$\mathbb{Z}_n$ & Group of integers under multiplication modulo $n$\\
+$S_N$&Permutation group on $N$ objects\\
+\hline
+$\widetilde{X}$&Universal cover of $X$\\
+$X^{\mathbb{C}}=X\otimes_{\mathbb{R}}\mathbb{C}$ &Complexification of $X$\\
+$\Aut(X)$&Automorphism group of $X$\\
+$\Out(X)$&Outer automorphism group of $X$\\
+$\Inn(X)$&Inner automorphism group of $X$\\
+$\End(X)$&Endomorphisms of $X$\\
+$\Sym^N(X)=X^N/S_N$&$N^{\text{th}}$-Symmetric product of $X$\\
+$C^m(X)$ &Space of functions on $X$ with $m$ continuous derivatives \\
+$\extd$&Exterior derivative\\
+$\Omega^d(X)$ &Space of $d$-forms on $X$\\
+$\star$&Hodge star\\
+$TX$& Tangent bundle of manifold $X$\\
+$T^*X$& Cotangent bundle of manifold $X$\\
+\hline
+$\iu^2=-1$&Unit imaginary number\\
+$\Re z$, $\Im z$& Real and imaginary parts of $z\in\mathbb{C}$\\\hline
+ $G$ & Real matrix Lie group\\
+ $T(G)$ & Maximal torus of $G$\\
+ $d\mu_G$ & Haar measure for $G$\\
+ $\rank G=\dim_{\mathbb{R}} T(G)$& Rank of $G$\\
+ $\mathfrak{g}=Lie(G)$&Lie algebra of $G$\\
+ $C_{G}(S)=\{g\in G|\Ad_gs=s\,\forall\,s\in S\}$ & Centraliser of $S$ in $G$\\
+ $\mathfrak{h}$, $\mathfrak{t}$& Cartan subalgebra of $\mathfrak{g}$ \\
+ $\Ad_g(X)=gXg^{-1}$&Adjoint action $g\in G$, $X\in\mathfrak{g}$\\
+ $\ad_XY=[X,Y]$&Adjoint action of $X$ on $\mathfrak{g}$, $X,Y\in\mathfrak{g}$\\
+\hline
+$\mathbf{M}$, $\mathbf{F}$, $\mathbf{HB}$, $\mathbf{CB}$&Affine varieties\\
+$M$, $F$, $HB$, $CB$ &Coordinate rings of $\mathbf{M}$, $\mathbf{F}$, $\mathbf{HB}$, $\mathbf{CB}$\\
+$R$ & Rings\\
+$I$, $J$ & Ideals\\
+$\HS(\tau;R)$ & Hilbert series for the ring $R$\\\hline
+\end{tabular}
+\end{center}
+\newpage
+\pagenumbering{gobble}
+\begin{center}
+\small
+\begin{tabular}{ p{5.5cm} p{8.5cm}  }
+\hline
+$\mathcal{M}_d$ & $d$-dimensional Riemannian manifold\\
+$\mathcal{C}$, $\mathcal{X}$ & Riemann surfaces\\
+$\mathbb{S}^d$ & Round $d$-dimensional sphere\\
+$T^d=(\mathbb{S}^1)^d$ & $d$-dimensional torus\\
+$AdS$ & Anti-de-Sitter space\\
+\hline
+$\mathcal{I}$ & Supersymmetric index\\
+$\HL$ & HL limit of the 4d supersymmetric index\\
+$\Ell$ & Elliptic genus (2d supersymmetric index)\\
+$Z$ &Other types of partition functions\\
+$\Qtwo,\widetilde{\Qtwo}$& 2d Euclidean Poincar\'e supercharges\\
+$\Qfour,\widetilde{\Qfour}$& 4d Euclidean Poincar\'e supercharges\\
+$\Qfive,\widetilde{\Qfive}$& 5d Euclidean Poincar\'e supercharges\\
+$\Qsix,\widetilde{\Qsix}$& 6d Euclidean Poincar\'e supercharges\\
+$\Phi$, $Q$, $\widetilde{Q}$& 4d $\mathcal{N}=1$ chiral multiplets\\
+$\overline{\Phi}$, $\overline{Q}$, $\overline{\widetilde{Q}}$ & 4d $\mathcal{N}=1$ anti-chiral multiplets\\\hline
+\end{tabular}
+\end{center}
+\clearpage
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\onehalfspacing
+
+\mainmatter

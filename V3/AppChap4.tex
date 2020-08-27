@@ -1,0 +1,233 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\section{The Elliptic Genus Computation}\label{App:EllipticGenus1}
+In this appendix we review the computation of the Elliptic genus via letter counting. 
+\subsection{Single Letter Indices}
+As the Witten index is independent of coupling constants we may compute the index in the free field $g\to0$ limit. 
+To compute the index we list the gauge covariant field content with $\delta=\overline{L}_0-\frac{1}{2}\overline{J}_0=0$ in the UV. Only the `letters' with $\delta=0$ contribute to the index and their
+quantum numbers are listed in Tables \ref{tab:Vletters}, \ref{tab:Hletters} and \ref{tab:Uletters}. We denote also the decomposition of $\N=(4,4)$ multiplets into $\N=(0,2)$ multiplets.
+Since the $\N=(0,2)$ field strength multiplet is not conformal extra care must be taken to take the free field limit. In two dimensions the field strength multiplet $\Upsilon$ is nothing but a Fermi multiplet with auxillary $D-\iu F_{+-}$ . The $R$-charge of $\Upsilon$ is fixed to unity everywhere along the flow, i.e. $\mathfrak{R}\left[\Upsilon\right]=\overline{J}_0\left[\Upsilon\right]=1$ . Therefore the index of the off-diagonal vector multiplet should be equal to that of a off-diagonal Fermi multiplet of $R$-charge $\mathfrak{R}_{\text{IR}}=\mathfrak{R}_{\text{UV}}=1$:
+\begin{equation}
+Z_{\text{vec}}(y_I\neq y_J,q)=\Delta(y)^{-1}Z_{\text{Fermi}}(y_I\neq y_J,q)=\PE\left[-\frac{2q}{1-q}\sum_{I\neq J}\frac{y_I}{y_J}\right]
+\end{equation}
+where $\Delta(y)$ is the Vandermonde determinant accounting for the Cartan zero modes.
+\renewcommand{\arraystretch}{1.5}
+\begin{table}
+\centering
+ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} 
+ \hline
+$\N=(0,2)$ & Letter & $L_0$& $\overline{L}_0$& $\overline{J}_0$ &$2j_1$&$2j_2$& $2j_L$&$2j_R$ & Index\\[2pt]\hline
+\hline
+\multirow{ 3}{*}{$Y,Y^{\dagger}$}&$Y^{2\dot2}$ &$0$ & $0$&$0$& $0$&$0$&$+1$ &$+1$& $wz$\\[2pt]\cline{2-10}
+&$Y^{1\dot1}$ &$0$ & $0$& $0$&$0$&$0$&$-1$ & $-1$ & $w^{-1}z^{-1}$\\\cline{2-10}
+&$\overline{\lambda}_{+}^{\dot11}$ &$0$&$\frac{1}{2}$ & $+1$&$0$&$-1$& $-1$ & $0$ & $-w^{-1}z^{-1}$\\\hline
+\multirow{ 3}{*}{$\tilde{Y}^{\dagger},\tilde{Y}$}&$Y^{1\dot2}$ & $0$ & $0$&$0$&$0$&$0$& $-1$& $+1$ & $w^{-1}z$\\\cline{2-10}
+&$Y^{2\dot1}$ &$0$ & $0$& $0$&$0$&$0$&$+1$ & $-1$ & $wz^{-1}$\\\cline{2-10}
+&$\overline{\lambda}_{+}^{\dot12}$ &$0$&$\frac{1}{2}$ & $+1$ &$0$&$-1$& $+1$& $0$&$-wz^{-1}$\\\hline
+\multirow{ 2}{*}{$\overline{\xi},\overline{\xi}^{\dagger}$} &$\overline{\xi}_{-}^{\dot1\dot1}$ &$\frac{1}{2}$&$0$ & $0$&$0$&$-1$ & $0$ & $-1$ & $-qz^{-2}$\\\cline{2-10}
+&$\overline{\xi}_{-}^{\dot2\dot2}$ &$\frac{1}{2}$ & $0$ & $0$ &$0$&$+1$& $0$ & $+1$ & $-z^2$\\\hline
+\multirow{ 2}{*}{$\Upsilon,\Upsilon^{\dagger}$}&$\overline{\xi}_{-}^{\dot2\dot1}$& $\frac{1}{2}$&$0$ & $+1$ &$0$&$-1$& $0$ & $-1$ & $-q$\\\cline{2-10}
+&$\overline{\xi}_{-}^{\dot1\dot2}$ &$\frac{1}{2}$&$0$ & $-1$ &$0$&$+1$& $0$ &$+1$& $-q$\\\hline
+\hline
+\multirow{ 2}{*}{}&$\partial_-\overline{\lambda}_{+}^{\dot11}$ &$1$&$\frac{1}{2}$ & $+1$ &$0$&$-1$& $-1$& $0$&$qw^{-1}z^{-1}$\\\cline{2-10}
+&$\partial_-\overline{\lambda}_{+}^{\dot12}$ &$1$&$\frac{1}{2}$ & $+1$ &$0$&$-1$& $+1$& $0$& $qwz^{-1}$\\\hline
+\hline
+&$\partial_{-}$ &$1$&$0$ &$0$& $0$ & $0$&$0$&$0$ & $q$\\\hline
+\end{tabular}
+\caption{\it Gauge covariant field content contributing to the index of the $\N=(4,4)$ vector multiplet $V$.}
+ \label{tab:Vletters}
+\end{table}
+\begin{table}
+\centering
+ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|} 
+ \hline
+$\N=(0,2)$ &Letter & $L_0$&$\overline{L}_0$& $\overline{J}_0$ &$2j_1$&$2j_2$& $2j_L$&$2j_R$& Index\\\hline
+\hline
+\multirow{ 3}{*}{$X,X^{\dagger}$}&$X^{1\dot1}$&$0$ &$0$ & $0$& $-1$&$-1$&$0$ & $0$& $q^{\frac{1}{2}}v^{-1}z^{-1}$\\\cline{2-10}
+&$X^{2\dot2}$ &$0$&$0$ & $0$& $+1$&$+1$&$0$&$0$ & $q^{-\frac{1}{2}}vz$\\\cline{2-10}
+&$\xi_{+}^{2\dot2}$ &$0$&$\frac{1}{2}$ & $+1$&$+1$&$0$ & $0$& $+1$ &$-q^{-\frac{1}{2}}vz$\\\hline
+\multirow{ 3}{*}{$\tilde{X}^{\dagger},\tilde{X}$}&$X^{2\dot1}$ &$0$&$0$ & $0$&$+1$&$-1$& $0$&$0$ & $q^{\frac{1}{2}}vz^{-1}$\\\cline{2-10}
+&$X^{1\dot2}$&$0$ &$0$ & $0$&$-1$&$+1$& $0$ & $0$&$q^{-\frac{1}{2}}v^{-1}z$\\\cline{2-10}
+&$\xi_{+}^{1\dot2}$&$0$ &$\frac{1}{2}$ & $+1$ &$-1$&$0$& $0$&$+1$& $-q^{-\frac{1}{2}}v^{-1}z$\\\hline
+\multirow{ 2}{*}{$\lambda,\lambda^{\dagger}$} &$\lambda_{-}^{11}$ &$\frac{1}{2}$&$0$ & $0$ &$-1$&$0$& $-1$ &$0$& $-q^{\frac{1}{2}}v^{-1}w^{-1}$\\\cline{2-10}
+&$\lambda_{-\frac{1}{2}}^{22}$&$\frac{1}{2}$ &$0$ & $0$ & $+1$&$0$&$+1$ & $0$ &$-q^{\frac{1}{2}}vw$\\\hline
+\multirow{ 2}{*}{$\tilde{\lambda}^{\dagger},\tilde{\lambda}$}&$\lambda_{-}^{12}$ &$\frac{1}{2}$&$0$ & $0$&$-1$& $0$& $+1$ & $0$&$-q^{\frac{1}{2}}v^{-1}w$\\\cline{2-10}
+&$\lambda_{-}^{21}$ &$\frac{1}{2}$&$0$ & $0$ &$+1$&$0$& $-1$ & $0$ & $-q^{\frac{1}{2}}vw^{-1}$\\\hline
+\hline
+\multirow{ 2}{*}{}&$\partial_-\xi_{+}^{2\dot2}$ &$1$&$\frac{1}{2}$ & $+1$ &$+1$&$0$& $0$& $+1$&$q^{\frac{1}{2}}vz$\\\cline{2-10}
+&$\partial_-\xi_{+}^{1\dot2}$&$1$ &$\frac{1}{2}$ & $+1$ &$-1$&$0$& $0$&$+1$& $q^{\frac{1}{2}}v^{-1}z$\\\hline
+\hline
+&$\partial_{-}$&$1$ &$0$ &$0$& $0$ &$0$&$0$&$0$& $q$\\\hline
+\end{tabular}
+\caption{\it Gauge covariant field content with $\delta=0$ of the $\N=(4,4)$ hypermultiplet $H$.}
+ \label{tab:Hletters}
+\end{table}
+\begin{table}
+\centering
+ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} 
+ \hline
+$\N=(0,2)$&Letter &$L_0$& $\overline{L}_0$& $\overline{J}_0$ &$2j_1$&$2j_2$& $2j_L$&$2j_R$ & Index\\\hline
+\hline
+\multirow{ 3}{*}{$\phi,\phi^{\dagger}$}&$\phi^{\dot1}$ &$0$ & $0$& $0$&$0$&$-1$&$0$&$0$ & $q^{\frac{1}{2}}z^{-1}$\\\cline{2-10}
+&$\phi^{\dagger}_{\dot1}$&$0$ &$0$ & $0$&$0$&$+1$& $0$ & $0$&$q^{-\frac{1}{2}}z$\\\cline{2-10}
+&$\chi^{\dagger}_{+\dot1}$ &$0$&$\frac{1}{2}$ & $+1$ &$0$&$0$& $0$ &$+1$& $-q^{-\frac{1}{2}}z$\\\hline
+\multirow{ 3}{*}{$\tilde{\phi}^{\dagger},\tilde{\phi}$}&$\phi^{\dagger}_{\dot2}$ &$0$&$0$ & $0$&$0$&$-1$& $0$&$0$ & $q^{\frac{1}{2}}z^{-1}$\\\cline{2-10}
+&$\phi^{\dot2}$ &$0$&$0$ & $0$& $0$&$+1$&$0$ &$0$& $q^{-\frac{1}{2}}z$\\\cline{2-10}
+&$\chi_{+}^{\dot2}$&$0$ &$\frac{1}{2}$ & $+1$ &$0$&$0$& $0$& $+1$&$-q^{-\frac{1}{2}}z$\\\hline
+\multirow{ 2}{*}{$\psi,\psi^{\dagger}$}&$\psi_{-}^{1}$ &$\frac{1}{2}$&$0$ & $0$ &$0$&$0$& $-1$ &$0$& $-q^{\frac{1}{2}}w^{-1}$\\\cline{2-10}
+&$\psi^{\dagger}_{-1}$&$\frac{1}{2}$ &$0$ & $0$&$0$&$0$ & $1$ &$0$& $-q^{\frac{1}{2}}w$\\\hline
+\multirow{ 2}{*}{$\tilde{\psi}^{\dagger},\tilde{\psi}$}&$-\psi^{\dagger}_{-2}$&$\frac{1}{2}$ &$0$ & $0$&$0$&$0$ & $-1$ &$0$& $-q^{\frac{1}{2}}w^{-1}$\\\cline{2-10}
+&$\psi_{-}^{2}$ &$\frac{1}{2}$&$0$ & $0$ &$0$&$0$& $1$ &$0$& $-q^{\frac{1}{2}}w$\\\hline
+\hline
+\multirow{ 2}{*}{}&$\partial_-\chi^{\dagger}_{+\dot1}$ &$1$&$\frac{1}{2}$ & $+1$ &$0$&$0$& $0$&$+1$& $q^{\frac{1}{2}}z$\\\cline{2-10}
+&$\partial_-\chi_{+}^{\dot2}$&$1$ &$\frac{1}{2}$ & $+1$ &$0$&$0$& $0$&$+1$& $q^{\frac{1}{2}}z$\\\hline
+\hline
+&$\partial_{-}$&$1$ &$0$ &$0$& $0$&$0$&$0$ &$0$& $q$\\\hline
+\end{tabular}
+\caption{\it Gauge covariant field content with $\delta=0$ of the $\N=(4,4)$ hypermultiplet $U$.}
+ \label{tab:Uletters}
+\end{table}
+\renewcommand{\arraystretch}{1}
+The single letter indices were given in equations \eqref{eqn:letterfV}, \eqref{eqn:letterfH} and \eqref{eqn:letterfU}. We again list them here
+\begin{equation}
+i_V(q,w,z,y_I)=\left[\frac{\left(w+w^{-1}\right)\left(z+qz^{-1}\right)-qz^{-2}-z^2-2q}{1-q}\right]\sum_{I,J=1}^Ky_Iy_J^{-1}\,,
+\end{equation}
+\begin{equation}
+i_H(q,v,w,z,y_I)=\left[\frac{q^{\frac{1}{2}}\left(v+v^{-1}\right)\left(z+z^{-1}-w^{-1}-w\right)}{1-q}\right]\sum_{I,J=1}^Ky_Iy_J^{-1}\,,
+\end{equation}
+\begin{equation}
+i_U(q,w,z,x_A,y_I)=\left[\frac{q^{\frac{1}{2}}\left(z+z^{-1}-w^{-1}-w\right)}{1-q}\right]\sum_{I=1}^K\sum_{A=1}^N\left(\frac{y_I}{x_A}+\frac{x_A}{y_I}\right)\,.
+\end{equation}
+Finally, we also list the Casimir energy:
+\begin{equation}
+E_{\text{Casimir}}=\substack{\text{Finite}\\q\to1}\left[\sum_{\mathcal{M}}\frac{\partial i_{\mathcal{ M}}}{\partial\log q}\right]=\frac{\beta^2_5}{\iu\pi}2NK\left(\frac{\epsilon_+}{2}+m\right)\left(\frac{\iu\pi}{\beta_5}+\frac{\epsilon_+}{2}-m\right)\label{eqn:Casimir1} \,.
+\end{equation}
+\subsection{Orbifolded Single Letter Indices}
+The single letters for the $\Gamma$ projected multiplets is given by enumerating all letters in Tables \ref{tab:Vletters}, \ref{tab:Hletters} and \ref{tab:Uletters} while also inserting fugacities for the $\Gamma$ action embedded in the global and gauge symmetries. Recall that 
+\begin{equation}
+\gamma_{\ell}:=2j_L=J_{710}-J_{89}\,,\quad \gamma_k:=J_{56}+j_L-j_R=J_{56}-J_{89}\,.
+\end{equation}
+The projected single letters are thus given by
+\begin{equation}
+\begin{aligned}
+&i_{\Gamma V}(q,w,z,y_{ni,I})=\frac{1}{\ell k}\sum_{\substack{\varepsilon\in\mathbb{Z}_{\ell}\\\varepsilon_k\in\mathbb{Z}_k}}\sum_{r\geq0}q^r\varepsilon_k^{-r}\sum_{n,i}^{\ell}\sum_{m,j}^k\sum_{I=1}^{K_{ni}}\sum_{I=1}^{K_{mj}}\varepsilon_{\ell}^{n-m}\varepsilon_k^{i-j}y_{ni,I}y_{mj,J}^{-1}\\
+&\times\left[\left(\varepsilon_{\ell}w+\varepsilon^{-1}_{\ell}\varepsilon_k^{-1}w^{-1}\right)\left(z+qz^{-1}\right)-qz^{-2}-\varepsilon_k^{-1}z^2-(\varepsilon_k^{-1}+1)q\right]\,,
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&i_{\Gamma H}(q,v,w,z,y_{ni,I})=\frac{1}{\ell k}\sum_{\substack{\varepsilon\in\mathbb{Z}_{\ell}\\\varepsilon_k\in\mathbb{Z}_k}}\left[\left(z^{-1}+\varepsilon_k^{-1}z-\varepsilon_{\ell}^{-1}\varepsilon_k^{-1}w^{-1}-\varepsilon_{\ell}w\right)\right]\\
+&\times q^{\frac{1}{2}}\left(v+v^{-1}\right)\sum_{r\geq0}q^r\varepsilon_k^{-r}\sum_{n,m}^{\ell}\sum_{i,i}^k\sum_{I=1}^{K_{ni}}\sum_{I=1}^{K_{mj}}\varepsilon_{\ell}^{n-m}\varepsilon_k^{i-j}y_{ni,I}y_{jm,J}^{-1}\,,
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&i_{\Gamma U}(q,w,z,x_{ni,A},y_{ni,I})=\frac{1}{\ell k}\sum_{\substack{\varepsilon\in\mathbb{Z}_{\ell}\\\varepsilon_k\in\mathbb{Z}_k}}\left[q^{\frac{1}{2}}\left(\frac{z}{\varepsilon_k}+z^{-1}-\frac{w^{-1}}{\varepsilon_{\ell}\varepsilon_k}-\varepsilon_{\ell}w\right)\right]\\
+&\times\sum_{r\geq0}q^r\varepsilon_k^{-r}\sum_{n,m}^{\ell}\sum_{i,j}^k\sum_{A=1}^{N}\varepsilon_{\ell}^{n-m}\varepsilon_k^{i-j}\left(\sum_{I=1}^{K_{ni}}\frac{y_{ni,I}}{t_{ni}x_{mj,A}}+\sum_{I=1}^{K_{mj}}\frac{t_{ni}x_{ni,A}}{y_{mj,I}}\right)\,.
+\end{aligned}
+\end{equation}
+We now detail how to evaluate the sums over conformal descendants and over the orbifold group.
+Note that here we rescaled $x_{mj,A}$ (which are fugacities associated with $S\left[U(N)^{k\ell}\right]$ and satisfy $\prod_{i=1}^k\prod_{n=1}^{\ell}\prod_{A=1}^Nx_{ni,A}=1$) to $t_{ni}x_{ni,A}$ which now satisfy satisfying $\prod_{A=1}^Nx_{ni,A}=\prod_{n=1}^{\ell}\prod_{i=1}^kx_{ni,A}=\prod_{n=1}^{\ell}\prod_{i=1}^kt_{ni}=1$ corresponding to $S\left[U(N)^{k\ell}\right]\iso \frac{U(1)^{\ell k}}{U(1)}\times SU(N)^{\ell k}$ 
+Firstly, to evaluate the sums over conformal descendants we write to $r:=L_{ij}+\tilde{r}k\geq0$ with $L_{ij}$ defined in \eqref{eqn:Ljv}. This enables one to rewrite, for any fixed value $1\leq j\leq k$, to split the sum 
+\begin{equation}
+\sum_{r\geq0}q^r\varepsilon_k^{-r}=\sum_{i=1}^kq^{L_{ij}}\varepsilon_k^{-L_{ij}}\sum_{\tilde{r}\geq0}q^{\tilde{r}k}=\sum_{i=1}^k\frac{q^{L_{ij}}\varepsilon_k^{-L_{ij}}}{1-q^k}\,, 
+\end{equation}
+recall that $\varepsilon_k^k=1$.
+After this rewriting the sums over both $\mathbb{Z}_{\ell},\mathbb{Z}_{k}$ may be simply carried out and is essentially equivalent to demanding that the exponents of $\varepsilon_{\ell}$, $\varepsilon_k$ vanish modulo $\ell$, $k$ in each term. Hence we have after, rearranging and applying the identity \eqref{eqn:usefulid},
+\begin{equation}
+\begin{aligned}
+&i_{\Gamma V}\left(q,w,z,y_{ni,I}\right)=\\
+&\sum_{n=1}^{\ell}\sum_{i,j=1}^k\frac{1}{1-q^k}\left[-\sum_{I=1}^{K_{ni}}\sum_{J=1}^{K_{nj}}\left(z^{-2}q^{L_{ij}+1}\frac{y_{ni,I}}{y_{nj,J}}+z^2q^{k-L_{ij}-1}\frac{y_{nj,J}}{y_{ni,I}}\right)\right.\\
+&+\sum_{I=1}^{K_{ni}}\sum_{J=1}^{K_{(n+1)j}}\left(wq^{L_{ij}}\frac{y_{ni,I}}{y_{(n+1)j,J}}+w^{-1}q^{k-L_{ij}-1}\frac{y_{(n+1)j,J}}{y_{ni,I}}\right)\left(z+\frac{q}{z}\right)\\
+&\left.-\sum_{I=1}^{K_{ni}}\sum_{J=1}^{K_{nj}}\left(q^{L_{ij}}y_{ni,I}y_{nj,J}^{-1}+\left(q^{k-L_{ij}}-(1-q^k)\delta_{L_{ni},0}\right)y_{ni,I}^{-1}y_{nj,J}\right)\right],
+\end{aligned}\label{eqn:orbletterfV}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+i_{\Gamma H}&\left(q,v,w,z,y_{ni,I}\right)=\\
+&\sum_{n=1}^{\ell}\sum_{i,j=1}^k\frac{q^{\frac{1}{2}}\left(v+v^{-1}\right)}{1-q^k}\left[\sum_{I=1}^{K_{ni}}\sum_{J=1}^{K_{nj}}\left(z^{-1}q^{L_{ij}}\frac{y_{ni,I}}{y_{nj,J}}+zq^{k-L_{ij}-1}\frac{y_{nj,J}}{y_{ni,I}}\right)\right.\\
+&\left.-\sum_{I=1}^{K_{ni}}\sum_{J=1}^{K_{(n+1)j}}\left(wq^{L_{ij}}y_{ni,I}y_{(n+1)j,J}^{-1}+w^{-1}q^{k-L_{ij}-1}y_{ni,I}^{-1}y_{(n+1)j,J}\right)\right],
+\end{aligned}\label{eqn:orbletterfH}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+i_{\Gamma U}&\left(q,w,z,x_{ni,A},y_{ni,I}\right)=\sum_{n=1}^{\ell}\sum_{i,j=1}^k\sum_{A=1}^N\frac{q^{\frac{1}{2}}}{1-q^k}\\
+&\times\left[z^{-1}q^{L_{ij}}\left(\sum_{I=1}^{K_{ni}}y_{ni,I}x_{nj,A}^{-1}+\sum_{I=1}^{K_{nj}}y_{nj,I}^{-1}x_{ni,A}\right)\right.\\
+&+zq^{k-L_{ij}-1}\left(\sum_{I=1}^{K_{ni}}y_{ni,I}^{-1}x_{nj,A}+\sum_{I=1}^{K_{nj}}y_{nj,I}x_{ni,A}^{-1}\right)\\
+&-wq^{L_{ij}}\left(\sum_{I=1}^{K_{ni}}y_{ni,I}x_{(n+1)j,A}^{-1}+\sum_{I=1}^{K_{(n+1)j}}y_{(n+1)j,I}^{-1}x_{ni,A}\right)\\
+&\left.-w^{-1}q^{k-L_{ij}-1}\left(\sum_{I=1}^{K_{ni}}y_{ni,I}^{-1}x_{(n+1)j,A}+\sum_{I=1}^{K_{(n+1)j}}y_{(n+1)j,I}x_{ni,A}^{-1}\right)\right].
+\end{aligned}\label{eqn:orbletterfU}
+\end{equation}
+In this form the plethystics may be easily performed. For the sake of completeness we also list the contribution from the Casimir energy \eqref{eqn:casimir}
+\begin{equation}
+\begin{aligned}&E_{\text{Casimir}}=\frac{k\beta^2_5}{\iu\pi}\left(2NkK\left(\frac{\epsilon_+}{2}+m\right)\left(\frac{\iu\pi}{\beta_5}+\frac{\epsilon_+}{2}-m\right)\right)\\
+&+\frac{k\beta_5^2}{\pi^2}\sum_{n=1}^{\ell}\sum_{\mathcal{A}=1}^{kN}\sum_{\mathcal{I}=1}^{K_n}u_{n,\mathcal{I}}\left(\tilde{a}_{n+1,\mathcal{A}}+\tilde{a}_{n-1,\mathcal{A}}-2\tilde{a}_{n,\mathcal{A}}\right)\\
+&+\frac{k\beta_5^2}{\pi^2}\sum_{n=1}^{\ell}\sum_{\mathcal{A}=1}^{kN}K_n\left(2\tilde{a}_{n,\mathcal{A}}^2-\tilde{a}_{n-1,\mathcal{A}}^2-\tilde{a}_{n+1,\mathcal{A}}^2+2m\tilde{a}_{n+1,\mathcal{A}}-2m\tilde{a}_{n-1,\mathcal{A}}\right)\label{eqn:lkCasimir} 
+\end{aligned}
+\end{equation}
+where we also made the gauge transformation and redefinition \eqref{eqn:gaugetrans} and used the definitions \eqref{eqn:lk5dvariables}.
+
+\section{4d \& 5d Contour Integral Representations}
+In this appendix we present the contour integral representations for the partition functions for the 5d and 4d theories both in the precense of the orbifold and without. These may be obtained by applying the limit directly to the respective 6d contour integral expression. We follow mostly the prescription presented in \cite{Gadde:2011ia}. We will firstly take the 5d $\beta_6\to0$ $(q\to1)$ limit.
+\subsection{5d Limit of the Contour Integral}\label{5dLimitOfUnorbifolded}
+Using the identifications \eqref{eqn:5dvariables} and setting $y_I=q^{\frac{\beta_5u_I}{\iu\pi}}$ we have that
+\begin{align}
+&\lim_{q\to1}\Delta(y_I)Z_V=\prod_{I,J=1}^K\frac{\sinh\beta_5\left(u_{IJ}\right)'\sinh\beta_5\left(u_{IJ}-\epsilon_+\right)}{\sinh\beta_5\left(u_{IJ}-\tilde{m}-\epsilon_+\right)\sinh\beta_5\left(u_{IJ}+\tilde{m}\right)}\,,\\
+&\lim_{q\to1}Z_H=\prod_{I,J=1}^K\frac{\sinh\beta_5\left(u_{IJ}+\frac{\epsilon_-}{2}+m\right)\sinh\beta_5\left(u_{IJ}-\frac{\epsilon_-}{2}+m\right)}{\sinh\beta_5\left(u_{IJ}+\epsilon_1\right)\sinh\beta_5\left(u_{IJ}+\epsilon_2\right)}\,,\\
+&\lim_{q\to1}Z_U=\prod_{I=1}^K\prod_{A=1}^N\frac{\sinh\beta_5\left(u_{I}-a_A-m\right)\sinh\beta_5\left(u_{I}-a_A+m\right)}{\sinh\beta_5\left(u_{I}-a_A-\frac{\epsilon_+}{2}\right)\sinh\beta_5\left(u_{I}-a_A+\frac{\epsilon_+}{2}\right)}\,,
+\end{align}
+where $u_{IJ}:=u_I-u_J$ and $\tilde{m}=m-\epsilon_+/2$.
+By definition 
+\begin{equation}
+\lim_{q\to1}Z^{(0)}(q,v,w,z,x_A,y_I)=1\,.
+\end{equation}
+Hence, all that remains is to perform the limit on the integration over the maximal torus of $U(K)$:
+\begin{equation}
+\lim_{q\to1}\oint_{T\left[U\left(K\right)\right]}\prod_{I=1}^K\frac{dy_I}{2\pi\iu y_I}=\lim_{\beta_6\to0}\left(2\tau\right)^K\int^{\frac{\iu\pi}{2\tau}}_{-\frac{\iu\pi}{2\tau}}\prod_{I=1}^K\frac{du_I}{2\pi\iu\beta_5}=\int^{+\infty}_{-\infty}\prod_{I=1}^K\frac{du_I}{2\pi\iu\beta_5}\,.
+\end{equation}
+Putting all of the above ingredients together we write
+\begin{equation}\label{eqn:5dpartitionfunction}
+\begin{aligned}
+&Z^{5d}_K:=\lim_{q\to1}Z^{6d}_K=\frac{1}{K!}\int\prod_{I=1}^K\frac{du_I}{2\pi\iu\beta_5}\\
+&\times\prod_{I=1}^K\prod_{A=1}^N\frac{\sinh\beta_5\left(u_{I}-a_A-m\right)\sinh\beta_5\left(u_{I}-a_A+m\right)}{\sinh\beta_5\left(u_{I}-a_A-\frac{\epsilon_+}{2}\right)\sinh\beta_5\left(u_{I}-a_A+\frac{\epsilon_+}{2}\right)}\\
+&\times\prod_{I,J=1}^K\frac{\sinh\beta_5\left(u_{IJ}\right)'\sinh\beta_5\left(u_{IJ}-\epsilon_+\right)}{\sinh\beta_5\left(u_{IJ}+\epsilon_1\right)\sinh\beta_5\left(u_{IJ}+\epsilon_2\right)}\\
+&\times\prod_{I,J=1}^K\frac{\sinh\beta_5\left(u_{IJ}+\frac{\epsilon_-}{2}+m\right)\sinh\beta_5\left(u_{IJ}-\frac{\epsilon_-}{2}+m\right)}{\sinh\beta_5\left(u_{IJ}-\frac{\epsilon_+}{2}-m\right)\sinh\beta_5\left(u_{IJ}+\frac{\epsilon_+}{2}-m\right)}\,.
+\end{aligned}
+\end{equation}
+
+\subsection{4d Limit of the Contour Integral}
+It is then a straightforward exercise to take the 4d limit $\beta_5\to0$. We have
+\begin{align}
+&Z^{4d}_K:=\lim_{\beta_5\to0}Z^{5d}_K\label{eqn:4dpartitionfunction}\\
+&\begin{aligned}
+&=\sum_{K\geq0}\frac{1}{K!}\int\prod_{I=1}^K\frac{du_I}{2\pi\iu}\prod_{I=1}^K\prod_{A=1}^N\frac{\left(u_{I}-a_A-m\right)\left(u_{I}-a_A+m\right)}{\left(u_{I}-a_A-\frac{\epsilon_+}{2}\right)\left(u_{I}-a_A+\frac{\epsilon_+}{2}\right)}\\
+&\times\prod_{I\neq J}u_{IJ}\prod_{I,J=1}^K\frac{\left(u_{IJ}-\epsilon_+\right)\left(u_{IJ}-\frac{\epsilon_-}{2}-m\right)\left(u_{IJ}+\frac{\epsilon_-}{2}-m\right)}{\left(u_{IJ}-m-\frac{\epsilon_+}{2}\right)\left(u_{IJ}+m-\frac{\epsilon_+}{2}\right)\left(u_{IJ}-\epsilon_1\right)\left(u_{IJ}-\epsilon_2\right)}\,.
+\end{aligned}
+\end{align}
+
+\subsection{5d Limit of the Orbifolded Contour Integral}
+Taking this limit is largely the same procedure as for the $\ell=k=1$ case however we instead use the slightly different set of variables \eqref{eqn:lk5dvariables}.
+We are again interested in the $q\to1$ limit of the partition function \eqref{eqn:lkmnpartfnrewrite}. Setting $y_{i,\mathcal{I}}=q^{\frac{ku_{i\mathcal{I}}}{\iu\pi}}$ we have
+\begin{align}
+&\lim_{q\to1}Z^{6d,\ell,k}_{\{K_{ij}\}}:=Z^{5d,\ell,k}_{\{K_{ij}\}}\label{eqn:lknm5dpartitionfunction}\\
+&\begin{aligned}
+=&\prod_{i=1}^{\ell}\Bigg[\frac{1}{\prod_{j=1}^kK_{ij}!}\int\prod_{\mathcal{I}=1}^{K_{i}}\frac{du_{i,\mathcal{I}}}{2\pi\iu\beta_5}\prod_{\mathcal{I}\neq \mathcal{J}}\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}\right)\\
+&\times\prod_{\mathcal{I},\mathcal{J}=1}^{K_{i}}\frac{\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}-\epsilon_+\right)}{\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}+\epsilon_2\right)\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}+\epsilon_1\right)}\\
+&\times\prod_{\mathcal{I}=1}^{K_{i}}\prod_{\mathcal{J}=1}^{K_{i+1}}\frac{\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}+m+\frac{\epsilon_-}{2}\right)}{\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}+m-+\frac{\epsilon_+}{2}\right)}\\
+&\times\prod_{\mathcal{I}=1}^{K_{i}}\prod_{\mathcal{J}=1}^{K_{i+1}}\frac{\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}+m-\frac{\epsilon_-}{2}\right)}{\sinh\beta_5\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}+m-\frac{\epsilon_+}{2}\right)}\\
+&\times\prod_{\mathcal{A}=1}^{kN}\prod_{\mathcal{I}=1}^{K_{i}}\frac{\sinh\beta_5\left(u_{i,\mathcal{I}}-\tilde{a}_{i+1,\mathcal{A}}+m\right)\sinh\beta_5\left(u_{i,\mathcal{I}}-\tilde{a}_{i-1,\mathcal{A}}-m\right)}{\sinh\beta_5\left(u_{i,\mathcal{I}}-\tilde{a}_{i,\mathcal{A}}-\frac{\epsilon_+}{2}\right)\sinh\beta_5\left(u_{i,\mathcal{I}}-\tilde{a}_{i,\mathcal{A}}+\frac{\epsilon_+}{2}\right)}\Bigg]\,.
+\end{aligned}
+\end{align}
+
+\subsection{4d Limit of the Orbifolded Contour Integral}
+As before it is straightforward to take the 4d limit $\beta_5\to0$.
+\begin{align}
+&Z^{4d,\ell,k}_{\{K_{ij}\}}:=\lim_{\beta_5\to0}Z^{5d,\ell,k}_{\{K_{ij}\}}\\
+&\begin{aligned}
+=&\prod_{i=1}^{\ell}\Bigg[\frac{1}{\prod_{j=1}^kK_{ij}!}\int\prod_{\mathcal{I}=1}^{K_{i}}\frac{du_{i,\mathcal{I}}}{2\pi\iu}\prod_{\mathcal{I}\neq \mathcal{J}}\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}\right)\\
+&\times\prod_{\mathcal{I},\mathcal{J}=1}^{K_{i}}\frac{\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}-\epsilon_+\right)}{\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}+\epsilon_2\right)\left(u_{i,\mathcal{I}}-u_{i,\mathcal{J}}+\epsilon_1\right)}\\
+&\times\prod_{\mathcal{I}=1}^{K_{i}}\prod_{\mathcal{J}=1}^{K_{i+1}}\frac{\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}+m+\frac{\epsilon_-}{2}\right)\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}+m-\frac{\epsilon_-}{2}\right)}{\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}+\frac{\epsilon_+}{2}+m\right)\left(u_{i,\mathcal{I}}-u_{i+1,\mathcal{J}}-\frac{\epsilon_+}{2}+m\right)}\\
+&\times\prod_{\mathcal{A}=1}^{kN}\prod_{\mathcal{I}=1}^{K_{i}}\frac{\left(u_{i,\mathcal{I}}-\tilde{a}_{i+1,\mathcal{A}}+m\right)\left(u_{i,\mathcal{I}}-\tilde{a}_{i-1,\mathcal{A}}-m\right)}{\left(u_{i,\mathcal{I}}-\tilde{a}_{i,\mathcal{A}}-\frac{\epsilon_+}{2}\right)\left(u_{i,\mathcal{I}}-\tilde{a}_{i,\mathcal{A}}+\frac{\epsilon_+}{2}\right)}\Bigg]\,.
+\end{aligned}
+\end{align}
+\end{document}

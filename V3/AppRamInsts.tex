@@ -1,0 +1,135 @@
+\documentclass[main.tex]{subfiles}
+\begin{document} 
+In this appendix we discuss how to obtain the instanton partition function for the 5d $\mathcal{N}=1^*$ theory on $\mathbb{S}^1\times\mathbb{C}^2/\mathbb{Z}_p$. This is a more general result of the one computed in Section \ref{sec:s1s4surfinst} where we take the more generic $\mathbb{Z}_p$ action on the coordinates $(\theta,z_1,z_2)$ of $\mathbb{S}^1\times\mathbb{C}^2$ to be
+\begin{equation}\label{eqn:genorbq1q2}
+\mathbb{Z}_p:(\theta,z_1,z_2)\mapsto(\theta,\gamma^{q_1}z_1,\gamma^{q_2}z_2)\,,
+\end{equation}
+with $\gamma^p=1$, $q_1,q_2,p\in\mathbb{Z}$ and $gcd(q_1,p)=gcd(q_2,p)=1$. This is generalisation of the results computed in \cite{Kanno:2011fw} and of Section \ref{sec:s1s4surfinst} which were made with the specialisation $q_1=0$, $q_2=1$, $p=k$. In the context of $\frac{1}{2}$-BPS defects this generalisation should give rise to other types of defect configurations.
+
+In the Nekrasov instanton counting the $\Omega$-deformation forces the instantons to sit at the origin $z_1=z_2=0$. The instantons therefore sit at the fixed point of the action \eqref{eqn:genorbq1q2}.
+Note that in order to preserve the supercharges used in the instanton localisation computation we have to turn on a background $R$-current.
+We \textit{assume} that the projections do not change the localisation structure. Under that assumption the Nekrasov partition function takes the form of an `orbifolded' Nekrasov partition function $\widetilde{Z}_{\text{nek}}^{\text{orb}}=Z_{\text{cl}}^{\text{orb}}Z_{\text{inst}}^{\text{orb}}$. We have to project onto states left invariant by the orbifold action 
+\begin{gather}
+\alpha_{A,I}\mapsto\alpha_{A,I}-\frac{2\pi\iu A}{p}\,,\quad m\mapsto m-\frac{2\pi\iu (q_1+q_2)}{2p}\,,\label{eqn:trans1}\\
+\epsilon_1\mapsto \epsilon_1+\frac{2\pi\iu q_{1}}{p}\,,\quad \epsilon_2 \mapsto \epsilon_2+\frac{2\pi\iu q_{2}}{p}\label{eqn:trans2}\,.
+\end{gather}
+Using the same conventions as those in Chapter \ref{Chap:App6dhalfBPS} we decompose the vector spaces $W$, $V$ (for a fixed momentum mode around the $\mathbb{S}^1$) with respect to their $\mathbb{Z}_p$ grading
+\begin{equation}
+W=\bigoplus_{A=1}^pW_A\,,\quad V=\bigoplus_{A=1}^pV_A\,,
+\end{equation}
+of dimension $\dim_{\mathbb{C}}W_A=N_A$ and $\dim_{\mathbb{C}}V_A=k_A$. Moreover, we also take the index $A=1,\dots,p$ modulo $p$.
+Under the $\mathbb{Z}_p$ action the ADHM data transforms as
+\begin{equation}
+B^{(l)}\mapsto\gamma^{q_{l}}B^{(l)}\,,\quad
+P\mapsto P\,,\quad Q\mapsto\gamma^{q_1+q_2}Q\,,
+\end{equation}
+where $q_3:=-q_1-q_2$, $q_4:=0$.
+In order to have a non-trivial result, following \cite{Douglas:1996sw}, we also quotient by a $\mathbb{Z}_p\hookrightarrow U(k)$ corresponding to \eqref{eqn:Ukaction} with $g=\diag\left(\gamma\mathbb{I}_{k_1},\gamma^2\mathbb{I}_{k_2}\dots,\right)\in U(k)$. This breaks $U(k)\to\prod_{A=1}^pU(k_A)$ with $k=\sum_{A=1}^pk_A$. The surviving components are 
+\begin{gather}
+B^{(l)}_{A}\in\Hom\left(V_A,V_{A+q_{l}}\right)\,,\quad P_{A}\in\Hom\left(V_A,V_{A}\right)\,,\\ Q_{A}\in\Hom\left(V_A,V_{A+q_{1}+q_{2}}\right)\,.
+\end{gather}
+The ADHM equations $\mu^{(i)}_{\mathbb{C},A}=\mu_{\mathbb{R},A}=0$ are given by performing the projections to \eqref{eqn:ADHM1} and \eqref{eqn:ADHM2}. The ramified instanton moduli space is then given by 
+\begin{equation}
+\mathbf{M}_{\{k_A\},\{N_A\}}^{\mathbb{Z}_p}=\left\{B^{(l)}_A\,,\,P_A\,,\,Q_A\middle|\mu^{(i)}_{\mathbb{C},A}=\mu_{\mathbb{R},A}=0\right\}\,.
+\end{equation}
+The fixed points after the $\mathbb{Z}_p$ quotient are still labelled by $N$-tuples of Young diagrams $\vec{\mu}$ which we now label by $\vec{\mu}=\{\mu_{A,I}\}$.
+We choose bases 
+\begin{gather}
+W_A=\vecspan_{\mathbb{C}}\left\{w_{A,I}\middle|I=1,\dots,N_A\right\}\\
+V_{A+q_{1}i+q_{2}j}=\vecspan_{\mathbb{C}}\left\{v^{(i,j)}_{A+q_{1}i+q_{2}j,I}\middle|I=1,\dots,N_{A+q_{1}i+q_{2}j}, (i,j)\in\mu_{A,I}\right\}\,.
+\end{gather}
+The torus action acts by
+\begin{equation}
+w_{A,I}\mapsto e^{\alpha_{A,I}}w_{A,I}\,,\quad v^{(i,j)}_{A+q_{1}i+q_{2}j,I}\mapsto e^{(1-i)\epsilon_1+(1-\epsilon_2)}v^{(i,j)}_{A+q_{1}i+q_{2}j,I}\,.
+\end{equation}
+The fixed point configuration is given by the orbifold projection of \eqref{eqn:fixedpoint}, namely
+\begin{gather}\label{eqn:fixedpointorb}
+B^{(1)}_{A}v^{(i,j)}_{A,I}=v^{(i+1,j)}_{A+q_{1},I}\,,\quad B^{(2)}_{A}v^{(i,j)}_{A,I}=v^{(i,j+1)}_{A+q_{2},I}\,,\quad P_Aw_{A,I}=v^{(1,1)}_{A,I}\,,\\ Q_A=B^{(3)}_A=B^{(4)}_A=0\,.
+\end{gather}
+The dimension of $V_B$ is then given by
+\begin{equation}\label{eqn:dimVB}
+k_B=k_B(\vec{\mu})=\dim_{\mathbb{C}}V_B=\sum_{A=1}^p \sum_{I=1}^{N_A}\sum_{(i,j)\in y_{A,B}^{(I)}}1\,,
+\end{equation}
+where $y_{A,B}^{(I)}$ is given by
+\begin{equation}
+y^{(I)}_{A,B}=\left\{(i,j)|(i,j)\in\mu_{A,I},A+q_{1}i+q_{2}j=B\bmod p\right\}\,.
+\end{equation}
+For $q_{1}=0$ and $q_{2}=1$ equation \eqref{eqn:dimVB} reduces to (2.37) of \cite{Kanno:2011fw}. We demonstrate an explicit example with $p=3$, $q_{1}=1$, $q_{2}=-2$, $N_1=N_2=N_3=1$, $\mu_{1,1}=\{4,3,2\}$, $\mu_{2,1}=\{2,2\}$ and $\mu_{3,1}=\{3,2\}$ in Figure \ref{fig:ramifiedeg}. Because $N_A=1$ we drop the $I$ indices, for example $v^{(i,j)}_{A,1}=v^{(i,j)}_A$. $k_1=7$, $k_2=5$ and $k_3=6$; in agreement with \eqref{eqn:dimVB}. 
+\begin{figure}
+\begin{tikzcd}
+&v_1^{(4,1)}\\
+&v_3^{(3,1)}\arrow[u,"B_3^{(1)}"]\arrow[r,"B_3^{(2)}"]&v_1^{(3,2)}\\
+&v_2^{(2,1)}\arrow[u,"B_2^{(1)}"]\arrow[r,"B_2^{(2)}"]&v_3^{(2,2)}\arrow[r,"B_3^{(2)}"]\arrow[u,"B_3^{(1)}"]&v_1^{(2,3)}\\
+&v_1^{(1,1)}\arrow[u,"B_1^{(1)}"]\arrow[r,"B_1^{(2)}"]&v_2^{(1,2)}\arrow[u,"B_2^{(1)}"]\arrow[r,"B_2^{(2)}"]&v_3^{(1,3)}\arrow[u,"B_3^{(1)}"]\\
+w_1\arrow[ur,"P_1"]
+\end{tikzcd}
+\begin{tikzcd}
+&\\
+&\\
+&\\
+&v_3^{(2,1)}\arrow[r,"B_3^{(2)}"]&v_1^{(2,2)}\\
+&v_2^{(1,1)}\arrow[u,"B_2^{(1)}"]\arrow[r,"B_2^{(2)}"]&v_3^{(1,2)}\arrow[u,"B_3^{(1)}"]\\
+w_2\arrow[ur,"P_2"]
+\end{tikzcd}
+
+\begin{tikzcd}
+&v_2^{(3,1)}\\
+&v_1^{(2,1)}\arrow[r,"B_1^{(2)}"]\arrow[u,"B_1^{(1)}"]&v_2^{(2,2)}\\
+&v_3^{(1,1)}\arrow[u,"B_3^{(1)}"]\arrow[r,"B_3^{(2)}"]&v_1^{(1,2)}\arrow[u,"B_1^{(1)}"]\\
+w_3\arrow[ur,"P_3"]
+\end{tikzcd}
+\caption{\textit{Example of the fixed point structure for $p=3$, $q_{1}=1$, $q_{2}=-2$, $N_1=N_2=N_3=1$.}}
+\label{fig:ramifiedeg}
+\end{figure}
+Finally the character of $T\mathbf{M}_{\{k_A\},\{N_A\}}^{\mathbb{Z}_p}$ at the fixed point $\vec{\mu}$ is given by the $\mathbb{Z}_p$ invariant part of \eqref{eqn:ind}, namely
+\begin{equation}
+\chi_{\vec{\mu}}\left(T\mathbf{M}_{\{k_A\},\{N_A\}}^{\mathbb{Z}_p}\right):=\chi_{\vec{\mu},\mathbb{Z}_p}^{\text{Vec}}+\chi_{\vec{\mu},\mathbb{Z}_p}^{\text{Hyp}}\,,
+\end{equation}
+with 
+\begin{equation}
+\begin{aligned}
+\chi_{\vec{\mu},\mathbb{Z}_p}^{\text{Vec}}=&\sum_{t\in\mathbb{Z}}e^{\frac{2\pi t}{r}}
+\sum_{B=1}^p\left[W^*_{B}V_B+e^{2\epsilon_+}V^*_{B+q_{1}+q_{2}}W_B-V_{B}^*V_{B}\right.\\
+&\left.\quad+e^{\epsilon_1}V_{B+q_{1}}^*V_{B}+e^{\epsilon_2}V_{B+q_{2}}^*V_{B}-e^{2\epsilon_+}V_{B+q_{1}+q_{2}}^*V_{B}\right]\,,
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\chi_{\vec{\mu},\mathbb{Z}_p}^{\text{Hyp}}=&-\sum_{t\in\mathbb{Z}}e^{\frac{2\pi t}{r}}e^{m-\epsilon_+}
+\sum_{B=1}^p\left[W^*_{B-q_1-q_2}V_B+e^{2\epsilon_+}V^*_{B}W_B\right.\\
+&\left.-V_{B-q_1-q_2}^*V_{B}+e^{\epsilon_1}V_{B-q_2}^*V_{B}+e^{\epsilon_2}V_{B-q_1}^*V_{B}-e^{2\epsilon_+}V_{B}^*V_{B}\right]\,.
+\end{aligned}
+\end{equation}
+As before conjugation reverses the signs of the exponents. We also abused the notation and identified the vector spaces and their characters
+\begin{align}
+&\begin{aligned}
+&V_A=\\
+&\sum_{C,D=1}^p\sum_{I=1}^{N_{q_{1}C+q_{2}D-A}}\sum_{\substack{(pi-C+1,pj-D+1)\\\in y_{q_{1}C+q_{2}D-A,A}^{(I)}}}e^{\alpha_{q_{1}C+q_{2}D-A,I}+(C-pi)\epsilon_1+(D-pj)\epsilon_2}\,,
+\end{aligned}\\
+&W_A=\sum_{I=1}^{N_{p-A+1}}e^{\alpha_{p-A+1,I}}\,,
+\end{align}
+under the orbifold $\mathbb{Z}_p:V_A,W_A\mapsto \gamma^AV_A,\gamma^AW_A$. At this point it is very important to stress that we understand $A,B,C,D$ to be taken modulo $p$ when and only when they are considered as indices used to label quantities for example $\alpha_{A,I}=\alpha_{A+p,I}$. These quantities are significantly more complicated than those of the case $q_1=0$, $q_2=1$ of \eqref{eqn:simpleinstform}.
+
+According to the conversion rule \eqref{eqn:chartopartitionfn} we can, in principle, compute the partition function
+\begin{equation}
+\chi_{\vec{\mu}}\left(T\mathbf{M}_{\{k_A\},\{N_A\}}^{\mathbb{Z}_p}\right)\to z^{\mathbb{Z}_p}_{\vec{\mu}}\left(\vec{\alpha},m,\epsilon_1,\epsilon_2,r\right)\,.
+\end{equation}
+The instanton partition function then reads
+\begin{equation}
+Z_{\text{inst}}^{\text{orb}}\left(\vec{\alpha},m,\epsilon_1,\epsilon_2,r;\mathbf{q}_A\right)=\sum_{\vec{\mu}}\left(\prod_{B=1}^pq_B^{k_B(\vec{\mu})}\right)z^{\mathbb{Z}_p}_{\vec{\mu}}\left(\vec{\alpha},m,\epsilon_1,\epsilon_2,r\right)\,.
+\end{equation}
+
+In the limit $m=-\epsilon_+$ the supersymmetry of the 5d theory enhances $\mathcal{N}=1^*\to\mathcal{N}=2$. Correspondingly the instanton partition drastically simplifies and one can see that
+\begin{equation}
+\left.\chi_{\vec{\mu},\mathbb{Z}_p}^{\text{Vec}}\right|_{m=-\epsilon_+}=-\left.\left(\chi_{\vec{\mu},\mathbb{Z}_p}^{\text{Hyp}}\right)^*\right|_{m=-\epsilon_+}\,.
+\end{equation}
+From \eqref{eqn:chartopartitionfn} we conclude that
+\begin{equation}
+z^{\mathbb{Z}_p}_{\vec{\mu}}\left(\vec{\alpha},-\epsilon_+,\epsilon_1,\epsilon_2,r\right)\equiv1\,.
+\end{equation}
+So,
+\begin{equation}
+Z_{\text{inst}}^{\text{orb}}\left(\vec{\alpha},-\epsilon_+,\epsilon_1,\epsilon_2,r;\mathbf{q}_A\right)=\sum_{\vec{\mu}}\left(\prod_{B=1}^pq_B^{k_B(\vec{\mu})}\right)\,.
+\end{equation}
+\end{document}

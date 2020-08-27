@@ -1,0 +1,169 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\section{Quartic and Weierstrass Forms}\label{App:quartquad}
+The explicit transformations for transforming from Quartic to Weierstrass forms are given in \cite{connell1996elliptic} Section 1.2.
+Here is an explicit check for our case. Given the curve \eqref{eqn:SIcurve}  define
+\begin{equation}
+z=\frac{\tilde{x}+2\gamma}{4}\,,\quad
+w=\frac{\tilde{y}}{8}\quad\,,
+\gamma:=-u+\Lambda^4_1+\Lambda^4_2
+\end{equation}
+gives
+\begin{equation}
+w^2=z^3+2\gamma z^2-4(\gamma^2-4\Lambda^4_1\Lambda^4_2(z+2))
+\end{equation}
+Then, let
+\begin{align}
+w&=\frac{4}{x^3}(\gamma^2-4\Lambda^4_1\Lambda^4_2)(y+\sqrt{\gamma^2-4\Lambda^4_1\Lambda^4_2}-ux^2)\\
+z&=\frac{2}{x^2}\sqrt{\gamma^2-4\Lambda^4_1\Lambda^4_2}(y+\sqrt{\gamma^2-4\Lambda^4_1\Lambda^4_2})
+\end{align}
+Plugging into \eqref{eqn:SIcurve} yields the quadratic form for the curve \cite{Csaki:1997zg}
+\begin{equation}
+y^2=(x^2-u+\Lambda^4_1+\Lambda^4_2)^2-4\Lambda^4_1\Lambda^4_2\,.
+\end{equation}
+\section{Anomaly Free R-Symmetry}
+Here we verify that the $\mathfrak{u}(1)_r$ R-symmetry for the core theories in class $\mathcal{S}_k$ are anomaly free.
+The 1-loop running of the holomorphic UV coupling at the $(i,n){\text{th}}$ node is
+\begin{equation}\label{eqn:betafn}
+\tau_{(i,n)}(E) = \tau_{(i,n),\text{UV}} - \frac{b_{(i,c)}}{2\pi i}\log\frac{E}{\Lambda_{(i,c),\text{UV}}} \,.
+\end{equation}
+From the point of view of the $(i,n)^{\text{th}}$ gauge group, there are $3N$ chiral multiplets in the fundamental representation $\mathbf{N}$ and $3N$ in the anti-fundamental $\overline{\mathbf{N}}$ and therefore
+\begin{align}
+b_{(i,n)}=&E\frac{d}{dE}\frac{8\pi^2}{g_{(i,n)}^2}\\
+=&3c_2(\text{adj.})-3Nc_2(\mathbf{N})-3Nc_2(\overline{\mathbf{N}})\\
+=&0
+\end{align}
+where $c_2(\mathcal{R})$ is the Dynkin index of a representation $\mathcal{R}$ of a compact, semi-simple Lie algebra. For $SU(N)$, $c_2(\mathbf{N})=c_2(\overline{\mathbf{N}})=1/2$ and $c_2(\text{adj.})=N$.
+
+Suppose that under some combination of the $U(1)$ symmetries of the Lagrangian the gauginos and the fermion parts of matter fields coupled to the gauge group labelled by $(i,n)$ transform as 
+\begin{align}
+\Phi_{(i,n)}|_{\theta}\to& e^{\iu\alpha_{(i,n)}}\Phi_{(i,n)}|_{\theta}\\
+Q_{(i,n)}|_{\theta}\to& e^{\iu\beta_{(i,n)}}Q_{(i,n)}|_{\theta}\\
+\widetilde{Q}_{(i,n)}|_{\theta}\to& e^{\iu\gamma_{(i,n)}}\widetilde{Q}_{(i,n)}|_{\theta}\\
+\lambda^{\alpha}_{(i,n)}\to& e^{\iu\sigma_{(i,n)}}\lambda^{\alpha}_{(i,n)}
+\end{align}
+Where $|_{\theta}=\frac{\partial}{\partial\theta}|_{\theta=0}$ denotes the projection onto the theta component. Then, the fermionic part of the path integral measure transforms, due to the zero modes, as
+\begin{equation}
+\begin{split}
+&\prod_{n=1}^{\ell-2}\prod_{i=1}^{k}[\mathcal{D}\lambda^{\alpha}_{(i,n)}\mathcal{D}\Phi_{(i,n)}|_{\theta}\mathcal{D}\widetilde{Q}_{(i,n)}|_{\theta}\mathcal{D}Q_{(i,n)}|_{\theta}]\to\\
+&\qquad\quad\prod_{n=1}^{\ell-2}\prod_{i=1}^{k}e^{2\iu f_{(i,n)}K_{(i,n)}}[\mathcal{D}\lambda^{\alpha}_{(i,n)}\mathcal{D}\Phi_{(i,n)}|_{\theta}\mathcal{D}\widetilde{Q}_{(i,n)}|_{\theta}\mathcal{D}Q_{(i,n)}|_{\theta}]
+\end{split}
+\end{equation}
+where
+\begin{equation}
+\begin{aligned}
+f_{(i,n)}=&\sigma_{(i,n)}c_2(\text{adj.})+(\alpha_{(i,n)}+\beta_{(i,n-1)}+\gamma_{(i,n)})Nc_2(\mathbf{N})\\
+&+(\alpha_{(i-1,n)}+\beta_{(i,n-1)}+\gamma_{(i-1,n-1)})Nc_2(\overline{\mathbf{N}})
+\end{aligned}
+\end{equation}
+and 
+\begin{equation}
+K_{(i,n)}=\frac{1}{16\pi^2}\int_{\mathbb{R}^4}\tr{ F_{(i,n)}\wedge F_{(i,n)}}\in\mathbb{Z}\,,
+\end{equation}
+is the instanton number.
+
+Therefore, a generic $U(1)$ symmetry is anomalously broken by a non-zero instanton number. Note that it can be compensated for by shifting the theta angle
+\begin{equation}
+ \theta_{(i,n)}\to\theta_{(i,n)}+2f_{(i,n)}\,.
+\end{equation}
+This is only a symmetry when $2f_{(i,n)}\in2\pi\mathbb{Z}$.
+
+The $U(1)_r$ symmetry is anomaly free since 
+\begin{align}
+&r[\Phi_{(i,n)}]=0=1+r[\Phi_{(i,n)}|_{\theta}]\,,\\
+&r[\widetilde{Q}_{(i,n)}]=1=1+r[\widetilde{Q}_{(i,n)}|_{\theta}]\,,\\
+&r[Q_{(i,n)}]=1=1+r[Q_{(i,n)}|_{\theta}]\,,\\
+&r[\lambda^{\alpha}_{(i,n)}]=1\,,
+\end{align}
+hence, plugging these charges into $f_{(i,n)}$ yields
+\begin{equation}
+f_{(i,n)}=N-\frac{N}{2}-\frac{N}{2}=0\,.
+\end{equation}
+\section{Some Elliptic Curve Theory}\label{Chap:AppEllcurve}
+Given a compact Riemann surface $\mathcal{X}$ of genus $g$. We can consider the space of closed holomorphic 1-forms $\Omega^{1,0}(\mathcal{X})$ \cite{koblitz1993introduction}. By the maximum principle all exact holomorphic one forms are identically zero. One can show that $\dim\Omega^{1,0}(\mathcal{X})=\dim\Omega^{0,1}(\mathcal{X})=g$ where $\Omega^{0,1}(\mathcal{X})$ is the space of antiholomorphic closed one forms, $\Omega^{1,0}(\mathcal{X})\cap\Omega^{0,1}(\mathcal{X})=0$ and consequently that $H^1(\mathcal{X},\mathbb{C})=\Omega^{1,0}(\mathcal{X})\oplus\Omega^{0,1}(\mathcal{X})$
+
+One can also consider the meromorphic 1-forms on $\mathcal{X}$, for any non-zero meromorphic 1-form $\lambda$ we have that $\sum_{P\in \mathcal{X}}\text{ord}_P(\lambda)=2g-2$ as a consequence of the Riemann-Hurwitz formula, also, $\sum_{P\in \mathcal{X}}\text{Res}_P(\omega)=0$. 
+
+Choosing a basis for the homology as $\{A_1,\dots,A_g,B_1,\dots,B_g\}$, because the is a natural isomorphism $H^1(\mathcal{X},\mathbb{C})=\Omega^{1,0}(\mathcal{X})\oplus\Omega^{0,1}(\mathcal{X})\cong\Hom(H_1\mathcal{X},\mathbb{C})$ provided by integration over one-cycles, there then exists a unique, linearly independent, basis $\{\omega_1,\dots,\omega_g \}$ for $\Omega^{1,0}(\mathcal{X})$ such that
+\begin{equation}
+\int_{A_j}\omega_i=\delta_{ji}\label{eqn:periodA}\,,\quad \int_{B_j}\omega_i=\tau_{ji}\,.
+\end{equation}
+The period matrix is symmetric $\tau_{ji}=\tau_{ij}$ and obeys $\Im \tau>0$ (by Riemann's bilinear relations).
+Explicitly, for a hyperelliptic curve $y^2=F(x,\dots)$ where, considered as a polynomial in $x$, $\deg F=2N=2g+2$, an explicit basis is given by $\omega_i=x^{i-1}dx/y$.
+
+Now define a mapping $f:H_1\mathcal{X}\hookrightarrow\Lambda\subset\mathbb{C}^g$ given by $\gamma\mapsto(\int_{\gamma}\omega_1,\dots,\int_{\gamma}\omega_g)$ which is an embedding of $H_1\mathcal{X}$ into the lattice $\Lambda$.
+
+We now focus our attention to the case $g=1$. Then $\mathcal{X}=\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})$ and the pair of cycles $A_1=[0,1]$ and $B_1=[0,\tau]$ give a basis for $H_1\mathcal{X}$. Such a Riemann surface can be thought of as a two-sheeted covering of $\mathbb{S}^2$ with 4-branch points, by a M\"obius transformation these branch points can be taken to be at $x=0,1,\infty,q$. We can then take the curve $y^2=x(x-1)(x-q)$ then $\omega_1=\omega=dx/y$ is the unique (up to a constant multiple) holomorphic 1-form on $\mathcal{X}$ and hence satisfies all of the above discussions.
+How is $q$ related to the complex structure $\tau$ of the torus? To answer this question we rewrite the curve as $y^2=\prod_{i=1}^3(x-e_i)$ because the discriminant $\Delta\neq0$ then $e_1+e_2+e_3=0$. Then $q=\frac{e_2-e_3}{e_1-e_3}$. After computing the periods \eqref{eqn:periodA} and inverting one finds that
+\begin{equation}\label{eqn:lam}
+q=\lambda(\tau)=\frac{\theta_2(\tau)^4}{\theta_3(\tau)^4}\,.
+\end{equation}
+$\lambda(\tau)$ is called the modular lambda function.
+
+For hyperelliptic curves, which can be realised as two-sheeted branch coverings of $\mathbb{S}^2$, they have $2g+2$ branch points and explicit computations of the period matrix are harder to perform.
+
+
+
+\paragraph{Relation to gauge theory} 
+In the Seiberg-Witten theory of the $\mathcal{N}=2$ gauge theory we have
+\begin{itemize}
+\item{The SW curve $\mathfrak{X}=\mathcal{X}_{\{u_i\}}$ which is a $\rank \mathfrak{g}$ cover of a Riemann surface $\mathcal{X}_{\{u_i\}}\xrightarrow[]{\rank \mathfrak{g}:1}\mathcal{C}$. The period matrix of $\mathcal{X}_{\{u_i\}}$, in turn, is identified with the IR $U(1)$ gauge couplings and therefore computes the pre-potential $\mathcal{F}$. For a $SU(N)$ $\mathcal{N}=2$ gauge theory, we have the following relations
+\begin{equation}
+\frac{\partial a^D_i}{\partial a^j}=\tau_{ij}
+\end{equation}
+we then define $a_i$ and $a^D_i$ as integrals of the $A_i$ and $B_i$ cycles respectively over a certain meromorphic differential $\lambda_{\text{SW}}\sim\lambda_{\text{SW}}+\extd f$ since the addition of an exact form $\extd f$ does not affect the integration under closed one-cycles.
+\begin{equation}
+a^i=\int_{A_i}\lambda_{\text{SW}}\,,\quad a^D_i=\int_{B_i}\lambda_{\text{SW}}\,.
+\end{equation}
+and we demand
+\begin{equation}\label{eqn:taudetsw}
+\frac{\partial\lambda_{\text{SW}}}{\partial u_i}|_{\text{fixed $x$}}=\omega_i+\extd f_i
+\end{equation}
+furthermore we require that for all $p\in X$ Res$_{p}\lambda_{\text{SW}}$ is at most linear in the quark bare masses and that $\sum_{p\in X}$Res$_p\lambda_{\text{SW}}=0$.}
+\item{For theories of class $\mathcal{S}$ the space of UV gauge couplings is identified with the space of complex structure deformations $\mathcal{E}$ of the underlying surface $\mathcal{C}$. We have an isomorphism 
+\begin{equation}
+\mathcal{E}\iso Teich(\mathcal{C})/ MCG(\mathcal{C})
+\end{equation}
+where $Teich(\mathcal{C})$ is the Teichm\"uller space of $\mathcal{C}$ and is parametrised by the same cross ratios $q$ appearing in the SW curve. $MCG(\mathcal{C})$ is the mapping class group of $\mathcal{C}$, in physics terms this is the `generalised S-duality group'.}
+\end{itemize} 
+\subsection{Computation of the Period Matrix}
+We begin with the SW-curve for the pure $\mathfrak{su}(2)$ $\mathcal{N}=2$ theory
+\begin{equation}
+y^2=(x-\Lambda^2)(x+\Lambda^2)(x-u)\,.
+\end{equation} 
+The curve becomes singular at $u=-\Lambda^2,+\Lambda^2,\infty$. The $B$-cycle is taken to enclose $-\Lambda^2,+\Lambda^2$ while the $A$-cycle is taken from $+\Lambda^2,u$.
+We first change coordinates by $x= \Lambda^2(2x'+1)$ and $y=(2\Lambda^2)^{3/2}y'$
+\begin{equation}
+y'^2=x'(x'-1)\left(x'-\frac{\Lambda^2+u}{2\Lambda^2}\right)
+\end{equation}
+Defining $q=\frac{\Lambda^2+u}{2\Lambda^2}$ we arrive at the desired form
+\begin{equation}
+y^2=x(x-1)(x-q)\,.
+\end{equation}
+In these coordinates the singular points of the curve are mapped to $q=0,1,\infty$.
+So we have to compute integrals of the form
+\begin{equation}
+p(\gamma)=\oint_{\gamma}\omega=\oint_{\gamma}\frac{dx}{\sqrt{x(x-1)(x-q)}}\,.
+\end{equation}
+The we deform the cycle $A$ to enclose $1,q$ and $B$ to enclose $0,1$. So we can write
+\begin{equation}
+p(A)=2\int_{1}^q\omega+\oint_{C_1}\omega+\oint_{C_q}\omega\,,\quad p(B)=2\int_{0}^1\omega+\oint_{C_0}\omega+\oint_{C_1}\omega
+\end{equation}
+where $C_{x_0}$ denotes sphere centred around the point $x=x_0$ with infinitesimal radius $\epsilon$. However, one can immediately see that
+\begin{equation}
+\oint_{C_p}\omega\sim\int_{-\pi}^{\pi}\frac{\iu\sqrt{\epsilon} e^{\iu\theta/2} d\theta}{\sqrt{\prod_{p'\in\{0,1,q\}\backslash\{p\}}(p-p')}}=\frac{4\iu\sqrt{\epsilon} }{\sqrt{\prod_{p'\in\{0,1,q\}\backslash\{p\}}(p-p')}}\to0
+\end{equation}
+for any $p\in\{0,1,q\}$. Writing $x=w^2$
+\begin{equation}
+\int_{0}^p\frac{dx}{\sqrt{x(x-1)(x-q)}}=\int_{0}^{\sqrt{p}}\frac{2dw}{\sqrt{(w^2-1)(w^2-q)}}=\frac{2}{\sqrt{q}}F(\sqrt{p};1/\sqrt{q})
+\end{equation}
+where $F(x;k)$ is the incomplete elliptic integral of the first kind in Jacobi form.
+We can therefore write
+\begin{equation}
+p(A)=\frac{4}{\sqrt{q}}\left(F(\sqrt{q};1/\sqrt{q})-F(1;1/\sqrt{q})\right)\,,\quad p(B)=\frac{4}{\sqrt{q}}F(1;1/\sqrt{q})\,.
+\end{equation}
+Therefore the period matrix is
+\begin{equation}
+\tau=\frac{p(A)}{p(B)}=\frac{F(\sqrt{q};1/\sqrt{q})}{F(1;1/\sqrt{q})}-1\,.
+\end{equation}
+\end{document}

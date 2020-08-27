@@ -1,0 +1,139 @@
+\usepackage[a4paper,top=4.5cm,bottom=4.5cm,left=4cm,right=3cm]{geometry}
+
+\usepackage[latin1]{inputenc}
+\usepackage{appendix}
+%\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb,amsthm,mathabx,amsfonts,epsfig}
+\usepackage{pdfpages}
+\usepackage{dsfont}
+\usepackage{url}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{chngcntr}
+\usepackage{lscape}
+\usepackage{etoolbox}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{subfiles}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tikz,tikz-cd}
+\usetikzlibrary{arrows,math,calc,shapes.geometric,decorations.markings,positioning}
+\usepackage{changepage}
+\usepackage{youngtab}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage[makeroom]{cancel}
+\usepackage{fancyhdr}
+\usepackage{textcase}
+\usepackage{setspace}
+
+
+\DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}}
+\newcommand{\irchi}[2]{\raisebox{0.5\depth}{$#1\chi$}}
+
+\def\downnormalfill{$\,\,\vrule depth4pt width0.4pt
+	\leaders\vrule depth 0pt height0.4pt\hfill\vrule depth4pt width0.4pt\,\,$}
+\def\WT#1{\mathop{\vbox{\ialign{##\crcr\noalign{\kern3pt}
+				\downnormalfill\crcr\noalign{\kern0.8pt\nointerlineskip}
+				$\hfil\displaystyle{#1}\hfil$\crcr}}}\limits}
+
+\AtBeginEnvironment{subappendices}{%
+ % \addtocontents{toc}{\protect\addvspace{10pt}Appendices}
+}
+\makeatletter
+\patchcmd{\@chapter}{\protect\numberline{\thechapter}#1}
+{\@chapapp~\thechapter: #1}{}{}
+\makeatother		
+				
+%%Math Macros
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+
+
+\newcommand{\HS}{\textrm{HS}}
+\newcommand{\HL}{\textrm{HL}}
+\newcommand{\HF}{\textrm{HF}}
+\newcommand{\HWG}{\mathrm{HWG}}
+\newcommand{\Ell}{\textrm{Ell}}
+\newcommand{\iso}{\cong}
+\newcommand{\union}{\cup}
+\newcommand{\ts}{\textsuperscript}
+\newcommand{\Kahler}{K\"ahler}
+\newcommand{\iu}{\mathrm{i}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\qbf}{\mathfrak{q}}
+\newcommand{\pbf}{\mathfrak{p}}
+\newcommand{\tbf}{\mathfrak{t}}
+\newcommand{\cbf}{\mathfrak{c}}
+\newcommand{\qfk}{\mathbf{q}}
+\newcommand{\floork}[1]{\left\lfloor\frac{{#1}}{k}\right\rfloor}
+\newcommand{\Qtau}{Q_{\tau}}
+\newcommand{\MI}{\mathcal{I}}
+\newcommand{\MJ}{\mathcal{J}}
+\newcommand{\inst}{\text{inst}}
+\newcommand{\extd}{d}
+\newcommand{\Qtwo}{\mathrm{Q}}
+\newcommand{\Stwo}{\mathrm{S}}
+\newcommand{\Qfour}{\mathcal{Q}}
+\newcommand{\Sfour}{\mathcal{S}}
+\newcommand{\Qfive}{\mathtt{Q}}
+\newcommand{\Sfive}{\mathtt{S}}
+\newcommand{\Qsix}{\mathsf{Q}}
+\newcommand{\QBRST}{\mathfrak{Q}}
+\newcommand{\Sk}{$\mathcal{S}_k$}
+\newcommand{\tHS}{\tau}
+\newcommand{\kgg}{n}
+\newcommand{\newdot}{+}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\str}{str}
+\DeclareMathOperator{\trans}{T}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\PLog}{\mathrm{PLog}}
+\DeclareMathOperator{\sdet}{sdet}
+\DeclareMathOperator{\SDet}{SDet}
+\DeclareMathOperator{\exponents}{exponents}
+\DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Pf}{Pf}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\PE}{\mathrm{PE}}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\vecspan}{span}
+\DeclareMathOperator{\Stab}{Stab}
+\def\acts{\mathrel{\reflectbox{$\righttoleftarrow$}}}
+\newenvironment{widerequation}{%
+    \begin{adjustwidth}{-2cm}{-2cm}\begin{equation}}
+    {\end{equation}\end{adjustwidth}}
+    
+\DeclareMathOperator*{\SumInt}{%
+\mathchoice%
+  {\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+}
+
+\theoremstyle{plain}
+\newtheorem{definition}{Definition}

@@ -1,0 +1,243 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\section{Representation Theory of \texorpdfstring{$\mathfrak{su}(2,2|1)$}{su(2,2|1)}}\label{app:SCAreps}
+In this appendix we discuss the representation theory of (the complexification of) the $\mathfrak{su}(2,2|1)$ superalgebra. Unitary representations of $\mathfrak{su}(2,2|1)$ can be decomposed into a finite sum of representations $[j_1,j_2]_E^{(r)}$ of the maximal compact bosonic subalgebra
+\begin{equation}
+\mathfrak{u}(1)_E\oplus \mathfrak{su}(2)_1\oplus\mathfrak{su}(2)_2\oplus \mathfrak{u}(1)_{r}\subset\mathfrak{su}(2,2|1)\,.
+\end{equation}
+The $\mathfrak{su}(2,2|1)$ superalgebra has four Poincar\'e supercharges 
+\begin{equation}
+\mathcal{Q}\in[1/2,0]_{\frac{1}{2}}^{(-1)}\,,\quad \widetilde{\mathcal{Q}}\in[0,1/2]^{(1)}_{\frac{1}{2}}\,.
+\end{equation}
+Note that with respect to \cite{Cordova:2016emh} we use $j=2j_1$, $\bar{j}=2j_2$. The $\mathcal{Q}$ and $\widetilde{\mathcal{Q}}$ shortening conditions are listed in Table \ref{tab:Qshort} and Table \ref{tab:Qtilshort} respectively. 
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Name&Primary&Unitarity bound& $\mathcal{Q}$-Null state\\\hline
+$L$&$[j_1,j_2]_{E}^{(r)}$&$E>2+2j_1-\frac{3}{2}r$&None\\\hline
+$A_1$&$[j_1\geq1/2,j_2]_{E}^{(r)}$&$E=2+2j_1-\frac{3}{2}r$&$[j_1-1/2,j_2]_{E+1/2}^{(r-1)}$\\\hline
+$A_2$&$[0,j_2]_{E}^{(r)}$&$E=2-\frac{3}{2}r$&$[0,j_2]_{E+1}^{(r-2)}$\\\hline
+$B_1$&$[0,j_2]_{E}^{(r)}$&$E=-\frac{3}{2}r$&$[1/2,j_2]_{E+1/2}^{(r-1)}$\\\hline
+\end{tabular}
+\caption{\textit{$\mathcal{Q}$-shortening conditions.}}
+\label{tab:Qshort}
+\end{table}
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Name&Primary&Unitarity bound& $\widetilde{\mathcal{Q}}$-Null state\\\hline
+$\overline{L}$&$[j_1,j_2]_{E}^{(r)}$&$E>2+2j_1+\frac{3}{2}r$&None\\\hline
+$\overline{A}_1$&$[j_1,j_2\geq1/2]_{E}^{(r)}$&$E=2+2j_1+\frac{3}{2}r$&$[j_1,j_2-1/2]_{E+1/2}^{(r+1)}$\\\hline
+$\overline{A}_2$&$[j_1,0]_{E}^{(r)}$&$E=2+\frac{3}{2}r$&$[j_1,0]_{E+1}^{(r+2)}$\\\hline
+$\overline{B}_1$&$[j_1,0]_{E}^{(r)}$&$E=\frac{3}{2}r$&$[j_1,1/2]_{E+1/2}^{(r+1)}$\\\hline
+\end{tabular}
+\caption{\textit{$\widetilde{\Qfour}$-shortening conditions.}}
+\label{tab:Qtilshort}
+\end{table}
+We list all possible short unitary multiplets of the $\mathfrak{su}(2,2|1)$ superconformal algebra in Table \ref{tab:shorts}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+CDI-notation&Quantum number relations& DO-notation\\\hline\hline
+$L\overline{L}[j_1,j_2]_{E}^{(r)}$&$E>2+\max\left\{2j_1-\frac{3}{2}r,2j_2+\frac{3}{2}r\right\}$&$\mathcal{A}^E_{r,(j_1,j_2)}$\\\hline\hline
+$B_1\overline{L}[0,j_2]_E^{(r)}$&$r<-\frac{2}{3}(j_2+1)$, $E=-\frac{3}{2}r$&$\mathcal{B}_{r,(0,j_2)}$\\\hline
+$L\overline{B}_1[j_1,0]_E^{(r)}$&$r>\frac{2}{3}(j_1+1)$, $E=\frac{3}{2}r$&$\overline{\mathcal{B}}_{r,(j_1,0)}$\\\hline
+$B_1\overline{B}_1[0,0]_E^{(r)}$&$E=r=0$&$\hat{\mathcal{B}}$\\\hline\hline
+$A_{\ell}\overline{L}[j_1,j_2]_E^{(r)}$&$r<\frac{2}{3}(j_1-j_2)$, $E=2+2j_1-\frac{3}{2}r$&$\mathcal{C}_{r,(j_1,j_2)}$\\\hline
+$L\overline{A}_{\overline{\ell}}[j_1,j_2]_E^{(r)}$&$r>\frac{2}{3}(j_1-j_2)$, $E=2+2j_2+\frac{3}{2}r$&$\overline{\mathcal{C}}_{r,(j_1,j_2)}$\\\hline
+$A_{\ell}\overline{A}_{\overline{\ell}}[j_1,j_2]_E^{(r)}$&$r=\frac{2}{3}(j_1-j_2)$, $E=2+j_1+j_2$&$\hat{\mathcal{C}}_{(j_1,j_2)}$\\\hline\hline
+$B_1\overline{A}_{\overline{\ell}}[0,j_2]_E^{(r)}$&$E=-\frac{3}{2}r=1+j_2$&$\mathcal{D}_{(0,j_2)}$\\\hline
+$A_{\ell}\overline{B}_1[j_1,0]_E^{(r)}$&$E=\frac{3}{2}r=1+j_1$&$\overline{\mathcal{D}}_{(j_1,0)}$\\\hline
+\end{tabular}
+\caption{\textit{Unitary representations of the $\mathfrak{su}(2,2|1)$ superconformal algebra. In the above we have $\ell=1$ if $j_1\geq\frac{1}{2}$, $\ell=2$ if $j_1=0$, $\overline{\ell}=1$ if $j_2\geq\frac{1}{2}$ and $\overline{\ell}=2$ if $j_2=0$. In the first column we ist the notation of \cite{Cordova:2016emh} and in third column we list the corresponding Dolan \& Osborn style notation \cite{Dolan:2002zh} which was also used in \cite{Liendo:2011wc,Beem:2012yn,Rastelli:2016tbz,Gadde:2010en}.}}
+\label{tab:shorts}
+\end{table}
+Several of these multiplets contain conserved currents; we list all multiplets that contain conserved currents in Table \ref{tab:Conserved}. 
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Conserved current multiplet(s)&Comment(s)\\\hline
+$\hat{\mathcal{C}}_{(0,0)}$&Flavour current\\\hline
+$\hat{\mathcal{C}}_{(\frac{1}{2},0)}$, $\hat{\mathcal{C}}_{(0,\frac{1}{2})}$&Supersymmetric currents\\\hline
+$\hat{\mathcal{C}}_{(\frac{1}{2},\frac{1}{2})}$&Stress tensor, contains $\mathfrak{u}(1)_{r}$ current\\\hline
+$\hat{\mathcal{C}}_{(j_1,j_2)}|_{j_1+j_2>1}$&Higher spin currents\\\hline
+$\overline{\mathcal{D}}_{(0,0)}$ $(\mathcal{D}_{(0,0)})$&Free (anti-)Chiral field $\Phi$ ($\overline{\Phi}$)\\\hline
+$\overline{\mathcal{D}}_{(\frac{1}{2},0)}$ ($\mathcal{D}_{(0,\frac{1}{2})}$)&Free (anti-)vector superfield $W_{\alpha}$ $(\overline{W}_{\dot\alpha})$\\\hline
+$\overline{\mathcal{D}}_{(j_1\geq1,0)}$, $\mathcal{D}_{(0,j_2\geq1)}$&Higher spin free fields.\\\hline
+\end{tabular}
+\caption{\textit{Conserved current multiplets of $\mathfrak{su}(2,2|1)$ superconformal algebra.}}
+\label{tab:Conserved}
+\end{table}
+
+Using
+\begin{equation}
+\mathcal{C}_{r,(-\frac{1}{2},j_2)}\iso\mathcal{B}_{r-1,(0,j_2)}\,,\quad\overline{\mathcal{C}}_{r,(j_1,-\frac{1}{2})}\iso\overline{\mathcal{B}}_{r+1,(j_1,0)}\,,
+\end{equation}
+the $\mathcal{N}=1$ recombination rules can be written as
+\begin{gather}
+\label{eqn:recomb1}\mathcal{A}^{2+2j_1-\frac{3}{2}r}_{r<\frac{2}{3}(j_1-j_2),(j_1,j_2)}\iso\mathcal{C}_{r,(j_1,j_2)}\oplus\mathcal{C}_{r-1,(j_1-\frac{1}{2},j_2)}\,,\\
+\mathcal{A}^{2+2j_2+\frac{3}{2}r}_{r>\frac{2}{3}(j_1-j_2),(j_1,j_2)}\iso\overline{\mathcal{C}}_{r,(j_1,j_2)}\oplus\overline{\mathcal{C}}_{r+1,(j_1,j_2-\frac{1}{2})}\,,\\
+\mathcal{A}^{2+j_1+j_2}_{\frac{2}{3}(j_1-j_2),(j_1,j_2)}\iso\hat{\mathcal{C}}_{(j_1,j_2)}\oplus\mathcal{C}_{\frac{2}{3}(j_1-j_2)-1,(j_1-\frac{1}{2},j_2)}\oplus\overline{\mathcal{C}}_{\frac{2}{3}(j_1-j_2)+1,(j_1,j_2-\frac{1}{2})}\,.\label{eqn:recomb2}
+\end{gather} 
+The multiplets $\overline{\mathcal{D}}_{(j_1,0)}$, $\overline{\mathcal{B}}_{r<\frac{2}{3}j_1+2,(j_1,0)}$ and their complex conjugates have no recombination rules and are therefore absolutely protected.
+We list below the contribution of each multiplet to the right-handed index \eqref{eqn:SCI2}
+\begin{equation}
+ \mathcal{I}_{\mathcal{A}^E_{r,(j_1,j_2)}}= \mathcal{I}_{\mathcal{B}_{r,(0,j_2)}}= \mathcal{I}_{\mathcal{C}_{r,(j_1,j_2)}}=0\,,\label{eqn:multiind1}
+\end{equation}
+\begin{equation}
+\mathcal{I}_{\hat{\mathcal{C}}_{(j_1,j_2)}}=\frac{(-1)^{2j_1+2j_2+1}(pq)^{\frac{2}{3}j_2+\frac{1}{3}j_1+1}}{(1-p)(1-q)}\chi_{2j_1}(\sqrt{p/q})\,,
+\end{equation}
+\begin{equation} 
+ \mathcal{I}_{\overline{\mathcal{C}}_{r,(j_1,j_2)}}=\frac{(-1)^{2j_1+2j_2+1}(pq)^{\frac{r}{2}+j_2+1}}{(1-p)(1-q)}\chi_{2j_1}(\sqrt{p/q})\,,
+ \end{equation}
+\begin{equation}
+ \mathcal{I}_{\overline{\mathcal{B}}_{r,(j_1,0)}}=\frac{(-1)^{2j_1}(pq)^{\frac{r}{2}}}{(1-p)(1-q)}\chi_{2j_1}(\sqrt{p/q})
+ \end{equation}
+\begin{equation}
+\mathcal{I}_{\mathcal{D}_{(0,j_2)}}=\frac{(-1)^{2j_2+1}(pq)^{\frac{2}{3}j_2+\frac{2}{3}}}{(1-p)(1-q)}\,,
+\end{equation}
+\begin{equation}
+  \mathcal{I}_{\overline{\mathcal{D}}_{(j_1,0)}}=\frac{(-1)^{2j_1}(pq)^{\frac{j_1+1}{3}}\left(\chi_{2j_1}(\sqrt{p/q})-\sqrt{pq}\chi_{2j_1-1}(\sqrt{p/q})\right)}{(1-p)(1-q)}\,,\label{eqn:multiind2}
+\end{equation}
+where the character of the spin-$\frac{s}{2}$ representation of $SU(2)$ is \newline$\chi_{s}(y)=(y^{s+1}-y^{-s-1})/(y-y^{-1})$..
+
+By construction the right-handed index of all multiplets of the type \newline$X\overline{L}[j_1,j_2]_E^{(r)}$ is zero. In computing the above one must carefully deal with equations of motion. If any given $\mathfrak{so}(4,2)$ representation appearing in a multiplet saturates the unitarity bound then there will be a corresponding equation of motion which must enter the index with opposite statistics. We list the the possible null states of $\mathfrak{so}(4,2)$ in Table \ref{tab:so42nulls}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Primary&Unitarity bound& Null state\\\hline
+$[j_1\geq1/2,j_2\geq1/2]_{E}$&$E\geq2+j_1+j_2$&$[j_1-1/2,j_2-1/2]_{E+1}$\\\hline
+$[j_1\geq1/2,0]_{E}$&$E\geq j_1+1$&$[j_1-1/2,1/2]_{E+1}$\\\hline
+$[0,j_2\geq1/2]_{E}$&$E\geq j_2+1$&$[1/2,j_2-1/2]_{E+1}$\\\hline
+$[0,0]_{E}$&$E\geq1$&$[0,0]_{E+2}$\\\hline
+$[0,0]_{E}$&$E=0$&$[1/2,1/2]_{E+1}$\\\hline
+\end{tabular}
+\caption{\textit{Unitary representations of $\mathfrak{so}(4,2)$. In the final column we list the associated null state when the unitarity bound is saturated. The null states correspond to equations of motion and as such their contribution must be subtracted from the index.}}
+\label{tab:so42nulls}
+\end{table}
+
+\subsection{\texorpdfstring{$\mathcal{N}=1$}{N=1} Index Equivalence Classes}
+By either examining the recombination rules \eqref{eqn:recomb1}-\eqref{eqn:recomb2}, or, by directly observing the contribution to the index from each multiplet \eqref{eqn:multiind1}-\eqref{eqn:multiind2} we can immediately read off the (left-)right-handed index equivalence classes \cite{Gadde:2009dj,Beem:2012yn,Evtikhiev:2017heo}. That is, the set of multiplets with equal contribution to the (left-)right-handed index. Here we focus only on the right-handed index. The equivalence classes (leaving implicit the quantum number inequalities of Table \ref{tab:shorts}) are
+\begin{align}
+&[\widetilde{r},j_1]_+:=\{\overline{\mathcal{C}}_{r,(j_1,\frac{\widetilde{r}-r}{2})}|\widetilde{r}-r\in2\mathbb{Z}_{\geq0}\}\cup\{\hat{\mathcal{C}}_{(j_1,\frac{3\widetilde{r}-2j_1}{4})}|3\widetilde{r}-2j_1\in4\mathbb{Z}_{\geq0}\}\\
+&\begin{aligned}
+[\widetilde{r},j_1]_-:=&\{\overline{\mathcal{C}}_{r,(j_1,\frac{\widetilde{r}-r}{2})}|\widetilde{r}-r\in-1+2\mathbb{Z}_{\geq0}\}\\
+&\cup\{\hat{\mathcal{C}}_{(j_1,\frac{3\widetilde{r}-2j_1}{4})}|3\widetilde{r}-2j_1\in2+4\mathbb{Z}_{\geq0}\}
+\end{aligned}
+\end{align}
+and their contributions to the index are
+\begin{equation}\label{eqn:indequiv}
+\mathcal{I}_{[\widetilde{r},j_1]_+}=-\mathcal{I}_{[\widetilde{r},j_1]_-}=\frac{(-1)^{2j_1+1}(pq)^{\frac{\widetilde{r}}{2}+1}}{(1-p)(1-q)}\chi_{2j_1}(\sqrt{p/q})\,.
+\end{equation} 
+The cases in which we can extract the most information regarding the spectrum from the index are those in which the equivalence class contains a small number of representatives. For example, for example if $\widetilde{r}\in(2j_1/3,4/3+2j_1/3]$ then $[\widetilde{r},j_1]_+$ is empty and $[\widetilde{r},j_1]_-$ can contain only $\overline{\mathcal{B}}_{\widetilde{r}-1,(j_1,0)}$. The multiplets $\mathcal{D}_{(0,j_2)}$ and $\overline{\mathcal{D}}_{(j_1,0)}$ are free fields and sit in their own equivalence classes. Finally the multiplets $\hat{\mathcal{C}}_{(\frac{1}{2},0)}$ and $\hat{\mathcal{C}}_{(0,\frac{1}{2})}$ are the only representatives within the classes $[\frac{1}{3},\frac{1}{2}]_+$ and $[\frac{2}{3},0]_-$, respectively. $[\frac{1}{3},\frac{1}{2}]_-$ and $[\frac{2}{3},0]_+$ also contain only a single representatives, being $\overline{\mathcal{B}}_{\frac{7}{3}(\frac{1}{2},0)}$ and $\overline{\mathcal{C}}_{\frac{2}{3}(0,0)}$ respectively. 
+We also define the \textit{net degeneracy}
+\begin{equation}\label{eqn:netdegen}
+\text{ND}[\widetilde{r},j_2]:=\#[\widetilde{r},j_2]_+-\#[\widetilde{r},j_2]_-\,.
+\end{equation}
+
+\subsection{Hall-Littlewood Limit}
+The indices \eqref{eqn:multiind1}-\eqref{eqn:multiind2} can of course enter into the character expansion of \eqref{eqn:SCI3} with factors of $\left(\tau/\rho\sigma\right)^{2q_t/3}=(t/(pq)^{2/3})^{q_t}$. By construction the Hall-Littlewood limit of the index \eqref{eqn:HL} counts only those operators with $2j_2=-r+\frac{4}{3}q_t$ and $j_1=0$. Assuming that this limit always exists for theories in class $\mathcal{S}_k$ we can extract bounds for the value of $\mathfrak{u}(1)_t$ charges for given multiplets appearing the character expansion of the index. In particular, using the fact that
+\begin{equation}
+\lim_{\sigma\to0}\lim_{\rho\to0}\,(\sigma\rho)^a\chi_{2j_1}\left(\sqrt{\sigma/\rho}\right)=\begin{cases}
+\delta_{j_1,0}&a=j_1\,,\\
+0&a> j_1\,,\\
+\infty&a<j_1\,,
+\end{cases}
+\end{equation}
+with $j_1\geq0$ so that the limit exists only if $a\geq j_1$. Therefore, from \eqref{eqn:multiind1}-\eqref{eqn:multiind2} one can see that the the $\mathfrak{u}(1)_t$ charges of the multiplets contributing to the right handed index must obey the constraints of Table \ref{tab:HLconstraint}. By appying conjugation it is possible to find similar bounds for multiplets appearing in the character expansion of the left-handed index. One may also repeat such an exercise with the Macdonald limit ($\sigma\to0$) of the index. 
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Multiplet&$q_t$ bound\\\hline\hline
+$\overline{\mathcal{B}}_{r,(j_1,0)}$&$\frac{r}{2}-\frac{2}{3}q_t\geq j_1$\\\hline
+$\overline{\mathcal{C}}_{r,(j_1,j_2)}$&$\frac{r}{2}+j_2+1-\frac{2}{3}q_t\geq j_1$\\\hline
+$\hat{\mathcal{C}}_{(j_1,j_2)}$&$1-\frac{2}{3}q_t\geq\frac{2}{3}(j_1-j_2)	$\\\hline
+$\mathcal{D}_{(0,j_2)}$&$j_2+1-q_t\geq0$\\\hline
+$\overline{\mathcal{D}}_{(j_1,0)}$&$-2j_1+1-q_t\geq0$\\\hline
+\end{tabular}
+\caption{\it Restrictions imposed on the $\mathfrak{u}(1)_t$ representations implied by the existence of the Hall-Littlewood limit of the index. In order that a multiplet contributes to the Hall-Littlewood index it must have $j_1=0$ and saturate the bound.}
+\label{tab:HLconstraint}
+\end{table}
+Defining $\HL_{\mathcal{S}^{(q_t)}}=\lim_{\sigma,\rho\to0}\left(\tau/\sigma\rho\right)^{2q_t/3} \mathcal{I}_{\mathcal{S}}$ and assuming that the bounds of Table \ref{tab:HLconstraint} are satisfied (such that the limit always always exists) we have
+\begin{equation}
+\HL_{{\mathcal{A}^{E,(q_t)}_{r,(j_1,j_2)}}}=\HL_{\mathcal{B}^{(q_t)}_{r,(0,j_2)}}=\HL_{\mathcal{C}^{(q_t)}_{r,(j_1,j_2)}}=0\,,\label{eqn:HLmultiind1}
+\end{equation}
+\begin{equation}
+\HL_{\overline{\mathcal{B}}^{(q_t)}_{r,(j_1,0)}}=\tau^{2q_t}\delta_{j_1,0}\delta_{\frac{3r}{4},q_t}\,,
+\end{equation}
+\begin{equation}
+\HL_{\overline{\mathcal{C}}^{(q_t)}_{r,(j_1,j_2)}}=(-1)^{2j_2+1}\tau^{2q_t}\delta_{j_1,0}\delta_{q_t,\frac{3}{2}(j_2+1)+\frac{3}{4}r}\,,
+\end{equation}
+\begin{equation}
+\HL_{\hat{\mathcal{C}}^{(q_t)}_{(j_1,j_2)}}=(-1)^{2j_2+1}\tau^{2q_t}\delta_{j_1,0}\delta_{q_t,j_2+\frac{3}{2}}\,,
+\end{equation}
+\begin{equation}
+\HL_{\mathcal{D}^{(q_t)}_{(0,j_2)}}=(-1)^{2j_2+1}\tau^{2q_t}\delta_{q_t,j_2+1}\,,\quad\HL_{\overline{\mathcal{D}}^{(q_t)}_{(j_1,0)}}=\tau\delta_{j_1,0}\delta_{q_t,\frac{1}{2}}\,.\label{eqn:HLmultiind2}
+\end{equation}
+so the only multiplets that can contribute to the right-handed index in the Hall-Littlewood limit are
+\begin{equation}
+\overline{\mathcal{B}}^{(\frac{4r}{3})}_{r,(0,0)}\,,\quad \overline{\mathcal{C}}^{(\frac{3}{2}(j_2+1)+\frac{3}{4}r)}_{r,(0,j_2)}\,,\quad \hat{\mathcal{C}}^{(j_2+\frac{3}{2})}_{(0,j_2)}\,,\quad \mathcal{D}^{(j_2+1)}_{(0,j_2)}\,,\quad \overline{\mathcal{D}}^{(\frac{1}{2})}_{(0,0)}\,.
+\end{equation}
+Equality of the Hall-Littlewood limit of the index with the Hilbert series of the Higgs branch at would imply that in those theories the Hall-Littlewood index receives contribution only from $\overline{\mathcal{D}}^{(\frac{1}{2})}_{(0,0)}$ and $\overline{\mathcal{B}}^{(\frac{4r}{3})}_{r,(0,0)}$ multiplets.
+
+\section{Unrefined HL Index for Interacting Trinions}\label{app:3puncHL}
+\subsection{\texorpdfstring{$T_B$}{TB} Theory}
+The Hall-Littlewood index for the three-punctured sphere $T_B$ theory in the unrefined $\mathbf{z}=\mathbf{u}=\mathbf{v}=\mathbf{1}$, $\gamma\beta=1$ limit is given by
+\begin{equation}
+\left.\HL^{(T_B)\mathbf{1}}_{\mathbf{1}\mathbf{1}}\right|_{\gamma\beta=1}=\frac{\gamma^2}{\beta^2}\frac{\tau^{19}\left(Q_B(\gamma^{-1}\beta,\tau^{-1})-Q_B(\gamma\beta^{-1},\tau)\right)}{\left(1-\frac{\beta}{\gamma}\tau^2\right)^{7}\left(1-\frac{\gamma}{\beta}\tau^2\right)^{9}\left(1-\tau^2\right)^{11}}\,.
+\end{equation}
+The polynomial $Q_B(\gamma\beta^{-1},\tau)$ is given by
+\begin{equation}
+\begin{aligned}
+&Q_B(\gamma\beta^{-1},\tau)=-\frac{3 \gamma ^5 \tau ^9}{\beta ^5}-\frac{15 \gamma ^5 \tau ^7}{\beta ^5}-\frac{17 \gamma ^5 \tau ^5}{\beta ^5}-\frac{5 \gamma ^5 \tau ^3}{\beta ^5}+\frac{21 \gamma ^4 \tau ^{11}}{\beta ^4}\\
+&-\frac{14 \gamma ^4 \tau ^7}{\beta ^4}-\frac{6 \gamma ^4 \tau ^5}{\beta ^4}+\frac{201 \gamma ^4 \tau ^3}{\beta ^4}+\frac{45 \gamma ^4 \tau }{\beta ^4}+\frac{\gamma ^3 \tau ^{17}}{\beta
+   ^3}-\frac{3 \gamma ^3 \tau ^{15}}{\beta ^3}\\
+   &-\frac{55 \gamma ^3 \tau ^{11}}{\beta ^3}+\frac{305 \gamma ^3 \tau ^9}{\beta ^3}+\frac{\beta ^3 \tau ^9}{\gamma
+   ^3}-\frac{387 \gamma ^3 \tau ^7}{\beta ^3}-\frac{11 \beta ^3 \tau ^7}{\gamma ^3}-\frac{885 \gamma ^3 \tau ^5}{\beta ^3}\\
+   &+\frac{919 \gamma ^3 \tau ^3}{\beta ^3}-\frac{265\beta ^3 \tau ^3}{\gamma ^3}-\frac{298 \gamma ^3 \tau }{\beta ^3}+\frac{818 \beta ^3 \tau }{\gamma ^3}+\frac{\gamma ^2 \tau ^{19}}{\beta ^2}+\frac{13 \gamma ^2 \tau ^{17}}{\beta ^2}\\
+   &-\frac{231 \gamma ^2 \tau ^{11}}{\beta ^2}+\frac{15 \beta ^2 \tau ^{11}}{\gamma ^2}+\frac{1421 \gamma ^2 \tau ^9}{\beta ^2}-\frac{149 \beta ^2 \tau
+   ^9}{\gamma ^2}-\frac{132 \gamma ^2 \tau ^7}{\beta ^2}\\
+ &-\frac{714 \beta ^2 \tau ^5}{\gamma ^2}+\frac{4332 \gamma ^2 \tau ^3}{\beta
+   ^2}-\frac{2327 \beta ^2 \tau ^3}{\gamma ^2}+\frac{1484 \gamma ^2 \tau }{\beta ^2}+\frac{4101 \beta ^2 \tau }{\gamma ^2}\\
+   &-\frac{193
+   \gamma  \tau ^{13}}{\beta }+\frac{52 \beta  \tau ^{13}}{\gamma }-\frac{805 \gamma  \tau ^{11}}{\beta }-\frac{308 \beta  \tau ^{11}}{\gamma }+\frac{2208 \gamma  \tau ^9}{\beta }+\frac{81 \beta  \tau ^9}{\gamma
+   }\\
+   &+\frac{2933 \beta  \tau ^7}{\gamma }-\frac{8621 \gamma  \tau ^5}{\beta }-\frac{4192 \beta  \tau ^5}{\gamma }+\frac{5807 \gamma  \tau ^3}{\beta }-\frac{2504 \beta  \tau
+   ^3}{\gamma }\\
+   &+52 \tau ^{15}-36 \tau ^{13}-982 \tau ^{11}+1322 \tau ^9+3423 \tau ^7-9605 \tau ^5+1849 \tau ^3\\
+   &+\frac{1224 \gamma  \tau ^7}{\beta }+14421 \tau+\frac{12360 \beta  \tau }{\gamma }-\frac{156 \gamma ^2 \tau ^{13}}{\beta ^2}+\frac{83 \gamma  \tau ^{15}}{\beta }\\
+   &+\frac{73 \gamma ^4
+   \tau ^9}{\beta ^4}+\frac{36 \gamma ^2 \tau
+   ^{15}}{\beta ^2}-\frac{67 \gamma ^3 \tau ^{13}}{\beta ^3}-\frac{3340 \gamma ^2 \tau ^5}{\beta ^2}+\frac{582 \beta ^2 \tau ^7}{\gamma ^2}+\frac{67 \beta ^3 \tau ^5}{\gamma ^3}\\
+   &+\frac{7024 \gamma  \tau }{\beta }+\frac{15 \gamma  \tau ^{17}}{\beta }\,.
+\end{aligned}
+\label{eqn:Qpolyn}
+\end{equation}
+
+\subsection{\texorpdfstring{$T_A$}{TA} Theory}
+The Hall-Littlewood index for the $T_A$ theory in the unrefined limit with $\gamma=\beta$ reads
+\begin{equation}
+\left.\HL^{(T_A)\mathbf{1}}_{\mathbf{1}\mathbf{1}}\right|_{\frac{\gamma}{\beta}=1}=\frac{\beta^5\gamma^5\tau^{15}\left(Q_A(\tau,\beta\gamma)-Q_A(\tau^{-1},\beta^{-1}\gamma^{-1})\right)}{(1-\tau^2)^{19}(1-\gamma^4\beta^4\tau^2)^4}
+\end{equation}
+where 
+\begin{equation}
+\begin{aligned}\label{eqn:QApolyn}
+&Q_A(\tau,\beta\gamma)=-\beta ^5 \gamma ^5 \tau ^{15}-29 \beta ^5 \gamma ^5 \tau ^{13}-274 \beta ^5 \gamma ^5 \tau ^{11}-1122 \beta ^5 \gamma ^5 \tau ^9\\
+&-2222 \beta ^5 \gamma ^5 \tau ^5-1122 \beta ^5
+   \gamma ^5 \tau ^3+\frac{\tau ^3}{\beta ^5 \gamma ^5}-274 \beta ^5 \gamma ^5 \tau +\frac{29 \tau }{\beta ^5 \gamma ^5}\\
+ &+525 \beta ^3 \gamma ^3
+   \tau ^9+4216 \beta ^3 \gamma ^3 \tau ^7+11048 \beta ^3 \gamma ^3 \tau ^5-\frac{4 \tau ^5}{\beta ^3 \gamma ^3}+12523 \beta ^3 \gamma ^3 \tau ^3\\
+   &+6519 \beta ^3 \gamma ^3
+   \tau -\frac{1524 \tau }{\beta ^3 \gamma ^3}-\beta  \gamma  \tau ^{11}+15 \beta  \gamma  \tau ^9-350 \beta  \gamma  \tau ^7+\frac{6 \tau ^7}{\beta  \gamma }\\
+   &+\frac{286 \tau
+   ^5}{\beta  \gamma }-19741 \beta  \gamma  \tau ^3+\frac{3706 \tau ^3}{\beta  \gamma }-27485 \beta  \gamma  \tau +\frac{15982 \tau }{\beta  \gamma }\\
+   &-19 \beta ^3 \gamma ^3 \tau ^{11}-\frac{144 \tau ^3}{\beta ^3 \gamma ^3}-5418 \beta  \gamma  \tau ^5-4 \beta ^3 \gamma ^3 \tau ^{13}-2222 \beta ^5 \gamma ^5 \tau ^7\,.
+\end{aligned}
+\end{equation}
+\end{document}
